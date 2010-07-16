@@ -1,0 +1,471 @@
+MAP
+  IMAGETYPE      JPEG                     # Image output type
+#  EXTENT         -180 -90 180 90          # Extent of the map (in degrees)
+  EXTENT         -84 34.5 -76.5 40.5
+  SIZE           640 480                  # Size of the output image
+  SHAPEPATH      "/usr/local/share/xcsoar" # Path to data directory
+  IMAGECOLOR     22 79 148                # Background colour for the image
+
+  # More details on the output format
+  OUTPUTFORMAT
+    NAME jpeg
+    DRIVER "GD/JPEG"
+    MIMETYPE "image/jpeg"
+    IMAGEMODE RGB
+    EXTENSION "jpg"
+    FORMATOPTION "QUALITY=95"
+  END
+
+  # Web template information - template file and output directory
+  WEB
+    TEMPLATE  'example1.html'
+    IMAGEPATH '/var/www/html/tmp/'
+    IMAGEURL  '/tmp/'
+  END
+
+  # Projection information - here we use "unprojected" lat/long
+  PROJECTION
+    "proj=latlong"
+    "datum=NAD83"
+  END
+
+ # GTOPO30 raster layer
+  LAYER
+    NAME      'srtm30'
+    TILEINDEX 'srtm30/srtm30.shp' # The tile index for the data
+    TILEITEM  'location'            # Data item to use for display
+    STATUS    DEFAULT
+    TYPE      RASTER                # Set the type of the layer
+
+    # Projection of the raster data
+    PROJECTION
+      "proj=latlong"
+      "datum=NAD83"
+    END
+
+    # Huge list of classes, each one corresponding to a particular height range
+    # and having a slightly different colour value.  This gives a nice gradient effect.
+    CLASS
+      EXPRESSION ([pixel] > 6500)
+      COLOR 255 255 255
+      NAME '6500m' # A few classes are given a name so they appear in the key
+    END
+    CLASS
+      EXPRESSION ([pixel] > 6400)
+      COLOR 255 252 255
+    END
+    CLASS
+      EXPRESSION ([pixel] > 6300)
+      COLOR 255 250 251
+    END
+    CLASS
+      EXPRESSION ([pixel] > 6200)
+      COLOR 255 248 248
+    END
+    CLASS
+      EXPRESSION ([pixel] > 6100)
+      COLOR 255 246 245
+    END
+    CLASS
+      EXPRESSION ([pixel] > 6000)
+      COLOR 255 244 242
+      NAME '6000m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 5900)
+      COLOR 255 242 239
+    END
+    CLASS
+      EXPRESSION ([pixel] > 5800)
+      COLOR 255 240 236
+    END
+    CLASS
+      EXPRESSION ([pixel] > 5700)
+      COLOR 255 238 233
+    END
+    CLASS
+      EXPRESSION ([pixel] > 5600)
+      COLOR 255 236 230
+    END
+    CLASS
+      EXPRESSION ([pixel] > 5500)
+      COLOR 255 234 227
+      NAME '5500m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 5400)
+      COLOR 254 232 224
+    END
+    CLASS
+      EXPRESSION ([pixel] > 5300)
+      COLOR 253 230 221
+    END
+    CLASS
+      EXPRESSION ([pixel] > 5200)
+      COLOR 252 228 218
+    END
+    CLASS
+      EXPRESSION ([pixel] > 5100)
+      COLOR 251 226 214
+    END
+    CLASS
+      EXPRESSION ([pixel] > 5000)
+      COLOR 250 224 211
+      NAME '5000m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 4900)
+      COLOR 248 222 208
+    END
+    CLASS
+      EXPRESSION ([pixel] > 4800)
+      COLOR 246 220 205
+    END
+    CLASS
+      EXPRESSION ([pixel] > 4700)
+      COLOR 246 218 202
+    END
+    CLASS
+      EXPRESSION ([pixel] > 4600)
+      COLOR 244 216 199
+    END
+    CLASS
+      EXPRESSION ([pixel] > 4500)
+      COLOR 242 214 196
+      NAME '4500m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 4400)
+      COLOR 240 212 193
+    END
+    CLASS
+      EXPRESSION ([pixel] > 4300)
+      COLOR 239 210 190
+    END
+    CLASS
+      EXPRESSION ([pixel] > 4200)
+      COLOR 237 208 187
+    END
+    CLASS
+      EXPRESSION ([pixel] > 4100)
+      COLOR 235 206 184
+    END
+    CLASS
+      EXPRESSION ([pixel] > 4000)
+      COLOR 233 204 181
+      NAME '4000m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 3900)
+      COLOR 232 202 178
+    END
+    CLASS
+      EXPRESSION ([pixel] > 3800)
+      COLOR 230 200 175
+    END
+    CLASS
+      EXPRESSION ([pixel] > 3700)
+      COLOR 228 198 172
+    END
+    CLASS
+      EXPRESSION ([pixel] > 3600)
+      COLOR 226 196 169
+    END
+    CLASS
+      EXPRESSION ([pixel] > 3500)
+      COLOR 225 194 166
+      NAME '3500m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 3400)
+      COLOR 223 192 163
+    END
+    CLASS
+      EXPRESSION ([pixel] > 3300)
+      COLOR 221 190 160
+    END
+    CLASS
+      EXPRESSION ([pixel] > 3200)
+      COLOR 219 188 157
+    END
+    CLASS
+      EXPRESSION ([pixel] > 3100)
+      COLOR 217 186 154
+    END
+    CLASS
+      EXPRESSION ([pixel] > 3000)
+      COLOR 215 184 151
+      NAME '3000m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 2900)
+      COLOR 210 181 147
+    END
+    CLASS
+      EXPRESSION ([pixel] > 2800)
+      COLOR 205 178 143
+    END
+    CLASS
+      EXPRESSION ([pixel] > 2700)
+      COLOR 200 175 139
+    END
+    CLASS
+      EXPRESSION ([pixel] > 2600)
+      COLOR 195 172 135
+    END
+    CLASS
+      EXPRESSION ([pixel] > 2500)
+      COLOR 190 169 131
+      NAME '2500m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 2400)
+      COLOR 185 166 127
+    END
+    CLASS
+      EXPRESSION ([pixel] > 2300)
+      COLOR 180 163 123
+    END
+    CLASS
+      EXPRESSION ([pixel] > 2200)
+      COLOR 175 160 119
+    END
+    CLASS
+      EXPRESSION ([pixel] > 2100)
+      COLOR 170 157 115
+    END
+    CLASS
+      EXPRESSION ([pixel] > 2000)
+      COLOR 165 154 111
+      NAME '2000m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 1900)
+      COLOR 160 151 107
+    END
+    CLASS
+      EXPRESSION ([pixel] > 1800)
+      COLOR 155 148 103
+    END
+    CLASS
+      EXPRESSION ([pixel] > 1700)
+      COLOR 150 145 99
+    END
+    CLASS
+      EXPRESSION ([pixel] > 1600)
+      COLOR 145 142 95
+    END
+    CLASS
+      EXPRESSION ([pixel] > 1500)
+      COLOR 140 139 91
+      NAME '1500m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 1400)
+      COLOR 135 136 87
+    END
+    CLASS
+      EXPRESSION ([pixel] > 1300)
+      COLOR 130 133 83
+    END
+    CLASS
+      EXPRESSION ([pixel] > 1200)
+      COLOR 125 130 79
+    END
+    CLASS
+      EXPRESSION ([pixel] > 1100)
+      COLOR 120 127 75
+    END
+    CLASS
+      EXPRESSION ([pixel] > 1000)
+      COLOR 115 124 71
+      NAME '1000m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 900)
+      COLOR 110 121 67
+    END
+    CLASS
+      EXPRESSION ([pixel] > 800)
+      COLOR 105 118 63
+    END
+    CLASS
+      EXPRESSION ([pixel] > 700)
+      COLOR 100 115 59
+    END
+    CLASS
+      EXPRESSION ([pixel] > 600)
+      COLOR 95 112 55
+    END
+    CLASS
+      EXPRESSION ([pixel] > 500)
+      COLOR 90 109 51
+      NAME '500m'
+    END
+    CLASS
+      EXPRESSION ([pixel] > 450)
+      COLOR 88 107 49
+    END
+    CLASS
+      EXPRESSION ([pixel] > 400)
+      COLOR 85 106 47
+    END
+    CLASS
+      EXPRESSION ([pixel] > 350)
+      COLOR 82 104 45
+    END
+    CLASS
+      EXPRESSION ([pixel] > 300)
+      COLOR 80 103 43
+    END
+    CLASS
+      EXPRESSION ([pixel] > 250)
+      COLOR 77 101 47
+    END
+    CLASS
+      EXPRESSION ([pixel] > 200)
+      COLOR 75 100 50
+    END
+    CLASS
+      EXPRESSION ([pixel] > 100)
+      COLOR 70 97 55
+    END
+    CLASS
+      EXPRESSION ([pixel] > 50)
+      COLOR 73 99 57
+    END
+    CLASS
+      COLOR 70 97 55
+      NAME '0m'
+    END
+  END
+
+  # Layer definition for thewater courses
+  LAYER
+    # Unique layer name
+    NAME             "watercourses"
+    # Path to data file from base data dir defined above
+    DATA             vmap0_all/watrcrslhydro_line_all
+    STATUS           ON
+    # This area is to be displayed as polygon data
+    TYPE             LINE
+
+    # Each layer must have at least one class.  Here we define colour info etc
+    CLASS
+      COLOR 0 0 255
+      #70 97 55
+      NAME 'Water Courses'
+    END
+
+    # The projection used in the data file
+    PROJECTION
+      "proj=latlong"
+      "datum=NAD83"
+    END
+  END
+
+
+  # Layer definition for thewater courses
+  LAYER
+    # Unique layer name
+    NAME             "waterareas"
+    # Path to data file from base data dir defined above
+    DATA             vmap0_all/inwaterahydro_area_all
+    STATUS           ON
+    # This area is to be displayed as polygon data
+    TYPE             POLYGON
+
+    # Each layer must have at least one class.  Here we define colour info etc
+    CLASS
+      COLOR 0 0 255
+      #70 97 55
+      NAME 'Inland Water Areas'
+    END
+
+    # The projection used in the data file
+    PROJECTION
+      "proj=latlong"
+      "datum=NAD83"
+    END
+  END
+
+  # Layer definition for the roads
+  LAYER
+    # Unique layer name
+    NAME             "rail"
+    # Path to data file from base data dir defined above
+    DATA             vmap0_all/railrdltrans_line_all
+    STATUS           ON
+    # This area is to be displayed as polygon data
+    TYPE             LINE
+
+    # Each layer must have at least one class.  Here we define colour info etc
+    CLASS
+      COLOR 0 0 0
+      #70 97 55
+      NAME 'Railroads'
+    END
+
+    # The projection used in the data file
+    PROJECTION
+      "proj=latlong"
+      "datum=NAD83"
+    END
+  END
+
+  # Layer definition for the roads
+  LAYER
+    # Unique layer name
+    NAME             "roads"
+    # Path to data file from base data dir defined above
+    DATA             vmap0_all/roadltrans_line_all
+    STATUS           ON
+    # This area is to be displayed as polygon data
+    TYPE             LINE
+
+    # Each layer must have at least one class.  Here we define colour info etc
+    CLASS
+      COLOR 255 0 0
+      #70 97 55
+      NAME 'Roads'
+    END
+
+    # The projection used in the data file
+    PROJECTION
+      "proj=latlong"
+      "datum=NAD83"
+    END
+  END
+  # Layer definition for the populated areas
+  LAYER
+    # Unique layer name
+    NAME             "packages"
+    # Path to data file from base data dir defined above
+    DATA             vmap0_all/packages
+    STATUS           DEFAULT
+    # This area is to be displayed as polygon data
+    TYPE             LINE
+    TRANSPARENCY 30
+    LABELITEM "Name"
+    # Each layer must have at least one class.  Here we define colour info etc
+    CLASS
+      COLOR 255 255 0
+      #70 97 55
+      NAME 'Populated Areas'
+
+    LABEL
+        COLOR 218 218 218
+        TYPE BITMAP
+        SIZE medium
+        POSITION auto
+        PARTIALS FALSE
+    END
+    END
+
+    # The projection used in the data file
+    PROJECTION
+      "proj=latlong"
+      "datum=NAD83"
+    END
+  END
+END

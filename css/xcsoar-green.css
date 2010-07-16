@@ -1,0 +1,47 @@
+/******************************************************************************
+ MASTER STYLES FOR SCREEN MEDIA
+ ******************************************************************************/
+
+/* GLOBALS */
+
+a { color: #359A41; }
+a:hover { color: #1B8D29; }
+a:active { color: #359A41; }
+
+/* HTML */
+html { color: #453c37; background: url(../img/bg-green.gif) 50% 0 repeat; }
+
+/* HIGHTLIGHT */
+.highlight { color: #359A41; font-weight: bold; }
+
+/******************************************************************************
+ PRIMARY SECTION 
+ ******************************************************************************/
+
+/* NAV */
+ul#nav li.current a { border-bottom: 2px solid #1B8D29; color: #1B8D29; }
+
+/* FORM */
+#form input.button { color: #fff; background: #359A41; }
+#form input.button:hover, #form input.button:focus { background: #1A4977; }
+
+/* QUOTE */
+#quote p { color: #453c37; background: url(../img/quote-achor-green.gif) 30px 0 no-repeat; }
+#quote.markup-magic p { background-image: url(../img/quote-anchor-green.gif); }
+#quote.awesome p, #quote.endeavor p { background-image: url(../img/quote-anchor-brown.gif); }
+#quote p a { color: #453c37; }
+
+/* ASIDE */
+#aside div.vcard a:hover { color: #1B8D29; }
+
+/* PORTFOLIO */
+#portfolio p.next a { background: #359A41; }
+#portfolio p.next a:hover { background: #1B8D29; }
+
+/******************************************************************************
+ SECONDARY SECTION 
+ ******************************************************************************/
+
+/* DETAILS */
+#details ul li { background: url(../img/bullet-green.gif) 0 5px no-repeat; }
+#details ul li ul li { background: url(../img/bullet-green.gif) 0 5px no-repeat; }

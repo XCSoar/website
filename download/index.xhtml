@@ -1,0 +1,56 @@
+﻿<!--#set var="menu" value="download" -->
+<!--#set var="title" value="Download" -->
+<!--#set var="color" value="green" -->
+<!--#include virtual="/include/header_html.inc.xhtml" -->
+ 	<script type="text/javascript">
+	$(document).ready(function() {
+    $('a#platform-pc').click(function(e){
+      e.preventDefault();
+      //do ajax form
+      $("div#platforms").fadeOut(function(){
+        $("div#pc").fadeIn();
+      });
+    }); 
+	});
+	</script>
+<!--#include virtual="/include/header_primary.inc.xhtml" -->
+			<div id="summary">
+				<h2>Platforms</h2>
+        <div id="platforms">
+          <h3>XCSoar is currently available for the following platforms:</h3>
+          <a id="platform-pda" href="http://sourceforge.net/projects/xcsoar/files/Binaries/XCSoar%205.2.4%20%28Stable%29/XCSoarPPC2003.ARMV4.5.2.4.cab/download"><img src="/img/button-pda.png"/></a>
+          <a id="platform-pna" href="http://sourceforge.net/projects/xcsoar/files/Binaries/XCSoar%205.2.2%20%28Stable%29/XCSoarPNA-522.zip/download"><img src="/img/button-pna.png"/></a>
+          <a id="platform-pc" href="#"><img src="/img/button-pc.png"/></a>
+          <a id="platform-altair" href="http://sourceforge.net/projects/xcsoar/files/Binaries/XCSoar%205.2.2%20%28Stable%29/XCSoarAltair-5.2.2.zip/download"><img src="/img/button-altair.png"/></a>
+        </div>
+        <div id="pc" style="display: none;">
+          <h3>The XCSoar PC Version is currently available for the following operating systems:</h3>
+          <a href="http://sourceforge.net/projects/xcsoar/files/Binaries/XCSoar%205.2.4%20%28Stable%29/XCSoarPC-5.2.4.zip/download"><img src="/img/button-windows.png"/></a>
+          <a href="#"><img src="/img/button-unix.png"/></a>
+        </div>
+			</div> <!-- /summary -->
+
+			<div id="aside">
+				<h2>Attention</h2>
+				<p>This is just the download of the application itself. In order to use the full potential of XCSoar, you will need <span class="highlight">Maps</span> for the region you are going to fly in.</p>
+        <p>Since our Download Wizard is not completed yet, you will have to choose and download the maps by hand. You may use our <a href="/download/terrain"><span class="highlight">Terrain Generator</span></a> to create maps of your area.</p>
+        <p>An explanation of the files, XCSoar is able to load, is given at the bottom of this page. All the details can also be found in our <a href="/trac/wiki/Filetypes"><span class="highlight">wiki</span></a>.</p>
+        <p><a href="/download/terrain"><img src="/img/terraingen-button.png"/></a></p>
+			</div> <!-- /aside -->
+<!--#include virtual="/include/footer_primary.inc.xhtml" -->
+<!--#include virtual="/include/header_secondary.inc.xhtml" -->
+      <div id="details">
+        <h2>Files</h2>
+        <h3>These files can be used with XCSoar</h3>
+        <ul class="files">
+          <li>Map File<br/><span class="detail">A map file (.xcm) is a file, that can contain terrain, topology, waypoint and airspace files itself. These files can be created with our <a href="/download/terrain">Terrain Generator</a>.</span></li>
+          <li>Airspace File<br/><span class="detail">An airspace file (.txt) is a file, that contains special use airspace information and coordinates in the OpenAir file format.</span></li>
+          <li>Waypoint File<br/><span class="detail">A waypoint file (.xcw / .dat) is a file, that contains waypoints, airports and outlanding fields in the WinPilot/Cambridge waypoint format.<br/><i>(Support for SeeYou and Zander files is included in v6.0)</i></span></li>
+          <li>Airfields File<br/><span class="detail">An airfields file (.txt) is a file, that contains detailed information about the loaded waypoints, that is available on a seperate page of the Waypoint Details dialog.</span></li>
+          <li>Terrain File<br/><span class="detail">A terrain file (.dat) is a file, that contains all the height information for the chosen area.<br/><i>(Outdated! Please use map files instead)</i></span></li>
+          <li>Topology Files<br/><span class="detail">Topology files are files, that contain names and coordinates of cities, roads, railroads, rivers and lakes.<br/><i>(Outdated! Please use map files instead)</i></span></li>
+          <li class="no-bullet"><a href="/trac/wiki/Filetypes">more details...</a></li>
+        </ul>
+      </div> <!-- /details -->
+<!--#include virtual="/include/footer_secondary.inc.xhtml" -->
+<!--#include virtual="/include/footer_html.inc.xhtml" -->

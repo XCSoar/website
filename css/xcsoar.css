@@ -1,0 +1,172 @@
+/******************************************************************************
+ MASTER STYLES FOR SCREEN MEDIA
+ ******************************************************************************/
+
+/* GLOBALS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, ins, strike, strong, sub, sup, dt, dd, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {	margin: 0; padding: 0; border: 0; }
+ul, ol, li, dl { border: 0; }
+
+a:active { outline: 0; }
+abbr, acronym { font-size: .9em; cursor: help; }
+body { line-height: 1; font-size: small; }
+blockquote, q {	quotes: none; }
+ins { text-decoration: none; }
+del {	text-decoration: line-through; }
+table {	border-collapse: collapse; border-spacing: 0; }
+.hidden { display: none; }
+
+/* HTML */
+html { min-width: 960px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; }
+
+/* BODY */
+body { padding-top: 20px; background: url(../img/shadow-top.png) 0 10px repeat-x; }
+
+/* LAYOUT */
+#header, #content, #feature, #footer { width: 940px; margin: 0 auto; }
+
+/* TRAC OVERWRITE */
+h1, h2, h3, h4 { letter-spacing: 0; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; }
+#secondary #footer { line-height: 14px; }
+
+/******************************************************************************
+ PRIMARY SECTION 
+ ******************************************************************************/
+#primary { float: left; width: 100%; background: #fff; }
+
+/* HEADER */
+#header { position: relative; padding-top: 20px; }
+#header h1 { float: left; width: 100%; margin-top: 20px; border-top: 1px dotted #9f9c99; border-bottom: 1px dotted #9f9c99; padding: 20px 0; font-family: Georgia, serif; text-align: left; font-size: 38px; font-weight: normal; color: #000; }
+#header h1.tagline { text-align: center; font-size: 27.3px; }
+
+/* TITLE */
+#title { font-family: Verdana, sans-serif; text-align: left; font-size: 38px; font-weight: bold; color: #000; }
+#title img { vertical-align: -22px; padding-right: 20px; margin: 0px; }
+#title a { color: #222; }
+#header a { text-decoration: none; }
+
+/* NAV */
+ul#nav { position: absolute; top: 40px; right: 0; width: 450px; list-style: none; font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; margin: 0; }
+ul#nav li { float: right; height: 14px; padding-left: 47px; font-size: 16px; }
+ul#nav li a { float: left; overflow: hidden; height: 14px; padding: 0px 5px 4px 5px; text-decoration: none; text-transform: uppercase; color: #878380; }
+ul#nav li.discover a:hover { border-bottom: 2px solid #1A4977; color: #1A4977; }
+ul#nav li.download a:hover { border-bottom: 2px solid #1B8D29; color: #1B8D29; }
+ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
+
+/* SUMMARY & FORM */
+#summary, #form { float: left; width: 620px; padding: 40px 0 20px; }
+
+/* SUMMARY */
+#summary h2 { display: none; }
+#summary h3 { margin-bottom: 20px; padding-right: 20px; font-family: Georgia, serif; font-size: 18px; line-height: 24px; font-weight: normal; }
+#summary h3 a { text-decoration: none; }
+#summary h3 a:hover { text-decoration: underline; }
+#summary h4 { margin: 30px 0 10px 0; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
+#summary h4.first-child { margin-top: 0; }
+#summary div, #summary p { margin-bottom: 20px; padding-right: 20px; font-family: Georgia, serif; font-size: 15px; line-height: 28px; }
+#summary div img, #summary p img { float: left; margin: 0 30px 30px 0; }
+#summary ul { margin-bottom: 20px; padding-left: 20px; }
+#summary ul li { margin-bottom: 10px; font-family: Georgia, serif; font-size: 18px; }
+#summary a.more { font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; }
+
+/* FORM */
+#form h2 { display: none; }
+#form p { margin-bottom: 30px; padding-right: 20px; font-family: Georgia, serif; }
+#form label { float: left; padding-bottom: 12px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; }
+#form input.text, #form textarea { width: 580px; padding: 10px; border: 1px solid #9f9c99; border-radius: 8px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;  font-size: 20px; }
+#form input.text:focus, #form textarea:focus { border: 1px solid #555; }
+#form input.button { padding: 5px 10px; font-size: 18px; text-transform: uppercase; border: 0; border-radius: 8px; cursor: pointer; }
+#form input.button:hover, #form input.button:focus { cursor: pointer; }
+
+/* DOWNLOAD */
+#download { float: right; width: 300px; padding: 40px 0px; }
+#download h2 { display: none; }
+#download a { padding-left: 40px; }
+
+/* ASIDE */
+#aside { float: right; width: 300px; padding: 40px 0; }
+#aside h2 { margin-bottom: 10px; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
+#aside p { margin-bottom: 10px; font-size: 14px; line-height: 21px; font-family: Georgia, serif; color: #878380;}
+
+/* PORTFOLIO */
+#portfolio { position: relative; float: left; width: 100%; }
+#portfolio p.next a { position: absolute; z-index: 1000; top: 380px; left: 640px; float: left; border-radius: 100px; padding: 8px 12px 6px 12px; font-size: 10px; line-height: 10px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #fff; }
+#portfolio ul { list-style: none; }
+#portfolio li { float: left; width: 100%; border-bottom: 1px dotted #9f9c99; padding: 40px 0; }
+#portfolio li.last-child { border-bottom: 0; }
+#portfolio div.summary { position: relative; right: 12px; float: left; }
+#portfolio div.summary p { float: left; width: 624px; height: 424px; background: url(../img/backdrop.gif) 0 0 no-repeat; }
+#portfolio div.summary img { float: left; padding: 17px 22px 27px 22px; }
+#portfolio div.details { float: left; width: 276px; padding: 20px 0 0 16px; }
+#portfolio div.details dt { padding: 20px 0 2px 0; font-size: 11px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; color: #878380; }
+#portfolio div.details dd { font-size: 18px; line-height: 21px; font-family: Georgia, serif; }
+#portfolio div.details dd strong { font-size: 22px; font-weight: normal; }
+#portfolio div.details p { margin-top: 20px; }
+#portfolio div.details a { text-decoration: none; }
+#portfolio div.details a:hover { text-decoration: underline; }
+
+/* WEBCHAT */
+#webchat { margin: 120px 0px 20px; height: 500px; border: 1px dotted #9f9c99; }
+
+/* IFRAME */
+#iframe{ margin: 120px 0px 20px; }
+
+/******************************************************************************
+ SECONDARY SECTION 
+ ******************************************************************************/
+#secondary { float: left; width: 100%; border-top: 1px solid #dcdad4; background: #f4f4ed; }
+
+/* SCREENSHOTS */
+#screenshots { float: left; width: 100%; padding: 27px 0 20px; }
+#screenshots h2 { font-family: Georgia, serif; font-size: 24px; line-height: 30px; font-weight: normal; }
+#screenshots h3 { margin-bottom: 20px; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; color: #878380; }
+#screenshots ul { position: relative; float: left; right: 10px; width: 960px; list-style: none; }
+#screenshots ul li { float: left; width: 296px; padding: 5px 10px; margin: 0 5px 20px 0; background: url(../img/thumbnail-backdrop.png) 0 0 no-repeat; }
+#screenshots ul li.last-child { margin-right: 0; }
+#screenshots ul li a { float: left; padding: 9px; border: 1px solid #fff; margin-bottom: 10px; background: #fff; }
+#screenshots ul li a:hover { border-color: #dcdad4; }
+#screenshots ul li img { float: left; width: 276px; height: 180px; }
+#screenshots ul li p { padding-left: 10px; font-size: 11px; line-height: 13px; color: #6a635f; }
+#screenshots ul li p strong { font-size: 12px; color: #453c37; }
+
+/* DETAILS */
+#details { float: left; width: 100%; padding: 27px 0 20px; }
+#details h2 { margin-bottom: 10px; font-family: Georgia, serif; font-size: 24px; line-height: 30px; font-weight: normal; }
+#details h3 { margin-bottom: 20px; border-bottom: 1px solid #e9e9e2; padding-bottom: 10px; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; color: #453c37; }
+#details ul { list-style: none; }
+#details ul li { float: left; width: 320px; margin-bottom: 20px; padding-left: 12px; padding-right: 20px; }
+#details ul li.last-child { padding-right: 0; }
+#details ul li ul li { clear: left; padding-left: 12px; font-family: Georgia, serif; font-size: 14px; line-height: 16px; }
+#details .email { font-size: 11px; }
+#details .detail { font-size: 11px; }
+#details ul.files li { height: 65px; }
+#details ul li.no-bullet { background: none; height: auto; }
+
+/******************************************************************************
+ TERTIARY SECTION 
+ ******************************************************************************/
+#tertiary { float: left; width: 100%; padding-top: 40px; background: url(../img/shadow-bottom.png) 0 0 repeat-x; }
+
+/* FOOTER */
+#footer { border: 0px; }
+#tertiary #footer { color: #fff; font-size: 13px; }
+#tertiary #footer a { text-decoration: none; color: #fff; border: none; }
+#tertiary #footer a:hover { border-bottom: 1px dotted; color: #d2e0ec; background: transparent; }
+
+/* STATUS */
+#status { position: relative; float: left; width: 470px; min-height: 120px; padding-left: 80px; background: url(../img/twitter-bird.png) 0 43px no-repeat; }
+#status h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
+#status span { line-height: 20px; }
+#status span.more { line-height: 40px; }
+#status img { height: 12px; }
+
+/* CONTACT */
+#contact { float: right; width: 350px; padding-bottom: 20px; }
+#contact h2 { display: none; }
+#contact h3 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
+#contact span.irc { padding-left: 30px; font-family: Georgia, serif; font-size: 14px; line-height: 30px; background: url(../img/icon-irc.png) 0 50% no-repeat; }
+#contact span.email { padding-left: 30px; font-family: Georgia, serif; font-size: 14px; line-height: 30px; background: url(../img/icon-email.png) 0 50% no-repeat; }
+#contact span.web { padding-left: 30px; font-family: Georgia, serif; font-size: 14px; line-height: 30px; background: url(../img/icon-web.png) 0 60% no-repeat; }
+
+/* COPYRIGHT */
+#copyright { float: left; padding: 40px 0 40px 80px; }
+#copyright p { font-size: 11px; }

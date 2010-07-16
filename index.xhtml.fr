@@ -1,0 +1,32 @@
+<!--#set var="title" value="the tactical glide computer" --><!--#set var="extra" value='<p>
+                FRENCH <strong>XCSoar</strong> is a tactical glide computer.
+                <a href="/about/">Read more...</a>
+        </p>
+' --><!--#include virtual="/_inc/top.xhtml" -->
+
+<div id="col1">
+	<h2>FRENCH Where to start</h2>
+<p>
+	    <a href="/get/" class="special">Get</a> the program and data.
+	    <a href="/use/" class="special">Use</a> manuals, videos, help.
+</p>
+
+	<br />
+	<ul>
+		<li><strong>News...</strong> OLC validation now supported.</li>
+	</ul>
+</div>
+
+<div id="col2">
+	<h2>FRENCH Community</h2>
+	<ul>
+	    <li><a href="/community/">Community</a></li>
+	    <li><a href="/trac/wiki/">The wiki</a></li>
+	    <li><a href="/maillist/">Mail lists</a></li>
+	    <li><a href="/trac/report/">Ideas, Jobs and Bugs</a></li>
+	    <li><a href="/trac/roadmap/">The roadmap</a></li>
+	</ul>
+</div>
+
+
+<!--#include virtual="/_inc/bottom.xhtml" -->
