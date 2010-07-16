@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      py:strip="">
+
+  <!--! Add site-specific style sheet -->
+  <head py:match="head" py:attrs="select('@*')">
+    ${select('*|comment()|text()')}
+    <link rel="icon" href="/favicon.ico" type="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/style/style.css" />
+  </head>
+
+  <body py:match="body" py:attrs="select('@*')">
+<div id="navigation">
+	<ul>
+		<li id="nav-home"><a href="/">Home</a></li>
+		<li id="nav-docs"><a href="/get/">Get</a></li>
+		<li id="nav-whatever"><a href="/use/">Use</a></li>
+		<li id="nav-fun"><a href="/community/">Community</a></li>
+		<li id="nav-whatever"><a href="/about/">About</a></li>
+	</ul>
+</div>
+
+    ${select('*|text()')}
+
+    <div id="sitefooter">
+	<p>XCSoar is Free Software released under the GNU/GPL License. Copyright 2009.</p>
+    </div>
+
+  </body>
+</html>
