@@ -1,32 +1,48 @@
-<!--#set var="title" value="the tactical glide computer" --><!--#set var="extra" value='<p>
-                <strong>XCSoar</strong> is a tactical glide computer.
-                <a href="/about/">Read more...</a>
-        </p>
-' --><!--#include virtual="/_inc/top.xhtml" -->
-
-<div id="col1">
-	<h2>Where to start</h2>
-  <p>
-    <a href="/get/" class="special">Get</a> the program and data.
-    <a href="/use/" class="special">Use</a> manuals, videos, help.
-  </p>
-
-	<br />
-	<ul>
-		<li><strong>News...</strong> OLC validation now supported.</li>
-	</ul>
-</div>
-
-<div id="col2">
-	<h2>Community</h2>
-	<ul>
-	    <li><a href="/community/">Community</a></li>
-	    <li><a href="/trac/wiki/">The wiki</a></li>
-	    <li><a href="/maillist/">Mail lists</a></li>
-	    <li><a href="/trac/report/">Ideas, Jobs and Bugs</a></li>
-	    <li><a href="/trac/roadmap/">The roadmap</a></li>
-	</ul>
-</div>
-
-
-<!--#include virtual="/_inc/bottom.xhtml" -->
+﻿<!--#set var="menu" value="" -->
+<!--#set var="title" value="... the open-source glide computer" -->
+<!--#set var="color" value="blue" -->
+<!--#set var="tagline" value="true" -->
+<!--#include virtual="/include/header_html.inc.xhtml" -->
+	<script type="text/javascript">
+	$(function() {
+			$('#screenshots a.screenshot').lightBox();
+	});
+	</script>
+<!--#include virtual="/include/header_primary.inc.xhtml" -->
+			<div id="summary">
+				<h2>Introduction</h2>
+				<h3>XCSoar is a tactical glide computer for the Pocket PC platform. In 2005, the originally commercial software was given to the open-source community for further development and has constantly been improved since.<br/><a href="discover.html" title="Learn more about XCSoar">Learn more</a>.</h3>
+			</div> <!-- /summary -->
+			
+			<div id="download">
+			  <h2>Download</h2>
+			  <a href="/download" title="Download XCSoar v5.2.4"><img src="/img/download-button.png" alt="Download XCSoar v5.2.4"></a>
+			</div> <!-- /download -->
+<!--#include virtual="/include/footer_primary.inc.xhtml" -->
+<!--#include virtual="/include/header_secondary.inc.xhtml" -->
+			<div id="screenshots">
+				<h2>Screenshots</h2>
+				<h3>This is how XCSoar looks like</h3>
+				<ul>
+					<li>
+						<a href="/content/screenshots/map.png" title="The Map" class="screenshot"><img src="/content/screenshots/thumb-map.png" alt="The Map"/></a>
+						<p><strong>The Map</strong><br/>
+							This is the moving map. The thing you will see most when flying.</p>
+					</li>
+					<li>
+						<a href="/content/screenshots/map_terrain1.png" title="Terrain Display" class="screenshot"><img src="/content/screenshots/thumb-map_terrain1.png" alt="Terrain Display"/></a>
+						<p><strong>Terrain Display</strong><br/>
+							Terrain and Topology data from all over the world can be displayed on the moving map.</p>
+					</li>
+					<li class="last-child">
+						<a href="/content/screenshots/map_flarm_traffic.png" title="FLARM Integration" class="screenshot"><img src="/content/screenshots/thumb-map_flarm_traffic.png" alt="FLARM Integration"/></a>
+						<p><strong>FLARM Integration</strong><br/>
+							All received FLARM traffic is display on the map and on the small radar screen. (including climb speed)</p>
+					</li>
+				</ul>
+				<p>
+				  <a href="/discover/screenshots">More...</a>
+				</p>
+			</div> <!-- /screenshots -->
+<!--#include virtual="/include/footer_secondary.inc.xhtml" -->
+<!--#include virtual="/include/footer_html.inc.xhtml" -->
