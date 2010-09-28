@@ -5,7 +5,13 @@
 <!--#include virtual="/include/header_html.inc.xhtml" -->
 	<script type="text/javascript">
 	$(function() {
-			$('#screenshots a.screenshot').lightBox();
+		$('#screenshots a.screenshot').lightBox({
+			imageLoading: '/img/lightbox-ico-loading.gif',
+			imageBtnClose: '/img/lightbox-btn-close.gif',
+			imageBtnPrev: '/img/lightbox-btn-prev.gif',
+			imageBtnNext: '/img/lightbox-btn-next.gif',
+			imageBlank: '/img/lightbox-blank.gif'
+		});
 	});
 	</script>
 <!--#include virtual="/include/header_primary.inc.xhtml" -->
