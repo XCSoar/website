@@ -14,10 +14,11 @@
 		});
 	});
 	</script>
+	<style>
+	#screenshots { margin: 10px; padding: 10px; border: 1px solid #dcdad4; background: #f4f4ed; width: auto; }
+	#screenshots ul { width: 640px; float: none; position: static; }
+	</style>
 <!--#include virtual="/include/header_primary.inc.xhtml" -->
-<br/>&nbsp;
-<!--#include virtual="/include/footer_primary.inc.xhtml" -->
-<!--#include virtual="/include/header_secondary.inc.xhtml" -->
 			<div id="screenshots">
 				<ul>
 					<li>
@@ -25,17 +26,17 @@
 						<p><strong>The Map</strong><br/>
 							This is the moving map. The thing you will see most when flying.</p>
 					</li>
-					<li>
+					<li class="last-child">
 						<a href="/content/screenshots/map_terrain1.png" title="Terrain Display" class="screenshot"><img src="/content/screenshots/thumb-map_terrain1.png" alt="Terrain Display"/></a>
 						<p><strong>Terrain Display</strong><br/>
 							Terrain and Topology data from all over the world can be displayed on the moving map.</p>
 					</li>
-					<li class="last-child">
+					<li>
 						<a href="/content/screenshots/map_flarm_traffic.png" title="FLARM Integration" class="screenshot"><img src="/content/screenshots/thumb-map_flarm_traffic.png" alt="FLARM Integration"/></a>
 						<p><strong>FLARM Integration</strong><br/>
 							All received FLARM traffic is display on the map and on the small radar screen. (including climb speed)</p>
 					</li>
-					<li>
+					<li class="last-child">
 						<a href="/content/screenshots/flarm_radar1.png" title="FLARM Integration" class="screenshot"><img src="/content/screenshots/thumb-flarm_radar1.png" alt="FLARM Integration"/></a>
 						<p><strong>FLARM Radar</strong><br/>
 							A Butterfly-like Radar can be opened including climb values and touch-to-select functionality</p>
@@ -55,7 +56,7 @@
 						<p><strong>Analysis: OLC</strong><br/>
 							Do your postflight analysis straight on the pda. 	
 					</li>
-					<li>
+					<li class="last-child">
 						<a href="/content/screenshots/analysis_task.png" title="Analysis: Task" class=screenshot><img src="/content/screenshots/thumb-analysis_task.png" alt="Analysis: Task"/></a>
 						<p><strong>Analysis: Task</strong><br/>
 						Know where you are, and what is still left to do. 	
@@ -64,5 +65,6 @@
 				<p>
 				</p>
 			</div> <!-- /screenshots -->
-<!--#include virtual="/include/footer_secondary.inc.xhtml" -->
+<!--#include virtual="/discover/menu.inc.xhtml" -->
+<!--#include virtual="/include/footer_primary.inc.xhtml" -->
 <!--#include virtual="/include/footer_html.inc.xhtml" -->
