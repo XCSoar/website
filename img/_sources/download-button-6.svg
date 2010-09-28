@@ -16,9 +16,9 @@
    version="1.1"
    inkscape:version="0.47 r22583"
    sodipodi:docname="download-button.svg"
-   inkscape:export-filename="C:\Users\Turbo\Programmierung\XCSoar\Web\img\download-button.png"
-   inkscape:export-xdpi="28.910917"
-   inkscape:export-ydpi="28.910917">
+   inkscape:export-filename="C:\Dokumente und Einstellungen\tobias.bieniek\Desktop\tmp\xcsoar\img\download-button.png"
+   inkscape:export-xdpi="143.84749"
+   inkscape:export-ydpi="143.84749">
   <defs
      id="defs4">
     <linearGradient
@@ -156,10 +156,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.76"
-     inkscape:cx="-263.27066"
+     inkscape:cx="-288.73158"
      inkscape:cy="741.13259"
      inkscape:document-units="px"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer9"
      showgrid="false"
      inkscape:showpageshadow="false"
      showborder="false"
@@ -214,9 +214,10 @@
   <g
      inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="Button-Highlight">
+     inkscape:label="Button-Highlight"
+     sodipodi:insensitive="true">
     <path
-       style="fill:#416746;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       style="fill:#1b8d29;fill-opacity:1;fill-rule:evenodd;stroke:none"
        d="m 114.59375,155 0,156.09375 119.40625,0 c 22.16,0 40,-17.84 40,-40 L 274,195 c 0,-22.16 -17.84,-40 -40,-40 l -119.40625,0 z"
        id="rect2816-4" />
   </g>
@@ -255,18 +256,16 @@
   <g
      inkscape:groupmode="layer"
      id="layer9"
-     inkscape:label="Button-Subtext"
-     sodipodi:insensitive="true">
+     inkscape:label="Button-Subtext">
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#919191;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#919191;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;text-anchor:start;text-align:start;writing-mode:lr;line-height:125%"
        x="-261.95624"
        y="282.91833"
-       id="text3832"><tspan
+       id="text3832"
+       sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan3834"
-         x="-261.95624"
-         y="282.91833">Version 5.2.4</tspan></text>
+         id="tspan2852">Version 6.0</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
