@@ -78,9 +78,8 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #form input.button:hover, #form input.button:focus { cursor: pointer; }
 
 /* DOWNLOAD */
-#download { float: right; width: 300px; padding: 40px 0px; }
-#download h2 { display: none; }
-#download a { padding-left: 40px; }
+#download h3 { font-weight: bold; }
+#download ul li { margin-bottom: 10px; font-size: 14px; }
 
 /* ASIDE */
 #aside { float: right; width: 300px; padding: 40px 0; }

@@ -1,41 +1,37 @@
 ﻿<!--#set var="menu" value="download" -->
 <!--#set var="title" value="Download" -->
-<!--#set var="color" value="green" -->
+<!--#set var="color" value="green" --><!--#set var="tagline" value="green" -->
 <!--#include virtual="/include/header_html.inc.xhtml" -->
- 	<script type="text/javascript">
-	$(document).ready(function() {
-    $('a#platform-pc').click(function(e){
-      e.preventDefault();
-      //do ajax form
-      $("div#platforms").fadeOut(function(){
-        $("div#pc").fadeIn();
-      });
-    }); 
-	});
-	</script>
 <!--#include virtual="/include/header_primary.inc.xhtml" -->
 			<div id="summary">
-				<h2>Platforms</h2>
-        <div id="platforms">
-          <h3>XCSoar is currently available for the following platforms:</h3>
-          <a id="platform-pda" href="http://sourceforge.net/projects/xcsoar/files/Binaries/XCSoar%205.2.4%20%28Stable%29/XCSoarPPC2003.ARMV4.5.2.4.cab/download"><img src="/img/button-pda.png"/></a>
-          <a id="platform-pna" href="http://sourceforge.net/projects/xcsoar/files/Binaries/XCSoar%205.2.2%20%28Stable%29/XCSoarPNA-522.zip/download"><img src="/img/button-pna.png"/></a>
-          <a id="platform-pc" href="#"><img src="/img/button-pc.png"/></a>
-          <a id="platform-altair" href="http://sourceforge.net/projects/xcsoar/files/Binaries/XCSoar%205.2.2%20%28Stable%29/XCSoarAltair-5.2.2.zip/download"><img src="/img/button-altair.png"/></a>
-        </div>
-        <div id="pc" style="display: none;">
-          <h3>The XCSoar PC Version is currently available for the following operating systems:</h3>
-          <a href="http://sourceforge.net/projects/xcsoar/files/Binaries/XCSoar%205.2.4%20%28Stable%29/XCSoarPC-5.2.4.zip/download"><img src="/img/button-windows.png"/></a>
-          <a href="#"><img src="/img/button-unix.png"/></a>
-        </div>
+				<div id="download">
+					<h3>XCSoar 6.0 on Windows:</h3>
+					<p>The Windows version of XCSoar can be used to get to know the application or to replay flights with our IGC replay feature.</p>
+					<ul>
+					<li><a href="http://max.kellermann.name/download/xcsoar/nightly/stable/PC/">XCSoar 6.0 on Windows (stable)</a></li>
+					</ul>
+					<h3>XCSoar 6.0 on Windows Mobile:</h3>
+					<p>The Windows Mobile version should be used on all PDAs and PNAs. Depending on how old your PDA/PNA is and what operating system is used to run it you need to choose between Pocket PC 2000, Pocket PC 2003 and Windows Mobile 5.</p>
+					<ul>
+					<li><a href="http://max.kellermann.name/download/xcsoar/nightly/stable/WM5/">XCSoar 6.0 on Windows Mobile 5 (stable)</a></li>
+					<li><a href="http://max.kellermann.name/download/xcsoar/nightly/stable/PPC2003/">XCSoar 6.0 on Pocket PC 2003 (stable)</a></li>
+					<li><a href="http://max.kellermann.name/download/xcsoar/nightly/stable/PPC2000/">XCSoar 6.0 on Pocket PC 2000 (stable)</a></li>
+					</ul>
+					<h3>XCSoar 6.0 on Altair:</h3>
+					<p>We are currently not working on XCSoar 6.0 for the Altair platform. If you would like to use XCSoar 6.0 on this platform please contact the <a href="http://www.triadis.ch/index.php?altair">manufacturer</a>.</p>
+					<h3>XCSoar on Unix:</h3>
+					<p>The Unix version of XCSoar 6.0 is almost ready. We will release a first test version within the next weeks.</p>
+					<h3>XCSoar on Android:</h3>
+					<p>We are working on porting XCSoar to the Android platform, but since such a port needs time, please be patient.</p>
+				</div>
 			</div> <!-- /summary -->
 
 			<div id="aside">
 				<h2>Attention</h2>
 				<p>This is just the download of the application itself. In order to use the full potential of XCSoar, you will need <span class="highlight">Maps</span> for the region you are going to fly in.</p>
-        <p>Since our Download Wizard is not completed yet, you will have to choose and download the maps by hand. You may use our <a href="/download/terrain"><span class="highlight">Terrain Generator</span></a> to create maps of your area.</p>
-        <p>An explanation of the files, XCSoar is able to load, is given at the bottom of this page. All the details can also be found in our <a href="/trac/wiki/Filetypes"><span class="highlight">wiki</span></a>.</p>
-        <p><a href="/download/terrain"><img src="/img/terraingen-button.png"/></a></p>
+				<p>Since our Download Wizard is not completed yet, you will have to choose and download the maps by hand. You may use our <a href="/download/terrain"><span class="highlight">Terrain Generator</span></a> to create maps of your area.</p>
+				<p>An explanation of the files, XCSoar is able to load, is given at the bottom of this page. All the details can also be found in our <a href="/trac/wiki/Filetypes"><span class="highlight">wiki</span></a>.</p>
+				<p><a href="/download/terrain"><img src="/img/terraingen-button.png"/></a></p>
 			</div> <!-- /aside -->
 <!--#include virtual="/include/footer_primary.inc.xhtml" -->
 <!--#include virtual="/include/header_secondary.inc.xhtml" -->
