@@ -83,9 +83,11 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #download ul li { margin-bottom: 10px; font-size: 14px; }
 
 /* ASIDE */
-#aside { float: right; width: 300px; padding: 40px 0; }
+#aside { float: right; width: 250px; padding: 40px 0; }
 #aside h2 { margin-bottom: 10px; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
 #aside p { margin-bottom: 10px; font-size: 14px; line-height: 21px; font-family: Georgia, serif; color: #878380;}
+#aside ul { padding-left: 20px; }
+#aside ul li { padding: 5px; }
 
 /* PORTFOLIO */
 #portfolio { position: relative; float: left; width: 100%; }
