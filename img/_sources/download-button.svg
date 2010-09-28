@@ -26,11 +26,11 @@
       <stop
          id="stop3738"
          offset="0"
-         style="stop-color:#000000;stop-opacity:0.38064516;" />
+         style="stop-color:#000000;stop-opacity:0.3137255;" />
       <stop
          id="stop3740"
          offset="1"
-         style="stop-color:#ffffff;stop-opacity:0;" />
+         style="stop-color:#000000;stop-opacity:0;" />
     </linearGradient>
     <linearGradient
        id="linearGradient3668">
@@ -120,7 +120,7 @@
        x2="267.03125"
        y2="233.04688"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.676716,0,0,1,-25.211546,0)" />
+       gradientTransform="matrix(0.4963806,0,0,1,12.044621,0)" />
     <inkscape:perspective
        id="perspective3757"
        inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
@@ -156,10 +156,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.76"
-     inkscape:cx="-263.27066"
+     inkscape:cx="-235.1559"
      inkscape:cy="741.13259"
      inkscape:document-units="px"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer5"
      showgrid="false"
      inkscape:showpageshadow="false"
      showborder="false"
@@ -176,7 +176,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -214,7 +214,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="Button-Highlight">
+     inkscape:label="Button-Highlight"
+     sodipodi:insensitive="true">
     <path
        style="fill:#416746;fill-opacity:1;fill-rule:evenodd;stroke:none"
        d="m 114.59375,155 0,156.09375 119.40625,0 c 22.16,0 40,-17.84 40,-40 L 274,195 c 0,-22.16 -17.84,-40 -40,-40 l -119.40625,0 z"
@@ -223,11 +224,10 @@
   <g
      inkscape:groupmode="layer"
      id="layer5"
-     inkscape:label="Button-Highlight-Shadow"
-     sodipodi:insensitive="true">
+     inkscape:label="Button-Highlight-Shadow">
     <path
        style="fill:url(#linearGradient3734);fill-opacity:1;fill-rule:evenodd;stroke:none"
-       d="m 114.59375,155 0,156.09375 40.89902,0 0,-156.09375 -40.89902,0 z"
+       d="m 114.59375,155 0,156.09375 30,0 0,-156.09375 -30,0 z"
        id="rect2816-4-0" />
   </g>
   <g
