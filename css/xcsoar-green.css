@@ -23,7 +23,7 @@ ul#nav li.current a { border-bottom: 2px solid #1B8D29; color: #1B8D29; }
 
 /* FORM */
 #form input.button { color: #fff; background: #359A41; }
-#form input.button:hover, #form input.button:focus { background: #1A4977; }
+#form input.button:hover, #form input.button:focus { background: #1B8D29; }
 
 /* QUOTE */
 #quote p { color: #453c37; background: url(../img/quote-achor-green.gif) 30px 0 no-repeat; }
