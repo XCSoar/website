@@ -3,9 +3,27 @@
 <!--#set var="color" value="green" -->
 <!--#set var="tagline" value="false" -->
 <!--#include virtual="/include/header_html.inc.xhtml" -->
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#connection_wait').hide();
+		$('#connection_error').show();
+	});
+	</script>
 <!--#include virtual="/include/header_primary.inc.xhtml" -->
-		  <div id="iframe" style="height: 720px;">
-			  <iframe src="http://xcsoar.dd.com.au/cgi-bin/terrain.pl" width="100%" height="100%"></iframe>		
-			</div>
+			<div id="summary" style="min-height:300px; font-style: italic; width: 100%;">
+				<div id="connection_wait" style="text-align: center; margin-top: 70px;">
+					<h3 style="padding: 0px;">Establishing connection</h3>
+					<img src="/img/lightbox-ico-loading.gif" style="float: none; margin: 0px;"><br/>
+					Please wait ...
+				</div>
+				<div id="connection_error" style="text-align: center; margin-top: 70px; display: none;">
+					<h3 style="padding: 0px;">Connection problems</h3>
+					It seems that our map server is <span class="highlight">currently not available</span>!<br/>
+					Please try again later, use the <a href="/download/mapgen/old/">old map generator</a> or contact us via <a href="/discover/irc/">IRC</a> or <a href="/discover/mailinglist/">mail</a>.<br/>
+					<br/>
+					<a href="javascript:history.back()">&lt; Back</a>
+				</div>
+			</div> <!-- /summary -->
+
 <!--#include virtual="/include/footer_secondary.inc.xhtml" -->
 <!--#include virtual="/include/footer_html.inc.xhtml" -->
