@@ -155,7 +155,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #tertiary #footer a:hover { border-bottom: 1px dotted; color: #d2e0ec; background: transparent; }
 
 /* STATUS */
-#status { position: relative; float: left; width: 470px; min-height: 120px; padding-left: 80px; background: url(../img/twitter-bird.png) 0 43px no-repeat; }
+#status { position: relative; float: left; width: 470px; min-height: 120px; padding-left: 80px; }
 #status h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
 #status span { line-height: 20px; }
 #status span.more { line-height: 40px; }
