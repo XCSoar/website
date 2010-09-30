@@ -75,6 +75,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #form input.text, #form textarea { width: 580px; padding: 10px; border: 1px solid #9f9c99; border-radius: 8px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;  font-size: 20px; }
 #form input.text:focus, #form textarea:focus { border: 1px solid #555; }
 #form input.button { padding: 5px 10px; font-size: 18px; text-transform: uppercase; border: 0; border-radius: 8px; cursor: pointer; }
+#form input.button_inactive { color: #fff; background: #777777; padding: 5px 10px; font-size: 18px; text-transform: uppercase; border: 0; border-radius: 8px; cursor: pointer; }
 #form input.button:hover, #form input.button:focus { cursor: pointer; }
 
 /* DOWNLOAD */
