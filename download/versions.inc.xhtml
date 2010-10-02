@@ -1,16 +1,28 @@
 					<h3>XCSoar Releases:</h3>
-					<p>While development of XCSoar 6.0 continues, work-in-progress versions are frequently released for testing:</p>
-					<ul>
-						<li>
-							<!--#if expr="$version = stable"--><b><a>XCSoar 6.0 (stable alpha)</a></b><!--#else--><a href="/download/">XCSoar 6.0 (stable alpha)</a><!--#endif--><br/>
-							The latest version to be judged stable by the developers.
-						</li>
-						<li>
-							<!--#if expr="$version = latest"--><b><a>XCSoar 6.0 (latest)</a></b><!--#else--><a href="/download/latest/">XCSoar 6.0 (latest)</a><!--#endif--><br/>
-							The latest 'bleeding edge' developer version - potentially unstable, recommended for testing only.
-						</li>
-						<li>
-							<!--#if expr="$version = 5"--><b><a>XCSoar 5.2.4</a></b><!--#else--><a href="/download/5.2.4/">XCSoar 5.2.4</a><!--#endif--><br/>
-							The "old" version which is no longer fully supported.
-						</li>
-					</ul>
+					<span id="releases_less">
+						<p>
+							Current download page:
+							<span class="highlight">
+								<!--#if expr="$version = stable"-->XCSoar 6.0 (stable alpha)<!--#endif-->
+								<!--#if expr="$version = latest"-->XCSoar 6.0 (latest)<!--#endif-->
+								<!--#if expr="$version = 5"-->XCSoar 5.2.4<!--#endif-->
+							</span> - <a href="javascript:$('#releases_less').hide();$('#releases_more').show();">Change</a>
+						</p>
+					</span>
+					<span id="releases_more" style="display: none;">
+						<p>While development of XCSoar 6.0 continues, work-in-progress versions are frequently released for testing:</p>
+						<ul>
+							<li>
+								<!--#if expr="$version = stable"--><b><a>XCSoar 6.0 (stable alpha)</a></b><!--#else--><a href="/download/">XCSoar 6.0 (stable alpha)</a><!--#endif--><br/>
+								The latest version to be judged stable by the developers.
+							</li>
+							<li>
+								<!--#if expr="$version = latest"--><b><a>XCSoar 6.0 (latest)</a></b><!--#else--><a href="/download/latest/">XCSoar 6.0 (latest)</a><!--#endif--><br/>
+								The latest 'bleeding edge' developer version - potentially unstable, recommended for testing only.
+							</li>
+							<li>
+								<!--#if expr="$version = 5"--><b><a>XCSoar 5.2.4</a></b><!--#else--><a href="/download/5.2.4/">XCSoar 5.2.4</a><!--#endif--><br/>
+								The "old" version which is no longer fully supported.
+							</li>
+						</ul>
+					</span>
