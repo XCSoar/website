@@ -1,0 +1,57 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+  <head> 
+    <title>XCSoar Maps</title>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+    <script src="http://openlayers.org/api/OpenLayers.js"></script> 
+    <script src="maps.js"></script>
+	<script type="text/javascript"> 
+		var map, drawControls, selectControl, selectedFeature;
+		function getPopupContent(feature) {
+			return "<div style='font-size: 18pt;'>Map: " + feature.attributes.title + "</div><br/>"+
+			       "<a href='http://www.xcsoar.org/download/maps/" + feature.attributes.title + ".xcm'>"+
+				   "http://www.xcsoar.org/download/maps/" + feature.attributes.title + ".xcm</a>";
+		}
+        function onFeatureSelect(feature) {
+            selectedFeature = feature;
+            popup = new OpenLayers.Popup.FramedCloud("details", feature.geometry.getBounds().getCenterLonLat(),
+                                     null, getPopupContent(feature), null, false, null);
+            feature.popup = popup;
+            map.addPopup(popup);
+        }
+        function onFeatureUnselect(feature) {
+            map.removePopup(feature.popup);
+            feature.popup.destroy();
+            feature.popup = null;
+        }    
+        function init(){
+            map = new OpenLayers.Map('map');
+            var wmsLayer = new OpenLayers.Layer.WMS( "OpenLayers WMS", 
+                "http://vmap0.tiles.osgeo.org/wms/vmap0?", {layers: 'basic'}); 
+ 
+            var boxes = new OpenLayers.Layer.Vector("XCSoar Maps");
+ 			for (var i = 0; i < maps.length; i++) {
+				ext = maps[i];
+				bounds = new OpenLayers.Bounds(ext[1], ext[2], ext[3], ext[4]);
+				
+				box = new OpenLayers.Feature.Vector(bounds.toGeometry(), {title: ext[0]});
+				boxes.addFeatures(box);
+			}
+ 
+            map.addLayers([wmsLayer, boxes]);
+            
+            selectControl = new OpenLayers.Control.SelectFeature(boxes,
+                {onSelect: onFeatureSelect, onUnselect: onFeatureUnselect});
+            
+            map.addControl(selectControl);
+			selectControl.activate();
+ 
+			map.zoomToMaxExtent();
+			map.zoomIn();
+        }
+     </script> 
+  </head> 
+  <body onload="init()"> 
+    <div id="map" style="width: 100%; height: 100%;"></div> 
+  </body> 
+</html> 
