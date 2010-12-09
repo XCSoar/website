@@ -9,8 +9,8 @@
 		var map, drawControls, selectControl, selectedFeature;
 		function getPopupContent(feature) {
 			return "<div style='font-size: 1.7em;'>Map: " + feature.attributes.title + "</div><br/>"+
-			       "<a href='http://www.xcsoar.org/download/maps/" + feature.attributes.title + ".xcm'>"+
-				   "http://www.xcsoar.org/download/maps/" + feature.attributes.title + ".xcm</a><br/>"+
+			       "<a href='http://download.xcsoar.org/maps/" + feature.attributes.title + ".xcm'>"+
+				   "http://download.xcsoar.org/maps/" + feature.attributes.title + ".xcm</a><br/>"+
 				   "<i style='font-size: 0.7em;'>(based on the LKM maps created by Paolo Ventafridda)</i>";
 		}
         function onFeatureSelect(feature) {
