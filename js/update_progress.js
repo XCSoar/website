@@ -6,7 +6,7 @@
 			$(html).find("li.milestone").each(function(i) {
 				var found = false;
 				$(this).find(".info h2 em").each(function(i) {
-					if ($(this).text() == "XCSoar 6.0") found = true
+					if ($(this).text() == "XCSoar 6.1") found = true
 				});
 				if (found) {
 					$(this).find(".info .percent").each(function(i) {
