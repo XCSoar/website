@@ -15,6 +15,10 @@ del {	text-decoration: line-through; }
 table {	border-collapse: collapse; border-spacing: 0; }
 .hidden { display: none; }
 
+a.green { color: #359A41; }
+a.green:hover { color: #1B8D29; }
+a.green:active { color: #359A41; }
+
 /* HTML */
 html { min-width: 960px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; }
 
@@ -56,7 +60,8 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #summary, #form { float: left; width: 620px; padding: 40px 0 20px; }
 
 /* SUMMARY */
-#summary h2 { display: none; }
+#summary h2:first-child { display: none; }
+#summary h2 { margin-bottom: 20px; margin-top: 40px; }
 #summary h3 { margin-bottom: 20px; padding-right: 20px; font-family: Georgia, serif; font-size: 18px; line-height: 24px; font-weight: normal; }
 #summary h3 a { text-decoration: none; }
 #summary h3 a:hover { text-decoration: underline; }
