@@ -4,25 +4,25 @@
 							Current download page:
 							<span class="highlight">
 								<!--#if expr="$version = stable"-->XCSoar 6.0<!--#endif-->
-								<!--#if expr="$version = latest"-->XCSoar 6.0 (development)<!--#endif-->
+								<!--#if expr="$version = latest"-->XCSoar 6.x (development)<!--#endif-->
 								<!--#if expr="$version = 5"-->XCSoar 5.2.x<!--#endif-->
 							</span> - <a href="#" onclick="$('#releases_less').hide();$('#releases_more').show();return false;">Change</a>
 						</p>
 					</span>
 					<span id="releases_more" style="display: none;">
-						<p>While development of XCSoar continues, work-in-progress versions are frequently released for testing. These are the currently available versions:</p>
+						<p>These are the currently available versions:</p>
 						<ul>
 							<li>
 								<!--#if expr="$version = stable"--><b><a>XCSoar 6.0</a></b><!--#else--><a href="/download/">XCSoar 6.0</a><!--#endif--><br/>
-								The latest version to be judged stable by the developers.
+								The most current version of the XCSoar software.
 							</li>
 							<li>
-								<!--#if expr="$version = latest"--><b><a>XCSoar 6.0 (development)</a></b><!--#else--><a href="/download/latest/">XCSoar 6.0 (development)</a><!--#endif--><br/>
+								<!--#if expr="$version = latest"--><b><a>XCSoar 6.x (development)</a></b><!--#else--><a href="/download/latest/">XCSoar 6.x (development)</a><!--#endif--><br/>
 								The latest 'bleeding edge' developer version.<br/>(potentially unstable, recommended for testing only)
 							</li>
 							<li>
 								<!--#if expr="$version = 5"--><b><a>XCSoar 5.2.x</a></b><!--#else--><a href="/download/5.2.x/">XCSoar 5.2.x</a><!--#endif--><br/>
-								The "old" version which is no longer fully supported.
+								The last version before the 6.x series, which is no longer supported by the developers.
 							</li>
 						</ul>
 					</span>
