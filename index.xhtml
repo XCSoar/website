@@ -1,4 +1,5 @@
-﻿<!--#set var="menu" value="" -->
+﻿<!--#include virtual="/include/vars.inc.xhtml" -->
+<!--#set var="menu" value="" -->
 <!--#set var="title" value="... the open-source glide computer" -->
 <!--#set var="color" value="blue" -->
 <!--#set var="tagline" value="true" -->
@@ -25,7 +26,7 @@
 				<h3><i>After nearly 2 years of development, including major rewrites of the task engine and many other features, 
 				we have finally released the sixth version of the XCSoar glide computer software. If you want to have a quick look on 
 				what the major changes are take a look at our 
-				<a href="http://max.kellermann.name/download/xcsoar/releases/6.0/NEWS.txt" title="See what's new in XCSoar 6.0">News</a> 
+				<a href="http://max.kellermann.name/download/xcsoar/releases/<!--#echo var="version"-->/NEWS.txt" title="See what's new in XCSoar <!--#echo var="version"-->">News</a> 
 				file, otherwise proceed directly to the 
 				<a href="http://xcsoar.org/download/" title="Download XCSoar 6.0" class="green"><b>Download</b></a> page.<br/><br/>
 				
@@ -35,31 +36,31 @@
 			</div> <!-- /summary -->
 			
 			<div id="aside">
-			    <a href="/download/" title="Download XCSoar v6.0"><img src="/img/download-button-6.png" alt="Download XCSoar v6.0"></a>
+			    <a href="/download/" title="Download XCSoar v<!--#echo var="version"-->"><img src="/img/download-button-6.png" alt="Download XCSoar v<!--#echo var="version"-->"></a>
 				<div style="padding-top: 0px; padding-bottom: 15px; padding-left: 20px;">
-					<a href="http://max.kellermann.name/download/xcsoar/releases/6.0/PC/" title="Windows" style="text-decoration: none;" class="green">
+					<a href="http://max.kellermann.name/download/xcsoar/releases/<!--#echo var="version"-->/PC/" title="Windows" style="text-decoration: none;" class="green">
 						<img src="/img/windows-logo.png" alt="Windows" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Windows
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/6.0/WM5/" title="Windows Mobile 5" style="text-decoration: none;" class="green">
+					<a href="http://max.kellermann.name/download/xcsoar/releases/<!--#echo var="version"-->/WM5/" title="Windows Mobile 5" style="text-decoration: none;" class="green">
 						<img src="/img/windows-mobile-logo.png" alt="Windows Mobile 5" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Windows Mobile 5
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/6.0/PPC2003/" title="Windows Mobile 2003" style="text-decoration: none;" class="green">
+					<a href="http://max.kellermann.name/download/xcsoar/releases/<!--#echo var="version"-->/PPC2003/" title="Windows Mobile 2003" style="text-decoration: none;" class="green">
 						<img src="/img/windows-mobile-logo.png" alt="Windows Mobile 2003" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Windows Mobile 2003
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/6.0/PPC2000/" title="Pocket PC 2000" style="text-decoration: none;" class="green">
+					<a href="http://max.kellermann.name/download/xcsoar/releases/<!--#echo var="version"-->/PPC2000/" title="Pocket PC 2000" style="text-decoration: none;" class="green">
 						<img src="/img/windows-mobile-logo.png" alt="Pocket PC 2000" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Pocket PC 2000
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/6.0/ANDROID/" title="Android" style="text-decoration: none;" class="green">
+					<a href="http://max.kellermann.name/download/xcsoar/releases/<!--#echo var="version"-->/ANDROID/" title="Android" style="text-decoration: none;" class="green">
 						<img src="/img/android-logo.png" alt="Android" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Android
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/6.0/LINUX/" title="Linux" style="text-decoration: none;" class="green">
+					<a href="http://max.kellermann.name/download/xcsoar/releases/<!--#echo var="version"-->/LINUX/" title="Linux" style="text-decoration: none;" class="green">
 						<img src="/img/linux-logo.png" alt="Linux" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Linux
 					</a><br/>
 				</div>
 			    <a href="/discover/manual/" title="Download XCSoar Manual"><img src="/img/download-button-manual.png" alt="Download XCSoar Manual"></a>
 				<div style="padding-top: 0px; padding-bottom: 15px; padding-left: 20px;">
-					<a href="http://max.kellermann.name/download/xcsoar/releases/6.0/XCSoar-manual.pdf" title="Manual" style="text-decoration: none;">
-						<img src="/img/xcsoar-logo.png" alt="Manual" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Manual for XCSoar 6.0
+					<a href="http://max.kellermann.name/download/xcsoar/releases/<!--#echo var="version"-->/XCSoar-manual.pdf" title="Manual" style="text-decoration: none;">
+						<img src="/img/xcsoar-logo.png" alt="Manual" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Manual for XCSoar <!--#echo var="version"-->
 					</a><br/>
 				</div>
 			</div> <!-- /download -->
