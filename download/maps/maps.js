@@ -4,8 +4,7 @@ var map;
     function onFeatureSelect(feature) {
         var popupContent = "<span style='font-size: 1.7em;'>Map: " + feature.attributes.title + "</span><br/>"+
             "<a href='http://download.xcsoar.org/maps/" + feature.attributes.title + ".xcm'>"+
-            "http://download.xcsoar.org/maps/" + feature.attributes.title + ".xcm</a><br/>"+
-            "<i style='font-size: 0.7em;'>(based on the LKM maps created by Paolo Ventafridda)</i>";
+            "http://download.xcsoar.org/maps/" + feature.attributes.title + ".xcm</a>";
         popup = new OpenLayers.Popup.FramedCloud("selected-map", feature.geometry.getBounds().getCenterLonLat(),
                                                  null, popupContent, null, false, null);
         feature.popup = popup;
