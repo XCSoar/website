@@ -22,10 +22,10 @@ var map;
                                           "http://vmap0.tiles.osgeo.org/wms/vmap0?", {layers: 'basic'}));
 
     var boxes = new OpenLayers.Layer.Vector("XCSoar Maps");
-    for (var i = 0; i < MAPS.length; i++) {
-        var ext = MAPS[i];
-        var bounds = new OpenLayers.Bounds(ext[1], ext[2], ext[3], ext[4]);
-        boxes.addFeatures(new OpenLayers.Feature.Vector(bounds.toGeometry(), {title: ext[0]}));
+    for (var name in MAPS) {
+        var ext = MAPS[name];
+        var bounds = new OpenLayers.Bounds(ext[0], ext[1], ext[2], ext[3]);
+        boxes.addFeatures(new OpenLayers.Feature.Vector(bounds.toGeometry(), {title: name}));
     }
 
     map.addLayer(boxes);
