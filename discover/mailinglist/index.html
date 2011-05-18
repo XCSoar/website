@@ -1,9 +1,9 @@
-﻿<!--#set var="menu" value="discover" -->
-<!--#set var="title" value="Mailing lists" -->
-<!--#set var="color" value="blue" -->
-<!--#set var="tagline" value="false" -->
-<!--#include virtual="/include/header_html.inc.xhtml" -->
-<!--#include virtual="/include/header_primary.inc.xhtml" -->
+---
+layout: default
+color: blue
+title: Mailing lists
+menu: discover
+---
 			<div id="summary">
 				<i>
 				<h2>Mailing lists</h2>
@@ -13,7 +13,6 @@
 				<h3>Developer list</h3>
 				<p><a href="http://lists.sourceforge.net/lists/listinfo/xcsoar-devel">xcsoar-devel</a> (XCSoar Development) is the place for discussing how to improve XCSoar. As any discussion here will be of features not yet implemented in XCSoar, there is no reason (other than curiosity) for most end-users to subscribe.</p>
 				</i>
-			</div> <!-- /summary -->
-<!--#include virtual="/discover/menu.inc.xhtml" -->
-<!--#include virtual="/include/footer_primary.inc.xhtml" -->
-<!--#include virtual="/include/footer_html.inc.xhtml" -->
+			</div> 
+                        
+            {% include discover_menu.html %}

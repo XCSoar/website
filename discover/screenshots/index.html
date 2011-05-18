@@ -1,24 +1,26 @@
-﻿<!--#set var="menu" value="discover" -->
-<!--#set var="title" value="Screenshots" -->
-<!--#set var="color" value="blue" -->
-<!--#set var="tagline" value="false" -->
-<!--#include virtual="/include/header_html.inc.xhtml" -->
-	<script type="text/javascript">
-	$(function() {
-		$('#screenshots a.screenshot').lightBox({
-			imageLoading: '/img/lightbox-ico-loading.gif',
-			imageBtnClose: '/img/lightbox-btn-close.gif',
-			imageBtnPrev: '/img/lightbox-btn-prev.gif',
-			imageBtnNext: '/img/lightbox-btn-next.gif',
-			imageBlank: '/img/lightbox-blank.gif'
-		});
-	});
-	</script>
-	<style>
-	#screenshots { margin: 10px; padding: 10px; border: 1px solid #dcdad4; background: #f4f4ed; width: auto; }
-	#screenshots ul { width: 640px; float: none; position: static; }
-	</style>
-<!--#include virtual="/include/header_primary.inc.xhtml" -->
+---
+layout: default
+color: blue
+title: Screenshots
+menu: discover
+---
+            <script type="text/javascript">
+            $(function() {
+                $('#screenshots a.screenshot').lightBox({
+                    imageLoading: '/img/lightbox-ico-loading.gif',
+                    imageBtnClose: '/img/lightbox-btn-close.gif',
+                    imageBtnPrev: '/img/lightbox-btn-prev.gif',
+                    imageBtnNext: '/img/lightbox-btn-next.gif',
+                    imageBlank: '/img/lightbox-blank.gif'
+                });
+            });
+            </script>
+
+            <style>
+            #screenshots { margin: 10px; padding: 10px; border: 1px solid #dcdad4; background: #f4f4ed; width: auto; }
+            #screenshots ul { width: 640px; float: none; position: static; }
+            </style>
+
 			<div id="screenshots">
 				<ul>
 					<li>
@@ -64,7 +66,6 @@
 				</ul>
 				<p>
 				</p>
-			</div> <!-- /screenshots -->
-<!--#include virtual="/discover/menu.inc.xhtml" -->
-<!--#include virtual="/include/footer_primary.inc.xhtml" -->
-<!--#include virtual="/include/footer_html.inc.xhtml" -->
+			</div> 
+
+            {% include discover_menu.html %}
