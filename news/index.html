@@ -12,5 +12,10 @@ menu: discover
                     <span style="font-size: 10pt; color: #999999;">({{ post.date | date:'%e. %b %Y' }})</span>
                 </h2>
 				<h3>{{ post.content }}<br><a href="{{ post.url }}">more...</a></h3>
+                {% if post.previous %}
+                <hr><br>
+                {% endif %}
                 {% endfor %}
 			</div> 
+            
+            {% include discover_menu.html %}
