@@ -1,3 +1,9 @@
+{% if page.color %}
+{% assign color = page.color %}
+{% else %}
+{% assign color = 'blue' %}
+{% endif %}
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
@@ -8,7 +14,7 @@
 	{% else %}
 	<link rel="stylesheet" type="text/css" href="/css/xcsoar-not-trac.css"/>
 	{% endif %}
-	<link rel="stylesheet" type="text/css" href="/css/xcsoar-{{ page.color }}.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/xcsoar-{{ color }}.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/xcsoar.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/jquery.lightbox-0.5.css" media="screen" />
 	<link rel="shortcut icon" type="image/ico" href="/img/favicon.ico"/>
@@ -41,7 +47,7 @@
 	<div id="primary">
 
 		<div id="header">
-			<p id="title"><a href="/"><img src="/img/logo-{{ page.color }}.png" alt="XCSoar"/></a></p>
+			<p id="title"><a href="/"><img src="/img/logo-{{ color }}.png" alt="XCSoar"/></a></p>
 
 			<ul id="nav">
 				<li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="/develop/" title="Help us to develop XCSoar even further">Develop</a></li>
