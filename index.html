@@ -60,9 +60,11 @@ tagline: true
 					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf" title="Manual" style="text-decoration: none;">
 						<img src="/img/xcsoar-logo.png" alt="Manual" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Manual for XCSoar {{ site.xcsoar_stable_version }}
 					</a><br/>
+                    {% if site.xcsoar_testing_version != site.xcsoar_stable_version %}
 					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_testing_version }}/XCSoar-manual.pdf" title="Manual" style="text-decoration: none;">
 						<img src="/img/xcsoar-logo.png" alt="Manual" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Manual for XCSoar {{ site.xcsoar_testing_version }}
 					</a><br/>
+                    {% endif %}
 				</div>
 			</div> 
 
