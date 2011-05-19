@@ -31,10 +31,11 @@ tagline: true
                 </h2>
 				<h3>{{ post.content | truncatewords: 100 }}<br><br><a href="{{ post.url }}">more...</a></h3>
 
+                <hr><br><h3>
                 {% if post.previous %}
-                <hr><br>
-                <h3><a href="/news/" title="See previous news posts">Previous news...</a></h3>
+                <a href="/news/" title="See previous news posts">Previous news...</a>
                 {% endif %}
+                <a href="atom.xml"><img style="float: right; margin-right: -15px;" src="/img/atom-feed.png" title="XCSoar.org ATOM feed"></a></h3>
                 {% endfor %}
 			</div> 
 			
