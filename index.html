@@ -32,6 +32,7 @@ tagline: true
 				<h3>{{ post.content | truncatewords: 100 }}<br><br><a href="{{ post.url }}">more...</a></h3>
 
                 {% if post.previous %}
+                <hr><br>
                 <h3><a href="/news/" title="See previous news posts">Previous news...</a></h3>
                 {% endif %}
                 {% endfor %}
