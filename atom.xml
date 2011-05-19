@@ -1,0 +1,36 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>XCSoar</title>
+  <link href="http://www.xcsoar.org/atom.xml" rel="self"/>
+  <link href="http://www.xcsoar.org/"/>
+  <updated>{{site.time | date_to_xmlschema }}</updated>
+  <id>http://www.xcsoar.org/</id>
+  
+  <icon>http://www.xcsoar.org/img/icon.jpg</icon>
+  <logo>http://www.xcsoar.org/img/logo-blue.jpg</logo>
+  
+  <author>
+    <name>XCSoar Team</name>
+    <email></email>
+    <uri>http://www.xcsoar.org/</uri>
+  </author>
+  
+  {% for post in site.posts limit: 10 %}
+  <entry>
+    <title>{{ post.title }}</title>
+    <link href="http://www.xcsoar.org{{ post.url }}"/>
+    <updated>{{post.date | date_to_xmlschema }}</updated>
+    <id>http://www.xcsoar.org{{ post.url }}</id>
+
+    {% if post.author %}
+    <author><name>{{ if post.author }}</name></author>
+    {% endif %}
+
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>
