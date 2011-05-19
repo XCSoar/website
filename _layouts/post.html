@@ -1,0 +1,19 @@
+{% if page.color %}
+{% assign color = page.color %}
+{% else %}
+{% assign color = 'blue' %}
+{% endif %}
+
+        {% include html_head.html %}
+        
+        {% include header.html %}
+
+		<div id="content">	
+			<div id="summary">
+                <h3>{{ content }}</h3>
+			</div> 
+
+            {% include discover_menu.html %}
+		</div> 
+        
+        {% include footer.html %}
