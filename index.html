@@ -27,7 +27,7 @@ tagline: true
                 {% for post in site.posts limit: 1 %}
 				<h2>
                     {{ post.title }}<br>
-                    <span style="font-size: 10pt; color: #999999;">({{ post.date | date:'%e. %b %Y' }})</span>
+                    <span style="font-size: 10pt; color: #999999;">({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</span>
                 </h2>
 				<h3>{{ post.content }}</h3>
 
