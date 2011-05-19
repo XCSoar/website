@@ -29,7 +29,7 @@ tagline: true
                     {{ post.title }}<br>
                     <span style="font-size: 10pt; color: #999999;">({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</span>
                 </h2>
-				<h3>{{ post.content }}</h3>
+				<h3>{{ post.content | truncatewords: 100 }}<br><br><a href="{{ post.url }}">more...</a></h3>
 
                 {% if post.previous %}
                 <h3><a href="/news/" title="See previous news posts">Previous news...</a></h3>
