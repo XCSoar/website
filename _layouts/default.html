@@ -9,11 +9,7 @@
 <head>
 	<title>XCSoar - {{ page.title }}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	{% if page.trac %}
-	<link rel="stylesheet" type="text/css" href="/css/xcsoar-trac.css"/>
-	{% else %}
 	<link rel="stylesheet" type="text/css" href="/css/xcsoar-not-trac.css"/>
-	{% endif %}
 	<link rel="stylesheet" type="text/css" href="/css/xcsoar-{{ color }}.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/xcsoar.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/jquery.lightbox-0.5.css" media="screen" />
@@ -44,56 +40,10 @@
 	</script>
 </head>
 <body>
-	<div id="primary">
+        {% include header.html %}
 
-		<div id="header">
-			<p id="title"><a href="/"><img src="/img/logo-{{ color }}.png" alt="XCSoar"/></a></p>
-
-			<ul id="nav">
-				<li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="/develop/" title="Help us to develop XCSoar even further">Develop</a></li>
-				<li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="/download/" title="Download XCSoar and the map files">Download</a></li>
-				<li class="discover{% if page.menu == 'discover' %} current{% endif %}"><a href="/discover/" title="Discover what XCSoar has to offer">Discover</a></li>
-			</ul>
-			<h1{% if page.tagline %} class="tagline"{% endif %}>{{ page.title }}</h1>
+		<div id="content">		
+		{{ content }}		
 		</div> 
 
-		<div id="content">
-		
-		{{ content }}
-		
-		</div> 
-	</div> 
-	
-	<div id="tertiary">
-		<div id="footer">
-			<div id="status">
-				<h2>Status</h2>
-				<p id="status_err">
-					<span>Not available</span>
-				</p>
-				<p id="status_ok" style="display: none;">
-					<span><img src="/img/statusbar-left.png"/><img id="fill" src="/img/statusbar-filled.png"/><img src="/img/statusbar-middle.png"/><img id="blank" src="/img/statusbar-blank.png"/><img src="/img/statusbar-right.png"/></span><br/>
-					<span>Version 6.1 - <span id="percent">0</span>% ready</span><br/>
-					<span class="more"><a href="/trac/milestone/XCSoar 6.1">more...</a></span>
-				</p>
-			</div> 
-
-			<div id="contact">
-				<h2>Contact</h2>
-				<div class="vcard">
-					<h3>XCSoar</h3>
-					<p>
-						<span class="irc"><a href="/discover/irc/" title="Visit our IRC channel">irc.freenode.net .. #xcsoar</a></span><br/>
-						<span class="email"><a href="/discover/mailinglist/" title="Visit our mailing list">xcsoar-user [at] lists [dot] sourceforge [dot] net</a></span><br/>
-						<span class="web"><a href="http://www.xcsoar.org/">http://www.xcsoar.org</a></span><br/>
-					</p>
-				</div> 
-			</div> 
-
-			<div id="copyright">
-				<p><strong>XCSoar</strong> is Free Software released under the <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt">GNU/GPL License</a> .. Copyright &copy; 2000-2011</p>
-			</div> 
-		</div> 
-	</div> 
-</body>
-</html>
+        {% include footer.html %}
