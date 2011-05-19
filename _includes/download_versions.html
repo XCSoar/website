@@ -3,8 +3,9 @@
 						<p>
 							Current download page:
 							<span class="highlight">
-								{% if page.version == 'stable' %}XCSoar 6.0{% endif %}
-								{% if page.version == 'latest' %}XCSoar 6.1 (development){% endif %}
+								{% if page.version == 'stable' %}XCSoar 6.1{% endif %}
+								{% if page.version == 'latest' %}XCSoar 6.2 (development){% endif %}
+								{% if page.version == 'old' %}XCSoar 6.0{% endif %}
 								{% if page.version == '5' %}XCSoar 5.x{% endif %}
 							</span> - <a href="#" onclick="$('#releases_less').hide();$('#releases_more').show();return false;">Change</a>
 						</p>
@@ -13,12 +14,16 @@
 						<p>These are the currently available versions:</p>
 						<ul>
 							<li>
-								{% if page.version == 'stable' %}<b><a>XCSoar 6.0</a></b>{% else %}<a href="/download/">XCSoar 6.0</a>{% endif %}<br/>
+								{% if page.version == 'stable' %}<b><a>XCSoar 6.1</a></b>{% else %}<a href="/download/">XCSoar 6.1</a>{% endif %}<br/>
 								The most current version of the XCSoar software.
 							</li>
 							<li>
-								{% if page.version == 'latest' %}<b><a>XCSoar 6.1 (development)</a></b>{% else %}<a href="/download/latest/">XCSoar 6.1 (development)</a>{% endif %}<br/>
+								{% if page.version == 'latest' %}<b><a>XCSoar 6.2 (development)</a></b>{% else %}<a href="/download/latest/">XCSoar 6.2 (development)</a>{% endif %}<br/>
 								The latest 'bleeding edge' developer version.<br/>(potentially unstable, recommended for testing only)
+							</li>
+							<li>
+								{% if page.version == 'old' %}<b><a>XCSoar 6.0</a></b>{% else %}<a href="/download/latest/">XCSoar 6.0</a>{% endif %}<br/>
+								The old stable version.
 							</li>
 							<li>
 								{% if page.version == '5' %}<b><a>XCSoar 5.2.x</a></b>{% else %}<a href="/download/5.2.x/">XCSoar 5.2.x</a>{% endif %}<br/>

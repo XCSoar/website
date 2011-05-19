@@ -1,4 +1,5 @@
 permalink:   none
 
-xcsoar_stable_version: 6.0.10
-xcsoar_testing_version: 6.1_beta2
+xcsoar_stable_version: 6.1
+xcsoar_testing_version: 6.1
+xcsoar_old_version: 6.0.10
