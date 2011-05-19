@@ -1,0 +1,16 @@
+---
+layout: default
+color: blue
+title: News
+menu: discover
+---
+
+			<div id="summary">
+                {% for post in site.posts %}
+				<h2>
+                    {{ post.title }}<br>
+                    <span style="font-size: 10pt; color: #999999;">({{ post.date | date:'%e. %b %Y' }})</span>
+                </h2>
+				<h3>{{ post.content }}<br><a href="{{ post.url }}">more...</a></h3>
+                {% endfor %}
+			</div> 
