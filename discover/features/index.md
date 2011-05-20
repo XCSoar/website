@@ -6,9 +6,9 @@ menu: discover
 ---
 ## Overview
 
-- [Features](#features)
-- [Supported platforms](#supported_platforms)
-- [Supported data files](#supported_data_files)
+- [Features](#features) &darr;
+- [Supported platforms](#supported_platforms) &darr;
+- [Supported data files](#supported_data_files) &darr;
 
 ## Features
 
