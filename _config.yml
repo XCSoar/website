@@ -1,4 +1,4 @@
-permalink: /news/:year/:month/:day/:title
+permalink: /discover/:year/:month/:day/:title.html
 
 xcsoar_stable_version: 6.1
 xcsoar_testing_version: 6.1
