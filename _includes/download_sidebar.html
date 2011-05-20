@@ -3,7 +3,7 @@
 				<ul>
 					<li>
 						{% if page.version == 'stable' %}<b><a>XCSoar {{ site.xcsoar_stable_version }}</a></b>{% else %}<a href="/download/index.html">XCSoar {{ site.xcsoar_stable_version }}</a>{% endif %}<br/>
-						The most current version of the XCSoar software.
+						The current stable version.
 					</li>
 					{% if site.xcsoar_testing_version != site.xcsoar_stable_version %}
 					<li>
@@ -13,7 +13,7 @@
 					{% endif %}
 					<li>
 						{% if page.version == 5 %}<b><a>XCSoar 5.2.x</a></b>{% else %}<a href="/download/5.2.x.html">XCSoar 5.2.x</a>{% endif %}<br/>
-						The last version before the 6.x series, which is no longer supported by the developers.
+						The last version before the 6.x series.<br/>This version is no longer supported by the developers.
 					</li>
 				</ul>
 				
