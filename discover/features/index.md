@@ -93,7 +93,7 @@ In addition to the OpenAir standard the AR command is recognized as the airspace
 - JPEG2000 JP2 files + J2W world file (terrain)
 - ShapeFiles (topography)
 
-The usual format is the XCM map. Maps can be downloaded from our website ([http://www.xcsoar.org/download/maps/](/download/maps/)) or generated specifically for your needs by our map generator (<http://mapgen.xcsoar.org/>).
+The usual format is the XCM map. [Pregenerated maps](/download/maps/) can be downloaded from our website or generated specifically for your needs by our [Map Generator](http://mapgen.xcsoar.org/).
 
 ### Tasks
 
@@ -106,4 +106,4 @@ SeeYou CUP files are read-only so far but the tasks can be converted and saved t
 
 - FlarmNet data.FLN file
 
-When connected to a Flarm, XCSoar is able to show the call signs and additional data that is saved inside the FlarmNet database (<http://www.flarmnet.org>).
+When connected to a Flarm, XCSoar is able to show the call signs and additional data that is saved inside the [FlarmNet](http://www.flarmnet.org) database.
