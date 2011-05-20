@@ -9,6 +9,7 @@ menu: discover
 - [Features](#features) &darr;
 - [Supported platforms](#supported_platforms) &darr;
 - [Supported data files](#supported_data_files) &darr;
+- [Supported devices](#supported_devices) &darr;
 
 ## Features
 
@@ -107,3 +108,131 @@ SeeYou CUP files are read-only so far but the tasks can be converted and saved t
 - FlarmNet data.FLN file
 
 When connected to a Flarm, XCSoar is able to show the call signs and additional data that is saved inside the [FlarmNet](http://www.flarmnet.org) database.
+
+## Supported devices
+
+**XCSoar** supports all devices that send GPS data on a serial port or via Bluetooth.  
+Devices with additional abilities which are supported by **XCSoar {{ site.xcsoar_stable_version }}** are listed here:  
+
+- [Altair](#altair) &darr;
+- [Borgelt B50](#borgelt_b50) &darr;
+- [CAI 302](#cai_302) &darr;
+- [Condor Simulator](#condor_simulator) &darr;
+- [Digifly Leonardo](#digifly_leonardo) &darr;
+- [EW](#ew) &darr;
+- [EW MicroRecorder](#ew_microrecorder) &darr;
+- [FLARM](#flarm) &darr;
+- [Flymaster F1](#flymaster_f1) &darr;
+- [Flytec](#flytec) &darr;
+- [ILEC](#ilec) &darr;
+- [IMI ERIXX](#imi_erixx) &darr;
+- [LX Devices](#lx_devices) &darr;
+- [PosiGraph](#posigraph) &darr;
+- [Vega](#vega) &darr;
+- [Volkslogger](#volkslogger) &darr;
+- [Westerboer](#westerboer) &darr;
+- [Zander](#zander) &darr;
+
+### Altair
+
+- Barometric Altitude
+- Task declaration
+
+### Borgelt B50
+
+- Vario, Airspeed, Temperature
+- MC/Bugs/Ballast to XCSoar
+
+### CAI 302
+
+- Barometric Altitude
+- Vario, Airspeed, Wind, ENL, QNH
+- MC/Bugs/Ballast to and from XCSoar
+- Task declaration
+
+### Condor Simulator
+
+- Barometric Altitude
+- Vario, Airspeed, Wind
+
+### Digifly Leonardo
+
+- Barometric Altitude
+- Vario, Airspeed, Wind, Temperature
+
+### EW
+
+- Task declaration
+
+### EW MicroRecorder
+
+- Barometric Altitude
+- Task declaration
+
+### FLARM
+
+- Barometric Altitude
+- Traffic data
+- Task declaration
+
+### Flymaster F1
+
+- Barometric Altitude
+- Vario
+
+### Flytec
+
+- Barometric Altitude
+- Vario, Airspeed, Temperature
+
+### ILEC
+
+- Barometric Altitude
+- Vario, Wind
+
+### IMI ERIXX
+
+*This device will be supported by XCSoar 6.2 and above*
+
+- Barometric Altitude
+- Task declaration
+
+### LX Devices
+
+*DX50, LX5000, LX7000, Colibri, ...*
+
+- Barometric Altitude
+- Vario, Airspeed, Wind
+- MC/Bugs/Ballast to XCSoar
+- Task declaration
+
+### PosiGraph
+
+- Barometric Altitude
+- Task declaration  
+  *for task declarations choose LX as device type!*
+
+### Vega
+
+- Barometric Altitude
+- Vario, Airspeed, Temperature
+- Acceleration, Humidity
+- External switches
+
+### Volkslogger
+
+- Barometric Altitude
+- Task declaration
+
+### Westerboer
+
+- Barometric Altitude
+- Vario, Airspeed, Temperature
+- MC to and from XCSoar
+- Battery voltage
+
+### Zander
+
+- Barometric Altitude
+- Vario, Airspeed, Wind
+- MC to XCSoar
