@@ -4,7 +4,15 @@ color: blue
 title: Features
 menu: discover
 ---
-## Moving map
+## Overview
+
+- [Features](#features)
+- [Supported platforms](#supported_platforms)
+- [Supported data files](#supported_data_files)
+
+## Features
+
+### Moving map
 
 - Terrain *(mountains can be shadowed by wind or sun direction)*
 - Terrain impact line *(reach calculation even around mountains)*
@@ -15,7 +23,7 @@ menu: discover
 - Task *(start, turnpoint, end sectors and lines, course line, best track line)*
 - Flight trail *(indicating climb/sink values or altitude)*
 
-## Infoboxes
+### Infoboxes
 
 - Altitudes *(GPS, baro, ground, FL, barogram)*
 - Thermals *(current, netto, average, whole thermal, whole day, gain, diagrams)*
@@ -26,7 +34,7 @@ menu: discover
 - Safety *(best landing options)*
 - many more...
 
-## FLARM radar
+### FLARM radar
 
 - Butterfly-like radar screen
 - Averaged climb rates for all FLARM targets
@@ -34,11 +42,11 @@ menu: discover
 - User defined call sign assignment (independent of FlarmNet)
 - Team mate mode
 
-## Thermal Assistant
+### Thermal Assistant
 
 - Cenfis-like thermal centering aid
 
-## Analysis dialog
+### Analysis dialog
 
 - Barogram
 - Climb history
