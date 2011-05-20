@@ -22,7 +22,7 @@ a.green:active { color: #359A41; }
 hr { border-style: dotted; border-width: 1px 0px 0px 0px; }
 
 /* HTML */
-html { min-width: 960px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; }
+html { min-width: 960px; font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; }
 
 /* BODY */
 body { padding-top: 20px; background: url(../img/shadow-top.png) 0 10px repeat-x; }
@@ -31,7 +31,7 @@ body { padding-top: 20px; background: url(../img/shadow-top.png) 0 10px repeat-x
 #header, #content, #feature, #footer { width: 940px; margin: 0 auto; }
 
 /* TRAC OVERWRITE */
-h1, h2, h3, h4 { letter-spacing: 0; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; }
+h1, h2, h3, h4 { letter-spacing: 0; font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; }
 #secondary #footer { line-height: 14px; }
 
 /******************************************************************************
@@ -51,7 +51,7 @@ h1, h2, h3, h4 { letter-spacing: 0; font-family: "Lucida Grande", "Lucida Sans U
 #header a { text-decoration: none; }
 
 /* NAV */
-ul#nav { position: absolute; top: 40px; right: 0; width: 450px; list-style: none; font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; margin: 0; }
+ul#nav { position: absolute; top: 40px; right: 0; width: 450px; list-style: none; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; margin: 0; }
 ul#nav li { float: right; height: 14px; padding-left: 47px; font-size: 16px; }
 ul#nav li a { float: left; overflow: hidden; height: 14px; padding: 0px 5px 4px 5px; text-decoration: none; text-transform: uppercase; color: #878380; }
 ul#nav li.discover a:hover { border-bottom: 2px solid #1A4977; color: #1A4977; }
@@ -63,24 +63,24 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 /* SUMMARY */
 #summary h2 { margin-bottom: 20px; }
-#summary h3 { margin-bottom: 20px; padding-right: 20px; font-family: Georgia, serif; line-height: 24px; }
+#summary h3 { margin-bottom: 20px; padding-right: 20px; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; line-height: 24px; }
 #summary h3 a { text-decoration: none; }
 #summary h3 a:hover { text-decoration: underline; }
 #summary h4 { margin: 30px 0 10px 0; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
 #summary h4.first-child { margin-top: 0; }
-#summary div, #summary p { margin-bottom: 20px; padding-right: 20px; font-family: Georgia, serif; font-size: 15px; line-height: 28px; }
+#summary div, #summary p { margin-bottom: 20px; padding-right: 20px; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; font-size: 15px; line-height: 28px; }
 #summary div img, #summary p img { float: left; margin: 0 30px 30px 0; }
 #summary ul { margin-bottom: 20px; padding-left: 20px; line-height: 24px; }
-#summary ul li { margin-bottom: 3px; font-family: Georgia, serif; font-size: 15px; }
-#summary a.more { font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; }
+#summary ul li { margin-bottom: 3px; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; font-size: 15px; }
+#summary a.more { font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; }
 
 /* FORM */
 #form h2 { display: none; }
-#form p { margin-bottom: 30px; padding-right: 20px; font-family: Georgia, serif; }
-#form label { float: left; padding-bottom: 12px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; }
-#form div.box { width: 580px; padding: 10px; margin-bottom: 4px; border: 1px solid #9f9c99; border-radius: 8px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;  font-size: 20px; }
+#form p { margin-bottom: 30px; padding-right: 20px; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; }
+#form label { float: left; padding-bottom: 12px; font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; }
+#form div.box { width: 580px; padding: 10px; margin-bottom: 4px; border: 1px solid #9f9c99; border-radius: 8px; font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;  font-size: 20px; }
 #form div.box .comment { color: #777777; font-size: 70%; }
-#form input.text, #form textarea { width: 580px; padding: 10px; border: 1px solid #9f9c99; border-radius: 8px; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;  font-size: 20px; }
+#form input.text, #form textarea { width: 580px; padding: 10px; border: 1px solid #9f9c99; border-radius: 8px; font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;  font-size: 20px; }
 #form input.text:focus, #form textarea:focus { border: 1px solid #555; }
 #form input.button { padding: 5px 10px; font-size: 18px; text-transform: uppercase; border: 0; border-radius: 8px; cursor: pointer; }
 #form input.button_inactive { color: #fff; background: #777777; padding: 5px 10px; font-size: 18px; text-transform: uppercase; border: 0; border-radius: 8px; cursor: pointer; }
@@ -94,7 +94,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 /* ASIDE */
 #aside { float: right; width: 250px; padding: 40px 0; }
 #aside h2 { margin-bottom: 10px; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
-#aside p { margin-bottom: 10px; font-size: 14px; line-height: 21px; font-family: Georgia, serif; color: #878380;}
+#aside p { margin-bottom: 10px; font-size: 14px; line-height: 21px; "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; color: #878380;}
 #aside ul { padding-left: 20px; }
 #aside ul li { padding: 5px; }
 
@@ -109,7 +109,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #portfolio div.summary img { float: left; padding: 17px 22px 27px 22px; }
 #portfolio div.details { float: left; width: 276px; padding: 20px 0 0 16px; }
 #portfolio div.details dt { padding: 20px 0 2px 0; font-size: 11px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; color: #878380; }
-#portfolio div.details dd { font-size: 18px; line-height: 21px; font-family: Georgia, serif; }
+#portfolio div.details dd { font-size: 18px; line-height: 21px; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; }
 #portfolio div.details dd strong { font-size: 22px; font-weight: normal; }
 #portfolio div.details p { margin-top: 20px; }
 #portfolio div.details a { text-decoration: none; }
@@ -128,7 +128,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 /* SCREENSHOTS */
 #screenshots { float: left; width: 100%; padding: 27px 0 20px; }
-#screenshots h2 { font-family: Georgia, serif; font-size: 24px; line-height: 30px; font-weight: normal; }
+#screenshots h2 { font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; font-size: 24px; line-height: 30px; font-weight: normal; }
 #screenshots h3 { margin-bottom: 20px; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; color: #878380; }
 #screenshots ul { position: relative; float: left; right: 10px; width: 960px; list-style: none; }
 #screenshots ul li { float: left; width: 296px; padding: 5px 10px; margin: 0 5px 20px 0; background: url(../img/thumbnail-backdrop.png) 0 0 no-repeat; }
@@ -141,12 +141,12 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 /* DETAILS */
 #details { float: left; width: 100%; padding: 27px 0 20px; }
-#details h2 { margin-bottom: 10px; font-family: Georgia, serif; font-size: 24px; line-height: 30px; font-weight: normal; }
+#details h2 { margin-bottom: 10px; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; font-size: 24px; line-height: 30px; font-weight: normal; }
 #details h3 { margin-bottom: 20px; border-bottom: 1px solid #e9e9e2; padding-bottom: 10px; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; color: #453c37; }
 #details ul { list-style: none; }
 #details ul li { float: left; width: 320px; margin-bottom: 20px; padding-left: 12px; padding-right: 20px; }
 #details ul li.last-child { padding-right: 0; }
-#details ul li ul li { clear: left; padding-left: 12px; font-family: Georgia, serif; font-size: 14px; line-height: 16px; }
+#details ul li ul li { clear: left; padding-left: 12px; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; font-size: 14px; line-height: 16px; }
 #details .email { font-size: 11px; }
 #details .detail { font-size: 11px; }
 #details ul.files li { height: 65px; }
