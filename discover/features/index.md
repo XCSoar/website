@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: discover
 color: blue
 title: Features
 menu: discover

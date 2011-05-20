@@ -1,0 +1,15 @@
+{% assign color = 'blue' %}
+
+        {% include html_head.html %}
+        
+        {% include header.html %}
+
+		<div id="content">	
+			<div id="summary">
+                {{ content }}
+			</div> 
+
+            {% include discover_menu.html %}
+		</div> 
+        
+        {% include footer.html %}
