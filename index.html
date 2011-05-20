@@ -18,10 +18,10 @@ tagline: true
 			</script>
 
 			<div id="summary">
-				<h3>XCSoar is a tactical glide computer originally developed for the Pocket PC platform. In 2005, the originally 
+				<p>XCSoar is a tactical glide computer originally developed for the Pocket PC platform. In 2005, the originally 
 				commercial software was given to the open-source community for further development and has constantly been improved 
 				since. It is now a multi-platform application that currently runs on Windows, Windows Mobile, Unix and soon also on 
-				Android devices.<br><br><a href="/discover/" title="Learn more about XCSoar">Learn more...</a></h3>
+				Android devices.<br><br><a href="/discover/" title="Learn more about XCSoar">Learn more...</a></p>
                 
                 <hr><br>
                 {% for post in site.posts limit: 1 %}
@@ -29,7 +29,7 @@ tagline: true
                     {{ post.title }}<br>
                     <span style="font-size: 10pt; color: #999999;">({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</span>
                 </h2>
-				<h3>{{ post.content | truncatewords: 100 }}<br><br><a href="{{ post.url }}">more...</a></h3>
+				{{ post.content | truncatewords: 100 }}<br><br><a href="{{ post.url }}">more...</a>
 
                 <hr><br><h3>
                 {% if post.previous %}
