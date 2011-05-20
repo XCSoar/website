@@ -12,6 +12,10 @@
 					</li>
 					{% endif %}
 					<li>
+						{% if page.version == 'old' %}<b><a>XCSoar {{ site.xcsoar_old_version }}</a></b>{% else %}<a href="/download/old.html">XCSoar {{ site.xcsoar_old_version }}</a>{% endif %}<br/>
+						The old stable version.
+					</li>
+					<li>
 						{% if page.version == 5 %}<b><a>XCSoar 5.2.x</a></b>{% else %}<a href="/download/5.2.x.html">XCSoar 5.2.x</a>{% endif %}<br/>
 						The last version before the 6.x series.<br/>This version is no longer supported by the developers.
 					</li>
