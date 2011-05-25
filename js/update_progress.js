@@ -1,3 +1,6 @@
+---
+layout: nil
+---
 	$(document).ready(function() {
 	  var max_width = 400;
 	  var percent = -1;
@@ -6,7 +9,7 @@
 			$(html).find("li.milestone").each(function(i) {
 				var found = false;
 				$(this).find(".info h2 em").each(function(i) {
-					if ($(this).text() == "XCSoar 6.1") found = true
+					if ($(this).text() == "{{ site.xcsoar_next_milestone }}") found = true
 				});
 				if (found) {
 					$(this).find(".info .percent").each(function(i) {
