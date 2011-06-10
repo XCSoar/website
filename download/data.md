@@ -1,32 +1,58 @@
 ---
 layout: download
 color: green
-title: Data
+title: Download - Data
 menu: download
 ---
 
-XCSoar needs to know the lay of the land (Map file), Airspaces, Waypoints and Airfields. Download the data suitable to your area.
+XCSoar works best if you provide it with some data files.
+Supported are [Map](#terrain__topography), [Airspace](#airspaces) and 
+[Waypoint](#waypoints) files, as well as the [FlarmNet database](#flarmnet) 
+and a custom [Waypoint Details](#waypoint_details)  file. 
 
-## Map file ##
+- Please download the data files suitable to your area 
+- Copy them into the XCSoarData folder on your SD card  
+  or a corresponding folder according to the [Manual](http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf)
 
-A map file (.xcm) is a file, that can contain terrain, topology, waypoint and airspace files itself. These files can be created with our new 
+## Terrain / Topography 
 
-- [Map Generator](http://mapgen.xcsoar.org/)
+A map file (.xcm) contains terrain and topography. In some cases it might also contain waypoint and airspace files. 
+
 - [Download Maps](/download/maps/)
+- Use the [Map Generator](http://mapgen.xcsoar.org/) to create your own maps
 
-## Airspaces ##
+## Airspaces
 
-An airspace file (.txt) is a file, that contains special use airspace information and coordinates in the OpenAir file format.
+An airspace file contains special use airspace information and coordinates. 
 
-- [Download Airspace from Soaringweb](http://soaringweb.org/Airspace/HomePage.html) - download OpenAir txt file
+XCSoar supports the Tim Newport-Pearce (.sua) and OpenAir (.txt) file formats.
 
-## Waypoints ##
+- [Download Airspace from Soaringweb](http://soaringweb.org/Airspace/HomePage.html)
 
-A waypoint file (.xcw / .dat) is a file, that contains waypoints, airports and outlanding fields in the WinPilot/Cambridge waypoint format.(Support for SeeYou and Zander files is included in v6.0)
+## Waypoints
 
-- [Download Waypoints from Soaringweb](http://soaringweb.org/Airspace/HomePage.html) - download WinPilot/Cambridge waypoint
+A waypoint file contains waypoints, airports and outlanding fields of a certain area. 
 
-## Airfields ##
+XCSoar currently supports these formats: 
+Cambridge/WinPilot (.dat), SeeYou (.cup), Zander (.wpz), OziExplorer (.wpt) and FS/GpsDump (.wpt)
 
-An airfields file (.txt) is a file, that contains detailed information about the loaded waypoints, that is available on a seperate page of the Waypoint Details dialog.
+- [Download Waypoints from Soaringweb](http://soaringweb.org/Airspace/HomePage.html) 
 
+## Waypoint Details
+
+A waypoint details file (.txt) contains detailed information about the loaded waypoints, that is available on a seperate page of the Waypoint Details dialog. It should have the following format:
+
+	[WAYPOINT_NAME_1]
+	Detailed Text 1
+	Detailed Text 2
+	...
+	[WAYPOINT_NAME_2]
+	Detailed Text 1
+	Detailed Text 2
+	...
+
+## FlarmNet
+
+XCSoar can use the FlarmNet database to show the callsigns and additional information of FLARM equipped planes around you.
+
+- [Download FlarmNet database](http://www.flarmnet.org/files/data.fln) 
