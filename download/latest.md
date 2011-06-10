@@ -16,6 +16,7 @@ The Windows version of XCSoar can be used preflight planning, postflight replay 
 The Windows Mobile version should be used on all PDAs and PNAs. Depending on what operating system your PDA runs you need to choose between Pocket PC 2000, 
 Windows Mobile 2003 and Windows Mobile 5. PNA owners should usually choose the Windows Mobile 5 version.
 
+- [Find out about your Windows Mobile version](/discover/wm_versions/)
 - [XCSoar {{ site.xcsoar_testing_version }} on Windows Mobile 5 (XScale CPU)](http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_testing_version }}/WM5X/)
 - [XCSoar {{ site.xcsoar_testing_version }} on Windows Mobile 5 (older CPU)](http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_testing_version }}/WM5/)
 - [XCSoar {{ site.xcsoar_testing_version }} on Windows Mobile 2003](http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_testing_version }}/PPC2003/)
