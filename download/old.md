@@ -5,12 +5,6 @@ title: Download
 menu: download
 version: old
 ---
-## XCSoar {{ site.xcsoar_old_version }} on Windows
-					
-The Windows version of XCSoar can be used preflight planning, postflight replay or just to get to know the application before using it in the air.
-
-- [XCSoar {{ site.xcsoar_old_version }} on Windows](http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_old_version }}/PC/)
-
 ## XCSoar {{ site.xcsoar_old_version }} on Windows Mobile
 
 The Windows Mobile version should be used on all PDAs and PNAs. Depending on what operating system your PDA runs you need to choose between Pocket PC 2000, 
@@ -27,6 +21,12 @@ Windows Mobile 2003 and Windows Mobile 5. PNA owners should usually choose the W
 The Android version of XCSoar {{ site.xcsoar_old_version }} runs on all phones and tablets with Android 1.6 or newer.
 
 - [XCSoar {{ site.xcsoar_old_version }} on Android](http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_old_version }}/ANDROID/)
+
+## XCSoar {{ site.xcsoar_old_version }} on Windows
+					
+The Windows version of XCSoar can be used preflight planning, postflight replay or just to get to know the application before using it in the air.
+
+- [XCSoar {{ site.xcsoar_old_version }} on Windows](http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_old_version }}/PC/)
 
 ## XCSoar {{ site.xcsoar_old_version }} on Linux
 
