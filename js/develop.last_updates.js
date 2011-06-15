@@ -6,7 +6,7 @@ function update_feed(feed, id) {
 	
 	var a, oDate
 	if (null != (a = item.updated.match(/(\d+)-(\d+)-(\d+)T(\d+):(\d+):(\d+)Z/)))
-		oDate = new Date(a[1], a[2]-1, a[3], a[4], a[5], a[6], 0);
+		oDate = Date.UTC(a[1], a[2]-1, a[3], a[4], a[5], a[6], 0);
 	else
 		oDate = new Date(item.updated);
 		
