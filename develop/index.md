@@ -12,8 +12,8 @@ title: Development
 
 ## Contributing
 
-XCSoar is a free software project, run by many volunteers in their free time.  
-We need help:
+XCSoar is a free software project, that is run by many volunteers in their free time.  
+If you would like to help, here are a few things you can do:
 
 - **Development**: Can you speak C++? Get the source code, hack it, and [submit your patches](/discover/mailinglist.html#developer_list).
 - **Testing**: Download XCSoar, test it, and [report bugs](http://www.xcsoar.org/trac/newticket).
