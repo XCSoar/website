@@ -4,11 +4,23 @@ color: red
 menu: develop
 title: Development
 ---
+<script language="javascript" type="text/javascript" src="/js/jfeeditem.js"> </script>
+<script language="javascript" type="text/javascript" src="/js/jatom.js"> </script>
+<script language="javascript" type="text/javascript" src="/js/jfeed.js"> </script>
+<script language="javascript" type="text/javascript" src="/js/reldate.js"> </script>
+<script language="javascript" type="text/javascript" src="/js/develop.last_updates.js"> </script>
+
 ## Source code
 
 [Browse our git repository online](http://git.xcsoar.org/cgit/master/xcsoar.git/), or clone it:
 
 	git clone git://git.xcsoar.org/xcsoar/master/xcsoar.git
+
+## Last Updates
+
+- **XCSoar**: *Loading ...*
+- **MapGenerator**: *Loading ...*
+- **Website**: *Loading ...*
 
 ## Contributing
 
