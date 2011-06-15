@@ -24,6 +24,7 @@ JAtom.prototype = {
             var item = new JFeedItem();
             
             item.title = jQuery(this).find('title').eq(0).text();
+            item.author = jQuery(this).find('author').find('name').eq(0).text();
             item.link = jQuery(this).find('link').eq(0).attr('href');
             item.description = jQuery(this).find('content').eq(0).text();
             item.updated = jQuery(this).find('updated').eq(0).text();
