@@ -14,7 +14,7 @@ Today XCSoar has almost everything you would need as a glider pilot... and more!
 Due to our many active users, we are always getting new ideas of features, that 
 one might want to have. If you feel that something is missing or you think you 
 have found a bug, please do not hesitate and follow the guide 
-[here](/trac/wiki/HowToCreateTicket) to write a feature request or bug report.
+[here](/develop/new_ticket.html) to write a feature request or bug report.
  
 
             

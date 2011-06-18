@@ -28,6 +28,6 @@ XCSoar is a free software project, that is run by many volunteers in their free 
 If you would like to help, here are a few things you can do:
 
 - **Development**: Can you speak C++? Get the source code, hack it, and [submit your patches](/discover/mailinglist.html#developer_list).
-- **Testing**: Download XCSoar, test it, and [report bugs](http://www.xcsoar.org/trac/newticket).
+- **Testing**: Download XCSoar, test it, and [report bugs](/develop/new_ticket.html).
 - **Documentation**: We need editors for the XCSoar manual. It is outdated, and needs some care.
 - **Translation**: Check our [Launchpad page](https://translations.launchpad.net/xcsoar/trunk) if you want to help.
