@@ -1,0 +1,36 @@
+[Pre-boarding - ABCD]
+A - Airframe
+B - Ballast
+C - Controls
+D - Dollies
+
+[Post-boarding - CHAOTIC]
+C - Control access
+H - Harness
+A - Airbrakes and flaps
+O - Outside and Options
+T - Trim
+I - Instruments
+C - Canopy, Carriage, Controls
+
+[Outlanding - SSSSSW]
+S - Size and shape
+S - Slope
+S - Surface
+S - Surroudings and obstructions
+S - Stock
+W - Wind
+
+[Pre-landing - FUST]
+F - Flaps
+U - Undercarriage
+S - Speed
+T - Trim
+
+[Pre-Stass,Spin,Aero - HASLL]
+H - Height
+A - Airframe
+S - Security
+L - Location
+L - Lookout
+
