@@ -11,7 +11,7 @@ function update_feed(feed, id) {
 		oDate = new Date(item.updated);
 		
 	var sdate = relativeDate(oDate, new Date());
-	var sid = item.id.substr(0, 6);
+	var sid = item.id.substr(0, 7);
 		
 	$("#last_updates + ul li:eq("+id+") em").replaceWith(sdate+" <em>by</em> "+item.author+" - <em><a href='"+item.link+"'>"+sid+"</a><br/>&#8220;"+item.title+"&#8221;</em>");
 }
