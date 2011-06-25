@@ -5,8 +5,6 @@ import re
 import datetime
 import math
 
-ftp_dir = '/releases'
-
 def filesizeformat(bytes, precision=2):
     """Returns a humanized string for a given amount of bytes"""
     bytes = int(bytes)
@@ -103,38 +101,47 @@ def upload_index_file(ftp):
     file.close()
     
 def create_folder_index(path, ftp, recursive):
-    print "Entering folder " + ftp_dir + path
-    ftp.cwd(ftp_dir + path)
+    print "Entering folder " + path
+    ftp.cwd(path)
 
-    print "Listing folder " + ftp_dir + path
+    print "Listing folder " + path
     subdirs, files = get_folder_content(ftp)
-    print "Creating index for folder " + ftp_dir + path
-    create_index_file(ftp_dir + path, subdirs, files)
-    print "Uploading index for folder " + ftp_dir + path
+    print "Creating index for folder " + path
+    create_index_file(path, subdirs, files)
+    print "Uploading index for folder " + path
     upload_index_file(ftp)
     
     if recursive:
         for dir in subdirs:
             create_folder_index(path + dir[0] + "/", ftp, recursive)
 
-def create_index():
-    recursive = False
+def help():
+    print('''Usage:   python create_index.py <password> [-r] [<ftp-folder>]
+
+         <password>    Password for the download.xcsoar.org ftp server
+         -r            Create the index files recursivly
+         <ftp-folder>  The folder for which the index file should be created''')
+    
+def main():
     if len(sys.argv) < 2:
-        print "Please enter password as parameter"
+        help()
         return
     
-    if len(sys.argv) > 2 and sys.argv[2] == "-r":
-        recursive = True            
-        if len(sys.argv) > 3:
-            ftp_dir = sys.argv[3]
-    elif len(sys.argv) > 2:
-        ftp_dir = sys.argv[2]
+    password = sys.argv[1]
+    
+    recursive = False
+    ftp_dir = '/releases'
+    for arg in sys.argv[2:]:
+        if arg == "-r":
+            recursive = True
+        else:
+            ftp_dir = arg.rstrip('/')
     
     print "Connecting to server ..."
-    ftp = ftplib.FTP('ftp.ddbits.com','xcsoar@ddbits.com',sys.argv[1]) # Connect
+    ftp = ftplib.FTP('ftp.ddbits.com', 'xcsoar@ddbits.com', password) # Connect
     
-    create_folder_index('/', ftp, recursive)
+    create_folder_index(ftp_dir + '/', ftp, recursive)
     
     ftp.quit()
     
-create_index()
+main()
