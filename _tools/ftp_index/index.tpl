@@ -20,6 +20,7 @@
 %%sep%%
 %%content_files%%
           </div> 
+%%readme%%
 	</div> 
       </div> 
       <div id="footer"> 

@@ -58,7 +58,26 @@ def get_folder_content(ftp):
 
     return subdirs, files
 
-def create_index_file(path, subdirs, files):
+def get_readme(ftp, path, files):
+    readme_file = None
+    for file in files:
+        if file[0].upper().startswith("README"): 
+            readme_file = file[0]
+            break
+
+    if readme_file == None: return ""
+    
+    f = open("readme.tpl", "r")
+    template = f.read()
+    f.close()
+
+    content = []
+    ftp.retrbinary("RETR " + readme_file, content.append)
+    content = ''.join(content)
+
+    return template.replace("%%filename%%", readme_file).replace("%%content%%", content)
+
+def create_index_file(ftp, path, subdirs, files):
     f = open("index.tpl", "r")
     index_template = f.read()
     f.close()
@@ -89,7 +108,8 @@ def create_index_file(path, subdirs, files):
             path2 += part + "/" 
             path_str += "<a href=\"" + path2 + "\">" + part + "</a> / "
     
-    html = index_template.replace("%%path%%", path_str).replace("%%sep%%", sep).replace("%%content_files%%", content_files).replace("%%content_subdirs%%", content_subdirs)
+    readme = get_readme(ftp, path, files)
+    html = index_template.replace("%%path%%", path_str).replace("%%sep%%", sep).replace("%%content_files%%", content_files).replace("%%content_subdirs%%", content_subdirs).replace("%%readme%%", readme)
     
     f = open("index.html", "w")
     f.write(html)
@@ -107,7 +127,7 @@ def create_folder_index(path, ftp, recursive):
     print "Listing folder " + path
     subdirs, files = get_folder_content(ftp)
     print "Creating index for folder " + path
-    create_index_file(path, subdirs, files)
+    create_index_file(ftp, path, subdirs, files)
     print "Uploading index for folder " + path
     upload_index_file(ftp)
     
