@@ -42,35 +42,35 @@ tagline: true
 			<div id="aside">
 			    <a href="/download/" title="Download XCSoar v{{ site.xcsoar_stable_version }}"><img src="/img/download-button-6.png" alt="Download XCSoar v{{ site.xcsoar_stable_version }}"></a>
 				<div style="padding-top: 0px; padding-bottom: 15px; padding-left: 20px;">
-					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/PC/" title="Windows" style="text-decoration: none;" class="green">
+					<a href="{{ site.download_server_url }}{{ site.xcsoar_stable_version }}/PC/" title="Windows" style="text-decoration: none;" class="green">
 						<img src="/img/windows-logo.png" alt="Windows" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Windows
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/WM5X/" title="Windows Mobile 5" style="text-decoration: none;" class="green">
+					<a href="{{ site.download_server_url }}{{ site.xcsoar_stable_version }}/WM5X/" title="Windows Mobile 5" style="text-decoration: none;" class="green">
 						<img src="/img/windows-mobile-logo.png" alt="Windows Mobile 5" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Windows Mobile 5 (XScale CPU)
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/WM5/" title="Windows Mobile 5" style="text-decoration: none;" class="green">
+					<a href="{{ site.download_server_url }}{{ site.xcsoar_stable_version }}/WM5/" title="Windows Mobile 5" style="text-decoration: none;" class="green">
 						<img src="/img/windows-mobile-logo.png" alt="Windows Mobile 5" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Windows Mobile 5 (older CPU)
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/PPC2003/" title="Windows Mobile 2003" style="text-decoration: none;" class="green">
+					<a href="{{ site.download_server_url }}{{ site.xcsoar_stable_version }}/PPC2003/" title="Windows Mobile 2003" style="text-decoration: none;" class="green">
 						<img src="/img/windows-mobile-logo.png" alt="Windows Mobile 2003" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Windows Mobile 2003
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/PPC2000/" title="Pocket PC 2000" style="text-decoration: none;" class="green">
+					<a href="{{ site.download_server_url }}{{ site.xcsoar_stable_version }}/PPC2000/" title="Pocket PC 2000" style="text-decoration: none;" class="green">
 						<img src="/img/windows-mobile-logo.png" alt="Pocket PC 2000" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Pocket PC 2000
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/ANDROID/" title="Android" style="text-decoration: none;" class="green">
+					<a href="{{ site.download_server_url }}{{ site.xcsoar_stable_version }}/ANDROID/" title="Android" style="text-decoration: none;" class="green">
 						<img src="/img/android-logo.png" alt="Android" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Android
 					</a><br/>
-					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/LINUX/" title="Linux" style="text-decoration: none;" class="green">
+					<a href="{{ site.download_server_url }}{{ site.xcsoar_stable_version }}/LINUX/" title="Linux" style="text-decoration: none;" class="green">
 						<img src="/img/linux-logo.png" alt="Linux" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Linux
 					</a><br/>
 				</div>
 			    <a href="/discover/manual.html" title="Download XCSoar Manual"><img src="/img/download-button-manual.png" alt="Download XCSoar Manual"></a>
 				<div style="padding-top: 0px; padding-bottom: 15px; padding-left: 20px;">
-					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf" title="Manual" style="text-decoration: none;">
+					<a href="{{ site.download_server_url }}{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf" title="Manual" style="text-decoration: none;">
 						<img src="/img/xcsoar-logo.png" alt="Manual" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Manual for XCSoar {{ site.xcsoar_stable_version }}
 					</a><br/>
                     {% if site.xcsoar_testing_version != site.xcsoar_stable_version %}
-					<a href="http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_testing_version }}/XCSoar-manual.pdf" title="Manual" style="text-decoration: none;">
+					<a href="{{ site.download_server_url }}{{ site.xcsoar_testing_version }}/XCSoar-manual.pdf" title="Manual" style="text-decoration: none;">
 						<img src="/img/xcsoar-logo.png" alt="Manual" height="20" width="20" style="top: 8px; position: relative; padding: 3px;"> Manual for XCSoar {{ site.xcsoar_testing_version }}
 					</a><br/>
                     {% endif %}
