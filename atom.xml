@@ -27,7 +27,7 @@ layout: nil
     <id>http://www.xcsoar.org{{ post.url }}</id>
 
     {% if post.author %}
-    <author><name>{{ if post.author }}</name></author>
+    <author><name>{{ post.author }}</name></author>
     {% endif %}
 
     <content type="html">{{ post.content | xml_escape }}</content>
