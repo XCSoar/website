@@ -24,6 +24,13 @@ tagline: true
 				Android devices.<br><br><a href="/discover/" title="Learn more about XCSoar">Learn more...</a></p>
                 
                 <hr><br>
+                {% if site.information %}
+                <h2><img style="margin-right: 10px; margin-top: -6px; vertical-align: middle;" src="/img/information.png">{{ site.information }}</h2>
+                {% if site.information_content %}
+                <p>{{ site.information_content }}</p>
+                {% endif %}
+                <hr><br>
+                {% endif %}
                 {% for post in site.posts limit: 1 %}
 				<h2>
                     {{ post.title }}<br>
