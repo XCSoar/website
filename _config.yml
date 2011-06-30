@@ -7,3 +7,6 @@ xcsoar_old_version: 6.0.10
 xcsoar_next_milestone: 'XCSoar 6.2'
 
 download_server_url: 'http://download.xcsoar.org/releases/'
+
+information: 'MapGen server offline'
+information_content: 'We are currently having some problems with the server that is running the Map Generator. Please be patient and try again in a few hours.'
