@@ -17,14 +17,13 @@ var map;
         feature.popup = null;
     }
 
-    map = new OpenLayers.Map('map');
-    map.addLayer(new OpenLayers.Layer.WMS("OpenLayers WMS",
-                                          "http://vmap0.tiles.osgeo.org/wms/vmap0?", {layers: 'basic'}));
+    map = new OpenLayers.Map({div: "map", projection: new OpenLayers.Projection("EPSG:900913")});
+    map.addLayer(new OpenLayers.Layer.Google("Google Terrain", {type: google.maps.MapTypeId.TERRAIN}));
 
     var boxes = new OpenLayers.Layer.Vector("XCSoar Maps");
     for (var name in MAPS) {
         var ext = MAPS[name];
-        var bounds = new OpenLayers.Bounds(ext[0], ext[1], ext[2], ext[3]);
+        var bounds = new OpenLayers.Bounds(ext[0], ext[1], ext[2], ext[3]).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
         boxes.addFeatures(new OpenLayers.Feature.Vector(bounds.toGeometry(), {title: name}));
     }
 
@@ -37,6 +36,5 @@ var map;
     map.addControl(selectControl);
     selectControl.activate();
 
-    map.zoomToMaxExtent();
-    map.zoomIn();
+    map.setCenter(new OpenLayers.LonLat(0, 20.0).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913")), 2);
 })();
