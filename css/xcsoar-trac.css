@@ -4,3 +4,8 @@ h2 { margin: 10px; }
     color: #878380;
     padding: 0px 5px 4px 5px;
 }
+
+blockquote.citation {
+    padding: 5px 15px;
+    margin: 5px;
+}
