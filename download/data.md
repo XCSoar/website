@@ -27,9 +27,9 @@ An airspace file contains special use airspace information and coordinates.
 
 XCSoar supports the Tim Newport-Pearce (.sua) and OpenAir (.txt) file formats.
 
-- [Download Airspace from Soaringweb](http://soaringweb.org/Airspace/HomePage.html)
+- [Download Airspace from Soaringweb](http://www.soaringweb.org/Airspace/)
 - [Austrian Airspace](http://www.austrocontrol.at/en/content/atm/AIS/Products/kml/kml.shtml)
-- [German Airspace](http://daec.de/aul/luftr_d.php)
+- [German Airspace](http://www.daec.de/aul/luftr_d.php)
 
 ## Waypoints
 
@@ -38,7 +38,7 @@ A waypoint file contains waypoints, airports and outlanding fields of a certain 
 XCSoar currently supports these formats: 
 Cambridge/WinPilot (.dat), SeeYou (.cup), Zander (.wpz), OziExplorer (.wpt) and FS/GpsDump (.wpt)
 
-- [Download Waypoints from Soaringweb](http://soaringweb.org/Airspace/HomePage.html) 
+- [Download Waypoints from Soaringweb](http://www.soaringweb.org/TP/) 
 
 ## Waypoint Details
 
