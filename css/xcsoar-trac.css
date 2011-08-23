@@ -9,3 +9,7 @@ blockquote.citation {
     padding: 5px 15px;
     margin: 5px;
 }
+
+p {
+    margin: 10px 0px;
+}
