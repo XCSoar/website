@@ -38,6 +38,8 @@ A waypoint file contains waypoints, airports and outlanding fields of a certain 
 XCSoar currently supports these formats: 
 Cambridge/WinPilot (.dat), SeeYou (.cup), Zander (.wpz), OziExplorer (.wpt) and FS/GpsDump (.wpt)
 
+- [Download Waypoints](/download/waypoints/)  
+  *(imported from the Welt2000 project)*
 - [Download Waypoints from Soaringweb](http://www.soaringweb.org/TP/) 
 
 ## Waypoint Details
