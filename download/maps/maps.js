@@ -1,40 +1,70 @@
-var map;
+var mapOptions = {
+  zoom: 2,
+  center: new google.maps.LatLng(25, 0),
+  mapTypeId: google.maps.MapTypeId.TERRAIN,
+  streetViewControl: false
+};
 
-(function() {
-    function onFeatureSelect(feature) {
-        var popupContent = "<span style='font-size: 1.7em;'>Map: " + feature.attributes.title + "</span><br/>"+
-            "<a href='http://download.xcsoar.org/maps/" + feature.attributes.title + ".xcm'>"+
-            "http://download.xcsoar.org/maps/" + feature.attributes.title + ".xcm</a>";
-        popup = new OpenLayers.Popup.FramedCloud("selected-map", feature.geometry.getBounds().getCenterLonLat(),
-                                                 null, popupContent, null, false, null);
-        feature.popup = popup;
-        map.addPopup(popup);
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+var info = null;
+var active_rect = null;
+google.maps.event.addListener(map, 'click', function() {
+    if (info) {
+        info.close();
+        info = null;
     }
-
-    function onFeatureUnselect(feature) {
-        map.removePopup(feature.popup);
-        feature.popup.destroy();
-        feature.popup = null;
+    
+    if (active_rect) {
+        active_rect.setOptions({      
+            strokeColor: "#FF8800",
+            fillColor: "#FF8800",
+        });
+        active_rect = null;
     }
+});
+    
+for (var name in MAPS) {
+    var ext = MAPS[name];
+    
+    var sw = new google.maps.LatLng(ext[1], ext[0]);
+    var ne = new google.maps.LatLng(ext[3], ext[2]);
+    var bounds = new google.maps.LatLngBounds(sw, ne);
+    var rect = new google.maps.Rectangle({
+      strokeColor: "#FF8800",
+      strokeOpacity: 0.7,
+      strokeWeight: 2,
+      fillColor: "#FF8800",
+      fillOpacity: 0.2,
+      map: map,
+      bounds: bounds
+    });
 
-    map = new OpenLayers.Map({div: "map", projection: new OpenLayers.Projection("EPSG:900913")});
-    map.addLayer(new OpenLayers.Layer.Google("Google Terrain", {type: google.maps.MapTypeId.TERRAIN}));
+    rect.region = name;
+ 
+    google.maps.event.addListener(rect, 'click', function() {
+        if (active_rect) {
+            active_rect.setOptions({      
+                strokeColor: "#FF8800",
+                fillColor: "#FF8800",
+            });
+        }
+        active_rect = this;
+        active_rect.setOptions({      
+            strokeColor: "#0000CC",
+            fillColor: "#0000CC",
+        });
+        var content = "<div style='margin: 0px; padding: 5px;'><span style='font-size: 1.7em;'>" + 
+            this.region + "</span><br/><br/>"+
+            "<a href='http://download.xcsoar.org/maps/" + this.region + ".xcm'>"+
+            "http://download.xcsoar.org/maps/" + this.region + ".xcm</a></div>";
+            
+        if (info) info.close();
+        info = new google.maps.InfoWindow({
+            content: content
+        });        
+        info.setPosition(this.getBounds().getCenter());
+        info.open(map);   
+    });
+}
 
-    var boxes = new OpenLayers.Layer.Vector("XCSoar Maps");
-    for (var name in MAPS) {
-        var ext = MAPS[name];
-        var bounds = new OpenLayers.Bounds(ext[0], ext[1], ext[2], ext[3]).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
-        boxes.addFeatures(new OpenLayers.Feature.Vector(bounds.toGeometry(), {title: name}));
-    }
-
-    map.addLayer(boxes);
-
-    var selectControl = new OpenLayers.Control.SelectFeature(boxes,
-                                                             { onSelect: onFeatureSelect,
-                                                               onUnselect: onFeatureUnselect });
-
-    map.addControl(selectControl);
-    selectControl.activate();
-
-    map.setCenter(new OpenLayers.LonLat(0, 20.0).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913")), 2);
-})();
