@@ -10,5 +10,8 @@ Others might be outdated or simply wrong. If you find anything that you feel is 
 [trac](/trac) or try to fix the manual yourself. Since this is an open-source project everybody can [collaborate](/develop/)!
 
 - [XCSoar {{ site.xcsoar_stable_version }} Manual]({{ site.download_server_url }}{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf) (PDF)
+{% if site.xcsoar_testing_version != site.xcsoar_stable_version %}
+- [XCSoar {{ site.xcsoar_testing_version }} Manual]({{ site.download_server_url }}{{ site.xcsoar_testing_version }}/XCSoar-manual.pdf) (PDF)
+{% endif %}
 - [XCSoar 5.x Manual](http://prdownloads.sourceforge.net/xcsoar/XCSoar-manual-500.pdf?download) (PDF)
 
