@@ -28,7 +28,8 @@ for (var name in WAYPOINTS) {
     google.maps.event.addListener(marker, 'click', function() {
         var content = "<div style='margin: 0px; padding: 5px;'><span style='font-size: 1.7em;'>" + 
             this.country + "</span><br/><br/>" + this.waypoints + " waypoints<br/><br/>"+
-            "<a href='http://download.xcsoar.org/waypoints/" + this.country + ".cup'>"+
+            "<a href='http://download.xcsoar.org/waypoints/" + this.country + ".cup' "+
+            "type='application/octet-stream'>"+
             "http://download.xcsoar.org/waypoints/" + this.country + ".cup</a></div>";
             
         if (info) info.close();

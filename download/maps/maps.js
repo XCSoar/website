@@ -56,7 +56,8 @@ for (var name in MAPS) {
         });
         var content = "<div style='margin: 0px; padding: 5px;'><span style='font-size: 1.7em;'>" + 
             this.region + "</span><br/><br/>"+
-            "<a href='http://download.xcsoar.org/maps/" + this.region + ".xcm'>"+
+            "<a href='http://download.xcsoar.org/maps/" + this.region + ".xcm' "+
+            "type='application/octet-stream'>"+
             "http://download.xcsoar.org/maps/" + this.region + ".xcm</a></div>";
             
         if (info) info.close();
