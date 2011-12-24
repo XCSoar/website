@@ -57,8 +57,12 @@ for (var name in MAPS) {
         var content = "<div style='margin: 0px; padding: 5px;'><span style='font-size: 1.7em;'>" + 
             this.region + "</span><br/><br/>"+
             "<a href='http://download.xcsoar.org/maps/" + this.region + ".xcm' "+
-            "type='application/octet-stream'>"+
-            "http://download.xcsoar.org/maps/" + this.region + ".xcm</a></div>";
+            "type='application/octet-stream'>" + this.region + ".xcm</a><br/>" +
+            "<a href='http://download.xcsoar.org/maps/" + this.region + "_HighRes.xcm' "+
+            "type='application/octet-stream'>" + this.region + "_HighRes.xcm</a><br/>" +
+            "<a href='http://download.xcsoar.org/maps/" + this.region + "_Altair.xcm' "+
+            "type='application/octet-stream'>" + this.region + "_Altair.xcm</a><br/>" +
+            "</div>";
             
         if (info) info.close();
         info = new google.maps.InfoWindow({
