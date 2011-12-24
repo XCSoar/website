@@ -158,7 +158,7 @@ def main():
             ftp_dir = arg.rstrip('/')
     
     print "Connecting to server ..."
-    ftp = ftplib.FTP('ftp.ddbits.com', 'xcsoar@ddbits.com', password) # Connect
+    ftp = ftplib.FTP('download.xcsoar.org', 'xcsoar@ddbits.com', password) # Connect
     
     create_folder_index(ftp_dir + '/', ftp, recursive)
     
