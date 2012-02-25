@@ -1,6 +1,6 @@
 permalink: /discover/:year/:month/:day/:title.html
 
-xcsoar_stable_version: 6.2.5
+xcsoar_stable_version: 6.2.6
 xcsoar_testing_version: 6.3_alpha2
 xcsoar_old_version: 6.1.5
 
