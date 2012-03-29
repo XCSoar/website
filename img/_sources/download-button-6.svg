@@ -14,11 +14,11 @@
    height="297mm"
    id="svg2"
    version="1.1"
-   inkscape:version="0.47 r22583"
+   inkscape:version="0.48.1 r9760"
    sodipodi:docname="download-button-6.svg"
-   inkscape:export-filename="C:\Dokumente und Einstellungen\tobias.bieniek\Desktop\tmp\xcsoar\img\download-button.png"
-   inkscape:export-xdpi="143.84749"
-   inkscape:export-ydpi="143.84749">
+   inkscape:export-filename="/home/turbo/Code/xcsoar/website/img/download-button-6.png"
+   inkscape:export-xdpi="28.910917"
+   inkscape:export-ydpi="28.910917">
   <defs
      id="defs4">
     <linearGradient
@@ -156,17 +156,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.52"
-     inkscape:cx="40.226117"
+     inkscape:cx="-49.576515"
      inkscape:cy="814.63826"
      inkscape:document-units="px"
-     inkscape:current-layer="layer5"
+     inkscape:current-layer="layer8"
      showgrid="false"
      inkscape:showpageshadow="false"
      showborder="false"
-     inkscape:window-width="1454"
-     inkscape:window-height="988"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1680"
+     inkscape:window-height="1003"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -176,7 +176,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -264,24 +264,24 @@
        id="text3832"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan2852">Version 6.1</tspan></text>
+         id="tspan3023">XCSoar 6.3</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer8"
-     inkscape:label="Button-Text"
-     sodipodi:insensitive="true">
+     inkscape:label="Button-Text">
     <text
        xml:space="preserve"
-       style="font-size:66px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#444444;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma Bold"
-       x="-266.97955"
-       y="234.32651"
+       style="font-size:63.64371109px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#444444;fill-opacity:1;stroke:none;font-family:Tahoma;-inkscape-font-specification:Tahoma Bold"
+       x="-276.42337"
+       y="225.96072"
        id="text3827"
-       sodipodi:linespacing="125%"><tspan
+       sodipodi:linespacing="125%"
+       transform="scale(0.96429863,1.0370231)"><tspan
          sodipodi:role="line"
          id="tspan3829"
-         x="-266.97955"
-         y="234.32651">Download</tspan></text>
+         x="-276.42337"
+         y="225.96072">Download</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
