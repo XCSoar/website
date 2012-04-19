@@ -31,7 +31,7 @@ The Windows version of XCSoar can be used preflight planning, postflight replay 
 
 ## XCSoar {{ site.xcsoar_stable_version }} on Linux
 
-The Linux version of XCSoar {{ site.xcsoar_stable_version }} is not yet entirely finished!
+The Linux version of XCSoar can be used preflight planning, postflight replay or just to get to know the application before using it in the air.
 
 - [XCSoar {{ site.xcsoar_stable_version }} on Linux]({{ site.download_server_url }}{{ site.xcsoar_stable_version }}/LINUX/)
 
