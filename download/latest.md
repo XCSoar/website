@@ -28,6 +28,7 @@ The Android version of XCSoar {{ site.xcsoar_testing_version }} runs on all phon
 The Windows version of XCSoar can be used preflight planning, postflight replay or just to get to know the application before using it in the air.
 
 - [XCSoar {{ site.xcsoar_testing_version }} on Windows]({{ site.download_server_url }}{{ site.xcsoar_testing_version }}/PC/)
+- [XCSoar {{ site.xcsoar_testing_version }} on Windows (64 bit)]({{ site.download_server_url }}{{ site.xcsoar_testing_version }}/WIN64/)
 
 ## XCSoar {{ site.xcsoar_testing_version }} on Linux
 
