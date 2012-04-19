@@ -36,6 +36,12 @@ The Linux version of XCSoar can be used preflight planning, postflight replay or
 
 - [XCSoar {{ site.xcsoar_testing_version }} on Linux]({{ site.download_server_url }}{{ site.xcsoar_testing_version }}/LINUX/)
 
+## XCSoar {{ site.xcsoar_testing_version }} on OS X
+
+The OS X version of XCSoar {{ site.xcsoar_testing_version }} is not yet entirely finished!
+
+- [XCSoar {{ site.xcsoar_testing_version }} on OS X]({{ site.download_server_url }}{{ site.xcsoar_testing_version }}/OSX/)
+
 ## XCSoar {{ site.xcsoar_testing_version }} on Altair
 
 We are working on XCSoar {{ site.xcsoar_testing_version }} for the Altair platform. This version however is experimental and currently not endorsed by the manufacturer.
