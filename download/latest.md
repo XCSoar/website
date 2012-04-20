@@ -44,6 +44,6 @@ The OS X version of XCSoar {{ site.xcsoar_testing_version }} is not yet entirely
 
 ## XCSoar {{ site.xcsoar_testing_version }} on Altair
 
-We are working on XCSoar {{ site.xcsoar_testing_version }} for the Altair platform. This version however is experimental and currently not endorsed by the manufacturer.
+We are working on XCSoar {{ site.xcsoar_testing_version }} for the Altair platform.
 
 - [XCSoar {{ site.xcsoar_testing_version }} on Altair]({{ site.download_server_url }}{{ site.xcsoar_testing_version }}/ALTAIR/)
