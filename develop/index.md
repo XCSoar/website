@@ -21,6 +21,7 @@ title: Development
 - **XCSoar**: *Loading ...*
 - **MapGenerator**: *Loading ...*
 - **Website**: *Loading ...*
+- **Skylines**: *Loading ...*
 
 ## Contributing
 

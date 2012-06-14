@@ -29,4 +29,8 @@ $(document).ready(function() {
 		url: '/get_rss.php?url=http://git.xcsoar.org/cgit/master/website.git/atom/?h=master',
 		success: function(feed) { update_feed(feed, 2); }
 	});
+    $.getFeed({
+		url: '/get_rss.php?url=http://git.xcsoar.org/cgit/master/skylines.git/atom/?h=master',
+		success: function(feed) { update_feed(feed, 3); }
+	});
 });
