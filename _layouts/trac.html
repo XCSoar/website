@@ -5,21 +5,18 @@
 <head py:match="head" py:attrs="select('@*')">
     ${select('*|comment()|text()')}
 
-    <link rel="stylesheet" type="text/css" href="/css/xcsoar-red.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/xcsoar.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/xcsoar-trac.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/jquery.lightbox-0.5.css" media="screen" />
-    <link rel="shortcut icon" type="image/ico" href="/img/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="http://www.xcsoar.org/css/xcsoar-red.css"/>
+  <link rel="stylesheet" type="text/css" href="http://www.xcsoar.org/css/xcsoar.css"/>
+  <link rel="stylesheet" type="text/css" href="http://www.xcsoar.org/css/xcsoar-trac.css"/>
+  <link rel="shortcut icon" type="image/ico" href="http://www.xcsoar.org/img/favicon.ico"/>
 
-    <!--[if IE 6]>
-		<link rel="stylesheet" href="/css/ie6.css" type="text/css"/>
-    <![endif]-->
-    
-    <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.lightbox-0.5.min.js"></script>
-    
-    <script type="text/javascript" src="/js/update_progress.js"></script>
-    
+  <!--[if IE 6]>
+	<link rel="stylesheet" href="http://www.xcsoar.org/css/ie6.css" type="text/css"/>
+  <![endif]-->
+  
+  <script type="text/javascript" src="http://www.xcsoar.org/js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="http://www.xcsoar.org/js/update_progress.js"></script>
+  
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -35,14 +32,14 @@
 
 	</script>
 
-    <script type="text/javascript">
+  <script type="text/javascript">
     $(document).ready(function() {
 		$('#secondary').append($('#primary #footer').detach());
 		$('#primary #content #banner #header').css("display", "none");
-		$('#secondary #footer #tracpowered img').attr("src", "/img/trac_logo_mini.png");
+		$('#secondary #footer #tracpowered img').attr("src", "http://www.xcsoar.org/img/trac_logo_mini.png");
     });
-    </script>
-</head>
+  </script>
+  </head>
   <body py:match="body" py:attrs="select('@*')">
     {% include header.html %}
 

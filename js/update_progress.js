@@ -5,8 +5,8 @@ layout: nil
 	  var max_width = 400;
 	  var percent = -1;
 		
-		$.get("/trac/roadmap", function(html){
-			$(html).find("li.milestone").each(function(i) {
+		$.get("/get_rss.php?url=http://bugs.xcsoar.org/roadmap", function(html){
+			$(html).find("div.milestone").each(function(i) {
 				var found = false;
 				$(this).find(".info h2 em").each(function(i) {
 					if ($(this).text() == "{{ site.xcsoar_next_milestone }}") found = true
