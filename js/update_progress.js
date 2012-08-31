@@ -5,7 +5,7 @@ layout: nil
 	  var max_width = 400;
 	  var percent = -1;
 		
-		$.get("/get_rss.php?url=http://bugs.xcsoar.org/roadmap", function(html){
+		$.get("/get_rss.php?url=http://bugs.xcsoar.org/roadmap/", function(html){
 			$(html).find("div.milestone").each(function(i) {
 				var found = false;
 				$(this).find(".info h2 em").each(function(i) {
