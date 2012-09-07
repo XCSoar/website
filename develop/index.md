@@ -4,10 +4,10 @@ color: red
 menu: develop
 title: Development
 ---
-<script language="javascript" type="text/javascript" src="{{ site.server_url }}js/jfeeditem.js"> </script>
-<script language="javascript" type="text/javascript" src="{{ site.server_url }}js/jatom.js"> </script>
-<script language="javascript" type="text/javascript" src="{{ site.server_url }}js/jfeed.js"> </script>
-<script language="javascript" type="text/javascript" src="{{ site.server_url }}js/reldate.js"> </script>
+<script language="javascript" type="text/javascript" src="{{ site.server_url }}lib/jfeed/jfeeditem.js"> </script>
+<script language="javascript" type="text/javascript" src="{{ site.server_url }}lib/jfeed/jatom.js"> </script>
+<script language="javascript" type="text/javascript" src="{{ site.server_url }}lib/jfeed/jfeed.js"> </script>
+<script language="javascript" type="text/javascript" src="{{ site.server_url }}lib/reldate.js"> </script>
 <script language="javascript" type="text/javascript" src="{{ site.server_url }}js/develop.last_updates.js"> </script>
 
 ## Source code
