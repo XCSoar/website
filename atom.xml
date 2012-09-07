@@ -5,13 +5,13 @@ layout: nil
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>XCSoar</title>
-  <link href="http://www.xcsoar.org/atom.xml" rel="self"/>
-  <link href="http://www.xcsoar.org/"/>
+  <link href="{{ site.server_url }}atom.xml" rel="self"/>
+  <link href="{{ site.server_url }}"/>
   <updated>{{site.time | date_to_xmlschema }}</updated>
-  <id>http://www.xcsoar.org/</id>
+  <id>{{ site.server_url }}</id>
   
-  <icon>http://www.xcsoar.org/img/icon.jpg</icon>
-  <logo>http://www.xcsoar.org/img/logo-blue.jpg</logo>
+  <icon>{{ site.server_url }}/xcsoar-logo.png</icon>
+  <logo>{{ site.server_url }}/logo-blue.jpg</logo>
   
   <author>
     <name>XCSoar Team</name>
@@ -21,9 +21,9 @@ layout: nil
   {% for post in site.posts limit: 10 %}
   <entry>
     <title>{{ post.title }}</title>
-    <link href="http://www.xcsoar.org{{ post.url }}"/>
+    <link href="{{ site.server_url }}{{ post.url }}"/>
     <updated>{{post.date | date_to_xmlschema }}</updated>
-    <id>http://www.xcsoar.org{{ post.url }}</id>
+    <id>{{ site.server_url }}{{ post.url }}</id>
 
     {% if post.author %}
     <author><name>{{ post.author }}</name></author>

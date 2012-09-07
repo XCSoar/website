@@ -5,17 +5,17 @@
 <head py:match="head" py:attrs="select('@*')">
     ${select('*|comment()|text()')}
 
-  <link rel="stylesheet" type="text/css" href="http://www.xcsoar.org/css/xcsoar-red.css"/>
-  <link rel="stylesheet" type="text/css" href="http://www.xcsoar.org/css/xcsoar.css"/>
-  <link rel="stylesheet" type="text/css" href="http://www.xcsoar.org/css/xcsoar-trac.css"/>
-  <link rel="shortcut icon" type="image/ico" href="http://www.xcsoar.org/img/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="{{ site.server_url }}css/xcsoar-red.css"/>
+  <link rel="stylesheet" type="text/css" href="{{ site.server_url }}css/xcsoar.css"/>
+  <link rel="stylesheet" type="text/css" href="{{ site.server_url }}css/xcsoar-trac.css"/>
+  <link rel="shortcut icon" type="image/ico" href="{{ site.server_url }}img/favicon.ico"/>
 
   <!--[if IE 6]>
-	<link rel="stylesheet" href="http://www.xcsoar.org/css/ie6.css" type="text/css"/>
+	<link rel="stylesheet" href="{{ site.server_url }}css/ie6.css" type="text/css"/>
   <![endif]-->
   
-  <script type="text/javascript" src="http://www.xcsoar.org/js/jquery-1.4.2.min.js"></script>
-  <script type="text/javascript" src="http://www.xcsoar.org/js/update_progress.js"></script>
+  <script type="text/javascript" src="{{ site.server_url }}js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="{{ site.server_url }}js/update_progress.js"></script>
   
 	<script type="text/javascript">
 
@@ -36,7 +36,7 @@
     $(document).ready(function() {
 		$('#secondary').append($('#primary #footer').detach());
 		$('#primary #content #banner #header').css("display", "none");
-		$('#secondary #footer #tracpowered img').attr("src", "http://www.xcsoar.org/img/trac_logo_mini.png");
+		$('#secondary #footer #tracpowered img').attr("src", "{{ site.server_url }}img/trac_logo_mini.png");
     });
   </script>
   </head>
