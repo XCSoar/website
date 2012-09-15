@@ -89,11 +89,9 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #download ul li { margin-bottom: 10px; font-size: 14px; }
 
 /* ASIDE */
-#aside { float: right; width: 250px; padding: 40px 0; }
+#aside { float: right; width: 250px; padding: 40px 0; line-height: 21px; }
 #aside h2 { margin-bottom: 10px; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
-#aside p { margin-bottom: 10px; font-size: 14px; line-height: 21px; "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; color: #878380;}
-#aside ul { padding-left: 20px; }
-#aside ul li { padding: 5px; }
+#aside p { margin-bottom: 10px; font-size: 14px;  "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; color: #878380;}
 
 /* PORTFOLIO */
 #portfolio { position: relative; float: left; width: 100%; }
@@ -227,4 +225,70 @@ body {
 
 .btn {
   text-decoration: none;
+}
+
+/* QUICKLINK LISTS */
+
+ul.quicklinks {
+  list-style: none;
+  margin: 10px;
+  line-height: 25px;
+}
+
+ul.quicklinks li {
+  padding-left: 26px;
+}
+
+ul.quicklinks li a {
+  text-decoration: none;
+}
+
+ul.quicklinks li a:hover {
+  text-decoration: underline;
+}
+
+ul.quicklinks li.divider {
+  height: 15px;
+}
+
+ul.quicklinks li.list-item-data {
+  background: url('../img/icon-globe.png') 0 2px no-repeat;
+}
+
+ul.quicklinks li.list-item-windows {
+  background: url('../img/icon-windows.png') 0 2px no-repeat;
+}
+
+ul.quicklinks li.list-item-wince {
+  background: url('../img/icon-windows-mobile.png') 0 2px no-repeat;
+}
+
+ul.quicklinks li.list-item-android {
+  background: url('../img/icon-android.png') 0 2px no-repeat;
+}
+
+ul.quicklinks li.list-item-linux {
+  background: url('../img/icon-linux.png') 0 2px no-repeat;
+}
+
+ul.quicklinks li.list-item-mac {
+  background: url('../img/icon-apple.png') 0 2px no-repeat;
+}
+
+ul.quicklinks li.list-item-xcsoar {
+  background: url('../img/icon-xcsoar.png') 0 2px no-repeat;
+}
+
+/* DOWNLOADS */
+
+ul#downloads a {
+  color: #359A41;
+}
+
+ul#downloads a:hover {
+  color: #1B8D29;
+}
+
+ul#downloads a:active {
+  color: #359A41;
 }
