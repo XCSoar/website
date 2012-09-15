@@ -24,9 +24,6 @@ hr { border-style: dotted; border-width: 1px 0px 0px 0px; }
 /* HTML */
 html { min-width: 960px; font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; }
 
-/* BODY */
-body { padding-top: 20px; background: url(../img/shadow-top.png) 0 10px repeat-x; }
-
 /* LAYOUT */
 #header, #content, #feature, #footer { width: 940px; margin: 0 auto; }
 
@@ -155,7 +152,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 /******************************************************************************
  TERTIARY SECTION 
  ******************************************************************************/
-#tertiary { float: left; width: 100%; padding-top: 40px; background: url(../img/shadow-bottom.png) 0 0 repeat-x; }
+#tertiary { float: left; width: 100%; padding-top: 40px; }
 
 /* FOOTER */
 #footer { border: 0px; }
@@ -181,6 +178,23 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 /* COPYRIGHT */
 #copyright { float: left; padding: 40px 0 40px 80px; }
 #copyright p { font-size: 11px; }
+
+/* GLOBAL */
+
+body {
+  /* margin to display the shadow */
+  margin-top: 20px;
+  /* stripes background image */
+}
+
+.shadowed {
+  /* shadow effect for the main content */
+  -webkit-box-shadow:0px 0px 20px #000000;
+     -moz-box-shadow:0px 0px 20px #000000;
+          box-shadow:0px 0px 20px #000000;
+
+  background: white;
+}
 
 /* PROGRESS BAR */
 
