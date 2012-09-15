@@ -166,13 +166,9 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 /* GLOBAL */
 
-body {
-  /* margin to display the shadow */
-  margin-top: 20px;
-  /* stripes background image */
-}
-
 .shadowed {
+  margin-top: 20px;
+
   /* shadow effect for the main content */
   -webkit-box-shadow:0px 0px 20px #000000;
      -moz-box-shadow:0px 0px 20px #000000;
