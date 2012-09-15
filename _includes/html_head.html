@@ -16,26 +16,34 @@
 
 {% endif %}
 
-  <link rel="stylesheet" type="text/css" href="{{ site.server_url }}lib/bootstrap/bootstrap-normalize.css"/>
-  <link rel="stylesheet" type="text/css" href="{{ site.server_url }}lib/bootstrap/bootstrap-button.css"/>
-  <link rel="stylesheet" type="text/css" href="{{ site.server_url }}css/xcsoar-{{ color }}.css"/>
-  <link rel="stylesheet" type="text/css" href="{{ site.server_url }}css/xcsoar.css"/>
-{% if page.trac %}
-  <link rel="stylesheet" type="text/css" href="{{ site.server_url }}css/xcsoar-trac.css"/>
-{% else %}
-  <link rel="stylesheet" type="text/css" href="{{ site.server_url }}css/xcsoar-not-trac.css"/>
-{% endif %}
-  <link rel="stylesheet" type="text/css" href="{{ site.server_url }}lib/jquery-lightbox/jquery.lightbox-0.5.css" media="screen" />
-
   <link rel="shortcut icon" type="image/ico" href="{{ site.server_url }}favicon.ico"/>
 
   <link href="{{ site.server_url }}atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
 
-  <script type="text/javascript" src="{{ site.server_url }}lib/jquery-1.4.2.min.js"></script>
-  <script type="text/javascript" src="{{ site.server_url }}lib/jquery-lightbox/jquery.lightbox-0.5.min.js"></script>
+{% bundle %}
+- /lib/bootstrap/bootstrap-normalize.css
+- /lib/bootstrap/bootstrap-button.css
+- /css/xcsoar.css
+- /lib/jquery-lightbox/jquery.lightbox-0.5.css
+{% endbundle %}
+
+{% bundle %}
+- /css/xcsoar-{{ color }}.css
+{% endbundle %}
+
+{% if page.trac %}
+  {% bundle %} [/css/xcsoar-trac.css] {% endbundle %}
+{% else %}
+  {% bundle %} [/css/xcsoar-not-trac.css] {% endbundle %}
+{% endif %}
+
+{% bundle %}
+- /lib/jquery-1.4.2.min.js
+- /lib/jquery-lightbox/jquery.lightbox-0.5.min.js
+- /js/google-analytics.js
+{% endbundle %}
   
   <script type="text/javascript" src="{{ site.server_url }}js/update_progress.js"></script>
-  <script type="text/javascript" src="{{ site.server_url }}js/google-analytics.js"></script>
 
 {% if page.trac %}
   <script type="text/javascript">
