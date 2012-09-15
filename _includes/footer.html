@@ -1,41 +1,40 @@
-	</div> 
-	
-	<div id="tertiary">
-		<div id="footer">
-			<div id="status">
-				<h2>Status</h2>
-				<p id="status_err">
-					<span>Not available</span>
-				</p>
-				<p id="status_ok" style="display: none;">
-					<span>
-					  <img src="{{ site.server_url }}img/statusbar-left.png"/>
-  					<img id="fill" src="{{ site.server_url }}img/statusbar-filled.png"/>
-  					<img src="{{ site.server_url }}img/statusbar-middle.png"/>
-  					<img id="blank" src="{{ site.server_url }}img/statusbar-blank.png"/>
-  					<img src="{{ site.server_url }}img/statusbar-right.png"/>
-  				</span><br/>
-					<span>{{ site.xcsoar_next_milestone }} - <span id="percent">0</span>% ready</span><br/>
-					<span class="more"><a href="http://bugs.xcsoar.org/milestone/{{ site.xcsoar_next_milestone }}">more...</a></span>
-				</p>
-			</div> 
+  </div>
 
-			<div id="contact">
-				<h2>Contact</h2>
-				<div class="vcard">
-					<h3>XCSoar</h3>
-					<p>
-						<span class="irc"><a href="{{ site.server_url }}discover/irc.html" title="Visit our IRC channel">irc.freenode.net .. #xcsoar</a></span><br/>
-						<span class="email"><a href="{{ site.server_url }}discover/mailinglist.html" title="Visit our mailing list">xcsoar-user [at] lists [dot] sourceforge [dot] net</a></span><br/>
-						<span class="web"><a href="{{ site.server_url }}">http://www.xcsoar.org</a></span><br/>
-					</p>
-				</div> 
-			</div> 
+  <div id="tertiary">
+    <div id="footer">
+      <div id="status">
+        <h2>Status</h2>
+        <p id="status_err" class="status">
+          <span>Not available</span>
+        </p>
+        <p id="status_ok" class="status" style="display: none;">
+          <div class="xcsoar-progress">
+            <div class="bar" style="width: 64%;"></div>
+          </div>
+          <p>
+            {{ site.xcsoar_next_milestone }} &ndash;
+            <span id="percent">64</span>% done &ndash;
+            <a href="http://bugs.xcsoar.org/milestone/{{ site.xcsoar_next_milestone }}">more...</a>
+          </p>
+        </p>
+      </div>
 
-			<div id="copyright">
-				<p><strong>XCSoar</strong> is Free Software released under the <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt">GNU/GPL License</a> .. Copyright &copy; 2000-2011</p>
-			</div> 
-		</div> 
-	</div> 
+      <div id="contact">
+        <h2>Contact</h2>
+        <div class="vcard">
+          <h3>XCSoar</h3>
+          <p>
+            <span class="irc"><a href="{{ site.server_url }}discover/irc.html" title="Visit our IRC channel">irc.freenode.net .. #xcsoar</a></span><br/>
+            <span class="email"><a href="{{ site.server_url }}discover/mailinglist.html" title="Visit our mailing list">xcsoar-user [at] lists [dot] sourceforge [dot] net</a></span><br/>
+            <span class="web"><a href="{{ site.server_url }}">http://www.xcsoar.org</a></span><br/>
+          </p>
+        </div>
+      </div>
+
+      <div id="copyright">
+        <p><strong>XCSoar</strong> is Free Software released under the <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt">GNU/GPL License</a> .. Copyright &copy; 2000-2011</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

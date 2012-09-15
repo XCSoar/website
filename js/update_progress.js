@@ -1,34 +1,31 @@
 ---
 layout: nil
 ---
-	$(document).ready(function() {
-	  var max_width = 400;
-	  var percent = -1;
-		
-		$.get("/get_rss.php?url=http://bugs.xcsoar.org/roadmap/", function(html){
-			$(html).find("div.milestone").each(function(i) {
-				var found = false;
-				$(this).find(".info h2 em").each(function(i) {
-					if ($(this).text() == "{{ site.xcsoar_next_milestone }}") found = true
-				});
-				if (found) {
-					$(this).find(".info .percent").each(function(i) {
-						percent = $(this).text();
-					});
-				}
-			});
-			percent = Number(String(percent).replace("%", ""));
-			
-			if (percent == -1) 
-				return;
-				
-			max_width -= 3*5;
-			$('#status img#fill').css("width", max_width * (percent/100));
-			$('#status img#blank').css("width", max_width * ((100-percent)/100));
-			$('#status img').css("height", "12px");
-			$('#status #percent').text(percent);
-			
-			$('#status #status_err').css("display", "none");
-			$('#status #status_ok').css("display", "block");
-		}, "html");
-	});
+$(document).ready(function() {
+  $.get("/get_rss.php?url=http://bugs.xcsoar.org/roadmap/", function(html) {
+    var percent = -1;
+
+    $(html).find("div.milestone").each(function(i) {
+      var found = false;
+      $(this).find(".info h2 em").each(function(i) {
+        if ($(this).text() == "{{ site.xcsoar_next_milestone }}") found = true
+      });
+      if (found) {
+        $(this).find(".info .percent").each(function(i) {
+          percent = $(this).text();
+        });
+      }
+    });
+
+    if (percent == -1)
+      return;
+
+    percent = Number(String(percent).replace("%", ""));
+
+    $('#status_ok .bar').css("width", percent + '%');
+    $('#status_ok #percent').text(percent);
+
+    $('#status_err').css("display", "none");
+    $('#status_ok').css("display", "block");
+  }, "html");
+});
