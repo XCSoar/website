@@ -208,3 +208,9 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
      -moz-border-radius: 5px;
           border-radius: 5px;
 }
+
+/* BUTTONS */
+
+.btn {
+  text-decoration: none;
+}
