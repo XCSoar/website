@@ -1,17 +1,16 @@
 {% assign color = 'green' %}
 
-        {% include html_head.html %}
-        
-        {% include header.html %}
+{% include html_head.html %}
+{% include header.html %}
 
-		<div id="content">	
-			<div id="summary">
-				<div id="download">
-                    {{ content }}
-				</div>
-			</div> 
+<div id="content">
+  <div id="summary">
+    <div id="download">
+    {{ content }}
+    </div>
+  </div>
 
-            {% include download_sidebar.html %}
-        </div> 
-        
-        {% include footer.html %}
+  {% include download_sidebar.html %}
+</div>
+
+{% include footer.html %}

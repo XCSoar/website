@@ -1,15 +1,14 @@
 {% if page.color %}
-{% assign color = page.color %}
+  {% assign color = page.color %}
 {% else %}
-{% assign color = 'blue' %}
+  {% assign color = 'blue' %}
 {% endif %}
 
-        {% include html_head.html %}
-        
-        {% include header.html %}
+{% include html_head.html %}
+{% include header.html %}
 
-		<div id="content">		
-		{{ content }}		
-		</div> 
+<div id="content">
+  {{ content }}
+</div>
 
-        {% include footer.html %}
+{% include footer.html %}

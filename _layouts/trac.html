@@ -3,7 +3,7 @@
       xmlns:py="http://genshi.edgewall.org/"
       py:strip="">
 <head py:match="head" py:attrs="select('@*')">
-    ${select('*|comment()|text()')}
+  ${select('*|comment()|text()')}
 
   <link rel="stylesheet" type="text/css" href="{{ site.server_url }}css/xcsoar-red.css"/>
   <link rel="stylesheet" type="text/css" href="{{ site.server_url }}css/xcsoar.css"/>
@@ -11,43 +11,43 @@
   <link rel="shortcut icon" type="image/ico" href="{{ site.server_url }}img/favicon.ico"/>
 
   <!--[if IE 6]>
-	<link rel="stylesheet" href="{{ site.server_url }}css/ie6.css" type="text/css"/>
+  <link rel="stylesheet" href="{{ site.server_url }}css/ie6.css" type="text/css"/>
   <![endif]-->
   
   <script type="text/javascript" src="{{ site.server_url }}js/jquery-1.4.2.min.js"></script>
   <script type="text/javascript" src="{{ site.server_url }}js/update_progress.js"></script>
   
-	<script type="text/javascript">
+  <script type="text/javascript">
 
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-20378879-1']);
-	  _gaq.push(['_setDomainName', '.xcsoar.org']);
-	  _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-20378879-1']);
+    _gaq.push(['_setDomainName', '.xcsoar.org']);
+    _gaq.push(['_trackPageview']);
 
-	  (function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-	</script>
+  </script>
 
   <script type="text/javascript">
     $(document).ready(function() {
-		$('#secondary').append($('#primary #footer').detach());
-		$('#primary #content #banner #header').css("display", "none");
-		$('#secondary #footer #tracpowered img').attr("src", "{{ site.server_url }}img/trac_logo_mini.png");
+    $('#secondary').append($('#primary #footer').detach());
+    $('#primary #content #banner #header').css("display", "none");
+    $('#secondary #footer #tracpowered img').attr("src", "{{ site.server_url }}img/trac_logo_mini.png");
     });
   </script>
-  </head>
-  <body py:match="body" py:attrs="select('@*')">
-    {% include header.html %}
+</head>
+<body py:match="body" py:attrs="select('@*')">
+{% include header.html %}
 
-		<div id="content">
-		{{ content }}
-		</div>
-        
-    </div> 
-	<div id="secondary">
-    
-	{% include footer.html %}
+    <div id="content">
+    {{ content }}
+    </div>
+
+  </div>
+  <div id="secondary">
+
+{% include footer.html %}
