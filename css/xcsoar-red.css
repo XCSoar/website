@@ -9,7 +9,7 @@ a:hover { color: #B55722; }
 a:active { color: #FF9052; }
 
 /* HTML */
-html { color: #453c37; background: url(../img/bg-red.gif) 50% 0 repeat; }
+html { color: #453c37; background: url(../img/bg-red.png) 50% 0 repeat; }
 
 /* HIGHTLIGHT */
 .highlight { color: #FF9052; font-weight: bold; }
