@@ -30,18 +30,3 @@ ul#nav li.current a { border-bottom: 2px solid #B55722; color: #B55722; }
 #quote.markup-magic p { background-image: url(../img/quote-anchor-red.gif); }
 #quote.awesome p, #quote.endeavor p { background-image: url(../img/quote-anchor-red.gif); }
 #quote p a { color: #453c37; }
-
-/* ASIDE */
-#aside div.vcard a:hover { color: #B55722; }
-
-/* PORTFOLIO */
-#portfolio p.next a { background: #FF9052; }
-#portfolio p.next a:hover { background: #B55722; }
-
-/******************************************************************************
- SECONDARY SECTION 
- ******************************************************************************/
-
-/* DETAILS */
-#details ul li { background: url(../img/bullet-red.gif) 0 5px no-repeat; }
-#details ul li ul li { background: url(../img/bullet-red.gif) 0 5px no-repeat; }

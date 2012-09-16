@@ -93,23 +93,6 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #aside h2 { margin-bottom: 10px; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
 #aside p { margin-bottom: 10px; font-size: 14px;  "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; color: #878380;}
 
-/* PORTFOLIO */
-#portfolio { position: relative; float: left; width: 100%; }
-#portfolio p.next a { position: absolute; z-index: 1000; top: 380px; left: 640px; float: left; border-radius: 100px; padding: 8px 12px 6px 12px; font-size: 10px; line-height: 10px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: #fff; }
-#portfolio ul { list-style: none; }
-#portfolio li { float: left; width: 100%; border-bottom: 1px dotted #9f9c99; padding: 40px 0; }
-#portfolio li.last-child { border-bottom: 0; }
-#portfolio div.summary { position: relative; right: 12px; float: left; }
-#portfolio div.summary p { float: left; width: 624px; height: 424px; background: url(../img/backdrop.gif) 0 0 no-repeat; }
-#portfolio div.summary img { float: left; padding: 17px 22px 27px 22px; }
-#portfolio div.details { float: left; width: 276px; padding: 20px 0 0 16px; }
-#portfolio div.details dt { padding: 20px 0 2px 0; font-size: 11px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; color: #878380; }
-#portfolio div.details dd { font-size: 18px; line-height: 21px; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; }
-#portfolio div.details dd strong { font-size: 22px; font-weight: normal; }
-#portfolio div.details p { margin-top: 20px; }
-#portfolio div.details a { text-decoration: none; }
-#portfolio div.details a:hover { text-decoration: underline; }
-
 /* WEBCHAT */
 #webchat { margin: 120px 0px 20px; height: 500px; border: 1px dotted #9f9c99; }
 
