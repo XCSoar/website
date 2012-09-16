@@ -7,11 +7,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 ul, ol, li, dl { border: 0; }
 
 a:active { outline: 0; }
-abbr, acronym { font-size: .9em; cursor: help; }
 body { line-height: 1; font-size: small; }
-blockquote, q {	quotes: none; }
-ins { text-decoration: none; }
-del {	text-decoration: line-through; }
 table {	border-collapse: collapse; border-spacing: 0; }
 .hidden { display: none; }
 
@@ -50,7 +46,7 @@ ul#nav li.download a:hover { border-bottom: 2px solid #1B8D29; color: #1B8D29; }
 ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 /* SUMMARY & FORM */
-#summary, #form { float: left; width: 620px; padding: 10px 0 20px; }
+#summary { float: left; width: 620px; padding: 10px 0 20px; }
 
 /* SUMMARY */
 #summary h2 { margin: 20px 0; }
@@ -65,22 +61,6 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #summary ul, #summary ol { margin-bottom: 20px; padding-left: 20px; line-height: 24px; }
 #summary ul li, #summary ol li { margin-bottom: 3px; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; font-size: 15px; }
 #summary a.more { font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; }
-
-/* FORM */
-#form h2 { display: none; }
-#form p { margin-bottom: 30px; padding-right: 20px; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; }
-#form label { float: left; padding-bottom: 12px; font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; }
-#form div.box { width: 580px; padding: 10px; margin-bottom: 4px; border: 1px solid #9f9c99; border-radius: 8px; font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;  font-size: 20px; }
-#form div.box .comment { color: #777777; font-size: 70%; }
-#form input.text, #form textarea { width: 580px; padding: 10px; border: 1px solid #9f9c99; border-radius: 8px; font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;  font-size: 20px; }
-#form input.text:focus, #form textarea:focus { border: 1px solid #555; }
-#form input.button { padding: 5px 10px; font-size: 18px; text-transform: uppercase; border: 0; border-radius: 8px; cursor: pointer; }
-#form input.button_inactive { color: #fff; background: #777777; padding: 5px 10px; font-size: 18px; text-transform: uppercase; border: 0; border-radius: 8px; cursor: pointer; }
-#form input.button:hover, #form input.button:focus { cursor: pointer; }
-
-/* DOWNLOAD */
-#download h3 { font-weight: bold; }
-#download ul li { margin-bottom: 10px; font-size: 14px; }
 
 /* ASIDE */
 #aside { float: right; width: 250px; padding: 40px 0; line-height: 21px; }

@@ -20,13 +20,3 @@ html { color: #453c37; background: url(../img/bg-blue.gif) 50% 0 repeat; }
 
 /* NAV */
 ul#nav li.current a { border-bottom: 2px solid #1A4977; color: #1A4977; }
-
-/* FORM */
-#form input.button { color: #fff; background: #3E73A7; }
-#form input.button:hover, #form input.button:focus { background: #1A4977; }
-
-/* QUOTE */
-#quote p { color: #453c37; background: url(../img/quote-achor-blue.gif) 30px 0 no-repeat; }
-#quote.markup-magic p { background-image: url(../img/quote-anchor-blue.gif); }
-#quote.awesome p, #quote.endeavor p { background-image: url(../img/quote-anchor-brown.gif); }
-#quote p a { color: #453c37; }
