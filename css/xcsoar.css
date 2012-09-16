@@ -279,3 +279,11 @@ ul#downloads a:hover {
 ul#downloads a:active {
   color: #359A41;
 }
+
+/* NEWS */
+
+h2 small {
+  color: #999999;
+  font-size: 65%;
+  font-weight: normal;
+}
