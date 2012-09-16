@@ -1,7 +1,16 @@
-body { padding-top: 20px; background: url(../img/shadow-top.png) 0 10px repeat-x; }
-html { color: #453c37; background: url(../img/bg-blue.gif) 50% 0 repeat; }
+body { color: #453c37; background: url(../img/bg-blue.png) 50% 0 repeat; }
 
-#header h1 { margin-top: -37px }
-#wrap { padding: 60px 20px 10px; } 
-#status h2 { font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; color: white; }
-#contact h3 { font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; color: white; border: none; padding: 0;}
+#wrap { padding: 0px; }
+footer h2 { font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; color: white; }
+
+h1 {
+  color: inherit;
+}
+
+a:visited, a:link {
+  color: inherit;
+}
+
+.copyright {
+  color: inherit;
+}

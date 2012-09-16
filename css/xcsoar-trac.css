@@ -1,8 +1,11 @@
-h2 { margin: 10px; }
+:link, :visited {
+  color: inherit;
+  border-bottom: inherit;
+}
 
-#header :link, #header :visited, #header :link:hover, #header :visited:hover {
-    color: #878380;
-    padding: 0px 5px 4px 5px;
+:link:hover, :visited:hover {
+  color: inherit;
+  background-color: inherit;
 }
 
 blockquote.citation {
@@ -12,4 +15,12 @@ blockquote.citation {
 
 p {
     margin: 10px 0px;
+}
+
+#footer {
+  border: 0px;
+}
+
+#secondary {
+  padding: 0px;
 }

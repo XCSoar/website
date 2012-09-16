@@ -2,14 +2,12 @@
 
 {% include header.html %}
 
-<div id="content">
-  <div id="summary">
-    <div id="download">
-    {{ content }}
-    </div>
-  </div>
-
+<div class="row" id="content">
   {% include download_sidebar.html %}
+
+  <div class="span8" id="summary">
+    {{ content }}
+  </div>
 </div>
 
 {% include footer.html %}

@@ -5,147 +5,153 @@ title: ... the open-source glide computer
 tagline: true
 ---
 
-      <script type="text/javascript">
-      $(function() {
-        $('#screenshots a.screenshot').lightBox({
-          imageLoading: '/lib/jquery-lightbox/lightbox-ico-loading.gif',
-          imageBtnClose: '/lib/jquery-lightbox/lightbox-btn-close.gif',
-          imageBtnPrev: '/lib/jquery-lightbox/lightbox-btn-prev.gif',
-          imageBtnNext: '/lib/jquery-lightbox/lightbox-btn-next.gif',
-          imageBlank: '/lib/jquery-lightbox/lightbox-blank.gif'
-        });
-      });
-      </script>
+<script type="text/javascript">
+$(function() {
+  $('#screenshots .span4 a').lightBox({
+    imageLoading: '/lib/jquery-lightbox/lightbox-ico-loading.gif',
+    imageBtnClose: '/lib/jquery-lightbox/lightbox-btn-close.gif',
+    imageBtnPrev: '/lib/jquery-lightbox/lightbox-btn-prev.gif',
+    imageBtnNext: '/lib/jquery-lightbox/lightbox-btn-next.gif',
+    imageBlank: '/lib/jquery-lightbox/lightbox-blank.gif'
+  });
+});
+</script>
 
-      <div id="summary">
-        <p>
-          XCSoar is a tactical glide computer originally developed for the
-          Pocket PC platform. In 2005, the originally commercial software was
-          given to the open-source community for further development and has
-          constantly been improved since. It is now a multi-platform application
-          that currently runs on Windows, Windows Mobile, Unix and even Android
-          devices.
-        </p>
-        <p>
-          <a href="/discover/" title="Learn more about XCSoar">Learn more...</a>
-        </p>
-                
-        <hr/>
+<div class="row" id="summary">
+  <div class="span8">
+    <p>
+      XCSoar is a tactical glide computer originally developed for the
+      Pocket PC platform. In 2005, the originally commercial software was
+      given to the open-source community for further development and has
+      constantly been improved since. It is now a multi-platform application
+      that currently runs on Windows, Windows Mobile, Unix and even Android
+      devices.
+    </p>
+    <p>
+      <a href="/discover/" title="Learn more about XCSoar">Learn more...</a>
+    </p>
+    <hr/>
+  </div>
 
-        {% for post in site.posts limit: 1 %}
-        <h2>
-          {{ post.title }}<br>
-          <small>({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</small>
-        </h2>
+  <div id="aside" class="span4 pull-right">
+    <a href="/download/" class="btn btn-success btn-large btn-block">
+      Download XCSoar
+    </a>
 
-        <div class="news-item">
-          {{ post.content | truncatewords: 100 }}
+    <ul id="downloads" class="quicklinks">
+      <li class="list-item-data">
+        <a href="/download/data.html">Maps, Waypoints, ...</a>
+      </li>
+
+      <li class="divider"></li>
+
+      <li class="list-item-windows">
+        <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/PC/">Windows</a>
+      </li>
+      <li class="list-item-wince">
+        <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/WM5X/">Windows Mobile 5</a>
+        <small class="nowrap">(for XScale CPUs)</small>
+      </li>
+      <li class="list-item-wince">
+        <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/WM5/">Windows Mobile 5</a>
+        <small class="nowrap">(for older CPUs)</small>
+      </li>
+      <li class="list-item-wince">
+        <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/PPC2003/">Windows Mobile 2003</a>
+      </li>
+      <li class="list-item-wince">
+        <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/PPC2000/">Pocket PC 2000</a>
+      </li>
+      <li class="list-item-android">
+        <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/ANDROID/">Android</a>
+        <small class="nowrap">(<a href="https://play.google.com/store/apps/details?id=org.xcsoar">Google Play</a>)</small>
+      </li>
+      <li class="list-item-linux">
+        <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/LINUX/">Linux</a>
+      </li>
+      <li class="list-item-mac">
+        <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/OSX/">Mac OS X</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <a href="/discover/manual.html" class="btn btn-large btn-block btn-primary">
+      Download Manual
+    </a>
+
+    <ul id="manuals" class="quicklinks">
+      <li class="list-item-xcsoar">
+        <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf">Manual for XCSoar {{ site.xcsoar_stable_version }}</a>
+      </li>
+      {% if site.xcsoar_testing_version != site.xcsoar_stable_version %}
+      <li class="list-item-xcsoar">
+        <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_testing_version }}/XCSoar-manual.pdf">Manual for XCSoar {{ site.xcsoar_testing_version }}</a>
+      </li>
+      {% endif %}
+    </ul>
+
+    <hr/>
+
+    <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FXCSoar%2F116684595018255&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=false&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true"></iframe>
+    
+    <hr/>
+  </div>
+
+  {% for post in site.posts limit: 1 %}
+  <div class="span8 news-item">
+    <h2>
+      {{ post.title }}<br>
+      <small>({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</small>
+    </h2>
+
+    <div class="news-content">
+      {{ post.content | truncatewords: 100 }}
+    </div>
+    <p>
+      <a href="{{ post.url }}">more...</a>
+    </p>
+    <hr/>
+  </div>
+  {% endfor %}
+
+  <div class="span8">
+    <h3>
+      <a href="/discover/news.html" title="See previous news posts">Previous news...</a>
+      <a href="atom.xml"><img style="float: right; margin-right: -15px;" src="/img/atom-feed.png" title="XCSoar.org ATOM feed"></a>
+    </h3>
+
+{% include section_change.html %}
+
+    <div id="screenshots">
+      <h2>Screenshots</h2>
+      <h3>Highlights of XCSoar's interface</h3>
+      <div class="row">
+        <div class="span4">
+          <a href="/discover/screenshots/map.png" title="Moving Map">
+          <img src="/discover/screenshots/map.png" alt="Moving Map" class="screenshot"/>
+          </a>
+          <p><strong>Moving Map</strong><br/>
+            The primary display, easily configurable to provide the desired level of detail.</p>
         </div>
-        <p>
-          <a href="{{ post.url }}">more...</a>
-        </p>
-        {% endfor %}
-
-        <hr/>
-
-        <h3>
-          <a href="/discover/news.html" title="See previous news posts">Previous news...</a>
-          <a href="atom.xml"><img style="float: right; margin-right: -15px;" src="/img/atom-feed.png" title="XCSoar.org ATOM feed"></a>
-        </h3>
+        <div class="span4">
+          <a href="/discover/screenshots/map_terrain1.png" title="Terrain Display">
+          <img src="/discover/screenshots/map_terrain1.png" alt="Terrain Display" class="screenshot"/>
+          </a>
+          <p><strong>Terrain Display</strong><br/>
+            Terrain and Topology data from all over the world can be displayed on the moving map.</p>
+        </div>
+        <div class="span4">
+          <a href="/discover/screenshots/map_flarm_traffic.png" title="FLARM Integration">
+          <img src="/discover/screenshots/map_flarm_traffic.png" alt="FLARM Integration" class="screenshot"/>
+          </a>
+          <p><strong>FLARM Integration</strong><br/>
+            All received FLARM traffic is displayed on the map and on the inset radar screen. (including climb speed)</p>
+        </div>
       </div>
-
-      <div id="aside">
-
-        <a href="/download/" class="btn btn-success btn-large btn-block">
-          Download XCSoar
-        </a>
-
-        <ul id="downloads" class="quicklinks">
-          <li class="list-item-data">
-            <a href="/download/data.html">Maps, Waypoints, ...</a>
-          </li>
-
-          <li class="divider"></li>
-
-          <li class="list-item-windows">
-            <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/PC/">Windows</a>
-          </li>
-          <li class="list-item-wince">
-            <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/WM5X/">Windows Mobile 5</a>
-            <small class="nowrap">(for XScale CPUs)</small>
-          </li>
-          <li class="list-item-wince">
-            <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/WM5/">Windows Mobile 5</a>
-            <small class="nowrap">(for older CPUs)</small>
-          </li>
-          <li class="list-item-wince">
-            <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/PPC2003/">Windows Mobile 2003</a>
-          </li>
-          <li class="list-item-wince">
-            <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/PPC2000/">Pocket PC 2000</a>
-          </li>
-          <li class="list-item-android">
-            <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/ANDROID/">Android</a>
-            <small class="nowrap">(<a href="https://play.google.com/store/apps/details?id=org.xcsoar">Google Play</a>)</small>
-          </li>
-          <li class="list-item-linux">
-            <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/LINUX/">Linux</a>
-          </li>
-          <li class="list-item-mac">
-            <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/OSX/">Mac OS X</a>
-          </li>
-        </ul>
-
-        <hr/>
-
-        <a href="/discover/manual.html" class="btn btn-large btn-block btn-primary">
-          Download Manual
-        </a>
-
-        <ul id="manuals" class="quicklinks">
-          <li class="list-item-xcsoar">
-            <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf">Manual for XCSoar {{ site.xcsoar_stable_version }}</a>
-          </li>
-          {% if site.xcsoar_testing_version != site.xcsoar_stable_version %}
-          <li class="list-item-xcsoar">
-            <a href="http://download.xcsoar.org/releases/{{ site.xcsoar_testing_version }}/XCSoar-manual.pdf">Manual for XCSoar {{ site.xcsoar_testing_version }}</a>
-          </li>
-          {% endif %}
-        </ul>
-
-        <hr>
-        <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FXCSoar%2F116684595018255&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=false&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true"></iframe>
-      </div>
-
-      {% include section_change.html %}
-
-      <div id="screenshots">
-        <h2>Screenshots</h2>
-        <h3>Highlights of XCSoar's interface</h3>
-        <ul>
-          <li>
-            <a href="/discover/screenshots/map.png" title="Moving Map" class="screenshot">
-            <img src="/discover/screenshots/thumb-map.png" alt="Moving Map"/>
-            </a>
-            <p><strong>Moving Map</strong><br/>
-              The primary display, easily configurable to provide the desired level of detail.</p>
-          </li>
-          <li>
-            <a href="/discover/screenshots/map_terrain1.png" title="Terrain Display" class="screenshot">
-            <img src="/discover/screenshots/thumb-map_terrain1.png" alt="Terrain Display"/>
-            </a>
-            <p><strong>Terrain Display</strong><br/>
-              Terrain and Topology data from all over the world can be displayed on the moving map.</p>
-          </li>
-          <li class="last-child">
-            <a href="/discover/screenshots/map_flarm_traffic.png" title="FLARM Integration" class="screenshot">
-            <img src="/discover/screenshots/thumb-map_flarm_traffic.png" alt="FLARM Integration"/>
-            </a>
-            <p><strong>FLARM Integration</strong><br/>
-              All received FLARM traffic is displayed on the map and on the inset radar screen. (including climb speed)</p>
-          </li>
-        </ul>
-        <p>
-          <a href="/discover/screenshots/">More...</a>
-        </p>
-      </div>
+      <p>
+        <a href="/discover/screenshots/">More...</a>
+      </p>
+    </div>
+  </div>
+</div>

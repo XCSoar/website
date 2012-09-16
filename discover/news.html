@@ -1,21 +1,24 @@
 ---
-layout: default
+layout: discover
 color: blue
 title: News
 menu: discover
 ---
+<div class="row">
+  {% for post in site.posts %}
+  <div class="span8 news-item">
+    <h2>
+      {{ post.title }}<br>
+      <small>({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</small>
+    </h2>
 
-			<div id="summary">
-                {% for post in site.posts %}
-				<h2>
-                    {{ post.title }}<br>
-                    <span style="font-size: 10pt; color: #999999;">({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</span>
-                </h2>
-				<div>{{ post.content | truncatewords: 50 }}<br><br><a href="{{ post.url }}">more...</a></div>
-                {% if post.previous %}
-                <hr><br>
-                {% endif %}
-                {% endfor %}
-			</div> 
-            
-            {% include discover_menu.html %}
+    <div class="news-content">
+      {{ post.content | truncatewords: 50 }}
+    </div>
+    <p>
+      <a href="{{ post.url }}">more...</a>
+    </p>
+    <hr/>
+  </div>
+  {% endfor %}
+</div>

@@ -2,11 +2,21 @@
 
 {% include header.html %}
 
-<div id="content">
-  {{ content }}
+<div class="row" id="content">
+  <div class="span12">
+    {{ content }}
+
+{% include section_change.html %}
+
+  </div>
 </div>
 
-</div>
-<div id="secondary">
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#secondary .row .span12').append($('#primary #footer').detach());
+    $('#primary #content #banner #header').hide();
+  });
+</script>
 
 {% include footer.html %}
+

@@ -45,6 +45,8 @@
 
 {% endif %}
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <link rel="shortcut icon" type="image/ico" href="{{ site.server_url }}/favicon.ico"/>
 
   <link href="{{ site.server_url }}/atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
@@ -52,6 +54,7 @@
 {% bundle %}
 - /lib/bootstrap/bootstrap-normalize.css
 - /lib/bootstrap/bootstrap-button.css
+- /lib/bootstrap/bootstrap-grid.css
 - /css/xcsoar.css
 - /lib/jquery-lightbox/jquery.lightbox-0.5.css
 {% endbundle %}
@@ -73,16 +76,6 @@
 {% endbundle %}
   
   <script type="text/javascript" src="{{ site.server_url }}/js/update_progress.js"></script>
-
-{% if page.trac %}
-  <script type="text/javascript">
-    $(document).ready(function() {
-    $('#secondary').append($('#primary #footer').detach());
-    $('#primary #content #banner #header').css("display", "none");
-    $('#secondary #footer #tracpowered img').attr("src", "{{ site.server_url }}/img/trac_logo_mini.png");
-    });
-  </script>
-{% endif %}
 
 {% if page.forum %}
   <!--
@@ -172,16 +165,25 @@
 <body>
 {% endif %}
 
-<div class="shadowed clearfix">
-<div id="primary">
-  <div id="header">
-    <div id="logo">
-      <a href="{{ site.server_url }}/"><img src="{{ site.server_url }}/img/logo-{{ color }}.png" alt="XCSoar"/></a>
-    </div>
-    <ul id="nav">
-      <li class="discover{% if page.menu == 'discover' %} current{% endif %}"><a href="{{ site.server_url }}/discover/" title="Discover what XCSoar has to offer">Discover</a></li>
-      <li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="{{ site.server_url }}/download/" title="Download XCSoar and the map files">Download</a></li>
-      <li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="{{ site.server_url }}/develop/" title="Help us to develop XCSoar even further">Develop</a></li>
-    </ul>
-    <h1{% if page.tagline %} class="tagline"{% endif %}>{{ page.title }}</h1>
-  </div>
+<div class="shadowed">
+  <div id="primary">
+    <div class="container">
+      <div class="row">
+        <div id="logo" class="span4">
+          <a href="{{ site.server_url }}/"><img src="{{ site.server_url }}/img/logo-{{ color }}.png" alt="XCSoar"/></a>
+        </div>
+        <div class="span8">
+          <ul id="nav">
+            <li class="discover{% if page.menu == 'discover' %} current{% endif %}"><a href="{{ site.server_url }}/discover/" title="Discover what XCSoar has to offer">Discover</a></li>
+            <li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="{{ site.server_url }}/download/" title="Download XCSoar and the map files">Download</a></li>
+            <li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="{{ site.server_url }}/develop/" title="Help us to develop XCSoar even further">Develop</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="title" class="span12">
+          <h1{% if page.tagline %} class="tagline"{% endif %}>{{ page.title }}</h1>
+        </div>
+      </div>
+

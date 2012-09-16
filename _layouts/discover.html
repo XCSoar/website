@@ -2,12 +2,12 @@
 
 {% include header.html %}
 
-<div id="content">
-  <div id="summary">
+<div class="row" id="content">
+  {% include discover_menu.html %}
+
+  <div class="span8" id="summary">
     {{ content }}
   </div>
-
-  {% include discover_menu.html %}
 </div>
 
 {% include footer.html %}

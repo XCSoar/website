@@ -1,71 +1,77 @@
 ---
-layout: default
+layout: discover
 color: blue
 title: Screenshots
 menu: discover
 ---
-            <script type="text/javascript">
-            $(function() {
-                $('#screenshots a.screenshot').lightBox({
-                    imageLoading: '/lib/jquery-lightbox/lightbox-ico-loading.gif',
-                    imageBtnClose: '/lib/jquery-lightbox/lightbox-btn-close.gif',
-                    imageBtnPrev: '/lib/jquery-lightbox/lightbox-btn-prev.gif',
-                    imageBtnNext: '/lib/jquery-lightbox/lightbox-btn-next.gif',
-                    imageBlank: '/lib/jquery-lightbox/lightbox-blank.gif'
-                });
-            });
-            </script>
+<script type="text/javascript">
+$(function() {
+    $('#screenshots a.screenshot').lightBox({
+        imageLoading: '/lib/jquery-lightbox/lightbox-ico-loading.gif',
+        imageBtnClose: '/lib/jquery-lightbox/lightbox-btn-close.gif',
+        imageBtnPrev: '/lib/jquery-lightbox/lightbox-btn-prev.gif',
+        imageBtnNext: '/lib/jquery-lightbox/lightbox-btn-next.gif',
+        imageBlank: '/lib/jquery-lightbox/lightbox-blank.gif'
+    });
+});
+</script>
 
-            <style>
-            #screenshots { margin: 10px; padding: 10px; border: 1px solid #dcdad4; background: #f4f4ed; width: auto; }
-            #screenshots ul { width: 640px; float: none; position: static; }
-            </style>
-
-			<div id="screenshots">
-				<ul>
-					<li>
-						<a href="map.png" title="The Map" class="screenshot"><img src="thumb-map.png" alt="The Map"/></a>
-						<p><strong>Moving Map</strong><br/>
-							The primary display, easily configurable to provide the desired level of detail.</p>
-					</li>
-					<li class="last-child">
-						<a href="map_terrain1.png" title="Terrain Display" class="screenshot"><img src="thumb-map_terrain1.png" alt="Terrain Display"/></a>
-						<p><strong>Terrain Display</strong><br/>
-							Terrain and topology data from all over the world can be displayed on the moving map.</p>
-					</li>
-					<li>
-						<a href="map_flarm_traffic.png" title="FLARM Integration" class="screenshot"><img src="thumb-map_flarm_traffic.png" alt="FLARM Integration"/></a>
-						<p><strong>FLARM Integration</strong><br/>
-							All received FLARM traffic is displayed on the map and on the inset radar screen. (including climb speed)</p>
-					</li>
-					<li class="last-child">
-						<a href="flarm_radar1.png" title="FLARM Integration" class="screenshot"><img src="thumb-flarm_radar1.png" alt="FLARM Integration"/></a>
-						<p><strong>FLARM Radar</strong><br/>
-							A Butterfly-like radar can be opened including climb values and touch-to-select functionality</p>
-					</li>
-					<li>
-						<a href="map_task.png" title="Task Navigation" class="screenshot"><img src="thumb-map_task.png" alt="Task Navigation"/></a>
-						<p><strong>Task Navigation</strong><br/>
-							Displays your path to the next waypoint while calculating the altitude required to complete the task.
-					</li>
-					<li class="last-child">
-						<a href="waypoint_info.png" title="Waypoint Information" class="screenshot"><img src="thumb-waypoint_info.png" alt="Waypoint Information"/></a>
-						<p><strong>Waypoint Information</strong><br/>
-							Waypoint data can be accessed at any time, including realtime calculations and useful stored information.
-					</li>
-					<li>
-						<a href="analysis_olc.png" title="Analysis: OLC" class="screenshot"><img src="thumb-analysis_olc.png" alt="Analysis: OLC"/></a>
-						<p><strong>Analysis: OLC</strong><br/>
-							Postflight analysis displays and automatically scores the flown task. 	
-					</li>
-					<li class="last-child">
-						<a href="analysis_task.png" title="Analysis: Task" class="screenshot"><img src="thumb-analysis_task.png" alt="Analysis: Task"/></a>
-						<p><strong>Analysis: Task</strong><br/>
-						Inflight tactical analysis provides an at-a-glance overview of the flight so far, and helps plan the remainder. 	
-					</li>
-				</ul>
-				<p>
-				</p>
-			</div> 
-
-            {% include discover_menu.html %}
+  <div class="row" id="screenshots">
+    <div class="span4">
+      <a href="map.png" title="Moving Map">
+      <img src="map.png" alt="Moving Map" class="screenshot"/>
+      </a>
+      <p><strong>Moving Map</strong><br/>
+        The primary display, easily configurable to provide the desired level of detail.</p>
+    </div>
+    <div class="span4">
+      <a href="map_terrain1.png" title="Terrain Display">
+      <img src="map_terrain1.png" alt="Terrain Display" class="screenshot"/>
+      </a>
+      <p><strong>Terrain Display</strong><br/>
+        Terrain and Topology data from all over the world can be displayed on the moving map.</p>
+    </div>
+    <div class="span4">
+      <a href="map_flarm_traffic.png" title="FLARM Integration">
+      <img src="map_flarm_traffic.png" alt="FLARM Integration" class="screenshot"/>
+      </a>
+      <p><strong>FLARM Integration</strong><br/>
+        All received FLARM traffic is displayed on the map and on the inset radar screen. (including climb speed)</p>
+    </div>
+    <div class="span4">
+      <a href="flarm_radar1.png" title="FLARM Radar">
+      <img src="flarm_radar1.png" alt="FLARM Radar" class="screenshot"/>
+      </a>
+      <p><strong>FLARM Radar</strong><br/>
+        A Butterfly-like radar can be opened including climb values and touch-to-select functionality</p>
+    </div>
+    <div class="span4">
+      <a href="map_task.png" title="Task Navigation">
+      <img src="map_task.png" alt="Task Navigation" class="screenshot"/>
+      </a>
+      <p><strong>Task Navigation</strong><br/>
+        Displays your path to the next waypoint while calculating the altitude required to complete the task.
+    </div>
+    <div class="span4">
+      <a href="waypoint_info.png" title="Waypoint Information">
+      <img src="waypoint_info.png" alt="Waypoint Information" class="screenshot"/>
+      </a>
+      <p><strong>Waypoint Information</strong><br/>
+        Waypoint data can be accessed at any time, including realtime calculations and useful stored information.
+    </div>
+    <div class="span4">
+      <a href="analysis_olc.png" title="Analysis: OLC">
+      <img src="analysis_olc.png" alt="Analysis: OLC" class="screenshot"/>
+      </a>
+      <p><strong>Analysis: OLC</strong><br/>
+        Postflight analysis displays and automatically scores the flown task.   
+    </div>
+    <div class="span4">
+      <a href="analysis_task.png" title="Analysis: Task">
+      <img src="analysis_task.png" alt="Analysis: Task" class="screenshot"/>
+      </a>
+      <p><strong>Analysis: Task</strong><br/>
+      Inflight tactical analysis provides an at-a-glance overview of the flight so far, and helps plan the remainder.   
+    </div>
+  </div>
+</div>
