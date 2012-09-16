@@ -37,20 +37,14 @@ h1, h2, h3, h4 { letter-spacing: 0; font-family: "Calibri", "Lucida Grande", "Lu
 #primary { float: left; width: 100%; background: #fff; }
 
 /* HEADER */
-#header { position: relative; padding-top: 20px; }
-#header h1 { float: left; width: 100%; margin-top: 20px; border-top: 1px dotted #9f9c99; border-bottom: 1px dotted #9f9c99; padding: 20px 0; font-family: Georgia, serif; text-align: left; font-size: 38px; font-weight: normal; color: #000; }
+#header { position: relative; margin-top: 20px; }
+#header h1 { clear: both; margin-top: 20px; border-top: 1px dotted #9f9c99; border-bottom: 1px dotted #9f9c99; padding: 20px 0; font-family: Georgia, serif; text-align: left; font-size: 38px; font-weight: normal; color: #000; }
 #header h1.tagline { text-align: center; font-size: 27.3px; }
 
-/* TITLE */
-#title { font-family: Verdana, sans-serif; text-align: left; font-size: 38px; font-weight: bold; color: #000; }
-#title img { vertical-align: -22px; padding-right: 20px; margin: 0px; }
-#title a { color: #222; }
-#header a { text-decoration: none; }
-
 /* NAV */
-ul#nav { position: absolute; top: 40px; right: 0; width: 450px; list-style: none; font-family: "Calibri", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; margin: 0; }
-ul#nav li { float: right; height: 14px; padding-left: 47px; font-size: 16px; }
-ul#nav li a { float: left; overflow: hidden; height: 14px; padding: 0px 5px 4px 5px; text-decoration: none; text-transform: uppercase; color: #878380; }
+ul#nav { float: right; margin-top: 20px; list-style: none; }
+ul#nav li { float: left; padding-left: 60px; font-size: 16px; }
+ul#nav li a { text-decoration: none; text-transform: uppercase; color: #878380; }
 ul#nav li.discover a:hover { border-bottom: 2px solid #1A4977; color: #1A4977; }
 ul#nav li.download a:hover { border-bottom: 2px solid #1B8D29; color: #1B8D29; }
 ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
@@ -158,6 +152,13 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 .nowrap {
   white-space: nowrap;
+}
+
+/* HEADER */
+
+#logo {
+  float: left;
+  margin-bottom: 20px;
 }
 
 /* PROGRESS BAR */

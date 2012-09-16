@@ -175,12 +175,13 @@
 <div class="shadowed clearfix">
 <div id="primary">
   <div id="header">
-    <p id="title"><a href="{{ site.server_url }}/"><img src="{{ site.server_url }}/img/logo-{{ color }}.png" alt="XCSoar"/></a></p>
-
+    <div id="logo">
+      <a href="{{ site.server_url }}/"><img src="{{ site.server_url }}/img/logo-{{ color }}.png" alt="XCSoar"/></a>
+    </div>
     <ul id="nav">
-      <li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="{{ site.server_url }}/develop/" title="Help us to develop XCSoar even further">Develop</a></li>
-      <li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="{{ site.server_url }}/download/" title="Download XCSoar and the map files">Download</a></li>
       <li class="discover{% if page.menu == 'discover' %} current{% endif %}"><a href="{{ site.server_url }}/discover/" title="Discover what XCSoar has to offer">Discover</a></li>
+      <li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="{{ site.server_url }}/download/" title="Download XCSoar and the map files">Download</a></li>
+      <li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="{{ site.server_url }}/develop/" title="Help us to develop XCSoar even further">Develop</a></li>
     </ul>
     <h1{% if page.tagline %} class="tagline"{% endif %}>{{ page.title }}</h1>
   </div>
