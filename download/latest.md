@@ -20,7 +20,7 @@ Windows Mobile 2003 and Windows Mobile 5. PNA owners should usually choose the W
 
 The Android version of XCSoar {{ site.xcsoar_testing_version }} runs on all phones and tablets with Android 1.6 or newer.
 
-- [XCSoar on Android Market](https://market.android.com/details?id=org.xcsoar.testing)
+- [XCSoar on Google Play](https://play.google.com/store/apps/details?id=org.xcsoar.testing)
 - [XCSoar {{ site.xcsoar_testing_version }} on Android]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/ANDROID/)
 
 ## XCSoar {{ site.xcsoar_testing_version }} on Windows
