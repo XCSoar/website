@@ -45,9 +45,9 @@
 
 {% endif %}
 
-  <link rel="shortcut icon" type="image/ico" href="{{ site.server_url }}favicon.ico"/>
+  <link rel="shortcut icon" type="image/ico" href="{{ site.server_url }}/favicon.ico"/>
 
-  <link href="{{ site.server_url }}atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
+  <link href="{{ site.server_url }}/atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
 
 {% bundle %}
 - /lib/bootstrap/bootstrap-normalize.css
@@ -72,14 +72,14 @@
 - /js/google-analytics.js
 {% endbundle %}
   
-  <script type="text/javascript" src="{{ site.server_url }}js/update_progress.js"></script>
+  <script type="text/javascript" src="{{ site.server_url }}/js/update_progress.js"></script>
 
 {% if page.trac %}
   <script type="text/javascript">
     $(document).ready(function() {
     $('#secondary').append($('#primary #footer').detach());
     $('#primary #content #banner #header').css("display", "none");
-    $('#secondary #footer #tracpowered img').attr("src", "{{ site.server_url }}img/trac_logo_mini.png");
+    $('#secondary #footer #tracpowered img').attr("src", "{{ site.server_url }}/img/trac_logo_mini.png");
     });
   </script>
 {% endif %}
@@ -175,12 +175,12 @@
 <div class="shadowed clearfix">
 <div id="primary">
   <div id="header">
-    <p id="title"><a href="{{ site.server_url }}"><img src="{{ site.server_url }}img/logo-{{ color }}.png" alt="XCSoar"/></a></p>
+    <p id="title"><a href="{{ site.server_url }}/"><img src="{{ site.server_url }}/img/logo-{{ color }}.png" alt="XCSoar"/></a></p>
 
     <ul id="nav">
-      <li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="{{ site.server_url }}develop/" title="Help us to develop XCSoar even further">Develop</a></li>
-      <li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="{{ site.server_url }}download/" title="Download XCSoar and the map files">Download</a></li>
-      <li class="discover{% if page.menu == 'discover' %} current{% endif %}"><a href="{{ site.server_url }}discover/" title="Discover what XCSoar has to offer">Discover</a></li>
+      <li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="{{ site.server_url }}/develop/" title="Help us to develop XCSoar even further">Develop</a></li>
+      <li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="{{ site.server_url }}/download/" title="Download XCSoar and the map files">Download</a></li>
+      <li class="discover{% if page.menu == 'discover' %} current{% endif %}"><a href="{{ site.server_url }}/discover/" title="Discover what XCSoar has to offer">Discover</a></li>
     </ul>
     <h1{% if page.tagline %} class="tagline"{% endif %}>{{ page.title }}</h1>
   </div>

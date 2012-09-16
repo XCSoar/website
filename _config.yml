@@ -6,8 +6,8 @@ xcsoar_old_version: 6.3.11
 
 xcsoar_next_milestone: 'XCSoar 6.4'
 
-server_url: 'http://www.xcsoar.org/'
-download_server_url: 'http://download.xcsoar.org/releases/'
+server_url: 'http://www.xcsoar.org'
+download_server_url: 'http://download.xcsoar.org/releases'
 
 asset_bundler:
   server_url: 'http://www.xcsoar.org'
