@@ -154,11 +154,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 /* CONTACT */
 #contact { float: right; width: 350px; padding-bottom: 20px; }
-#contact h2 { display: none; }
-#contact h3 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
-#contact span.irc { padding-left: 30px; font-family: Georgia, serif; font-size: 14px; line-height: 30px; background: url(../img/icon-irc.png) 0 50% no-repeat; }
-#contact span.email { padding-left: 30px; font-family: Georgia, serif; font-size: 14px; line-height: 30px; background: url(../img/icon-email.png) 0 50% no-repeat; }
-#contact span.web { padding-left: 30px; font-family: Georgia, serif; font-size: 14px; line-height: 30px; background: url(../img/icon-web.png) 0 60% no-repeat; }
+#contact h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
 
 /* COPYRIGHT */
 #copyright { float: left; padding: 40px 0 40px 80px; }
@@ -286,4 +282,29 @@ h2 small {
   color: #999999;
   font-size: 65%;
   font-weight: normal;
+}
+
+/* CONTACT LIST */
+
+ul.contact {
+  list-style: none;
+  margin: 10px;
+  line-height: 25px;
+}
+
+ul.contact li {
+  padding-left: 26px;
+  margin: 5px 0;
+}
+
+ul.contact li.list-item-irc {
+  background: url('../img/icon-irc.png') 0 6px no-repeat;
+}
+
+ul.contact li.list-item-mail {
+  background: url('../img/icon-email.png') 0 6px no-repeat;
+}
+
+ul.contact li.list-item-web {
+  background: url('../img/icon-web.png') 0 6px no-repeat;
 }
