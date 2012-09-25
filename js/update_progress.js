@@ -2,10 +2,10 @@
 layout: nil
 ---
 $(document).ready(function() {
-  $.get("/get_rss.php?url=http://bugs.xcsoar.org/roadmap/", function(html) {
+  $.get("http://bugs.xcsoar.org/roadmap/", function(html) {
     var percent = -1;
 
-    $(html).find("div.milestone").each(function(i) {
+    $(html.responseText).find("div.milestone").each(function(i) {
       var found = false;
       $(this).find(".info h2 em").each(function(i) {
         if ($(this).text() == "{{ site.xcsoar_next_milestone }}") found = true
