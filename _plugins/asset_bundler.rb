@@ -216,9 +216,9 @@ END
       return dev_markup() if @config['dev']
       case @type
         when 'js'
-          "<script type='text/javascript' src='#{@server_url}#{@base}#{@filename}'></script>\n"
+          "<script type='text/javascript' src='#{@server_url}#{@base}#{@filename}'> </script>\n"
         when 'coffee'
-          "<script type='text/coffeescript' src='#{@server_url}#{@base}#{@filename}'></script>\n"
+          "<script type='text/coffeescript' src='#{@server_url}#{@base}#{@filename}'> </script>\n"
         when 'css'
           "<link rel='stylesheet' type='text/css' href='#{@server_url}#{@base}#{@filename}' />\n"
         when 'less'
@@ -231,9 +231,9 @@ END
       @files.each {|f|
         case @type
           when 'js'
-            output.concat("<script type='text/javascript' src='#{f}'></script>\n")
+            output.concat("<script type='text/javascript' src='#{f}'> </script>\n")
           when 'coffee'
-            output.concat("<script type='text/coffeescript' src='#{f}'></script>\n")
+            output.concat("<script type='text/coffeescript' src='#{f}'> </script>\n")
           when 'css'
             output.concat("<link rel='stylesheet' type='text/css' href='#{f}' />\n")
           when 'less'
