@@ -18,19 +18,19 @@ function update_feed(feed, id) {
 
 $(document).ready(function() {
     $.getFeed({
-		url: '/get_rss.php?url=http://git.xcsoar.org/cgit/master/xcsoar.git/atom/',
+		url: 'http://git.xcsoar.org/cgit/master/xcsoar.git/atom/',
 		success: function(feed) { update_feed(feed, 0); }
 	});
     $.getFeed({
-		url: '/get_rss.php?url=http://git.xcsoar.org/cgit/master/mapgen.git/atom/',
+		url: 'http://git.xcsoar.org/cgit/master/mapgen.git/atom/',
 		success: function(feed) { update_feed(feed, 1); }
 	});
     $.getFeed({
-		url: '/get_rss.php?url=http://git.xcsoar.org/cgit/master/website.git/atom/',
+		url: 'http://git.xcsoar.org/cgit/master/website.git/atom/',
 		success: function(feed) { update_feed(feed, 2); }
 	});
     $.getFeed({
-		url: '/get_rss.php?url=http://git.xcsoar.org/cgit/master/skylines.git/atom/',
+		url: 'http://git.xcsoar.org/cgit/master/skylines.git/atom/',
 		success: function(feed) { update_feed(feed, 3); }
 	});
 });
