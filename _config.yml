@@ -4,7 +4,7 @@ xcsoar_stable_version: 6.4.1
 xcsoar_testing_version: 6.4.1
 xcsoar_old_version: 6.3.11
 
-xcsoar_next_milestone: 'XCSoar 6.4'
+xcsoar_next_milestone: 'XCSoar 6.5'
 
 server_url: 'http://www.xcsoar.org'
 download_server_url: 'http://download.xcsoar.org/releases'
