@@ -32,6 +32,7 @@ XCSoar supports the Tim Newport-Pearce (.sua) and OpenAir (.txt) file formats.
 - [Dutch Airspace](http://www.gliderpilotshop.nl/winkel/product_info.php?cPath=110_96&products_id=428)
 - [French Airspace](http://www.ffvvespaceaerien.org/?page_id=412)
 - [German Airspace](http://www.daec.de/fachbereiche/luftraum-flugbetrieb/luftraumdaten/)
+- [US Airspace](http://www.soaringdata.info/)
 
 ## Waypoints
 
