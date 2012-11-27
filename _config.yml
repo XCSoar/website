@@ -10,7 +10,9 @@ server_url: 'http://www.xcsoar.org'
 download_server_url: 'http://download.xcsoar.org/releases'
 
 asset_bundler:
-  server_url: 'http://www.xcsoar.org'
+  cdn: 'http://www.xcsoar.org'
   compress:
     css: 'yui-compressor --type css'
     js: 'yui-compressor --type js'
+  markup_templates:
+    js: "<script type='text/javascript' src='{{url}}'> </script>\n"

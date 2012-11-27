@@ -51,22 +51,26 @@
 
   <link href="{{ site.server_url }}/atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
 
-{% bundle %}
-- /lib/bootstrap/bootstrap-normalize.css
-- /lib/bootstrap/bootstrap-button.css
-- /lib/bootstrap/bootstrap-grid.css
-- /css/xcsoar.css
-- /lib/jquery-lightbox/jquery.lightbox-0.5.css
-{% endbundle %}
-
-{% bundle %}
-- /css/xcsoar-{{ color }}.css
-{% endbundle %}
-
 {% if page.trac %}
-  {% bundle %} [/css/xcsoar-trac.css] {% endbundle %}
+  {% bundle %}
+  - /lib/bootstrap/bootstrap-normalize.css
+  - /lib/bootstrap/bootstrap-button.css
+  - /lib/bootstrap/bootstrap-grid.css
+  - /css/xcsoar.css
+  - /lib/jquery-lightbox/jquery.lightbox-0.5.css
+  - /css/xcsoar-{{ color }}.css
+  - /css/xcsoar-trac.css
+  {% endbundle %}
 {% else %}
-  {% bundle %} [/css/xcsoar-not-trac.css] {% endbundle %}
+  {% bundle %}
+  - /lib/bootstrap/bootstrap-normalize.css
+  - /lib/bootstrap/bootstrap-button.css
+  - /lib/bootstrap/bootstrap-grid.css
+  - /css/xcsoar.css
+  - /lib/jquery-lightbox/jquery.lightbox-0.5.css
+  - /css/xcsoar-{{ color }}.css
+  - /css/xcsoar-not-trac.css
+  {% endbundle %}
 {% endif %}
 
 {% bundle %}
