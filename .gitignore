@@ -5,3 +5,4 @@
 .#*
 _site
 _tools/ftp_index/*.html
+_asset_bundler_cache
