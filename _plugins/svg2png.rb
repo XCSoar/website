@@ -14,12 +14,11 @@ class Jekyll::SVG2PNG < Liquid::Tag
 
   def initialize(tag_name, markup, tokens)
     super
-    if /(?<source>[^\s]+) (?<width>\d+)x(?<height>\d+)/i =~ markup
+    if /(?<source>[^\s]+)( (?<width>\d+)x(?<height>\d+))*( --format=(?<format>\w+))*/i =~ markup
       @source = source
       @width = width
       @height = height
-    elsif /(?<source>[^\s]+)/i =~ markup
-      @source = source
+      @format = (format or "png")
     end
   end
 
@@ -46,7 +45,7 @@ class Jekyll::SVG2PNG < Liquid::Tag
       basename.concat("-#{@width}x#{@height}")
     end
 
-    @dest = "#{File.dirname(@source)}/#{basename}.png"
+    @dest = "#{File.dirname(@source)}/#{basename}.#{@format}"
     @dest_path = File.join(site.dest, @dest)
 
     # Register as StaticFile
@@ -70,6 +69,9 @@ class Jekyll::SVG2PNG < Liquid::Tag
       if @width and @height
         options.concat(" --width=#{@width}")
         options.concat(" --height=#{@height}")
+      end
+      if @format
+        options.concat(" --format=#{@format}")
       end
 
       `rsvg-convert #{options} #{@source_path}`
