@@ -86,7 +86,6 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #summary h4.first-child { margin-top: 0; }
 #summary p { margin-bottom: 20px; padding-right: 20px; font-family: "Ubuntu" ,sans-serif; font-size: 15px; line-height: 28px; }
 #summary pre { margin-bottom: 20px; }
-#summary p img { margin: 0 30px 30px 0; }
 #summary ul, #summary ol { margin-bottom: 20px; padding-left: 20px; line-height: 24px; }
 #summary ul li, #summary ol li { margin-bottom: 3px; font-family: "Ubuntu" ,sans-serif; font-size: 15px; }
 #summary a.more { font-family: "Ubuntu", sans-serif; font-size: 12px; font-weight: bold; }
