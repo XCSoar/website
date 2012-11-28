@@ -53,18 +53,26 @@ ul#nav li.download a:hover { border-bottom: 2px solid #1B8D29; color: #1B8D29; }
 ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 @media (max-width: 767px) {
+  #logo {
+    text-align: center;
+  }
+
   ul#nav {
-    float: left;
+    float: none;
+    clear: both;
   }
 
   ul#nav li {
-    padding: 10px 30px 0px 0px;
+    padding: 10px 0 0;
+    width: 33%;
+    text-align: center;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 370px) {
   ul#nav li {
     float: none;
+    text-align: left;
   }
 }
 
