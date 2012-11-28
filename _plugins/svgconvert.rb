@@ -1,16 +1,17 @@
-# Generates a PNG image from an SVG file
+# Generates a PNG image or PDF from an SVG file
 #
 # Usage:
 #
-# {% svg2png /path/to/local/image.svg %}
-# {% svg2png /path/to/local/image.svg 50x50 %}
+# {% svgconvert /path/to/local/image.svg %}
+# {% svgconvert /path/to/local/image.svg 50x50 %}
+# {% svgconvert /path/to/local/image.svg --format=pdf %}
 #
 # Installation:
 #
 # * install the librsvg2-bin package (rsvg-convert is needed)
-# * copy svg2png.rb to plugins folder
+# * copy svgconvert.rb to plugins folder
 
-class Jekyll::SVG2PNG < Liquid::Tag
+class Jekyll::SVGConvert < Liquid::Tag
 
   def initialize(tag_name, markup, tokens)
     super
@@ -24,7 +25,7 @@ class Jekyll::SVG2PNG < Liquid::Tag
 
   def render(context)
     if !@source
-      print "SVG2PNG used wrong! Usage: svg2png /path/to/local/image.svg [100x100]\n"
+      print "svgconvert used wrong! Usage: svgconvert /path/to/local/image.svg [100x100]\n"
       return
     end
 
@@ -37,7 +38,7 @@ class Jekyll::SVG2PNG < Liquid::Tag
       return
     end
 
-    # Build PNG output path
+    # Build output path
     ext = File.extname(@source)
     basename = File.basename(@source, ext)
 
@@ -51,7 +52,7 @@ class Jekyll::SVG2PNG < Liquid::Tag
     # Register as StaticFile
     site.static_files.push(self)
 
-    # Return relative path to PNG file
+    # Return relative path to output file
     """#{@dest}"""
   end
 
@@ -61,9 +62,9 @@ class Jekyll::SVG2PNG < Liquid::Tag
   end
 
   def write(dest)
-    # Generate PNG file if it doesn't exist or is less recent than the source file
+    # Generate output file if it doesn't exist or is less recent than the source file
     if !File.exists?(@dest_path) || File.mtime(@dest_path) <= File.mtime(@source_path)
-      print "Generating PNG: #{@source} -> #{@dest}\n"
+      print "Generating #{@format.upcase}: #{@source} -> #{@dest}\n"
 
       options = "-o #{@dest_path}"
       if @width and @height
@@ -80,4 +81,4 @@ class Jekyll::SVG2PNG < Liquid::Tag
 
 end
 
-Liquid::Template.register_tag('svg2png', Jekyll::SVG2PNG)
+Liquid::Template.register_tag('svgconvert', Jekyll::SVGConvert)

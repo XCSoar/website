@@ -180,11 +180,11 @@
         <div id="logo" class="span4">
           <a href="{{ site.server_url }}/">
             {% if color == 'green' %}
-            <img src="{{ site.server_url }}/{% svg2png img/logo-green.svg %}" />
+            <img src="{{ site.server_url }}/{% svgconvert img/logo-green.svg %}" />
             {% elsif color == 'red' %}
-            <img src="{{ site.server_url }}/{% svg2png img/logo-red.svg %}" />
+            <img src="{{ site.server_url }}/{% svgconvert img/logo-red.svg %}" />
             {% else %}
-            <img src="{{ site.server_url }}/{% svg2png img/logo-blue.svg %}" />
+            <img src="{{ site.server_url }}/{% svgconvert img/logo-blue.svg %}" />
             {% endif %}
           </a>
         </div>
