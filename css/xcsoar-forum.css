@@ -1,7 +1,7 @@
 body { color: #453c37; background: url(../img/bg-blue.png) 50% 0 repeat; }
 
 #wrap { padding: 0px; }
-footer h2 { font-family: "Calibri", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; color: white; }
+footer h2 { font-family: "Ubuntu", sans-serif; color: white; }
 
 h1 {
   color: inherit;
