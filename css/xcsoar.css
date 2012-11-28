@@ -25,7 +25,7 @@ h1, h2, h3, h4 { letter-spacing: 0; font-family: "Calibri", "Lucida Grande", "Lu
 #secondary #footer { line-height: 14px; }
 
 /******************************************************************************
- PRIMARY SECTION 
+ PRIMARY SECTION
  ******************************************************************************/
 #primary { padding: 20px 0; background: #fff; }
 
@@ -94,7 +94,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #iframe{ margin: 120px 0px 20px; }
 
 /******************************************************************************
- SECONDARY SECTION 
+ SECONDARY SECTION
  ******************************************************************************/
 #secondary { padding: 20px 0; border-top: 1px solid #dcdad4; background: #f4f4ed; }
 
@@ -137,7 +137,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 }
 
 /******************************************************************************
- TERTIARY SECTION 
+ TERTIARY SECTION
  ******************************************************************************/
 
 /* FOOTER */
@@ -272,6 +272,14 @@ ul#downloads a:hover {
 
 ul#downloads a:active {
   color: #359A41;
+}
+
+/* SOCIAL LINKS */
+
+#social-links div {
+  float: left;
+  width: 33%;
+  text-align: center;
 }
 
 /* NEWS */
