@@ -20,8 +20,6 @@ class Jekyll::SVG2PNG < Liquid::Tag
       @height = height
     elsif /(?<source>[^\s]+)/i =~ markup
       @source = source
-      @width = nil
-      @height = nil
     end
   end
 
