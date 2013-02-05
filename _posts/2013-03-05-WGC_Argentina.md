@@ -92,7 +92,7 @@ attached.
 > **Turbo:** Do you use a Flarm and did you have it connected to XCSoar? Do you have
 > any other devices connected to XCSoar?
 
-No, I don't have Flarm. I wish I had, it seems very well integrated to XCS. 
+**Santi:** No, I don't have Flarm. I wish I had, it seems very well integrated to XCS. 
 I have it connected to the 302 vario only.
 
 > **Turbo:** What features would you like to see in future versions of XCSoar?
