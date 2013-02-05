@@ -19,7 +19,7 @@ we also want to congratulate.
 Read on Santi's story in this little interview with Turbo.
 
 
-    Turbo: Why did you choose to use XCSoar?
+> Turbo: Why did you choose to use XCSoar?
 
 Santi: This is my story: I wanted a software with a better support for AAT tasks. 
 Javier Gaude (my team-mate in the last championships) started to experiment with LK8000, 
@@ -34,27 +34,27 @@ some configuration it became my main navigation software and I convinced Javier
 to switch to it too.
 
 
-    Turbo: On what device(s) are you using XCSoar?
+> Turbo: On what device(s) are you using XCSoar?
 
 Santi: In Uvalde I used it on an oudie (don't tell Naviter ;) ) and in Chaves on 
 an Ipaq 5550, connected to a CAI 302. My team-mate use it on a Chinese PNA.
 
-    Turbo: How many other pilots/teams were using XCSoar on the WGC?
+> Turbo: How many other pilots/teams were using XCSoar on the WGC?
 
 Santi: Three pilots from Argentina (including me). Don't know about other teams.
 
-    Turbo: How do you think does the software compare to its competitors?
+> Turbo: How do you think does the software compare to its competitors?
 
 Santi: I think it's better than competitors.
 
-    Turbo: How did XCSoar help you during the WGC?
+> Turbo: How did XCSoar help you during the WGC?
 
 Santi: It helped me a lot, in very different ways, but in my opinion the AAT 
 task support is one of the best features it has. Thermal assistant is very useful 
 in some situations too.
 
-    Turbo: How did you configure XCSoar? (important infoboxes, map display 
-configuration, etc.)
+> Turbo: How did you configure XCSoar? (important infoboxes, map display
+> configuration, etc.)
 
 Santi: I use it portrait, with 8 infofoxes on top so the thermal assistant don't 
 cover any infobox.
@@ -89,17 +89,17 @@ contrast in the screen. Topology always on.
 I also use a custom menu that I found very useful. Take a look to "mi_menu.xci" 
 attached.
 
-    Turbo: Do you use a Flarm and did you have it connected to XCSoar? Do you 
-have any other devices connected to XCSoar?
+> Turbo: Do you use a Flarm and did you have it connected to XCSoar? Do you have
+> any other devices connected to XCSoar?
 
 No, I don't have Flarm. I wish I had, it seems very well integrated to XCS. 
 I have it connected to the 302 vario only.
 
-    Turbo: What features would you like to see in future versions of XCSoar?
+> Turbo: What features would you like to see in future versions of XCSoar?
 
 Santi: Not sure. It seems to have everything I need.
 
-    Turbo: What do you like best and what do you hate about XCSoar?
+> Turbo: What do you like best and what do you hate about XCSoar?
 
 Santi: AAT features are very good. I don't really hate anything in XCSoar, 
 but since you asked, I had some problems with the wind calculation. I am not 
