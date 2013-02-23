@@ -3,6 +3,7 @@ import ftplib
 import re
 import datetime
 import math
+import argparse
 
 
 def filesizeformat(bytes, precision=2):
@@ -144,32 +145,22 @@ def create_folder_index(path, ftp, recursive):
         for dir in subdirs:
             create_folder_index(path + dir[0] + "/", ftp, recursive)
 
-def help():
-    print('''Usage:   python create_index.py <password> [-r] [<ftp-folder>]
 
-         <password>    Password for the download.xcsoar.org ftp server
-         -r            Create the index files recursivly
-         <ftp-folder>  The folder for which the index file should be created''')
-    
 def main():
-    if len(sys.argv) < 2:
-        help()
-        return
+    parser = argparse.ArgumentParser()
+    parser.add_argument('password',
+                        help='Password for the download.xcsoar.org ftp server')
+    parser.add_argument('-r', dest='recursive', action='store_true', default=False,
+                        help='Create the index files recursivly')
+    parser.add_argument('folder', nargs='?', default='.',
+                        help='The folder for which the index file should be created')
 
-    password = sys.argv[1]
-
-    recursive = False
-    ftp_dir = '/releases'
-    for arg in sys.argv[2:]:
-        if arg == "-r":
-            recursive = True
-        else:
-            ftp_dir = arg.rstrip('/')
+    args = parser.parse_args()
 
     print "Connecting to server ..."
-    ftp = ftplib.FTP('download.xcsoar.org', 'xcsoar@ddbits.com', password)
+    ftp = ftplib.FTP('download.xcsoar.org', 'xcsoar@ddbits.com', args.password)
 
-    create_folder_index(ftp_dir + '/', ftp, recursive)
+    create_folder_index(args.folder + '/', ftp, args.recursive)
 
     ftp.quit()
 

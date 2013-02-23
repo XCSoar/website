@@ -4,6 +4,7 @@ import sys
 import re
 from datetime import datetime
 import math
+import argparse
 
 
 def filesizeformat(bytes, precision=2):
@@ -117,21 +118,15 @@ def create_folder_index(path, recursive):
         for dir in subdirs:
             create_folder_index(path + dir[0] + "/", recursive)
 
-def help():
-    print('''Usage:   python create_index.py [-r] [<folder>]
 
-         -r            Create the index files recursivly
-         <folder>  The folder for which the index file should be created''')
-    
 def main():
-    recursive = False
-    ftp_dir = '.'
-    for arg in sys.argv[1:]:
-        if arg == "-r":
-            recursive = True
-        else:
-            ftp_dir = arg.rstrip('/')
-    
-    create_folder_index(ftp_dir + '/', recursive)
-    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-r', dest='recursive', action='store_true', default=False,
+                        help='Create the index files recursivly')
+    parser.add_argument('folder', nargs='?', default='.',
+                        help='The folder for which the index file should be created')
+
+    args = parser.parse_args()
+    create_folder_index(args.folder + '/', args.recursive)
+
 main()
