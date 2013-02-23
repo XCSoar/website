@@ -5,6 +5,7 @@ import re
 from datetime import datetime
 import math
 import argparse
+import urlparse
 
 
 def filesizeformat(bytes, precision=2):
@@ -69,7 +70,9 @@ def get_readme(path, files):
     return template.replace("%%filename%%", readme_file).replace("%%content%%", content)
 
 
-def create_index_file(path, subdirs, files):
+def create_index_file(path, subdirs, files, base_folder, base_url):
+    relpath = os.path.relpath(path, base_folder)
+
     f = open("index.tpl", "r")
     index_template = f.read()
     f.close()
@@ -84,21 +87,22 @@ def create_index_file(path, subdirs, files):
 
     content_subdirs = ""
     for dir in subdirs:
-        content_subdirs += subdir_template.replace("%%path%%", path + dir[0] + "/").replace("%%title%%", dir[0])
+        content_subdirs += subdir_template.replace("%%path%%", urlparse.urljoin(urlparse.urljoin(base_url, relpath) + '/', dir[0]) + "/").replace("%%title%%", dir[0])
 
     content_files = ""
     for file in files:
-        content_files += file_template.replace("%%path%%", path + file[0]).replace("%%size%%", filesizeformat(file[2])).replace("%%title%%", file[0])
+        content_files += file_template.replace("%%path%%", urlparse.urljoin(urlparse.urljoin(base_url, relpath) + '/', file[0])).replace("%%size%%", filesizeformat(file[2])).replace("%%title%%", file[0])
 
     sep = "" if len(files) == 0 or len(subdirs) == 0 else "<hr/>"
 
-    path_parts = path.split("/")
+    path_parts = relpath.split("/")
+
     path2 = "/"
     path_str = "/ "
     for part in path_parts:
-        if part != "":
+        if part != "" and part != ".":
             path2 += part + "/"
-            path_str += "<a href=\"" + path2 + "\">" + part + "</a> / "
+            path_str += "<a href=\"" + urlparse.urljoin(base_url, path2) + "\">" + part + "</a> / "
 
     readme = get_readme(path, files)
     html = index_template.replace("%%path%%", path_str).replace("%%sep%%", sep).replace("%%content_files%%", content_files).replace("%%content_subdirs%%", content_subdirs).replace("%%readme%%", readme)
@@ -108,15 +112,16 @@ def create_index_file(path, subdirs, files):
     f.close()
 
 
-def create_folder_index(path, recursive):
+def create_folder_index(path, recursive, base_folder, base_url):
     print "Listing folder " + path
     subdirs, files = get_folder_content(path)
     print "Creating index for folder " + path
-    create_index_file(path, subdirs, files)
+    create_index_file(path, subdirs, files, base_folder, base_url)
 
     if recursive:
         for dir in subdirs:
-            create_folder_index(path + dir[0] + "/", recursive)
+            create_folder_index(path + dir[0] + "/", recursive,
+                                base_folder, base_url)
 
 
 def main():
@@ -125,8 +130,19 @@ def main():
                         help='Create the index files recursivly')
     parser.add_argument('folder', nargs='?', default='.',
                         help='The folder for which the index file should be created')
+    parser.add_argument('--base-folder',
+                        help='The path of the base folder')
+    parser.add_argument('--base-url',
+                        help='The URL of the base folder on the HTTP server')
 
     args = parser.parse_args()
-    create_folder_index(args.folder + '/', args.recursive)
+
+    if args.base_folder is None:
+        args.base_folder = args.folder
+    if args.base_url is None:
+        args.base_url = '/'
+
+    create_folder_index(args.folder + '/', args.recursive,
+                        args.base_folder, args.base_url)
 
 main()
