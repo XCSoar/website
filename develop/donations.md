@@ -9,10 +9,11 @@ companies, we are also very lucky to have some specific hardware donations.
 
 ## Hardware
 
-- Triadis: Altair, Altair Flight Recorder
+- Triadis: Altair, Altair Flight Recorder, Vega
 - K6-Team: K6-Bt
 - EW Avionics: EW MicroRecorder
 - IMI: ERIXX
+- LXNAV: V7, Nano
 
 ## Other
 
