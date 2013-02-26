@@ -47,3 +47,9 @@ The OS X version of XCSoar {{ site.xcsoar_testing_version }} is not yet entirely
 We are working on XCSoar {{ site.xcsoar_testing_version }} for the Altair platform.
 
 - [XCSoar {{ site.xcsoar_testing_version }} on Altair]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/ALTAIR/)
+
+## XCSoar {{ site.xcsoar_testing_version }} on Raspberry Pi
+
+The Raspberry Pi port is experimental.
+
+- [XCSoar {{ site.xcsoar_testing_version }} on Raspberry Pi]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/PI/)
