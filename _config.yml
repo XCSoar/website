@@ -1,7 +1,7 @@
 permalink: /discover/:year/:month/:day/:title.html
 
 xcsoar_stable_version: 6.4.6
-xcsoar_testing_version: 6.5_beta2
+xcsoar_testing_version: 6.5_beta3
 xcsoar_old_version: 6.3.11
 
 xcsoar_next_milestone: 'XCSoar 6.5'
