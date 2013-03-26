@@ -12,7 +12,7 @@ and a custom [Waypoint Details](#waypoint_details)  file.
 
 - Please download the data files suitable to your area 
 - Copy them into the XCSoarData folder on your SD card  
-  or a corresponding folder according to the [Manual](http://max.kellermann.name/download/xcsoar/releases/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf)
+  or a corresponding folder according to the [Manual]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf)
 
 ## Terrain / Topography 
 
