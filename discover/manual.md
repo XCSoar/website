@@ -15,6 +15,7 @@ The "stable" manuals:
 - [XCSoar {{ site.xcsoar_stable_version }} Handbuch]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-de.pdf) Complete German manual (PDF)
 - [XCSoar {{ site.xcsoar_stable_version }} Prise en main]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-Prise-en-main.pdf) Quick guide in French (PDF)
 - [XCSoar {{ site.xcsoar_stable_version }} Manuel de l’utilisateur]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-fr.pdf) Mostly complete French manual (PDF)
+- [XCSoar {{ site.xcsoar_stable_version }} Developer manual]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-developer-manual.pdf) (PDF)
 
 {% if site.xcsoar_testing_version != site.xcsoar_stable_version %}
 The "upcomeing" manuals:
@@ -23,6 +24,7 @@ The "upcomeing" manuals:
 - [XCSoar {{ site.xcsoar_testing_version }} Handbuch]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual-de.pdf) Complete German manual (PDF)
 - [XCSoar {{ site.xcsoar_testing_version }} Prise en main]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-Prise-en-main.pdf) Quick guide in French (PDF)
 - [XCSoar {{ site.xcsoar_testing_version }} Manuel de l’utilisateur]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual-fr.pdf) Mostly complete French manual (PDF)
+- [XCSoar {{ site.xcsoar_testing_version }} Developer manual]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-developer-manual.pdf) (PDF)
 {% endif %}
 
 The "old" one:
