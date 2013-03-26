@@ -47,9 +47,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="shortcut icon" type="image/ico" href="{{ site.server_url }}/favicon.ico"/>
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
 
-  <link href="{{ site.server_url }}/atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
 
 {% if page.trac %}
   {% bundle %}
@@ -83,7 +83,7 @@
 - /js/google-analytics.js
 {% endbundle %}
 
-  <script type="text/javascript" src="{{ site.server_url }}/js/update_progress.js"></script>
+  <script type="text/javascript" src="/js/update_progress.js"></script>
 
 {% if page.forum %}
   <!--
@@ -178,21 +178,21 @@
     <div class="container">
       <div class="row">
         <div id="logo" class="span4">
-          <a href="{{ site.server_url }}/">
+          <a href="/">
             {% if color == 'green' %}
-            <img src="{{ site.server_url }}/{% svgconvert img/logo-green.svg %}" />
+            <img src="/{% svgconvert img/logo-green.svg %}" />
             {% elsif color == 'red' %}
-            <img src="{{ site.server_url }}/{% svgconvert img/logo-red.svg %}" />
+            <img src="/{% svgconvert img/logo-red.svg %}" />
             {% else %}
-            <img src="{{ site.server_url }}/{% svgconvert img/logo-blue.svg %}" />
+            <img src="/{% svgconvert img/logo-blue.svg %}" />
             {% endif %}
           </a>
         </div>
         <div class="span8">
           <ul id="nav">
-            <li class="discover{% if page.menu == 'discover' %} current{% endif %}"><a href="{{ site.server_url }}/discover/" title="Discover what XCSoar has to offer">Discover</a></li>
-            <li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="{{ site.server_url }}/download/" title="Download XCSoar and the map files">Download</a></li>
-            <li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="{{ site.server_url }}/develop/" title="Help us to develop XCSoar even further">Develop</a></li>
+            <li class="discover{% if page.menu == 'discover' %} current{% endif %}"><a href="/discover/" title="Discover what XCSoar has to offer">Discover</a></li>
+            <li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="/download/" title="Download XCSoar and the map files">Download</a></li>
+            <li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="/develop/" title="Help us to develop XCSoar even further">Develop</a></li>
           </ul>
         </div>
       </div>
