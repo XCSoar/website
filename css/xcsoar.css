@@ -310,15 +310,3 @@ ul.contact li {
   padding-left: 26px;
   margin: 5px 0;
 }
-
-ul.contact li.list-item-irc {
-  background: url('../img/icon-irc.png') 0 6px no-repeat;
-}
-
-ul.contact li.list-item-mail {
-  background: url('../img/icon-email.png') 0 6px no-repeat;
-}
-
-ul.contact li.list-item-web {
-  background: url('../img/icon-web.png') 0 6px no-repeat;
-}
