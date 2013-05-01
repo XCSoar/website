@@ -49,8 +49,8 @@ h1, h2, h3, h4 { letter-spacing: 0; font-family: "Ubuntu", sans-serif; }
 ul#nav { float: right; margin-top: 20px; list-style: none; }
 ul#nav li { float: left; padding-left: 60px; font-size: 16px; }
 ul#nav li a { text-decoration: none; text-transform: uppercase; color: #878380; }
-ul#nav li.discover a:hover { border-bottom: 2px solid #1A4977; color: #1A4977; }
-ul#nav li.download a:hover { border-bottom: 2px solid #1B8D29; color: #1B8D29; }
+ul#nav li.discover a:hover, ul#nav li.contact a:hover { border-bottom: 2px solid #1A4977; color: #1A4977; }
+ul#nav li.download a:hover, ul#nav li.hardware a:hover { border-bottom: 2px solid #1B8D29; color: #1B8D29; }
 ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 @media (max-width: 767px) {
