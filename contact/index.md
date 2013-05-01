@@ -12,7 +12,7 @@ other XCSoar users:
 
 - [Forum](http://forum.xcsoar.org/)
 - [User mailing list](https://lists.sourceforge.net/lists/listinfo/xcsoar-user)
-- [Chat]({{ server_url }}/discover/irc.html) (irc.freenode.net #xcsoar)
+- [Chat](irc.html) (irc.freenode.net #xcsoar)
 - [Bug tracker](http://bugs.xcsoar.org/newticket) - report bugs or
   request features
 
@@ -21,4 +21,4 @@ other XCSoar users:
 To contact the developers directly (not for user support):
 
 - [Developer mailing list](https://lists.sourceforge.net/lists/listinfo/xcsoar-devel)
-- [Chat]({{ server_url }}/discover/irc.html) (irc.freenode.net #xcsoar)
+- [Chat](irc.html) (irc.freenode.net #xcsoar)
