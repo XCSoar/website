@@ -9,6 +9,7 @@ xcsoar_next_milestone: 'XCSoar 6.7'
 server_url: ''
 absolute_server_url: 'http://www.xcsoar.org'
 download_server_url: 'http://download.xcsoar.org/releases'
+trac_server_url: 'http://bugs.xcsoar.org'
 
 asset_bundler:
   cdn: 'http://www.xcsoar.org'

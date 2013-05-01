@@ -36,4 +36,4 @@ Map Generator:
 Map Generator git repository:  
 <http://git.xcsoar.org/cgit/master/mapgen.git/>  
 Map Generator trac:  
-<http://www.xcsoar.org/trac/milestone/%23%20Map%20Generator>
+<{{site.trac_server_url}}/milestone/%23%20Map%20Generator>
