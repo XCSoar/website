@@ -183,33 +183,6 @@ ul {
   padding-left: 0px;
 }
 
-/* PROGRESS BAR */
-
-.status {
-  margin: 25px 0;
-}
-
-.xcsoar-progress {
-  height: 10px;
-
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-
-  border: 1px solid white;
-  margin-bottom: 8px;
-}
-
-.xcsoar-progress .bar {
-  background: white;
-  height: 10px;
-  margin-left: -1px;
-
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
-}
-
 /* BUTTONS */
 
 .btn {
