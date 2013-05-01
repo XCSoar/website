@@ -13,7 +13,7 @@ other XCSoar users:
 - [Forum](http://forum.xcsoar.org/)
 - [User mailing list](https://lists.sourceforge.net/lists/listinfo/xcsoar-user)
 - [Chat](irc.html) (irc.freenode.net #xcsoar)
-- [Bug tracker](http://bugs.xcsoar.org/newticket) - report bugs or
+- [Bug tracker]({{site.trac_server_url}}/newticket) - report bugs or
   request features
 
 ## Developers
