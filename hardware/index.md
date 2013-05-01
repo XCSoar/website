@@ -1,6 +1,6 @@
 ---
 layout: simple
-color: blue
+color: green
 title: Hardware
 menu: hardware
 ---
