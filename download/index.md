@@ -16,6 +16,8 @@ Windows Mobile 2003 and Windows Mobile 5. PNA owners should usually choose the W
 - [XCSoar {{ site.xcsoar_stable_version }} on Windows Mobile 2003]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PPC2003/)
 - [XCSoar {{ site.xcsoar_stable_version }} on Pocket PC 2000]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PPC2000/)
 
+[Information for Naviter Oudie owners](/hardware/oudie.html).
+
 ## XCSoar {{ site.xcsoar_stable_version }} on Android
 
 The Android version of XCSoar {{ site.xcsoar_stable_version }} runs on all phones and tablets with Android 1.6 or newer.

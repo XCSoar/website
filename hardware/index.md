@@ -89,3 +89,7 @@ and the Nano has built-in Bluetooth.
 The CAI302 is fully supported by XCSoar, thanks to Cambridge's
 complete protocol documentation.  To allow fast IGC file download, it
 is recommended to use the K6-Team Bluetooth adapter.
+
+## XCSoar on the Naviter Oudie
+
+[More information about XCSoar on the Naviter Oudie](oudie.html).
