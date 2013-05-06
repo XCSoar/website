@@ -4,26 +4,12 @@ color: red
 menu: develop
 title: Development
 ---
-{% bundle %}
-- /lib/jfeed/jfeeditem.js
-- /lib/jfeed/jatom.js
-- /lib/jfeed/jfeed.js
-- /lib/reldate.js
-- /js/develop.last_updates.js
-{% endbundle %}
 
 ## Source code
 
 [Browse our git repository online](http://git.xcsoar.org/cgit/master/xcsoar.git/), or clone it:
 
 	git clone git://git.xcsoar.org/xcsoar/master/xcsoar.git
-
-## Last Updates
-
-- **XCSoar**: *Loading ...*
-- **MapGenerator**: *Loading ...*
-- **Website**: *Loading ...*
-- **Skylines**: *Loading ...*
 
 ## Contributing
 
