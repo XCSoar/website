@@ -13,13 +13,13 @@ XCSoar is compatible with many peripheral hardware such as varios and
 loggers.  Consult [the manual](/discover/manual.html) for an extensive
 list.
 
-# Suggested Hardware
-
 Many users ask us what hardware they shall buy for running XCSoar.
 This section describes setups that have been verified to work well.
 
+# Android
+
 The [Dell Streak 5"](https://en.wikipedia.org/wiki/Dell_Streak) is the
-best device to run XCSoar.  It is a smartphone with a transflective 5
+best Android device to run XCSoar.  It is a smartphone with a transflective 5
 inch screen that is perfectly readable in sunlight.  Unfortunately, it
 is out of production.  You can still get one on eBay.  The official car
 docking kit is a good choice.
@@ -66,6 +66,14 @@ Examples for IOIO adapters:
   (without the actual IOIO board)
 - you can [build your own](https://github.com/ytai/ioio/wiki)
 
+# Windows
+
+## Naviter Oudie
+
+[More information about XCSoar on the Naviter Oudie](oudie.html).
+
+# Peripherals
+
 ## FLARM
 
 Connecting to a FLARM gives you barometric height and information
@@ -89,7 +97,3 @@ and the Nano has built-in Bluetooth.
 The CAI302 is fully supported by XCSoar, thanks to Cambridge's
 complete protocol documentation.  To allow fast IGC file download, it
 is recommended to use the K6-Team Bluetooth adapter.
-
-## XCSoar on the Naviter Oudie
-
-[More information about XCSoar on the Naviter Oudie](oudie.html).
