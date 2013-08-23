@@ -66,6 +66,13 @@ Examples for IOIO adapters:
   (without the actual IOIO board)
 - you can [build your own](https://github.com/ytai/ioio/wiki)
 
+# Kobo Mini
+
+The Kobo Mini is an e-book reader with an e-ink screen.  It is black
+and white, but is perfectly readable in direct sunlight.
+
+[More information about XCSoar on the Kobo Mini](http://max.kellermann.name/projects/xcsoar/kobo.html).
+
 # Windows
 
 ## Naviter Oudie
