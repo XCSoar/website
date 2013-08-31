@@ -25,11 +25,12 @@ The Android version of XCSoar {{ site.xcsoar_testing_version }} runs on all phon
 - [XCSoar on Google Play](https://play.google.com/store/apps/details?id=org.xcsoar.testing)
 - [XCSoar {{ site.xcsoar_testing_version }} on Android]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/ANDROID/)
 
-## XCSoar {{ site.xcsoar_testing_version }} on Kobo Mini
+## XCSoar {{ site.xcsoar_testing_version }} on Kobo Mini/Touch/Glo
 
-XCSoar runs on the Kobo Mini.  To install, copy *KoboRoot.tgz* to the
-data partition to a directory called ".kobo" (note the leading dot;
-the directory already exists, but is hidden).  Reboot the Kobo Mini.
+XCSoar runs on the Kobo Mini, Kobo Touch and Kobo Glo.  To install,
+copy *KoboRoot.tgz* to the data partition to a directory called
+".kobo" (note the leading dot; the directory already exists, but is
+hidden).  Reboot the Kobo.
 
 - [XCSoar {{ site.xcsoar_testing_version }} Kobo installer]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/KOBO/KoboRoot.tgz)
 
