@@ -40,9 +40,8 @@ The Linux version of XCSoar can be used preflight planning, postflight replay or
 
 ## XCSoar {{ site.xcsoar_stable_version }} on OS X
 
-The OS X version of XCSoar {{ site.xcsoar_stable_version }} is not yet entirely finished!
-
-- [XCSoar {{ site.xcsoar_stable_version }} on OS X]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/OSX/)
+The OS X version of XCSoar {{ site.xcsoar_testing_version }} is not
+available, because there is no maintainer.  Volunteers welcome.
 
 ## XCSoar {{ site.xcsoar_stable_version }} on Altair
 
