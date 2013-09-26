@@ -63,7 +63,7 @@ Examples for IOIO adapters:
 
 - [DroidSoar](http://www.tvlnet.de/): a complete IOIO adapter with 4
   serial ports and 2 pressure sensors for 169 €
-- [Glidertools Androport](http://www.glidertools.com/products/adroport/):
+- [Glidertools Androport](http://www.glidertools.com/products/androport/):
   a complete IOIO adapter with 2 serial ports for 63.50 €
 - [SoarTronic](http://www.soartronic.net/) has a DIY kit for 26 €
   (without the actual IOIO board)
