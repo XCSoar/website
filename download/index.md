@@ -25,6 +25,15 @@ The Android version of XCSoar {{ site.xcsoar_stable_version }} runs on all phone
 - [XCSoar on Google Play](https://play.google.com/store/apps/details?id=org.xcsoar)
 - [XCSoar {{ site.xcsoar_stable_version }} on Android]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/ANDROID/)
 
+## XCSoar {{ site.xcsoar_stable_version }} on Kobo Mini/Touch/Glo
+
+XCSoar runs on the Kobo Mini, Kobo Touch and Kobo Glo.  To install,
+copy *KoboRoot.tgz* to the data partition to a directory called
+".kobo" (note the leading dot; the directory already exists, but is
+hidden).  Reboot the Kobo.
+
+- [XCSoar {{ site.xcsoar_stable_version }} Kobo installer]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/KOBO/KoboRoot.tgz)
+
 ## XCSoar {{ site.xcsoar_stable_version }} on Windows
 					
 The Windows version of XCSoar can be used preflight planning, postflight replay or just to get to know the application before using it in the air.
@@ -40,7 +49,7 @@ The Linux version of XCSoar can be used preflight planning, postflight replay or
 
 ## XCSoar {{ site.xcsoar_stable_version }} on OS X
 
-The OS X version of XCSoar {{ site.xcsoar_testing_version }} is not
+The OS X version of XCSoar {{ site.xcsoar_stable_version }} is not
 available, because there is no maintainer.  Volunteers welcome.
 
 ## XCSoar {{ site.xcsoar_stable_version }} on Altair
@@ -49,11 +58,11 @@ We are working on XCSoar {{ site.xcsoar_stable_version }} for the Altair platfor
 
 - [XCSoar {{ site.xcsoar_stable_version }} on Altair]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/ALTAIR/)
 
-## XCSoar {{ site.xcsoar_testing_version }} on Cubieboard
+## XCSoar {{ site.xcsoar_stable_version }} on Cubieboard
 
 The [Cubieboard](http://cubieboard.org/) port is experimental.
 
-- [XCSoar {{ site.xcsoar_testing_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/CUBIE/)
+- [XCSoar {{ site.xcsoar_stable_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/CUBIE/)
 
 ## XCSoar {{ site.xcsoar_stable_version }} on Raspberry Pi
 
