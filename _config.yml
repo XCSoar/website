@@ -1,10 +1,10 @@
 permalink: /discover/:year/:month/:day/:title.html
 
-xcsoar_stable_version: 6.7
-xcsoar_testing_version: 6.7
+xcsoar_stable_version: 6.7.1
+xcsoar_testing_version: 6.7.1
 xcsoar_old_version: 6.6.5
 
-xcsoar_next_milestone: 'XCSoar 6.7'
+xcsoar_next_milestone: 'XCSoar 6.8'
 
 server_url: ''
 absolute_server_url: 'http://www.xcsoar.org'
