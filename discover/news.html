@@ -13,7 +13,7 @@ menu: discover
     </h2>
 
     <div class="news-content">
-      {{ post.content | truncatewords: 50 }}
+      {{ post.content | truncatewords_html: 50 }}
     </div>
     <p>
       <a href="{{ post.url }}">more...</a>
