@@ -11,6 +11,7 @@ Others might be outdated or simply wrong. If you find anything that you feel is 
 Since this is an open-source project everybody can [collaborate](/develop/)!
 
 The "stable" manuals:
+- [XCSoar {{ site.xcsoar_stable_version }} XCSoar in a flash]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-in-a-flash.pdf) (PDF)
 - [XCSoar {{ site.xcsoar_stable_version }} Manual]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf) (PDF)
 - [XCSoar {{ site.xcsoar_stable_version }} Blitzeinstieg]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-Blitzeinstieg.pdf) Quick guide in German (PDF)
 - [XCSoar {{ site.xcsoar_stable_version }} Handbuch]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-de.pdf) Complete German manual (PDF)
@@ -20,6 +21,7 @@ The "stable" manuals:
 
 {% if site.xcsoar_testing_version != site.xcsoar_stable_version %}
 The "upcomeing" manuals:
+- [XCSoar {{ site.xcsoar_testing_version }} XCSoar in a flash]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-in-a-flash.pdf) (PDF)
 - [XCSoar {{ site.xcsoar_testing_version }} Manual]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual.pdf) (PDF)
 - [XCSoar {{ site.xcsoar_testing_version }} Blitzeinstieg]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-Blitzeinstieg.pdf) Quick guide in German (PDF)
 - [XCSoar {{ site.xcsoar_testing_version }} Handbuch]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual-de.pdf) Complete German manual (PDF)
