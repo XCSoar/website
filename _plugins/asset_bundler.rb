@@ -3,6 +3,7 @@
 #
 # Author : Colin Kennedy
 # Repo   : http://github.com/moshen/jekyll-asset_bundler
+# Version: 0.11
 # License: MIT, see LICENSE file
 #
 
@@ -24,7 +25,10 @@ module Jekyll
       src = context.registers[:site].source
       raw_markup = super(context)
       begin
-        @assets = YAML::load(raw_markup)
+        # Some ugliness to work around the Block returning an array
+        #   in liquid <2.4.0
+        # Note: Jekyll 1.0.x only require liquid 2.3
+        @assets = YAML::load(raw_markup.kind_of?(Array) ? raw_markup.first : raw_markup)
       rescue
         puts <<-END
 Asset Bundler - Error: Problem parsing a YAML bundle
@@ -34,7 +38,7 @@ Asset Bundler - Error: Problem parsing a YAML bundle
 END
       end
 
-      if @assets.class != Array
+      if !@assets.kind_of?(Array)
         puts "Asset Bundler - Error: YAML bundle is not an Array\n#{raw_markup}"
         @assets = []
       end
@@ -110,7 +114,7 @@ END
       'compile'        => { 'coffee' => false, 'less' => false },
       'compress'       => { 'js'     => false, 'css'  => false },
       'base_path'      => '/bundles/',
-      'cdn'            => '',
+      'server_url'     => '',
       'remove_bundled' => false,
       'dev'            => false,
       'markup_templates' => {
@@ -153,9 +157,10 @@ END
         ret_config = nil
         if context.registers[:site].config.key?("asset_bundler")
           ret_config = @@default_config.deep_merge(context.registers[:site].config["asset_bundler"])
+
           ret_config['markup_templates'].keys.each {|k|
-            if ret_config['markup_templates'][k].class != Liquid::Template
-              if ret_config['markup_templates'][k].class == String
+            if !ret_config['markup_templates'][k].instance_of?(Liquid::Template)
+              if ret_config['markup_templates'][k].instance_of?(String)
                 ret_config['markup_templates'][k] =
                   Liquid::Template.parse(ret_config['markup_templates'][k]);
               else
@@ -172,6 +177,10 @@ END
               end
             end
           }
+
+          if context.registers[:site].config['asset_bundler'].key?('cdn') and ret_config['server_url'].empty?
+            ret_config['server_url'] = context.registers[:site].config['asset_bundler']['cdn']
+          end
         else
           ret_config = @@default_config
         end
@@ -186,7 +195,8 @@ END
           ret_config['dev'] = context.registers[:site].config["dev"] ? true : false
         end
 
-        if context.registers[:site].config['server']
+        # Let's assume that when flag 'watch' or 'serving' is enabled, we want dev mode
+        if context.registers[:site].config['serving'] || context.registers[:site].config['watch']
           ret_config['dev'] = true
         end
 
@@ -241,7 +251,7 @@ END
 
     def cache_dir()
       cache_dir = File.expand_path( "../_asset_bundler_cache",
-                                    @context.registers[:site].plugins )
+                                    @context.registers[:site].plugins.first )
       if( !File.directory?(cache_dir) )
         FileUtils.mkdir_p(cache_dir)
       end
@@ -278,7 +288,7 @@ END
       src = @context.registers[:site].source
       @files.each {|f|
         @context.registers[:site].static_files.select! {|s|
-          if s.class == StaticFile
+          if s.instance_of?(StaticFile)
             s.path != File.join(src, f)
           else
             true
@@ -372,8 +382,9 @@ END
     def markup()
       return dev_markup() if @config['dev']
 
-      cdn = @config['cdn'] || ''
-      @config['markup_templates'][@type].render('url' => "#{cdn}#{@base}#{@filename}")
+      @config['markup_templates'][@type].render(
+        'url' => "#{@config['server_url']}#{@base}#{@filename}"
+      )
     end
 
     def dev_markup()
