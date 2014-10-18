@@ -3,7 +3,7 @@
 #
 # Author : Colin Kennedy
 # Repo   : http://github.com/moshen/jekyll-asset_bundler
-# Version: 0.11
+# Version: 0.12
 # License: MIT, see LICENSE file
 #
 
@@ -25,10 +25,7 @@ module Jekyll
       src = context.registers[:site].source
       raw_markup = super(context)
       begin
-        # Some ugliness to work around the Block returning an array
-        #   in liquid <2.4.0
-        # Note: Jekyll 1.0.x only require liquid 2.3
-        @assets = YAML::load(raw_markup.kind_of?(Array) ? raw_markup.first : raw_markup)
+        @assets = YAML::load(raw_markup)
       rescue
         puts <<-END
 Asset Bundler - Error: Problem parsing a YAML bundle
@@ -117,6 +114,7 @@ END
       'server_url'     => '',
       'remove_bundled' => false,
       'dev'            => false,
+      'bundle_name'    => false,
       'markup_templates' => {
         'js'     =>
           Liquid::Template.parse("<script type='text/javascript' src='{{url}}'></script>\n"),
@@ -156,7 +154,8 @@ END
       if @@current_config.nil?
         ret_config = nil
         if context.registers[:site].config.key?("asset_bundler")
-          ret_config = @@default_config.deep_merge(context.registers[:site].config["asset_bundler"])
+          ret_config = Utils.deep_merge_hashes(@@default_config,
+                                               context.registers[:site].config["asset_bundler"])
 
           ret_config['markup_templates'].keys.each {|k|
             if !ret_config['markup_templates'][k].instance_of?(Liquid::Template)
@@ -225,11 +224,24 @@ END
           f.sub!( /^https/i, "http" ) if $1 =~ /^https/i
           @content.concat(remote_asset_cache(URI(f)))
         else
-          @content.concat(File.read(File.join(src, f)))
+          # Load file from path and render it if it contains tags
+
+          # Extract the path parts
+          f = File.split(f)
+
+          # Render the page                               path  file
+          page = Page.new(@context.registers[:site], src, f[0], f[1])
+          page.render(@context.registers[:site].layouts,
+                      @context.registers[:site].site_payload())
+
+          @content.concat(page.output)
         end
+
+        # In case the content does not end in a newline
+        @content.concat("\n")
       }
 
-      @hash = Digest::MD5.hexdigest(@content)
+      @hash = @config['bundle_name'] || Digest::MD5.hexdigest(@content)
       @filename = "#{@hash}.#{@type}"
       cache_file = File.join(cache_dir(), @filename)
 
@@ -401,6 +413,10 @@ END
     # Methods required by Jekyll::Site to write out the bundle
     #   This is where we give Jekyll::Bundle a Jekyll::StaticFile
     #   duck call and send it on its way.
+    def relative_path
+      File.join(@base, @filename)
+    end
+
     def destination(dest)
       File.join(dest, @base, @filename)
     end
