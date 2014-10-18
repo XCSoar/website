@@ -29,7 +29,7 @@ class Jekyll::SVGConvert < Liquid::Tag
       return
     end
 
-    site = context.registers[:site]
+    @site = site = context.registers[:site]
     @source_path = File.join(site.source, @source)
 
     # Check if SVG file exists
@@ -54,6 +54,16 @@ class Jekyll::SVGConvert < Liquid::Tag
 
     # Return relative path to output file
     """#{@dest}"""
+  end
+
+  # Returns source file path.
+  def path
+    @source_path
+  end
+
+  # Returns the source file path relative to the site source
+  def relative_path
+    @relative_path ||= path.sub(/\A#{@site.source}/, '')
   end
 
   def destination(dest)
