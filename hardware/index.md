@@ -84,6 +84,13 @@ and white, but is perfectly readable in direct sunlight.
 
 # Peripherals
 
+## Vaulter
+
+[The Vaulter](http://wharingtonsmith.com/vaulter.html) is a variometer
+developed by long-time XCSoar developer
+[John Wharington](http://wharingtonsmith.com/company.html).  It is
+fully supported by XCSoar.
+
 ## FLARM
 
 Connecting to a FLARM gives you barometric height and information
