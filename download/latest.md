@@ -12,7 +12,6 @@ Windows Mobile 2003 and Windows Mobile 5. PNA owners should usually choose the W
 
 - [Find out about your Windows Mobile version](/discover/wm_versions/)
 - [XCSoar {{ site.xcsoar_testing_version }} on Windows Mobile 5 (XScale CPU)]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/WM5X/)
-- [XCSoar {{ site.xcsoar_testing_version }} on Windows Mobile 5 (older CPU)]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/WM5/)
 - [XCSoar {{ site.xcsoar_testing_version }} on Windows Mobile 2003]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/PPC2003/)
 
 [Information for Naviter Oudie owners](/hardware/oudie.html).
