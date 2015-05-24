@@ -120,16 +120,13 @@ $(function() {
   {% for post in site.posts limit: 1 %}
   <div class="span8 news-item">
     <h2>
-      {{ post.title }}<br>
+      <a href="{{ post.url }}">{{ post.title }}</a><br>
       <small>({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</small>
     </h2>
 
     <div class="news-content">
       {{ post.content }}
     </div>
-    <p>
-      <a href="{{ post.url }}">more...</a>
-    </p>
     <hr/>
   </div>
   {% endfor %}
