@@ -131,6 +131,15 @@ $(function() {
   </div>
   {% endfor %}
 
+  {% for post in site.posts limit: 5 offset: 1 %}
+  <div class="span8 news-item">
+    <h2>
+      <small>{{ post.date | date:'%e. %b %Y' }}:</small>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h2>
+  </div>
+  {% endfor %}
+
   <div class="span8">
     <h3>
       <a href="/discover/news.html" title="See previous news posts">Previous news...</a>
