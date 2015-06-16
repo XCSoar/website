@@ -51,14 +51,7 @@ We are working on XCSoar {{ site.xcsoar_stable_version }} for the Altair platfor
 
 - [XCSoar {{ site.xcsoar_stable_version }} on Altair]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/ALTAIR/)
 
-## XCSoar {{ site.xcsoar_stable_version }} on Cubieboard
-
-The [Cubieboard](http://cubieboard.org/) port is experimental.
-
-- [XCSoar {{ site.xcsoar_stable_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/CUBIE/)
-
-## XCSoar {{ site.xcsoar_stable_version }} on Raspberry Pi
-
-The Raspberry Pi port is experimental.
+## XCSoar {{ site.xcsoar_stable_version }} on single-board computers
 
 - [XCSoar {{ site.xcsoar_stable_version }} on Raspberry Pi]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PI/)
+- [XCSoar {{ site.xcsoar_stable_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/CUBIE/)
