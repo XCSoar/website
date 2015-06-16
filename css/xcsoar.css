@@ -197,10 +197,6 @@ ul.quicklinks {
   line-height: 25px;
 }
 
-ul.quicklinks li {
-  padding-left: 26px;
-}
-
 ul.quicklinks li a {
   text-decoration: none;
 }
@@ -214,31 +210,31 @@ ul.quicklinks li.divider {
 }
 
 ul.quicklinks li.list-item-data {
-  background: url('../img/icon-globe.png') 0 2px no-repeat;
+  list-style-image: url('/img/icon-globe.png');
 }
 
 ul.quicklinks li.list-item-windows {
-  background: url('../img/icon-windows.png') 0 2px no-repeat;
+  list-style-image: url('/img/icon-windows.png');
 }
 
 ul.quicklinks li.list-item-wince {
-  background: url('../img/icon-windows-mobile.png') 0 2px no-repeat;
+  list-style-image: url('/img/icon-windows-mobile.png');
 }
 
 ul.quicklinks li.list-item-android {
-  background: url('../img/icon-android.png') 0 2px no-repeat;
+  list-style-image: url('/img/icon-android.png');
 }
 
 ul.quicklinks li.list-item-linux {
-  background: url('../img/icon-linux.png') 0 2px no-repeat;
+  list-style-image: url('/img/icon-linux.png');
 }
 
 ul.quicklinks li.list-item-mac {
-  background: url('../img/icon-apple.png') 0 2px no-repeat;
+  list-style-image: url('/img/icon-apple.png');
 }
 
 ul.quicklinks li.list-item-xcsoar {
-  background: url('../img/icon-xcsoar.png') 0 2px no-repeat;
+  list-style-image: url('/img/icon-xcsoar.png');
 }
 
 /* DOWNLOADS */
