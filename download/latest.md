@@ -32,21 +32,11 @@ hidden).  Reboot the Kobo.
 
 - [XCSoar {{ site.xcsoar_testing_version }} Kobo installer]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/KOBO/KoboRoot.tgz)
 
-## XCSoar {{ site.xcsoar_testing_version }} on Windows
-					
-The Windows version of XCSoar can be used preflight planning, postflight replay or just to get to know the application before using it in the air.
+## XCSoar {{ site.xcsoar_testing_version }} on desktop computers
 
 - [XCSoar {{ site.xcsoar_testing_version }} on Windows]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/PC/)
 - [XCSoar {{ site.xcsoar_testing_version }} on Windows (64 bit)]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/WIN64/)
-
-## XCSoar {{ site.xcsoar_testing_version }} on Linux
-
-The Linux version of XCSoar can be used preflight planning, postflight replay or just to get to know the application before using it in the air.
-
 - [XCSoar {{ site.xcsoar_testing_version }} on Linux]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/LINUX/)
-
-## XCSoar {{ site.xcsoar_testing_version }} on OS X
-
 - [XCSoar {{ site.xcsoar_testing_version }} on OS X]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/OSX/)
 
 ## XCSoar {{ site.xcsoar_testing_version }} on Altair
