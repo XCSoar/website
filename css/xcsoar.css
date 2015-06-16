@@ -209,31 +209,31 @@ ul.quicklinks li.divider {
   height: 15px;
 }
 
-ul.quicklinks li.list-item-data {
+li.list-item-data {
   list-style-image: url('/img/icon-globe.png');
 }
 
-ul.quicklinks li.list-item-windows {
+li.list-item-windows {
   list-style-image: url('/img/icon-windows.png');
 }
 
-ul.quicklinks li.list-item-wince {
+li.list-item-wince {
   list-style-image: url('/img/icon-windows-mobile.png');
 }
 
-ul.quicklinks li.list-item-android {
+li.list-item-android {
   list-style-image: url('/img/icon-android.png');
 }
 
-ul.quicklinks li.list-item-linux {
+li.list-item-linux {
   list-style-image: url('/img/icon-linux.png');
 }
 
-ul.quicklinks li.list-item-mac {
+li.list-item-mac {
   list-style-image: url('/img/icon-apple.png');
 }
 
-ul.quicklinks li.list-item-xcsoar {
+li.list-item-xcsoar {
   list-style-image: url('/img/icon-xcsoar.png');
 }
 
