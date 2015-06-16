@@ -22,16 +22,9 @@ The Android version of XCSoar {{ site.xcsoar_old_version }} runs on all phones a
 
 - [XCSoar {{ site.xcsoar_old_version }} on Android]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/ANDROID/)
 
-## XCSoar {{ site.xcsoar_old_version }} on Windows
-					
-The Windows version of XCSoar can be used preflight planning, postflight replay or just to get to know the application before using it in the air.
+## XCSoar {{ site.xcsoar_stable_version }} on desktop computers
 
 - [XCSoar {{ site.xcsoar_old_version }} on Windows]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/PC/)
-
-## XCSoar {{ site.xcsoar_old_version }} on Linux
-
-The Linux version of XCSoar can be used preflight planning, postflight replay or just to get to know the application before using it in the air.
-
 - [XCSoar {{ site.xcsoar_old_version }} on Linux]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/LINUX/)
 
 ## XCSoar {{ site.xcsoar_old_version }} on Altair
