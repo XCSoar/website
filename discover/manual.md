@@ -33,8 +33,3 @@ The "upcomeing" manuals:
 - [XCSoar {{ site.xcsoar_testing_version }} Manual do Usuário]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual-pt_BR.pdf) Complete Portuguese manual (PDF)
 - [XCSoar {{ site.xcsoar_testing_version }} Developer manual]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-developer-manual.pdf) (PDF)
 {% endif %}
-
-The "old" one:
-
-- [XCSoar 5.x Manual](http://prdownloads.sourceforge.net/xcsoar/XCSoar-manual-500.pdf?download) (PDF)
-
