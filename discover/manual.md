@@ -12,24 +12,24 @@ Since this is an open-source project everybody can [collaborate](/develop/)!
 
 The "stable" manuals:
 
-- {% country_flag gb %} [XCSoar {{ site.xcsoar_stable_version }} XCSoar in a flash]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-in-a-flash.pdf) (PDF)
-- {% country_flag gb %} [XCSoar {{ site.xcsoar_stable_version }} Manual]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf) (PDF)
-- {% country_flag de %} [XCSoar {{ site.xcsoar_stable_version }} Blitzeinstieg]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-Blitzeinstieg.pdf) Quick guide in German (PDF)
-- {% country_flag de %} [XCSoar {{ site.xcsoar_stable_version }} Handbuch]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-de.pdf) Complete German manual (PDF)
-- {% country_flag fr %} [XCSoar {{ site.xcsoar_stable_version }} Prise en main]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-Prise-en-main.pdf) Quick guide in French (PDF)
-- {% country_flag fr %} [XCSoar {{ site.xcsoar_stable_version }} Manuel de l’utilisateur]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-fr.pdf) Mostly complete French manual (PDF)
-- {% country_flag gb %} [XCSoar {{ site.xcsoar_stable_version }} Developer manual]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-developer-manual.pdf) (PDF)
+- {% country_flag gb %} [XCSoar {{ site.xcsoar_stable_version }} XCSoar in a flash]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-in-a-flash.pdf)
+- {% country_flag gb %} [XCSoar {{ site.xcsoar_stable_version }} Manual]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf)
+- {% country_flag de %} [XCSoar {{ site.xcsoar_stable_version }} Blitzeinstieg]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-Blitzeinstieg.pdf) Quick guide in German
+- {% country_flag de %} [XCSoar {{ site.xcsoar_stable_version }} Handbuch]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-de.pdf) Complete German manual
+- {% country_flag fr %} [XCSoar {{ site.xcsoar_stable_version }} Prise en main]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-Prise-en-main.pdf) Quick guide in French
+- {% country_flag fr %} [XCSoar {{ site.xcsoar_stable_version }} Manuel de l’utilisateur]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-fr.pdf) Mostly complete French manual
+- {% country_flag gb %} [XCSoar {{ site.xcsoar_stable_version }} Developer manual]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-developer-manual.pdf)
 
 {% if site.xcsoar_testing_version != site.xcsoar_stable_version %}
 The "upcomeing" manuals:
 
-- {% country_flag gb %} [XCSoar {{ site.xcsoar_testing_version }} XCSoar in a flash]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-in-a-flash.pdf) (PDF)
-- {% country_flag gb %} [XCSoar {{ site.xcsoar_testing_version }} Manual]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual.pdf) (PDF)
-- {% country_flag de %} [XCSoar {{ site.xcsoar_testing_version }} Blitzeinstieg]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-Blitzeinstieg.pdf) Quick guide in German (PDF)
-- {% country_flag de %} [XCSoar {{ site.xcsoar_testing_version }} Handbuch]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual-de.pdf) Complete German manual (PDF)
-- {% country_flag fr %} [XCSoar {{ site.xcsoar_testing_version }} Prise en main]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-Prise-en-main.pdf) Quick guide in French (PDF)
-- {% country_flag fr %} [XCSoar {{ site.xcsoar_testing_version }} Manuel de l’utilisateur]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual-fr.pdf) Mostly complete French manual (PDF)
-- {% country_flag br %} [XCSoar {{ site.xcsoar_testing_version }} XCSoar em um flash]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-in-a-flash-pt_BR.pdf) Quick guide in Portuguese (PDF)
-- {% country_flag br %} [XCSoar {{ site.xcsoar_testing_version }} Manual do Usuário]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual-pt_BR.pdf) Complete Portuguese manual (PDF)
-- {% country_flag gb %} [XCSoar {{ site.xcsoar_testing_version }} Developer manual]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-developer-manual.pdf) (PDF)
+- {% country_flag gb %} [XCSoar {{ site.xcsoar_testing_version }} XCSoar in a flash]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-in-a-flash.pdf)
+- {% country_flag gb %} [XCSoar {{ site.xcsoar_testing_version }} Manual]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual.pdf)
+- {% country_flag de %} [XCSoar {{ site.xcsoar_testing_version }} Blitzeinstieg]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-Blitzeinstieg.pdf) Quick guide in German
+- {% country_flag de %} [XCSoar {{ site.xcsoar_testing_version }} Handbuch]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual-de.pdf) Complete German manual
+- {% country_flag fr %} [XCSoar {{ site.xcsoar_testing_version }} Prise en main]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-Prise-en-main.pdf) Quick guide in French
+- {% country_flag fr %} [XCSoar {{ site.xcsoar_testing_version }} Manuel de l’utilisateur]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual-fr.pdf) Mostly complete French manual
+- {% country_flag br %} [XCSoar {{ site.xcsoar_testing_version }} XCSoar em um flash]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-in-a-flash-pt_BR.pdf) Quick guide in Portuguese
+- {% country_flag br %} [XCSoar {{ site.xcsoar_testing_version }} Manual do Usuário]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-manual-pt_BR.pdf) Complete Portuguese manual
+- {% country_flag gb %} [XCSoar {{ site.xcsoar_testing_version }} Developer manual]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/XCSoar-developer-manual.pdf)
 {% endif %}
