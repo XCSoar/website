@@ -6,7 +6,7 @@ xcsoar_old_version: 6.6.5
 
 server_url: ''
 absolute_server_url: 'http://www.xcsoar.org'
-download_server_url: 'http://download.xcsoar.org/releases'
+download_server_url: 'http://max.kellermann.name/download/xcsoar/releases'
 trac_server_url: 'http://bugs.xcsoar.org'
 
 asset_bundler:
