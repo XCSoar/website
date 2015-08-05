@@ -1,7 +1,7 @@
 permalink: /discover/:year/:month/:day/:title.html
 
 xcsoar_stable_version: 6.7.9
-xcsoar_testing_version: 6.8_alpha9
+xcsoar_testing_version: 6.8_beta1
 xcsoar_old_version: 6.6.5
 
 server_url: ''
