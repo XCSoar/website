@@ -20,8 +20,10 @@ A map file (.xcm) contains terrain and topography. In some cases it might also c
 
 - [Download Maps](/download/maps/)
   ([mirror](http://87.102.254.100/maps/))
-- Use the [Map Generator](http://mapgen.xcsoar.org/) to create your own maps
-  ([mirror](http://87.102.254.100/))
+- Use the [Map Generator]({{ site.mapgen_url }}) to create your own maps
+{% if site.mapgen_mirror_url %}
+  ([mirror]({{ site.mapgen_mirror_url }}))
+{% endif %}
 
 ## Airspaces
 

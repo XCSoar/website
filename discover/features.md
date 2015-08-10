@@ -94,7 +94,7 @@ In addition to the OpenAir standard the AR command is recognized as the airspace
 - JPEG2000 JP2 files + J2W world file (terrain)
 - ShapeFiles (topography)
 
-The usual format is the XCM map. [Pregenerated maps](/download/maps/) can be downloaded from our website or generated specifically for your needs by our [Map Generator](http://mapgen.xcsoar.org/).
+The usual format is the XCM map. [Pregenerated maps](/download/maps/) can be downloaded from our website or generated specifically for your needs by our [Map Generator]({{ site.mapgen_url }}).
 
 ### Tasks
 

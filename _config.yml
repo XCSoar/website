@@ -8,6 +8,8 @@ server_url: ''
 absolute_server_url: 'http://www.xcsoar.org'
 download_server_url: 'http://download.xcsoar.org/releases'
 trac_server_url: 'http://bugs.xcsoar.org'
+mapgen_url: 'http://mapgen.xcsoar.org/'
+mapgen_mirror_url: 'http://87.102.254.100/'
 
 asset_bundler:
   cdn: 'http://www.xcsoar.org'
