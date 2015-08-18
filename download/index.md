@@ -12,9 +12,7 @@ Windows Mobile 2003 and Windows Mobile 5. PNA owners should usually choose the W
 
 - [Find out about your Windows Mobile version](/discover/wm_versions/)
 - {:.list-item-wince}[XCSoar {{ site.xcsoar_stable_version }} on Windows Mobile 5 (XScale CPU)]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WM5X/)
-- {:.list-item-wince}[XCSoar {{ site.xcsoar_stable_version }} on Windows Mobile 5 (older CPU)]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WM5/)
 - {:.list-item-wince}[XCSoar {{ site.xcsoar_stable_version }} on Windows Mobile 2003]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PPC2003/)
-- {:.list-item-wince}[XCSoar {{ site.xcsoar_stable_version }} on Pocket PC 2000]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PPC2000/)
 
 [Information for Naviter Oudie owners](/hardware/oudie.html).
 
@@ -39,11 +37,7 @@ hidden).  Reboot the Kobo.
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_stable_version }} on Windows]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PC/)
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_stable_version }} on Windows (64 bit)]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN64/)
 - {:.list-item-linux}[XCSoar {{ site.xcsoar_stable_version }} on Linux]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/LINUX/)
-
-## XCSoar {{ site.xcsoar_stable_version }} on OS X
-
-The OS X version of XCSoar {{ site.xcsoar_stable_version }} is not
-available, because there is no maintainer.  Volunteers welcome.
+- {:.list-item-mac}[XCSoar {{ site.xcsoar_stable_version }} on OS X]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/OSX/)
 
 ## XCSoar {{ site.xcsoar_stable_version }} on Altair
 
