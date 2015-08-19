@@ -49,3 +49,11 @@ We are working on XCSoar {{ site.xcsoar_stable_version }} for the Altair platfor
 
 - {:.list-item-linux}[XCSoar {{ site.xcsoar_stable_version }} on Raspberry Pi]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PI/)
 - {:.list-item-linux}[XCSoar {{ site.xcsoar_stable_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/CUBIE/)
+
+## XCSoar {{ site.xcsoar_stable_version }} on iOS
+
+XCSoar {{ site.xcsoar_stable_version }} runs on jailbroken iOS devices and can be installed via Cydia.
+Add the XCSoar repository to your Cydia sources and install the XCSoar package.
+The XCSoar Cydia repository is available at the following URL:
+
+- http://xcsoar.org/cydia
