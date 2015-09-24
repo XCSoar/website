@@ -4,7 +4,7 @@ color: blue
 title: SkyLines Live Tracking
 author: Max
 ---
-One major feature of XCSoar 6.4 will be [SkyLines](http://skylines.xcsoar.org)
+One major feature of XCSoar 6.4 will be [SkyLines](http://skylines.aero)
 Live Tracking. I would like to introduce you to it.
 
 SkyLines implements a very light-weight tracking protocol that transmits only 48
@@ -22,10 +22,10 @@ developing it!
 How to use:
 
 - register in SkyLines if you havn't already  
-  (<http://skylines.xcsoar.org/users/new>)
+  (<https://skylines.aero/users/new>)
 
 - generate a tracking key in the SkyLines system settings  
-  (<http://skylines.xcsoar.org/settings/>)
+  (<https://skylines.aero/settings/>)
 
 - get XCSoar 6.4_alpha1  
   (<https://play.google.com/store/apps/details?id=org.xcsoar.testing>)
@@ -35,7 +35,7 @@ How to use:
 - fly!
 
 - your friends click on Live to see current live tracks  
-  (<http://skylines.xcsoar.org/tracking/>)
+  (<https://skylines.aero/tracking/>)
 
 This feature is only available on Android. You need an internet connection
 during the flight, so be sure to put your SIM card into your device. As soon as

@@ -22,7 +22,7 @@ soon. We are currently finishing the next maintenance release (XCSoar 6.4.2)
 and after that we will publish the first early preview version of the upcoming
 XCSoar 6.5.
 
-We are also working hard on the [SkyLines](http://skylines.xcsoar.org) platform
+We are also working hard on the [SkyLines](https://skylines.aero/) platform
 and we hope to bring you the terrain elevation data for your flights very soon.
 In addition to all that, I am working on a tracking client for the iPhone users
 out there. It has the simple purpose of sending your position in regular
