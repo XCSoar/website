@@ -14,7 +14,7 @@ The sixth maintenance release of XCSoar 6.7 fixes various bugs:
 Feature changes:
 
 * driver for [WSI Vaulter](http://wharingtonsmith.com/vaulter/)
-* migration to new [SkyLines](https://www.skylines.aero/) tracking server
+* migration to new [SkyLines](https://skylines.aero/) tracking server
 
 Changelog:
 

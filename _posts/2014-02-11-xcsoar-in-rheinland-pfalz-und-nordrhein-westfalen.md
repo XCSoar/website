@@ -6,7 +6,7 @@ layout: post
 ---
 
 Auf zwei Terminen im Westen Deutschlands stellen wir XCSoar und
-[SkyLines](http://www.skylines.aero/) vor:
+[SkyLines](https://skylines.aero/) vor:
 
 - Am Samstag, 15. Februar 2014 auf dem
   [Segelfliegertag Rheinland-Pfalz](http://www.sfc-betzdorf-kirchen.de/index.php/segelfliegertag)

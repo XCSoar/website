@@ -7,7 +7,7 @@ layout: post
 
 Am kommenden Samstag, 2. November,
 [findet in Hagen der Segelfliegertag 2013 statt](http://segelfliegertag-2013.de/).
-XCSoar und [SkyLines](http://www.skylines.aero/) werden auf Stand 7
+XCSoar und [SkyLines](https://skylines.aero/) werden auf Stand 7
 mit drei Entwicklern vertreten sein.  Die Firma
 [8F Computer (StrePla)](http://www.strepla.de/) hat uns
 freundlicherweise eingeladen, wie schon
