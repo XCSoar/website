@@ -5,16 +5,6 @@ title: Download
 menu: download
 version: latest
 ---
-## XCSoar {{ site.xcsoar_testing_version }} on Windows Mobile
-
-The Windows Mobile version should be used on all PDAs and PNAs. Depending on what operating system your PDA runs you need to choose between Pocket PC 2000, 
-Windows Mobile 2003 and Windows Mobile 5. PNA owners should usually choose the Windows Mobile 5 version.
-
-- [Find out about your Windows Mobile version](/discover/wm_versions/)
-- {:.list-item-wince}[XCSoar {{ site.xcsoar_testing_version }} on Windows Mobile 5 (XScale CPU)]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/WM5X/)
-- {:.list-item-wince}[XCSoar {{ site.xcsoar_testing_version }} on Windows Mobile 2003]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/PPC2003/)
-
-[Information for Naviter Oudie owners](/hardware/oudie.html).
 
 ## XCSoar {{ site.xcsoar_testing_version }} on Android
 
@@ -38,12 +28,6 @@ hidden).  Reboot the Kobo.
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_testing_version }} on Windows (64 bit)]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/WIN64/)
 - {:.list-item-linux}[XCSoar {{ site.xcsoar_testing_version }} on Linux]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/LINUX/)
 - {:.list-item-mac}[XCSoar {{ site.xcsoar_testing_version }} on OS X]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/OSX/)
-
-## XCSoar {{ site.xcsoar_testing_version }} on Altair
-
-We are working on XCSoar {{ site.xcsoar_testing_version }} for the Altair platform.
-
-- [XCSoar {{ site.xcsoar_testing_version }} on Altair]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/ALTAIR/)
 
 ## XCSoar {{ site.xcsoar_stable_version }} on single-board computers
 
