@@ -59,15 +59,11 @@ menu: discover
 
 ## Supported platforms
 
-- PDAs, PNAs and Windows Smartphones  
-  *(PocketPC 2000 until Windows Mobile 6)*
 - Android Smartphones and Tablets  
   *(min. Android 1.6)*
 - Computer  
   *(Windows or Unix)*
-- Altair
-- LX Minimap
-- Naviter Oudie
+- Windows CE (obsolete, will be removed soon)
 
 ## Supported data files
 
