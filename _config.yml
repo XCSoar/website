@@ -5,13 +5,13 @@ xcsoar_testing_version: 6.8
 xcsoar_old_version: 6.7.9
 
 server_url: ''
-absolute_server_url: 'http://www.xcsoar.org'
+absolute_server_url: '//www.xcsoar.org'
 download_server_url: 'http://download.xcsoar.org/releases'
 trac_server_url: 'https://bugs.xcsoar.org'
 mapgen_url: 'http://xcsoar-mapgen.sigkill.ch/'
 
 asset_bundler:
-  cdn: 'http://www.xcsoar.org'
+  cdn: '//www.xcsoar.org'
   compress:
     css: 'yui-compressor --type css'
     js: 'yui-compressor --type js'
