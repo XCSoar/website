@@ -31,6 +31,6 @@ Changelog:
 
 Download:
 
- [http://www.xcsoar.org/download/latest.html](/download/latest.html)  
+ [{{ site.absolute_server_url }}/download/latest.html](/download/latest.html)  
  <{{ site.download_server_url }}/6.8_alpha9/>  
  <https://play.google.com/store/apps/details?id=org.xcsoar.testing>
