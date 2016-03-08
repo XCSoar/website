@@ -7,7 +7,7 @@ xcsoar_old_version: 6.7.9
 server_url: ''
 absolute_server_url: 'http://www.xcsoar.org'
 download_server_url: 'http://download.xcsoar.org/releases'
-trac_server_url: 'http://bugs.xcsoar.org'
+trac_server_url: 'https://bugs.xcsoar.org'
 mapgen_url: 'http://xcsoar-mapgen.sigkill.ch/'
 
 asset_bundler:
