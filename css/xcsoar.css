@@ -17,6 +17,10 @@ a.green:active { color: #359A41; }
 
 hr { border-style: dotted; border-width: 1px 0px 0px 0px; margin: 10px 0; }
 
+strong {
+    font-weight: bold;
+}
+
 /* HTML */
 html { font-family: "Ubuntu", sans-serif; font-weight: 300; }
 
