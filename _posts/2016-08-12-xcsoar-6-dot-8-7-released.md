@@ -9,7 +9,9 @@ The seventh maintenance release of XCSoar 6.8 fixes two potential
 crash bugs and one minor SkyLines live tracking bugs.
 
 Most importantly, this release prepares a new revolutionary feature,
-which we will introduce later: the **XCSoar Cloud**.  It is a service
+which we will introduce later: the
+[XCSoar Cloud](http://cloud.xcsoar.net/).
+It is a service
 which allows sharing thermal/wave locations and other weather data
 with pilots in your area.  This release adds some basic code, which
 allows us to develop and test the service; please enable it to help
