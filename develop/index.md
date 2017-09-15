@@ -7,9 +7,9 @@ title: Development
 
 ## Source code
 
-[Browse our git repository online](http://git.xcsoar.org/cgit/master/xcsoar.git/), or clone it:
+[Browse our git repository online](https://github.com/XCSoar/XCSoar), or clone it:
 
-	git clone git://git.xcsoar.org/xcsoar/master/xcsoar.git
+	git clone git://github.com/XCSoar/XCSoar
 
 ## Contributing
 

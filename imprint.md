@@ -14,4 +14,4 @@ Germany
 <imprint@xcsoar.org>
 
 Source code of this web site can be found in the
-[git repository](http://git.xcsoar.org/cgit/master/website.git/).
+[git repository](https://github.com/XCSoar/website).

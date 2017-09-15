@@ -10,8 +10,6 @@ title: Infrastructure and Hosting
   A commercial server run at iWeb by Scott Penrose.  
   rsync backup is done nightly to secondary disk.  
   *TODO - consider offsite copy of Trac (all other content is reproducible from git)*
-- **git.xcsoar.org** is run by Max Kellermann.  
-  This host also contains the nightly builds.
 - **download.xcsoar.org** is a commercial web site (virtual on a shared machine).  
   It is run at iWeb by Scott Penrose.  
   Backup is done by service provider
