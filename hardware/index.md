@@ -76,7 +76,7 @@ and white, but is perfectly readable in direct sunlight.
 
 [More information about XCSoar on the Kobo Mini](http://max.kellermann.name/projects/xcsoar/kobo.html).
 
-# Windows
+# Windows CE
 
 ## Naviter Oudie
 
