@@ -78,6 +78,9 @@ and white, but is perfectly readable in direct sunlight.
 
 # Windows CE
 
+XCSoar on Windows CE discontinued. It is still supported in XCSoar 6.8.x, but
+future XCSoar releases will no support this operating system any more.
+
 ## Naviter Oudie
 
 [More information about XCSoar on the Naviter Oudie](oudie.html).
