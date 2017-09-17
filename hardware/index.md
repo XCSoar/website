@@ -30,7 +30,6 @@ Other Android products that have been reported to be reasonably good
 - [YotaPhone 2](https://yotaphone.com/): has an e-ink screen on the backside,
   which can be used for XCSoar
 - [Galaxy S6](http://www.samsung.com/de/smartphones/galaxy-s6-g920f/)
-- [Galaxy Note 2](http://www.samsung.com/galaxynoteII/)
 - [Sony Xperia](http://www.sonymobile.com/gb/xperia/): very bright
   screen, but broken Bluetooth, use IOIO instead
 
