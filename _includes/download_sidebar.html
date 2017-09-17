@@ -5,7 +5,7 @@
       {% if page.version == 'stable' %}<b><a>XCSoar {{ site.xcsoar_stable_version }}</a></b>{% else %}<a href="/download/index.html">XCSoar {{ site.xcsoar_stable_version }}</a>{% endif %}<br/>
       The current stable version.
     </li>
-    {% if site.xcsoar_testing_version != site.xcsoar_stable_version %}
+    {% if site.xcsoar_testing_version %}
     <li>
       {% if page.version == 'latest' %}<b><a>XCSoar {{ site.xcsoar_testing_version }} (development)</a></b>{% else %}<a href="/download/latest.html">XCSoar {{ site.xcsoar_testing_version }} (development)</a>{% endif %}<br/>
       The latest 'bleeding edge' developer version.<br/>(potentially unstable, recommended for testing only)
