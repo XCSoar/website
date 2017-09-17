@@ -8,7 +8,7 @@ version: latest
 
 ## XCSoar {{ site.xcsoar_testing_version }} on Android
 
-The Android version of XCSoar {{ site.xcsoar_testing_version }} runs on all phones and tablets with Android 1.6 or newer.
+The Android version of XCSoar {{ site.xcsoar_testing_version }} runs on phones and tablets with Android 1.6 or newer.
 
 - {:.list-item-android}[XCSoar on Google Play](https://play.google.com/store/apps/details?id=org.xcsoar.testing)
 - {:.list-item-android}[XCSoar {{ site.xcsoar_testing_version }} on Android]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/ANDROID/)
