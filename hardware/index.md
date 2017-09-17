@@ -69,10 +69,18 @@ Examples for IOIO adapters:
   (without the actual IOIO board)
 - you can [build your own](https://github.com/ytai/ioio/wiki)
 
-# Kobo Mini
+# Kobo
 
-The Kobo Mini is an e-book reader with an e-ink screen.  It is black
-and white, but is perfectly readable in direct sunlight.
+XCSoar supports multiple Kobo e-book readers. These device have an e-ink screen.
+It is black and white, but is perfectly readable in direct sunlight.
+
+The following Kobo models are supported:
+
+- Kobo Mini
+- Kobo Glo
+- Kobo Touch 2.0
+- Kobo Glo HD
+- Kobo Aura Edition 2
 
 [More information about XCSoar on the Kobo Mini](http://max.kellermann.name/projects/xcsoar/kobo.html).
 
