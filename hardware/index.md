@@ -30,8 +30,6 @@ Other Android products that have been reported to be reasonably good
 - [Galaxy Note 2](http://www.samsung.com/galaxynoteII/)
 - [Sony Xperia](http://www.sonymobile.com/gb/xperia/): very bright
   screen, but broken Bluetooth, use IOIO instead
-- [Caterpillar B15](http://catphones.com/b15-smartphone): not tested,
-  but rumor says its screen is transflective
 
 ## Built-in GPS
 
