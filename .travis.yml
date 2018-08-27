@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+  - 2.4.1
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - yui-compressor
+    - librsvg2-bin
+
+cache: bundler
+
+script: bundle exec jekyll build
