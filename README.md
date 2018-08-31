@@ -2,7 +2,7 @@
 
 1. Install dependencies
    ```
-   sudo apt-get install bundler yuicompressor librsvg2-bin
+   sudo apt-get install bundler yui-compressor librsvg2-bin build-essential ruby-dev
    ```
 
 2. Install ruby dependencies
