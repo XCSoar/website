@@ -15,3 +15,10 @@ before_deploy:
 - eval "$(ssh-agent -s)"
 - chmod 600 $TRAVIS_BUILD_DIR/xcsoar-website_rsa
 - ssh-add $TRAVIS_BUILD_DIR/xcsoar-website_rsa
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && scp -P ${DEPLOY_PORT} $TRAVIS_BUILD_DIR/_site/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/
+  on:
+    branch: master
