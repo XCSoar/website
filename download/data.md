@@ -19,7 +19,6 @@ and a custom [Waypoint Details](#waypoint_details)  file.
 A map file (.xcm) contains terrain and topography. In some cases it might also contain waypoint and airspace files. 
 
 - [Download Maps](/download/maps/)
-  ([mirror](http://xcsoar-mapgen.sigkill.ch/maps/))
 - Use the [Map Generator]({{ site.mapgen_url }}) to create your own maps
 {% if site.mapgen_mirror_url %}
   ([mirror]({{ site.mapgen_mirror_url }}))
