@@ -7,6 +7,7 @@ addons:
     packages:
     - yui-compressor
     - librsvg2-bin
+    - rsync
 cache: bundler
 script: bundle exec jekyll build
 
@@ -19,6 +20,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && scp -P ${DEPLOY_PORT} $TRAVIS_BUILD_DIR/_site/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/
+  script: ssh-keyscan -p ${DEPLOY_PORT} ${DEPLOY_HOST} > ~/.ssh/known_hosts && rsync -atpv --delete -e "ssh -p ${DEPLOY_PORT}" $TRAVIS_BUILD_DIR/_site/ ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/
   on:
     branch: master
