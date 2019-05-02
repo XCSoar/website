@@ -12,7 +12,7 @@ cache: bundler
 script: bundle exec jekyll build
 
 before_deploy:
-- openssl aes-256-cbc -K $encrypted_f87b8a6e436d_key -iv $encrypted_f87b8a6e436d_iv -in xcsoar-website_rsa.enc -out xcsoar-website_rsa -d
+- openssl aes-256-cbc -K $encrypted_a8379cc9e997_key -iv $encrypted_a8379cc9e997_iv -in xcsoar-website_rsa.enc -out xcsoar-website_rsa -d
 - eval "$(ssh-agent -s)"
 - chmod 600 $TRAVIS_BUILD_DIR/xcsoar-website_rsa
 - ssh-add $TRAVIS_BUILD_DIR/xcsoar-website_rsa
