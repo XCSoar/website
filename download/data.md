@@ -71,7 +71,7 @@ A waypoint details file (.txt) contains detailed information about the loaded wa
 
 XCSoar can use the FlarmNet database to show the callsigns and additional information of FLARM equipped planes around you. Save the file into the XCSoarData directory.
 
-- [Download FlarmNet database](http://www.flarmnet.org/files/data.fln) 
+- [Download FlarmNet database](https://www.flarmnet.org/static/files/wfn/data.fln) 
 
 ## Checklist
 
