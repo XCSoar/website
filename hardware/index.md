@@ -27,8 +27,7 @@ docking kit is a good choice.
 Other Android products that have been reported to be reasonably good
 (but not quite as good as the Streak):
 
-- [YotaPhone 2](https://yotaphone.com/): has an e-ink screen on the backside,
-  which can be used for XCSoar
+- YotaPhone 2: has an e-ink screen on the backside, which can be used for XCSoar
 - [Galaxy S6](http://www.samsung.com/de/smartphones/galaxy-s6-g920f/)
 - [Sony Xperia](http://www.sonymobile.com/gb/xperia/): very bright
   screen, but broken Bluetooth, use IOIO instead
@@ -51,21 +50,14 @@ connect peripherals:
 
 Examples for Bluetooth adapters:
 
-- [SoarTronic's bluetooth adapter](http://www.soartronic.net/) is cheap (38 €), but only compatible with FLARM
-- [GliderTools VFBT-1](http://www.glidertools.com/products/bluetooth-modul-pro-spojeni-loggeru-a-pda/)
-  is an adapter for 85 € which works with all devices that don't need
-  to switch baud rates
-- [K6-Team K6 BT 2](http://www.k6-team.de/index.php?a=165) costs 148
+- [SoarTronic's bluetooth adapter](http://www.soartronic.net/products) is cheap (38 €), but only compatible with FLARM
+- [K6-Team K6 BT Mux 2](https://www.k6-team.de/K6-Bt-Mux-2-NMEA-Multiplexer-mit-Bluetooth) costs 218
   €, but is the universal solution that allows baud rate switching
 - you can build your own
 
 Examples for IOIO adapters:
 
-- [DroidSoar](http://www.tvlnet.de/): a complete IOIO adapter with 4
-  serial ports and 2 pressure sensors for 169 €
-- [Glidertools Androport](http://www.glidertools.com/products/androport/):
-  a complete IOIO adapter with 2 serial ports for 63.50 €
-- [SoarTronic](http://www.soartronic.net/) has a DIY kit for 26 €
+- [SoarTronic](http://www.soartronic.net/products) has a DIY kit for 39 €
   (without the actual IOIO board)
 - you can [build your own](https://github.com/ytai/ioio/wiki)
 
@@ -86,7 +78,7 @@ The following Kobo models are supported:
 
 # Windows CE
 
-XCSoar on Windows CE discontinued. It is still supported in XCSoar 6.8.x, but
+XCSoar on Windows CE is discontinued. It is still supported in XCSoar 6.8.x, but
 future XCSoar releases will no support this operating system any more.
 
 ## Naviter Oudie
@@ -95,12 +87,18 @@ future XCSoar releases will no support this operating system any more.
 
 # Peripherals
 
-## Vaulter
+## Borgelt B800
+The [Borgelt B800](http://www.borgeltinstruments.com/?page_id=48) is fully supported by XCSoar.
+The [Borgelt Bluetooth Blade](http://www.borgeltinstruments.com/?page_id=156) is the dedicated bluetooth adapter.
 
-[The Vaulter](http://wharingtonsmith.com/vaulter.html) is a variometer
-developed by long-time XCSoar developer
-[John Wharington](http://wharingtonsmith.com/company.html).  It is
-fully supported by XCSoar.
+## Cambridge CAI302
+
+The CAI302 is fully supported by XCSoar, thanks to Cambridge's
+complete protocol documentation.  To allow fast IGC file download, it
+is recommended to use the [K6-Team Bluetooth adapter](https://www.k6-team.de/K6-Bt-Mux-2-NMEA-Multiplexer-mit-Bluetooth).
+
+## EW microRecorder
+The EW microRecorder is fully supported by XCSoar.
 
 ## FLARM
 
@@ -108,20 +106,28 @@ Connecting to a FLARM gives you barometric height and information
 about nearby traffic (FLARM radar).  XCSoar can send task declarations
 to an IGC FLARM and can read valid IGC files from it.
 
-[SoarTronic's bluetooth adapter](http://www.soartronic.net/) is a
+[SoarTronic's bluetooth adapter](http://www.soartronic.net/products) is a
 cheap way to connect a FLARM.
 
-## LXNAV V7 / Nano
+## IMI ERIXX
 
-Both [V7](http://www.lxnav.com/products/v7-v7d.html) and
+The [IMI ERIXX](http://www.imi-gliding.com/products/erixx-flight-recorder.html) is fully supported by XCSoar.
+
+## LXNAV S7 / Nano
+
+Both [S7](https://www.lxnav.nl/v7.html) and
 [Nano](http://www.lxnav.com/products/nano.html) are both fully
 supported by XCSoar, thanks to LXNAV's hardware donations.  LXNAV
 sells
-[a Bluetooth adapter for the V7](http://www.lxnav.com/accessories/v7-bluetooth.html),
+[a Bluetooth adapter for the S7](https://gliding.lxnav.com/products/s7-s8-s80-bluetooth-module/),
 and the Nano has built-in Bluetooth.
 
-## Cambridge CAI302
+## Triadis Altair / Vega
+The Triadis Altair and Vega are fully supported by XCSoar.
 
-The CAI302 is fully supported by XCSoar, thanks to Cambridge's
-complete protocol documentation.  To allow fast IGC file download, it
-is recommended to use the K6-Team Bluetooth adapter.
+## Vaulter
+
+The Vaulter is a variometer
+developed by long-time XCSoar developer
+John Wharington.  It is
+fully supported by XCSoar.
