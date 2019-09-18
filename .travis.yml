@@ -24,10 +24,11 @@ deploy:
   on:
     branch: master
 
+# The channel name "chat.freenode.net#xcsoar" is encrypted agains XCSoar/website to prevent IRC spam from forks
 notifications:
   irc:
     channels:
-      - chat.freenode.net#xcsoar
+      - secure: "fUyntGbpS8hoezQ1newp7Crw8Es68ivVdDupBn3bwZP81NbeSjrbBmD8sqcMpWTS9qVcmoAHdeOutiyqrrwlSyHVlOQqcyBzTtyU5SLBCuaqADqRVbyhZGADcFA3Oi5RJiJND8wMcnOceeDT7emyBwntbE7pxLstWIBwPFKaASiFrSBMZdu8Gxw+EFtWnNO5pjoY2I0zAsaj8Yl23NVqbQKcakrE1OTduMRc9NbaxqgpKdtJC3uIrioyODE7FUiKvgxzlwSLKcV1+1KMGyusHAnCMPakSpq0M3Vi81C5CqAT2wXNzLIvwqoGpMDV+QXO/wyIl1PhiqyJQkvfG5YqIGEU1wGuwoNFwRT9ug6nNZnuQTc6BLOR8r7DhQ8tsNQ34Z7pX3QCet2YadYOxwDhxeJ7v9QBo15PbLyIYizTnKrGRDFu+pTRHIPETy+cQ0cD2dZq9lr2fXWY2j3p9RgF/uNGpGcI/YCEFBRz6wPA5wkmTdK6mBdY0kqHWKkV1NISlTPUVES0JSVG6gE4HCKMQD0orN1jFqarJJujfF6OET3GQR2ym4tbO1i763CmMRDdUAWaXENlRxp8t6l9HwL2aT9j86bxWG8FeFScDY8Ue/9aeTCpDwcwjpnEB0dICGkdSbNeQqGsjv1ReIt7ADl94uzJ+o0fb5DhArUOS7P8J94="
     on_success: change
     on_failure: always
     template:
