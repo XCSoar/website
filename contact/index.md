@@ -10,7 +10,6 @@ menu: contact
 If you have problems with XCSoar or just want to get in touch with
 other XCSoar users:
 
-- [Forum](http://forum.xcsoar.org/)
 - [User mailing list](https://lists.sourceforge.net/lists/listinfo/xcsoar-user)
 - [Chat](irc.html) (irc.freenode.net #xcsoar)
 - [Bug tracker]({{site.trac_server_url}}/newticket) - report bugs or
