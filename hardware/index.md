@@ -38,14 +38,13 @@ connect peripherals:
 
 Examples for Bluetooth adapters:
 
-- [SoarTronic's bluetooth adapter](http://www.soartronic.net/products) BT1 (46 € but only compatible with FLARM) and BT2 (54 €)
-- [K6-Team K6 BT Mux 2](https://www.k6-team.de/K6-Bt-Mux-2-NMEA-Multiplexer-mit-Bluetooth), which costs 218
-  € but is the universal solution that allows baud rate switching
+- [SoarTronic's bluetooth adapter](http://www.soartronic.net/products) BT1 (only compatible with FLARM) and BT2
+- [K6-Team K6 BT Mux 2](https://www.k6-team.de/K6-Bt-Mux-2-NMEA-Multiplexer-mit-Bluetooth), a solution that allows baud rate switching
 - you can build your own
 
 Examples for IOIO adapters:
 
-- [SoarTronic](http://www.soartronic.net/products) has a DIY kit for 39 €
+- [SoarTronic](http://www.soartronic.net/products) has a Do-It-Yourself kit
   (without the actual IOIO board)
 - you can [build your own](https://github.com/ytai/ioio/wiki)
 
