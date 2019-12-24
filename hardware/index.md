@@ -72,6 +72,12 @@ XCSoar on Windows CE is discontinued. While it is still supported in XCSoar 6.8.
 
 # Peripherals
 
+## BarOn
+The [BarOn](http://aero--tech.ru/en/#BARON) provides atmospheric pressure changes to XCSoar through bluetooth.
+
+## BlueFlyVario
+The [BlueFlyVario](https://www.blueflyvario.com/) provides atmospheric pressure changes (and, optionally, GPS coordinates) to XCSoar.
+
 ## Borgelt B800
 The [Borgelt B800](http://www.borgeltinstruments.com/?page_id=48) is fully supported by XCSoar.
 The [Borgelt Bluetooth Blade](http://www.borgeltinstruments.com/?page_id=156) is the dedicated bluetooth adapter.
