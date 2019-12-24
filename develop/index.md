@@ -14,7 +14,7 @@ If you would like to help, here are a few things you can do:
 You can [pick an issue](https://github.com/XCSoar/XCSoar/issues) and make a pull request.
 - **Testing**: 
 	- [Download the released version](https://xcsoar.org/download/) of XCSoar, test it, and [report bugs](/develop/new_ticket.html).
-	- [Download the nightly-build version](https://download.xcsoar.org/nightly_builds/) of XCSoar, test it **on the ground only**, and [report bugs](/develop/new_ticket.html). This version is unstable, so **do not use it in flight**. 
+	- [Download XCSoar-testing (for Android)](https://play.google.com/store/apps/details?id=org.xcsoar.testing) or [the nightly-build version](https://download.xcsoar.org/nightly_builds/) of XCSoar, test it **on the ground only**, and [report bugs](/develop/new_ticket.html). This version is unstable, so **do not use it in flight**. 
 	You will be at the cutting edge of XCSoar development, able to discover the new features and eventually report recently-introduced bugs.
 - **Translation**: The XCSoar interface comes in more than 30 languages. Check our [Hosted Weblate page](https://hosted.weblate.org/projects/xcsoar) to improve the translations.
 - **Documentation**: 
