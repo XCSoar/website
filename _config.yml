@@ -2,7 +2,7 @@ permalink: /discover/:year/:month/:day/:title.html
 
 xcsoar_stable_version: 6.8.15
 xcsoar_testing_version: null
-xcsoar_old_version: 6.8.13
+xcsoar_old_version: 6.8.14
 
 server_url: ''
 absolute_server_url: '//www.xcsoar.org'
