@@ -102,8 +102,8 @@ cheap way to connect a FLARM.
 The [IMI ERIXX](http://www.imi-gliding.com/products/erixx-flight-recorder.html) is fully supported by XCSoar.
 
 ## LXNAV S7/S8/S100/Nano
-LXNAV [S7](https://www.lxnav.nl/v7.html), [S8](https://www.lxnav.nl/s8.html),
-[S100](https://www.lxnav.nl/s100.html) and [Nano](http://www.lxnav.com/products/nano.html) are fully
+LXNAV [S7](https://gliding.lxnav.com/products/s7/), [S8](https://gliding.lxnav.com/products/s8/),
+[S100](https://gliding.lxnav.com/products/s100/) and [Nano](https://gliding.lxnav.com/products/nano/) are fully
 supported by XCSoar, thanks to LXNAV's hardware donations.
 
 LXNAV S8, S100 and Nano have built-in Bluetooth.
