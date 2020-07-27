@@ -28,6 +28,6 @@ Once again we have updated our Map Generator with three new features:
 Map Generator:  
 <http://mapgen.xcsoar.org/>  
 Map Generator git repository:  
-<http://git.xcsoar.org/cgit/master/mapgen.git/>  
-Map Generator trac:  
-<{{site.trac_server_url}}/milestone/%23%20Map%20Generator>
+<https://github.com/XCSoar/mapgen>  
+Map Generator Bugtracker:  
+<https://github.com/XCSoar/mapgen/issues>

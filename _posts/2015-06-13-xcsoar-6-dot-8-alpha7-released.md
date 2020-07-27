@@ -9,7 +9,7 @@ The seventh alpha release of the upcoming XCSoar version 6.8 has been released.
 
 Changes since 6.8_alpha6:
 
-* improved keypad support (for [RBE-Avionik GN-01](http://rbe-avionik.de/index.php/produkte/gn-01))
+* improved keypad support (for [RBE-Avionik GN-01](https://rbe-avionik.de/index.php/produkte/biofeet-erfahrungen))
 * more fine-grained font scaling factor
 * various bug fixes
 

@@ -34,6 +34,6 @@ three new major features:
 Map Generator:  
 <http://mapgen.xcsoar.org/>  
 Map Generator git repository:  
-<http://git.xcsoar.org/cgit/master/mapgen.git/>  
-Map Generator trac:  
-<{{site.trac_server_url}}/milestone/%23%20Map%20Generator>
+<http://github.com/XCSoar/mapgen/>  
+Map Generator issues:  
+<http://github.com/XCSoar/mapgen/issues>  
