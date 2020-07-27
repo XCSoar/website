@@ -23,3 +23,5 @@
    ```
 
 2. Edit the new post, created in `./_posts`
+
+3. If there is a new relase also update _config.yml with the new release number.
