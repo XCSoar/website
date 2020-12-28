@@ -6,7 +6,7 @@ menu: hardware
 ---
 
 XCSoar runs on a wide variety of hardware: all desktop computers
-(Windows, Linux, Mac OS X), Android (smartphones, tablets, car GPS), and embedded Linux.
+(Windows, Linux), Android (smartphones, tablets, car GPS), and embedded Linux.
 Support to Windows CE (PDAs, PNAs, ...) is discontinued (but still maintained in XCSoar 6.8.x). 
 
 XCSoar is compatible with many peripheral hardware such as varios and
