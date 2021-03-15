@@ -117,7 +117,7 @@ END
       'bundle_name'    => false,
       'markup_templates' => {
         'js'     =>
-          Liquid::Template.parse("<script type='text/javascript' src='{{url}}'></script>\n"),
+          Liquid::Template.parse("<script src='{{url}}'></script>\n"),
         'coffee' =>
           Liquid::Template.parse("<script type='text/coffeescript' src='{{url}}'></script>\n"),
         'css'    =>
