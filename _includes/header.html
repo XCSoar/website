@@ -14,7 +14,7 @@
 
 {% elsif page.forum %}
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}" xml:lang="{S_USER_LANG}">
 <head>
 
@@ -43,7 +43,7 @@
 
 {% else %}
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <title>XCSoar - {{ page.title }}</title>
@@ -100,7 +100,7 @@
 	        about phpBB please visit http://www.phpbb.com
   -->
 
-  <script type="text/javascript">
+  <script>
   // <![CDATA[
 	  var jump_page = '{LA_JUMP_PAGE}:';
 	  var on_page = '{ON_PAGE}';
@@ -149,8 +149,8 @@
 
   // ]]>
   </script>
-  <script type="text/javascript" src="{T_TEMPLATE_PATH}/styleswitcher.js"></script>
-  <script type="text/javascript" src="{T_TEMPLATE_PATH}/forum_fn.js"></script>
+  <script src="{T_TEMPLATE_PATH}/styleswitcher.js"></script>
+  <script src="{T_TEMPLATE_PATH}/forum_fn.js"></script>
 
   <link href="{T_THEME_PATH}/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
   <link href="{T_STYLESHEET_LINK}" rel="stylesheet" type="text/css" media="screen, projection" />
@@ -183,11 +183,11 @@
         <div id="logo" class="span4">
           <a href="{{ server_url }}/">
             {% if color == 'green' %}
-            <img src="{{ server_url }}/{% svgconvert img/logo-green.svg %}" />
+            <img src="{{ server_url }}/{% svgconvert img/logo-green.svg %}" alt="xcsoar-logo-green" />
             {% elsif color == 'red' %}
-            <img src="{{ server_url }}/{% svgconvert img/logo-red.svg %}" />
+            <img src="{{ server_url }}/{% svgconvert img/logo-red.svg %}" alt="xcsoar-logo-red" />
             {% else %}
-            <img src="{{ server_url }}/{% svgconvert img/logo-blue.svg %}" />
+            <img src="{{ server_url }}/{% svgconvert img/logo-blue.svg %}" alt="xcsoar-logo-blue" />
             {% endif %}
           </a>
         </div>
