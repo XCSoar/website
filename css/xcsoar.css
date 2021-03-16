@@ -166,7 +166,9 @@ footer h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-
 /* GLOBAL */
 
 .shadowed {
-  margin: 20px 0;
+  margin: auto;
+  margin-top: 20px 0;
+  max-width: fit-content;
 
   /* shadow effect for the main content */
   -webkit-box-shadow:0px 0px 20px #000000;
