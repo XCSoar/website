@@ -6,3 +6,6 @@ layout: post
 ---
 
 XCSoar 7.4 is now available.
+
+Changelog:
+  https://download.xcsoar.org/releases/7.4/NEWS.txt
