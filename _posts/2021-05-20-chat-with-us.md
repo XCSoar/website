@@ -6,5 +6,7 @@ layout: post
 ---
 
 We have moved irc network to libra.chat. #xcsoar.
+
 You can chat with us from our Website [irc](./contact/irc.html)
+
 Please be patient and don't expect an immediate answer.
