@@ -5,15 +5,17 @@ title: Contact
 menu: contact
 ---
 
-## Getting Help
+# Getting Help
 
 If you have problems with XCSoar or just want to get in touch with
 other XCSoar users:
 
-- [Forum](http://forum.xcsoar.org/)
+## Community
+
+- [Forum](https://forum.xcsoar.org/)
 - [User mailing list](https://lists.sourceforge.net/lists/listinfo/xcsoar-user)
 - [Chat](irc.html) (irc.libera.chat #xcsoar)
-- [Bug tracker]({{site.trac_server_url}}/newticket) - report bugs or
+- [Bug tracker]({{site.trac_server_url}}) - report bugs or
   request features
 
 ## Developers
