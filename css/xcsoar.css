@@ -216,43 +216,52 @@ ul.quicklinks li.divider {
 }
 
 li.list-item-data {
-  list-style-image: url('/img/icon-globe.png');
+  background-image: url('/img/icon-globe.png');
 }
 
 li.list-item-windows {
-  list-style-image: url('/img/icon-windows.png');
+  background-image: url('/img/icon-windows.png');
 }
 
 li.list-item-wince {
-  list-style-image: url('/img/icon-windows-mobile.png');
+  background-image: url('/img/icon-windows-mobile.png');
 }
 
 li.list-item-android {
-  list-style-image: url('/img/icon-android.png');
+  background-image: url('/img/icon-android.png');
 }
 
 li.list-item-linux {
-  list-style-image: url('/img/icon-linux.png');
+  background-image: url('/img/icon-linux.png');
 }
 
 li.list-item-cubie {
-  list-style-image: url('/img/icon-cubie.svg');
+  background-image: url('/img/icon-cubie.svg');
 }
 
 li.list-item-pi {
-  list-style-image: url('/img/icon-pi.svg');
+  background-image: url('/img/icon-pi.svg');
 }
 
 li.list-item-mac {
-  list-style-image: url('/img/icon-apple.png');
+  background-image: url('/img/icon-apple.png');
 }
 
 li.list-item-kobo {
-  list-style-image: url('/img/icon-kobo.svg');
+  background-image: url('/img/icon-kobo.svg');
 }
 
 li.list-item-xcsoar {
-  list-style-image: url('/img/icon-xcsoar.png');
+  background-image: url('/img/icon-xcsoar.png');
+}
+
+li {
+	margin: 0;
+	padding: 36px 0 36px 84px;
+	list-style: none;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
 }
 
 /* DOWNLOADS */
