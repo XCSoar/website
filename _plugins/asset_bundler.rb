@@ -395,7 +395,7 @@ END
       return dev_markup() if @config['dev']
 
       @config['markup_templates'][@type].render(
-        'url' => "#{@config['server_url']}#{@base}#{@filename}"
+        'url' => "#{@base}#{@filename}"
       )
     end
 
