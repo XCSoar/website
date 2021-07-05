@@ -215,6 +215,10 @@ ul.quicklinks li.divider {
   height: 15px;
 }
 
+li {
+  padding-left: 25px;
+}
+
 li.list-item-data {
   background-image: url('/img/icon-globe.png');
 }
@@ -256,8 +260,6 @@ li.list-item-xcsoar {
 }
 
 li {
-	margin: 0;
-	padding: 36px 25px 36px 84px;
 	list-style: none;
 	background-repeat: no-repeat;
 	background-position: left center;
