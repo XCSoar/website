@@ -235,8 +235,20 @@ li.list-item-linux {
   list-style-image: url('/img/icon-linux.png');
 }
 
+li.list-item-cubie {
+  list-style-image: url('/img/icon-cubie.svg');
+}
+
+li.list-item-pi {
+  list-style-image: url('/img/icon-pi.svg');
+}
+
 li.list-item-mac {
   list-style-image: url('/img/icon-apple.png');
+}
+
+li.list-item-kobo {
+  list-style-image: url('/img/icon-kobo.svg');
 }
 
 li.list-item-xcsoar {
