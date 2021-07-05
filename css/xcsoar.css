@@ -258,10 +258,11 @@ li.list-item-xcsoar {
 li {
 	margin: 0;
 	padding: 36px 0 36px 84px;
+  padding-left: 25px;
 	list-style: none;
 	background-repeat: no-repeat;
 	background-position: left center;
-	background-size: 40px;
+	background-size: 20px;
 }
 
 /* DOWNLOADS */
