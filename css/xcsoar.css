@@ -31,7 +31,13 @@ h1, h2, h3, h4 { letter-spacing: 0; font-family: "Ubuntu", sans-serif; }
 /******************************************************************************
  PRIMARY SECTION
  ******************************************************************************/
-#primary { padding: 20px 0; background: #fff; }
+#primary { padding: 20px 0;
+  background: #fff;
+  margin: auto;
+  width: 98%;
+  margin-top: 1%;
+  max-width: 1230px;
+}
 
 /* HEADER */
 #title h1 {
@@ -108,7 +114,14 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 /******************************************************************************
  SECONDARY SECTION
  ******************************************************************************/
-#secondary { padding: 20px 0; border-top: 1px solid #dcdad4; background: #f4f4ed; }
+#secondary {
+  padding: 20px 0px;
+  background: #f4f4ed;
+  width: 98%;
+  margin: auto;
+  margin-top: 5px;
+  max-width: 1230px;
+}
 
 /* SCREENSHOTS */
 #screenshots h2 { font-size: 24px; line-height: 30px; font-weight: normal; }
@@ -165,17 +178,16 @@ footer h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-
 
 /* GLOBAL */
 
+/*
 .shadowed {
   margin: auto;
   margin-top: 20px 0;
   max-width: fit-content;
 
-  /* shadow effect for the main content */
   -webkit-box-shadow:0px 0px 20px #000000;
      -moz-box-shadow:0px 0px 20px #000000;
           box-shadow:0px 0px 20px #000000;
-}
-
+} */
 .nowrap {
   white-space: nowrap;
 }
@@ -220,50 +232,49 @@ li {
 }
 
 li.list-item-data {
-  background-image: url('/img/icon-globe.png');
+  list-style-image: url('/img/icon-globe.png');
 }
 
 li.list-item-windows {
-  background-image: url('/img/icon-windows.png');
+  list-style-image: url('/img/icon-windows.png');
 }
 
 li.list-item-wince {
-  background-image: url('/img/icon-windows-mobile.png');
+  list-style-image: url('/img/icon-windows-mobile.png');
 }
 
 li.list-item-android {
-  background-image: url('/img/icon-android.png');
+  list-style-image: url('/img/icon-android.png');
 }
 
 li.list-item-linux {
-  background-image: url('/img/icon-linux.png');
+  list-style-image: url('/img/icon-linux.png');
 }
 
+/* {% svgconvert img/icon-cubie.svg 20x20 %} */
 li.list-item-cubie {
-  background-image: url('/img/icon-cubie.svg');
+  list-style-image: url('/img/icon-cubie-20x20.png');
 }
 
+/* {% svgconvert img/icon-pi.svg 20x20 %} */
 li.list-item-pi {
-  background-image: url('/img/icon-pi.svg');
+  list-style-image: url('/img/icon-pi-20x20.png');
 }
 
 li.list-item-mac {
-  background-image: url('/img/icon-apple.png');
+  list-style-image: url('/img/icon-apple.png');
 }
 
+/* {% svgconvert img/icon-kobo.svg 20x20 %} */
 li.list-item-kobo {
-  background-image: url('/img/icon-kobo.svg');
+  list-style-image: url('/img/icon-kobo-20x20.png');
 }
-
 li.list-item-xcsoar {
-  background-image: url('/img/icon-xcsoar.png');
+  list-style-image: url('/img/icon-xcsoar.png');
 }
 
 li {
 	list-style: none;
-	background-repeat: no-repeat;
-	background-position: left center;
-	background-size: 20px;
 }
 
 /* DOWNLOADS */
