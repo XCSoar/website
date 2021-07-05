@@ -65,10 +65,7 @@ The following Kobo models are supported:
 
 # Windows CE
 
-XCSoar on Windows CE is discontinued. While it is still supported in XCSoar 6.8.x,  future XCSoar releases will not support this operating system any more.
-
-## Naviter Oudie
-[More information about XCSoar on the Naviter Oudie](oudie.html).
+XCSoar on Windows CE is discontinued. 
 
 # Peripherals
 
@@ -119,8 +116,5 @@ The [RBE Avionik GliderNav-O1](https://rbe-avionik.de/index.php/produkte/biofeet
 ## Triadis Altair / Vega
 The Triadis Altair and Vega (running under Windows CE) are fully supported up to XCSoar 6.8.x.
 
-## Vaulter
-The [Vaulter](https://rbe-avionik.de/index.php/produkte/vaulter) is a variometer
-developed by long-time XCSoar developer
-John Wharington. It is
-fully supported by XCSoar.
+## XCVario
+The [XCVario](https://xcvario.com) is an innovative electronic variometer based on both open hard and software.
