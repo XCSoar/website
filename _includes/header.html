@@ -53,9 +53,9 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link rel="shortcut icon" type="image/ico" href="{{ server_url }}/favicon.ico"/>
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/>
 
-  <link href="{{ server_url }}/atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
 
 {% if page.trac %}
   {% bundle %}
@@ -181,23 +181,23 @@
     <div class="container">
       <div class="row">
         <div id="logo" class="span4">
-          <a href="{{ server_url }}/">
+          <a href="/">
             {% if color == 'green' %}
-            <img src="{{ server_url }}/{% svgconvert img/logo-green.svg %}" alt="xcsoar-logo-green" />
+            <img src="/{% svgconvert img/logo-green.svg %}" alt="xcsoar-logo-green" />
             {% elsif color == 'red' %}
-            <img src="{{ server_url }}/{% svgconvert img/logo-red.svg %}" alt="xcsoar-logo-red" />
+            <img src="/{% svgconvert img/logo-red.svg %}" alt="xcsoar-logo-red" />
             {% else %}
-            <img src="{{ server_url }}/{% svgconvert img/logo-blue.svg %}" alt="xcsoar-logo-blue" />
+            <img src="/{% svgconvert img/logo-blue.svg %}" alt="xcsoar-logo-blue" />
             {% endif %}
           </a>
         </div>
         <div class="span8">
           <ul id="nav">
-            <li class="discover{% if page.menu == 'discover' %} current{% endif %}"><a href="{{ server_url }}/discover/" title="Discover what XCSoar has to offer">Discover</a></li>
-            <li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="{{ server_url }}/download/" title="Download XCSoar and the map files">Download</a></li>
-            <li class="hardware{% if page.menu == 'hardware' %} current{% endif %}"><a href="{{ server_url }}/hardware/" title="Information about hardware for XCSoar">Hardware</a></li>
-            <li class="contact{% if page.menu == 'contact' %} current{% endif %}"><a href="{{ server_url }}/contact/" title="Get in touch with XCSoar people">Contact</a></li>
-            <li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="{{ server_url }}/develop/" title="Help us to develop XCSoar even further">Contribute</a></li>
+            <li class="discover{% if page.menu == 'discover' %} current{% endif %}"><a href="/discover/" title="Discover what XCSoar has to offer">Discover</a></li>
+            <li class="download{% if page.menu == 'download' %} current{% endif %}"><a href="/download/" title="Download XCSoar and the map files">Download</a></li>
+            <li class="hardware{% if page.menu == 'hardware' %} current{% endif %}"><a href="/hardware/" title="Information about hardware for XCSoar">Hardware</a></li>
+            <li class="contact{% if page.menu == 'contact' %} current{% endif %}"><a href="/contact/" title="Get in touch with XCSoar people">Contact</a></li>
+            <li class="develop{% if page.menu == 'develop' %} current{% endif %}"><a href="/develop/" title="Help us to develop XCSoar even further">Contribute</a></li>
           </ul>
         </div>
       </div>
