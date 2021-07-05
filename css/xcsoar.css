@@ -15,6 +15,10 @@ a.green { color: #359A41; }
 a.green:hover { color: #1B8D29; }
 a.green:active { color: #359A41; }
 
+/* LINKS */
+a:link { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
 hr { border-style: dotted; border-width: 1px 0px 0px 0px; margin: 10px 0; }
 
 strong {
