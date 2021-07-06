@@ -5,7 +5,7 @@ xcsoar_testing_version: null
 xcsoar_old_version: 7.8
 
 server_url: ''
-absolute_server_url: '//www.xcsoar.org'
+absolute_server_url: '//xcsoar.org'
 download_server_url: 'https://download.xcsoar.org/releases'
 trac_server_url: 'https://github.com/XCSoar/XCSoar/issues'
 mapgen_url: 'http://mapgen.xcsoar.org/'
