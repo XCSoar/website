@@ -107,7 +107,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 /* ASIDE */
 #aside { line-height: 21px; }
 #aside h2 { margin-bottom: 10px; font-size: 12px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; }
-#aside p { margin-bottom: 10px; font-size: 14px;  "Ubuntu" ,sans-serif; color: #878380;}
+#aside p { margin-bottom: 10px; font-size: 14px; font-family: "Ubuntu" ,sans-serif; color: #878380; }
 
 /* WEBCHAT */
 #webchat { height: 500px; border: 1px dotted #9f9c99; }
