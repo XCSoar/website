@@ -8,7 +8,7 @@ Version 7.21 is released today.
 Please note that we currently do not release to the google play store. 
 Google's policies are a hassle to follow and would need extensive changes to the codebase.
 
-If you need an android edition please download it from https://download.xcsoar.org/releases/7.21/ANDROID
+If you need an android edition please download it from [ANDROID 7.21](https://download.xcsoar.org/releases/7.21/ANDROID)
 
 Version 7.21 - 2021/12/11
 * data files
