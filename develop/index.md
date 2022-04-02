@@ -10,7 +10,7 @@ title: Contribute
 XCSoar is a free software project, that is run by many volunteers in their free time. 
 If you would like to help, here are a few things you can do:
 
-- **Core development**: Can you speak C++? The [XCSoar Developer Manual]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-developer-manual.pdf) has instructions on how to get the source code, hack it, and submit your patches.  You can contact other developers [here](/contact/).
+- **Core development**: Can you speak C++? The [XCSoar Developer Manual](https://xcsoar.readthedocs.io/en/latest/) has instructions on how to get the source code, hack it, and submit your patches.  You can contact other developers [here](/contact/).
 You can [pick an issue](https://github.com/XCSoar/XCSoar/issues) and make a pull request.
 - **Testing**: 
 	- [Download the released version](https://xcsoar.org/download/) of XCSoar, test it, and [report bugs](/develop/new_ticket.html).
