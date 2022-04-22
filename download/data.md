@@ -33,7 +33,7 @@ An airspace file contains special use airspace information and coordinates.
 XCSoar supports the Tim Newport-Pearce (.sua) and OpenAir (.txt) file formats.
 
 - [Download Airspace from Soaringweb](http://soaringweb.org/Airspace/)
-- [Austrian Airspace](https://www.austrocontrol.at/en/atm/aim_services/aim_products/airspace_structure)
+- [Austrian Airspace](https://www.austrocontrol.at/en/pilots/pre-flight_preparation/aim_products/airspace_structure)
 - [Dutch Airspace](http://www.gliderpilotshop.nl/winkel/product_info.php?cPath=110_96&products_id=428)
 - [French Airspace](https://www.ffvp.fr/liens-utiles-telechargements)
 - [German Airspace](http://www.daec.de/fachbereiche/luftraum-flugbetrieb/luftraumdaten/)
