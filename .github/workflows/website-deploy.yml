@@ -22,7 +22,7 @@ jobs:
       - name: build website
         run: bundle exec jekyll build
       - name: rsync deployments
-        uses: burnett01/rsync-deployments@4.1
+        uses: burnett01/rsync-deployments@5.2
         with:
           switches: -rv --delete
           path: _site/
