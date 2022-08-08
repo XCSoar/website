@@ -20,7 +20,7 @@ jobs:
             librsvg2-bin \
             rsync
       - name: build website
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --future
       - name: rsync deployments
         uses: burnett01/rsync-deployments@5.2
         with:
