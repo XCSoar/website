@@ -59,35 +59,22 @@
 
   <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
 
+<link rel="/lib/bootstrap/bootstrap-normalize.css" >
+<link rel="/lib/bootstrap/bootstrap-button.css" >
+<link rel="/lib/bootstrap/bootstrap-grid.css" >
+<link rel="/css/xcsoar.css" >
+<link rel="/lib/jquery-lightbox/jquery.lightbox-0.5.css" >
+<link rel="/css/xcsoar-{{ color }}.css">
 {% if page.trac %}
-  {% bundle %}
-  - /lib/bootstrap/bootstrap-normalize.css
-  - /lib/bootstrap/bootstrap-button.css
-  - /lib/bootstrap/bootstrap-grid.css
-  - /css/xcsoar.css
-  - /lib/jquery-lightbox/jquery.lightbox-0.5.css
-  - /css/xcsoar-{{ color }}.css
-  - /css/xcsoar-trac.css
-  {% endbundle %}
+<link rel="/css/xcsoar-trac.css">
 {% else %}
-  {% bundle %}
-  - /lib/bootstrap/bootstrap-normalize.css
-  - /lib/bootstrap/bootstrap-button.css
-  - /lib/bootstrap/bootstrap-grid.css
-  - /lib/flags/flags.css
-  - /css/xcsoar.css
-  - /lib/jquery-lightbox/jquery.lightbox-0.5.css
-  - /css/xcsoar-{{ color }}.css
-  - /css/xcsoar-not-trac.css
-  {% endbundle %}
+<link rel="/css/xcsoar-not-trac.css">
 {% endif %}
 
 
 {% if page.jquery %}
-{% bundle %}
-- /lib/jquery-1.8.2.min.js
-- /lib/jquery-lightbox/jquery.lightbox-0.5.min.js
-{% endbundle %}
+<link rel="lib/jquery-1.8.2.min.js">
+<link rel="/lib/jquery-lightbox/jquery.lightbox-0.5.min.js">
 {% endif %}
 
 {% if page.forum %}
@@ -165,7 +152,7 @@
 	  <link href="{T_THEME_PATH}/bidi.css" rel="stylesheet" type="text/css" media="screen, projection" />
   <!-- ENDIF -->
 
-  {% bundle %} [/css/xcsoar-forum.css] {% endbundle %}
+  <link rel="/css/xcsoar-forum.css">
 {% endif %}
 
 </head>
@@ -209,4 +196,3 @@
           <h1{% if page.tagline %} class="tagline"{% endif %}>{{ page.title }}</h1>
         </div>
       </div>
-
