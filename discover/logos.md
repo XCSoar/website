@@ -6,7 +6,7 @@ menu: discover
 ---
 ## XCSoar logo
 
-![XCSoar logo](/{% svgconvert img/xcsoar.svg 100x100 %})
+![XCSoar logo](/img/xcsoar-100x100.png)
 
 Currently, the following larger sized and vector variants of the logo are available:
 
@@ -20,11 +20,11 @@ Currently, the following larger sized and vector variants of the logo are availa
 
 The XCSoar website logo exists in three color variants:
 
-![XCSoar website logo blue](/{% svgconvert img/logo-blue.svg %})
+![XCSoar website logo blue](/img/logo-blue.svg)
 
-![XCSoar website logo green](/{% svgconvert img/logo-green.svg %})
+![XCSoar website logo green](/img/logo-green.svg)
 
-![XCSoar website logo red](/{% svgconvert img/logo-red.svg %})
+![XCSoar website logo red](/img/logo-red.svg)
 
 
 
@@ -34,4 +34,3 @@ The XCSoar website logo exists in three color variants:
 * SVG format: [Blue](/img/logo-blue.svg),
               [Green](/img/logo-green.svg),
               [Red](/img/logo-red.svg)
-
