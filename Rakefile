@@ -1,8 +1,8 @@
 begin
-  require 'nanoc3/tasks'
+  require 'nanoc'
 rescue LoadError
   require 'rubygems'
-  require 'nanoc3/tasks'
+  require 'nanoc'
 end
 
 require 'yaml'
