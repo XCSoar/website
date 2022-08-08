@@ -255,12 +255,10 @@ li.list-item-linux {
   list-style-image: url('/img/icon-linux.png');
 }
 
-/* {% svgconvert img/icon-cubie.svg 20x20 %} */
 li.list-item-cubie {
   list-style-image: url('/img/icon-cubie-20x20.png');
 }
 
-/* {% svgconvert img/icon-pi.svg 20x20 %} */
 li.list-item-pi {
   list-style-image: url('/img/icon-pi-20x20.png');
 }
@@ -269,7 +267,6 @@ li.list-item-mac {
   list-style-image: url('/img/icon-apple.png');
 }
 
-/* {% svgconvert img/icon-kobo.svg 20x20 %} */
 li.list-item-kobo {
   list-style-image: url('/img/icon-kobo-20x20.png');
 }

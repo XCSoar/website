@@ -34,3 +34,9 @@ The XCSoar website logo exists in three color variants:
 * SVG format: [Blue](/img/logo-blue.svg),
               [Green](/img/logo-green.svg),
               [Red](/img/logo-red.svg)
+
+## 3rd Party logos
+
+![Cubie](/{% svgconvert img/icon-cubie.svg 20x20 %}),
+![PI](/{% svgconvert img/icon-pi.svg 20x20 %}),
+![KOBO](/{% svgconvert img/icon-kobo.svg 20x20 %})
