@@ -10,10 +10,5 @@ download_server_url: 'https://download.xcsoar.org/releases'
 trac_server_url: 'https://github.com/XCSoar/XCSoar/issues'
 mapgen_url: 'http://mapgen.xcsoar.org/'
 
-asset_bundler:
-  cdn: '//www.xcsoar.org'
-  compress:
-    css: 'yui-compressor --type css'
-    js: 'yui-compressor --type js'
-  markup_templates:
-    js: "<script src='{{url}}'> </script>\n"
+plugins:
+  - jekyll/minibundle
