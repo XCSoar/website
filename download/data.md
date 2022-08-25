@@ -16,9 +16,9 @@ Additional data, such as your own list of waypoints, can be added manually:
   or a corresponding folder according to the [Manual]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf)
 - Use the config menu of XCSoar to load them.
 
-### Terrain / Topography 
+### Terrain / Topography
 
-A map file (.xcm) contains terrain and topography. In some cases it might also contain waypoint and airspace files. 
+A map file (.xcm) contains terrain and topography. In some cases it might also contain waypoint and airspace files.
 
 - [Download Maps](/download/maps/)
 - Use the [Map Generator]({{ site.mapgen_url }}) to create your own maps
@@ -28,27 +28,22 @@ A map file (.xcm) contains terrain and topography. In some cases it might also c
 
 ### Airspaces
 
-An airspace file contains special use airspace information and coordinates. 
+An airspace file contains special use airspace information and coordinates.
 
 XCSoar supports the Tim Newport-Pearce (.sua) and OpenAir (.txt) file formats.
 
 - [Download Airspace from Soaringweb](http://soaringweb.org/Airspace/)
-- [Austrian Airspace](https://www.austrocontrol.at/en/pilots/pre-flight_preparation/aim_products/airspace_structure)
-- [Dutch Airspace](http://www.gliderpilotshop.nl/winkel/product_info.php?cPath=110_96&products_id=428)
-- [French Airspace](https://www.ffvp.fr/liens-utiles-telechargements)
-- [German Airspace](http://www.daec.de/fachbereiche/luftraum-flugbetrieb/luftraumdaten/)
-- [US Airspace](http://www.soaringdata.info/)
 
 ### Waypoints
 
-A waypoint file contains waypoints, airports and outlanding fields of a certain area. 
+A waypoint file contains waypoints, airports and outlanding fields of a certain area.
 
-XCSoar currently supports these formats: 
+XCSoar currently supports these formats:
 Cambridge/WinPilot (.dat), SeeYou (.cup), Zander (.wpz), OziExplorer (.wpt) and FS/GpsDump (.wpt)
 
 - [Download Waypoints](/download/waypoints/)
   *<small>(The waypoint database is adapted from the
-  <a target="_blank" href="http://www.segelflug.de/vereine/welt2000/">WELT2000 
+  <a target="_blank" href="http://www.segelflug.de/vereine/welt2000/">WELT2000
   database</a> which is made available under
   <a target="_blank" href="http://opendatacommons.org/licenses/odbl/1.0/">Open
   Database Licence</a>. Please
@@ -73,7 +68,7 @@ A waypoint details file (.txt) contains detailed information about the loaded wa
 
 XCSoar can use the FlarmNet database to show the callsigns and additional information of FLARM equipped planes around you. Save the file into the XCSoarData directory.
 
-- [Download FlarmNet database](https://www.flarmnet.org/static/files/wfn/data.fln) 
+- [Download FlarmNet database](https://www.flarmnet.org/static/files/wfn/data.fln)
 
 ### Checklist
 
