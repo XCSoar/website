@@ -42,13 +42,6 @@ XCSoar currently supports these formats:
 Cambridge/WinPilot (.dat), SeeYou (.cup), Zander (.wpz), OziExplorer (.wpt) and FS/GpsDump (.wpt)
 
 - [Download Waypoints](/download/waypoints/)
-  *<small>(The waypoint database is adapted from the
-  <a target="_blank" href="http://www.segelflug.de/vereine/welt2000/">WELT2000
-  database</a> which is made available under
-  <a target="_blank" href="http://opendatacommons.org/licenses/odbl/1.0/">Open
-  Database Licence</a>. Please
-  <a target="_blank" href="http://www.segelflug.de/vereine/welt2000/">contribute
-  to the WELT2000 project</a>!)</small>*
 - [Download Waypoints from Soaringweb](http://soaringweb.org/TP/)
 
 ### Waypoint Details
