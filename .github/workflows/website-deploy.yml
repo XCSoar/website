@@ -30,3 +30,4 @@ jobs:
           remote_host: www.xcsoar.org
           remote_user: website
           remote_key: ${{ secrets.DEPLOY_KEY }}
+        if: github.ref == 'refs/heads/master'
