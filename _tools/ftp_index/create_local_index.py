@@ -13,19 +13,20 @@ def filesizeformat(bytes, precision=2):
     """Returns a humanized string for a given amount of bytes"""
     bytes = int(bytes)
     if bytes is 0:
-        return '0 bytes'
+        return "0 bytes"
 
     log = math.floor(math.log(bytes, 1024))
-    return "%.*f %s" % (precision,
-                       bytes / math.pow(1024, log),
-                       ['bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']
-                       [int(log)])
+    return "%.*f %s" % (
+        precision,
+        bytes / math.pow(1024, log),
+        ["bytes", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"][int(log)],
+    )
 
 
 def sort_nicely(l):
     """Sort the given list in the way that humans expect."""
     convert = lambda text: int(text) if text.isdigit() else text
-    alphanum_key = lambda key: [convert(c) for c in re.split('([0-9]+)', key[0])]
+    alphanum_key = lambda key: [convert(c) for c in re.split("([0-9]+)", key[0])]
     l.sort(key=alphanum_key)
 
 
@@ -88,11 +89,24 @@ def create_index_file(path, subdirs, files, base_folder, base_url):
 
     content_subdirs = ""
     for dir in subdirs:
-        content_subdirs += subdir_template.replace("%%path%%", urllib.parse.urljoin(urllib.parse.urljoin(base_url, relpath) + '/', dir[0]) + "/").replace("%%title%%", dir[0])
+        content_subdirs += subdir_template.replace(
+            "%%path%%",
+            urllib.parse.urljoin(urllib.parse.urljoin(base_url, relpath) + "/", dir[0])
+            + "/",
+        ).replace("%%title%%", dir[0])
 
     content_files = ""
     for file in files:
-        content_files += file_template.replace("%%path%%", urllib.parse.urljoin(urllib.parse.urljoin(base_url, relpath) + '/', file[0])).replace("%%size%%", filesizeformat(file[2])).replace("%%title%%", file[0])
+        content_files += (
+            file_template.replace(
+                "%%path%%",
+                urllib.parse.urljoin(
+                    urllib.parse.urljoin(base_url, relpath) + "/", file[0]
+                ),
+            )
+            .replace("%%size%%", filesizeformat(file[2]))
+            .replace("%%title%%", file[0])
+        )
 
     sep = "" if len(files) == 0 or len(subdirs) == 0 else "<hr/>"
 
@@ -103,10 +117,22 @@ def create_index_file(path, subdirs, files, base_folder, base_url):
     for part in path_parts:
         if part != "" and part != ".":
             path2 += part + "/"
-            path_str += "<a href=\"" + urllib.parse.urljoin(base_url, path2) + "\">" + part + "</a> / "
+            path_str += (
+                '<a href="'
+                + urllib.parse.urljoin(base_url, path2)
+                + '">'
+                + part
+                + "</a> / "
+            )
 
     readme = get_readme(path, files)
-    html = index_template.replace("%%path%%", path_str).replace("%%sep%%", sep).replace("%%content_files%%", content_files).replace("%%content_subdirs%%", content_subdirs).replace("%%readme%%", readme)
+    html = (
+        index_template.replace("%%path%%", path_str)
+        .replace("%%sep%%", sep)
+        .replace("%%content_files%%", content_files)
+        .replace("%%content_subdirs%%", content_subdirs)
+        .replace("%%readme%%", readme)
+    )
 
     f = open(os.path.join(path, "index.html"), "w")
     f.write(html)
@@ -121,29 +147,39 @@ def create_folder_index(path, recursive, base_folder, base_url):
 
     if recursive:
         for dir in subdirs:
-            create_folder_index(path + dir[0] + "/", recursive,
-                                base_folder, base_url)
+            create_folder_index(path + dir[0] + "/", recursive, base_folder, base_url)
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-r', dest='recursive', action='store_true', default=False,
-                        help='Create the index files recursivly')
-    parser.add_argument('folder', nargs='?', default='.',
-                        help='The folder for which the index file should be created')
-    parser.add_argument('--base-folder',
-                        help='The path of the base folder')
-    parser.add_argument('--base-url',
-                        help='The URL of the base folder on the HTTP server')
+    parser.add_argument(
+        "-r",
+        dest="recursive",
+        action="store_true",
+        default=False,
+        help="Create the index files recursivly",
+    )
+    parser.add_argument(
+        "folder",
+        nargs="?",
+        default=".",
+        help="The folder for which the index file should be created",
+    )
+    parser.add_argument("--base-folder", help="The path of the base folder")
+    parser.add_argument(
+        "--base-url", help="The URL of the base folder on the HTTP server"
+    )
 
     args = parser.parse_args()
 
     if args.base_folder is None:
         args.base_folder = args.folder
     if args.base_url is None:
-        args.base_url = '/'
+        args.base_url = "/"
 
-    create_folder_index(args.folder + '/', args.recursive,
-                        args.base_folder, args.base_url)
+    create_folder_index(
+        args.folder + "/", args.recursive, args.base_folder, args.base_url
+    )
+
 
 main()

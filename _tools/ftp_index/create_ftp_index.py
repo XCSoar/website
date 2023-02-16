@@ -11,20 +11,20 @@ def filesizeformat(bytes, precision=2):
     """Returns a humanized string for a given amount of bytes"""
     bytes = int(bytes)
     if bytes is 0:
-        return '0 bytes'
+        return "0 bytes"
 
     log = math.floor(math.log(bytes, 1024))
-    return "%.*f %s" % (precision,
-                       bytes / math.pow(1024, log),
-                       ['bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']
-                       [int(log)])
+    return "%.*f %s" % (
+        precision,
+        bytes / math.pow(1024, log),
+        ["bytes", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"][int(log)],
+    )
 
 
 def sort_nicely(l):
-    """ Sort the given list in the way that humans expect.
-    """
+    """Sort the given list in the way that humans expect."""
     convert = lambda text: int(text) if text.isdigit() else text
-    alphanum_key = lambda key: [convert(c) for c in re.split('([0-9]+)', key[0])]
+    alphanum_key = lambda key: [convert(c) for c in re.split("([0-9]+)", key[0])]
     l.sort(key=alphanum_key)
 
 
@@ -41,13 +41,13 @@ def read_date_time(str):
 
 def get_folder_content(ftp):
     ftp_list = []
-    ftp.retrlines('MLSD', ftp_list.append)
-    #dir(ftp_list.append)
+    ftp.retrlines("MLSD", ftp_list.append)
+    # dir(ftp_list.append)
 
     subdirs = []
     files = []
     for item in ftp_list:
-        item = item.split(';')
+        item = item.split(";")
         name = item[-1].strip()
         last_mod = read_date_time(item[2].replace("modify=", ""))
         size = int(item[1].replace("size=", "").replace("sizd=", ""))
@@ -81,7 +81,7 @@ def get_readme(ftp, path, files):
 
     content = []
     ftp.retrbinary("RETR " + readme_file, content.append)
-    content = ''.join(content)
+    content = "".join(content)
 
     return template.replace("%%filename%%", readme_file).replace("%%content%%", content)
 
@@ -101,11 +101,17 @@ def create_index_file(ftp, path, subdirs, files):
 
     content_subdirs = ""
     for dir in subdirs:
-        content_subdirs += subdir_template.replace("%%path%%", path + dir[0] + "/").replace("%%title%%", dir[0])
+        content_subdirs += subdir_template.replace(
+            "%%path%%", path + dir[0] + "/"
+        ).replace("%%title%%", dir[0])
 
     content_files = ""
     for file in files:
-        content_files += file_template.replace("%%path%%", path + file[0]).replace("%%size%%", filesizeformat(file[2])).replace("%%title%%", file[0])
+        content_files += (
+            file_template.replace("%%path%%", path + file[0])
+            .replace("%%size%%", filesizeformat(file[2]))
+            .replace("%%title%%", file[0])
+        )
 
     sep = "" if len(files) == 0 or len(subdirs) == 0 else "<hr/>"
 
@@ -115,10 +121,16 @@ def create_index_file(ftp, path, subdirs, files):
     for part in path_parts:
         if part != "":
             path2 += part + "/"
-            path_str += "<a href=\"" + path2 + "\">" + part + "</a> / "
+            path_str += '<a href="' + path2 + '">' + part + "</a> / "
 
     readme = get_readme(ftp, path, files)
-    html = index_template.replace("%%path%%", path_str).replace("%%sep%%", sep).replace("%%content_files%%", content_files).replace("%%content_subdirs%%", content_subdirs).replace("%%readme%%", readme)
+    html = (
+        index_template.replace("%%path%%", path_str)
+        .replace("%%sep%%", sep)
+        .replace("%%content_files%%", content_files)
+        .replace("%%content_subdirs%%", content_subdirs)
+        .replace("%%readme%%", readme)
+    )
 
     f = open("index.html", "w")
     f.write(html)
@@ -126,8 +138,8 @@ def create_index_file(ftp, path, subdirs, files):
 
 
 def upload_index_file(ftp):
-    file = open("index.html", 'rb')
-    ftp.storbinary('STOR index.html', file)
+    file = open("index.html", "rb")
+    ftp.storbinary("STOR index.html", file)
     file.close()
 
 
@@ -149,20 +161,31 @@ def create_folder_index(path, ftp, recursive):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('password',
-                        help='Password for the download.xcsoar.org ftp server')
-    parser.add_argument('-r', dest='recursive', action='store_true', default=False,
-                        help='Create the index files recursivly')
-    parser.add_argument('folder', nargs='?', default='.',
-                        help='The folder for which the index file should be created')
+    parser.add_argument(
+        "password", help="Password for the download.xcsoar.org ftp server"
+    )
+    parser.add_argument(
+        "-r",
+        dest="recursive",
+        action="store_true",
+        default=False,
+        help="Create the index files recursivly",
+    )
+    parser.add_argument(
+        "folder",
+        nargs="?",
+        default=".",
+        help="The folder for which the index file should be created",
+    )
 
     args = parser.parse_args()
 
     print("Connecting to server ...")
-    ftp = ftplib.FTP('download.xcsoar.org', 'xcsoar@ddbits.com', args.password)
+    ftp = ftplib.FTP("download.xcsoar.org", "xcsoar@ddbits.com", args.password)
 
-    create_folder_index(args.folder + '/', ftp, args.recursive)
+    create_folder_index(args.folder + "/", ftp, args.recursive)
 
     ftp.quit()
+
 
 main()
