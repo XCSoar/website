@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import os.path
 import sys
@@ -5,7 +6,7 @@ import re
 from datetime import datetime
 import math
 import argparse
-import urlparse
+import urllib.parse
 
 
 def filesizeformat(bytes, precision=2):
@@ -87,11 +88,11 @@ def create_index_file(path, subdirs, files, base_folder, base_url):
 
     content_subdirs = ""
     for dir in subdirs:
-        content_subdirs += subdir_template.replace("%%path%%", urlparse.urljoin(urlparse.urljoin(base_url, relpath) + '/', dir[0]) + "/").replace("%%title%%", dir[0])
+        content_subdirs += subdir_template.replace("%%path%%", urllib.parse.urljoin(urllib.parse.urljoin(base_url, relpath) + '/', dir[0]) + "/").replace("%%title%%", dir[0])
 
     content_files = ""
     for file in files:
-        content_files += file_template.replace("%%path%%", urlparse.urljoin(urlparse.urljoin(base_url, relpath) + '/', file[0])).replace("%%size%%", filesizeformat(file[2])).replace("%%title%%", file[0])
+        content_files += file_template.replace("%%path%%", urllib.parse.urljoin(urllib.parse.urljoin(base_url, relpath) + '/', file[0])).replace("%%size%%", filesizeformat(file[2])).replace("%%title%%", file[0])
 
     sep = "" if len(files) == 0 or len(subdirs) == 0 else "<hr/>"
 
@@ -102,7 +103,7 @@ def create_index_file(path, subdirs, files, base_folder, base_url):
     for part in path_parts:
         if part != "" and part != ".":
             path2 += part + "/"
-            path_str += "<a href=\"" + urlparse.urljoin(base_url, path2) + "\">" + part + "</a> / "
+            path_str += "<a href=\"" + urllib.parse.urljoin(base_url, path2) + "\">" + part + "</a> / "
 
     readme = get_readme(path, files)
     html = index_template.replace("%%path%%", path_str).replace("%%sep%%", sep).replace("%%content_files%%", content_files).replace("%%content_subdirs%%", content_subdirs).replace("%%readme%%", readme)
@@ -113,9 +114,9 @@ def create_index_file(path, subdirs, files, base_folder, base_url):
 
 
 def create_folder_index(path, recursive, base_folder, base_url):
-    print "Listing folder " + path
+    print("Listing folder " + path)
     subdirs, files = get_folder_content(path)
-    print "Creating index for folder " + path
+    print("Creating index for folder " + path)
     create_index_file(path, subdirs, files, base_folder, base_url)
 
     if recursive:
