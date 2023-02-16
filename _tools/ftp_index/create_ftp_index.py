@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import ftplib
 import re
@@ -131,14 +132,14 @@ def upload_index_file(ftp):
 
 
 def create_folder_index(path, ftp, recursive):
-    print "Entering folder " + path
+    print("Entering folder " + path)
     ftp.cwd(path)
 
-    print "Listing folder " + path
+    print("Listing folder " + path)
     subdirs, files = get_folder_content(ftp)
-    print "Creating index for folder " + path
+    print("Creating index for folder " + path)
     create_index_file(ftp, path, subdirs, files)
-    print "Uploading index for folder " + path
+    print("Uploading index for folder " + path)
     upload_index_file(ftp)
 
     if recursive:
@@ -157,7 +158,7 @@ def main():
 
     args = parser.parse_args()
 
-    print "Connecting to server ..."
+    print("Connecting to server ...")
     ftp = ftplib.FTP('download.xcsoar.org', 'xcsoar@ddbits.com', args.password)
 
     create_folder_index(args.folder + '/', ftp, args.recursive)
