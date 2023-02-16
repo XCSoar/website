@@ -17,6 +17,6 @@ Changelog:
 
 Download:
 
- [{{ site.absolute_server_url }}/download/](/download/)  
- <{{ site.download_server_url }}/6.6.5/>  
+ [{{ site.absolute_server_url }}/download/](/download/)
+ <{{ site.download_server_url }}/6.6.5/>
  <https://play.google.com/store/apps/details?id=org.xcsoar>

@@ -48,14 +48,14 @@ Cambridge/WinPilot (.dat), SeeYou (.cup), Zander (.wpz), OziExplorer (.wpt) and 
 
 A waypoint details file (.txt) contains detailed information about the loaded waypoints, that is available on a separate page of the Waypoint Details dialog. It should have the following format:
 
-	[WAYPOINT_NAME_1]
-	Detailed Text 1
-	Detailed Text 2
-	...
-	[WAYPOINT_NAME_2]
-	Detailed Text 1
-	Detailed Text 2
-	...
+  [WAYPOINT_NAME_1]
+  Detailed Text 1
+  Detailed Text 2
+  ...
+  [WAYPOINT_NAME_2]
+  Detailed Text 1
+  Detailed Text 2
+  ...
 
 ### FlarmNet
 

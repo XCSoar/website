@@ -15,4 +15,3 @@ have up-to-date waypoint files and want to share them with the world please
 contact the [welt2000](mailto:welt2000@gmx.net) guys and tell them.
 
 MapGenerator: <http://mapgen.xcsoar.org>
-

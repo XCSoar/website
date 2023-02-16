@@ -14,9 +14,9 @@ google.maps.event.addListener(map, 'click', function() {
         info.close();
         info = null;
     }
-    
+
     if (active_rect) {
-        active_rect.setOptions({      
+        active_rect.setOptions({
             strokeColor: "#FF8800",
             fillColor: "#FF8800",
         });
@@ -26,7 +26,7 @@ google.maps.event.addListener(map, 'click', function() {
 
 for (var name in MAPS) {
     var ext = MAPS[name];
-    
+
     var sw = new google.maps.LatLng(ext[1], ext[0]);
     var ne = new google.maps.LatLng(ext[3], ext[2]);
     var bounds = new google.maps.LatLngBounds(sw, ne);
@@ -41,20 +41,20 @@ for (var name in MAPS) {
     });
 
     rect.region = name;
- 
+
     google.maps.event.addListener(rect, 'click', function() {
         if (active_rect) {
-            active_rect.setOptions({      
+            active_rect.setOptions({
                 strokeColor: "#FF8800",
                 fillColor: "#FF8800",
             });
         }
         active_rect = this;
-        active_rect.setOptions({      
+        active_rect.setOptions({
             strokeColor: "#0000CC",
             fillColor: "#0000CC",
         });
-        var content = "<div style='margin: 0px; padding: 5px;'><span style='font-size: 1.7em;'>" + 
+        var content = "<div style='margin: 0px; padding: 5px;'><span style='font-size: 1.7em;'>" +
             this.region + "</span><br/><br/>"+
             "<a href='https://download.xcsoar.org/source/map/region/" + this.region + ".xcm' "+
             "type='application/octet-stream'>Standard map</a><br/>" +
@@ -63,20 +63,19 @@ for (var name in MAPS) {
             "<a href='https://download.xcsoar.org/source/map/region/" + this.region + "_Altair.xcm' "+
             "type='application/octet-stream'>Altair map</a><br/>" +
             "</div>";
-            
+
         if (info) info.close();
         info = new google.maps.InfoWindow({
             content: content
-        });        
+        });
         info.setPosition(this.getBounds().getCenter());
-        info.open(map);   
+        info.open(map);
     });
 
-    var map_list_info = "<hr/><h2>" + name + "</h2><br/><a href=\"https://download.xcsoar.org/maps/" + 
-                        name + ".xcm\" type='application/octet-stream'>Standard map</a> | <a href=\"https://download.xcsoar.org/source/map/region/" + 
-                        name + "_HighRes.xcm\" type='application/octet-stream'>High resolution map</a> | <a href=\"https://download.xcsoar.org/map/region/" + 
+    var map_list_info = "<hr/><h2>" + name + "</h2><br/><a href=\"https://download.xcsoar.org/maps/" +
+                        name + ".xcm\" type='application/octet-stream'>Standard map</a> | <a href=\"https://download.xcsoar.org/source/map/region/" +
+                        name + "_HighRes.xcm\" type='application/octet-stream'>High resolution map</a> | <a href=\"https://download.xcsoar.org/map/region/" +
                         name + "_Altair.xcm\" type='application/octet-stream'>Altair map</a><br/><br/>";
 
     $("#map_list").append(map_list_info);
 }
-

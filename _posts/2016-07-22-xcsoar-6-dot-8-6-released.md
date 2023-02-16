@@ -19,8 +19,8 @@ Changelog:
 
 Download:
 
- [{{ site.absolute_server_url }}/download/](/download/)  
- <{{ site.download_server_url }}/6.8.6/>  
+ [{{ site.absolute_server_url }}/download/](/download/)
+ <{{ site.download_server_url }}/6.8.6/>
  <https://play.google.com/store/apps/details?id=org.xcsoar>
 
 **Update July 29th**: the Kobo build has been updated, because the Glo

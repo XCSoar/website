@@ -4,8 +4,8 @@ created_at: 2021-12-15 23:38:03 +0200
 author: folken
 layout: post
 ---
-Version 7.21 is released today. 
-Please note that we currently do not release to the google play store. 
+Version 7.21 is released today.
+Please note that we currently do not release to the google play store.
 Google's policies are a hassle to follow and would need extensive changes to the codebase.
 
 If you need an android edition please download it from [ANDROID 7.21](https://download.xcsoar.org/releases/7.21/ANDROID)

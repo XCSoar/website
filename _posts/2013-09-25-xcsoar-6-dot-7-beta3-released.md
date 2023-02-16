@@ -25,6 +25,6 @@ Changelog:
 
 Download:
 
- [{{ site.absolute_server_url }}/download/latest.html](/download/latest.html)  
- <{{ site.download_server_url }}/6.7_beta3/>  
+ [{{ site.absolute_server_url }}/download/latest.html](/download/latest.html)
+ <{{ site.download_server_url }}/6.7_beta3/>
  <https://market.android.com/details?id=org.xcsoar.testing>

@@ -5,7 +5,7 @@ author: folken
 layout: post
 ---
 
-Version 7.15 
+Version 7.15
 * user interface
   - fix crash in Config/System
   - fix overlapping axes labels in cross section
