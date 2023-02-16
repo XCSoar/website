@@ -1,6 +1,3 @@
----
-layout: null
----
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
@@ -9,15 +6,15 @@ layout: null
   <link href="{{ site.server_url }}"/>
   <updated>{{site.time | date_to_xmlschema }}</updated>
   <id>{{ site.server_url }}</id>
-  
+
   <icon>{{ site.server_url }}/xcsoar-logo.png</icon>
   <logo>{{ site.server_url }}/logo-blue.jpg</logo>
-  
+
   <author>
     <name>XCSoar Team</name>
     <uri>http://www.xcsoar.org/</uri>
   </author>
-  
+
   {% for post in site.posts limit: 10 %}
   <entry>
     <title>{{ post.title }}</title>
