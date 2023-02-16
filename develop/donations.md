@@ -4,7 +4,7 @@ color: red
 menu: develop
 title: Donations
 ---
-On top of the computers, internet, power and time donated by individuals and 
+On top of the computers, internet, power and time donated by individuals and
 companies, we are also very lucky to have some specific hardware donations.
 
 ## Hardware
@@ -17,5 +17,5 @@ companies, we are also very lucky to have some specific hardware donations.
 
 ## Other
 
-- [Infrastructure](/develop/infrastructure.html) is provided by free services 
+- [Infrastructure](/develop/infrastructure.html) is provided by free services
 and donations by XCSoar team members.
