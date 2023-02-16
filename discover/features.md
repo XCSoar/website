@@ -18,7 +18,7 @@ menu: discover
 - Terrain *(mountains can be shadowed by wind or sun direction)*
 - Terrain impact line *(reach calculation even around mountains)*
 - Topography *(cities, rivers, major roads and railways)*
-- Airspace  
+- Airspace
 - Airports and outlanding fields  *(including arrival height)*
 - Turnpoints
 - Task *(start, turnpoint, end sectors and lines, course line, best track line)*
@@ -59,9 +59,9 @@ menu: discover
 
 ## Supported platforms
 
-- Android Smartphones and Tablets  
+- Android Smartphones and Tablets
   *(min. Android 1.6)*
-- Computer  
+- Computer
   *(Windows or Unix)*
 - Windows CE (obsolete, will be removed soon)
 
@@ -107,8 +107,8 @@ When connected to a Flarm, XCSoar is able to show the call signs and additional 
 
 ## Supported devices
 
-**XCSoar** supports all devices that send GPS data on a serial port or via Bluetooth.  
-Devices with additional abilities which are supported by **XCSoar {{ site.xcsoar_stable_version }}** are listed here:  
+**XCSoar** supports all devices that send GPS data on a serial port or via Bluetooth.
+Devices with additional abilities which are supported by **XCSoar {{ site.xcsoar_stable_version }}** are listed here:
 
 - [Altair](#altair) &darr;
 - [Borgelt B50](#borgelt_b50) &darr;
@@ -205,7 +205,7 @@ Devices with additional abilities which are supported by **XCSoar {{ site.xcsoar
 ### PosiGraph
 
 - Barometric Altitude
-- Task declaration  
+- Task declaration
   *for task declarations choose LX as device type!*
 
 ### Vega
