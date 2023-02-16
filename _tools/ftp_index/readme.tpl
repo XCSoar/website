@@ -1,5 +1,4 @@
-<label>%%filename%%</label> 
-<div class="box"> 
+<label>%%filename%%</label>
+<div class="box">
 %%content%%
 </div>
-
