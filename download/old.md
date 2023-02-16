@@ -31,15 +31,3 @@ hidden).  Reboot the Kobo.
 
 - {:.list-item-linux}[XCSoar {{ site.xcsoar_old_version }} on Raspberry Pi]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/PI/)
 - {:.list-item-linux}[XCSoar {{ site.xcsoar_old_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/CUBIE/)
-
-## XCSoar {{ site.xcsoar_old_version }} on Windows Mobile
-
-XCSoar for Windows CE is obsolete, and support for it will be dropped
-in XCSoar 7.0.
-
-- [Find out about your Windows Mobile version](/discover/wm_versions/)
-- {:.list-item-wince}[XCSoar {{ site.xcsoar_old_version }} on Windows Mobile 5 (XScale CPU)]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/WM5X/)
-- {:.list-item-wince}[XCSoar {{ site.xcsoar_old_version }} on Windows Mobile 5 (older CPU)]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/WM5/)
-- {:.list-item-wince}[XCSoar {{ site.xcsoar_old_version }} on Windows Mobile 2003]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/PPC2003/)
-- {:.list-item-wince}[XCSoar {{ site.xcsoar_old_version }} on Pocket PC 2000]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/PPC2000/)
-- [XCSoar {{ site.xcsoar_old_version }} on Altair]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/ALTAIR/)
