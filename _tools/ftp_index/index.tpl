@@ -4,15 +4,15 @@
       <title> 
         XCSoar - Download Server
       </title> 
-      <link rel="stylesheet" href="http://download.xcsoar.org/file_index/style.css" type="text/css"> 
-      <link rel="shortcut icon" type="image/ico" href="http://download.xcsoar.org/favicon.ico"> 
+      <link rel="stylesheet" href="https://download.xcsoar.org/file_index/style.css" type="text/css"> 
+      <link rel="shortcut icon" type="image/ico" href="https://download.xcsoar.org/favicon.ico"> 
     </head> 
     <body> 
       <div id="container"> 
 	<div id="content"> 
 	  <div id="logo"> 
-	    <a href="http://www.xcsoar.org/"><img src="http://download.xcsoar.org/file_index/logo.png" alt="XCSoar"></a> 
-	    <a href="http://download.xcsoar.org/releases/">Download Server</a> 
+	    <a href="http://www.xcsoar.org/"><img src="https://download.xcsoar.org/file_index/logo.png" alt="XCSoar"></a> 
+	    <a href="https://download.xcsoar.org/releases/">Download Server</a> 
 	  </div> 
           <label>%%path%%</label> 
           <div class="box"> 
