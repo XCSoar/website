@@ -103,7 +103,7 @@ The EW microRecorder is fully supported by XCSoar.
 
 ## FLARM
 
-Connecting to a FLARM gives you barometric height and information
+Connecting to a [FLARM](https://flarm.com) gives you barometric height and information
 about nearby traffic (FLARM radar). XCSoar can send task declarations
 to an IGC FLARM and can read valid IGC files from it.
 
@@ -129,14 +129,10 @@ LXNAV sells [a Bluetooth adapter for the S7](https://gliding.lxnav.com/products/
 XCSoar is at the heart of the [OpenVario flight computer](https://www.openvario.org/doku.php).
 While OpenVario can be home-built, it can also be assembled for you by a [builder](https://www.openvario.org/doku.php?id=builders:top).
 
-## RBE Avionik GliderNav-O1
-
-The [RBE Avionik GliderNav-O1](https://rbe-avionik.de/index.php/produkte/biofeet-erfahrungen) natively runs XCSoar.
-
-## Triadis Altair / Vega
-
-The Triadis Altair and Vega (running under Windows CE) are fully supported up to XCSoar 6.8.x.
-
 ## XCVario
 
 The [XCVario](https://xcvario.com) is an innovative electronic variometer based on both open hard and software.
+
+## XCNav
+
+THe [XCNav](https://xcnav.de/) XCNav edition is a new Android-based multi-platform navigation system for gliding and ultralight flight.
