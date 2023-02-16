@@ -11,7 +11,7 @@
       <div id="container"> 
 	<div id="content"> 
 	  <div id="logo"> 
-	    <a href="http://www.xcsoar.org/"><img src="https://download.xcsoar.org/file_index/logo.png" alt="XCSoar"></a> 
+	    <a href="https://www.xcsoar.org/"><img src="https://download.xcsoar.org/file_index/logo.png" alt="XCSoar"></a> 
 	    <a href="https://download.xcsoar.org/releases/">Download Server</a> 
 	  </div> 
           <label>%%path%%</label> 

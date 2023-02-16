@@ -65,7 +65,7 @@ The following Kobo models are supported:
 - Kobo Glo HD
 - Kobo Aura Edition 2
 
-[More information about XCSoar on the Kobo Mini](http://max.kellermann.name/projects/xcsoar/kobo.html).
+[More information about XCSoar on the Kobo Mini](https://max.kellermann.name/projects/xcsoar/kobo.html).
 
 # Windows CE
 
