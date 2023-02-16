@@ -21,20 +21,20 @@ developing it!
 
 How to use:
 
-- register in SkyLines if you havn't already  
+- register in SkyLines if you havn't already
   (<https://skylines.aero/users/new>)
 
-- generate a tracking key in the SkyLines system settings  
+- generate a tracking key in the SkyLines system settings
   (<https://skylines.aero/settings/>)
 
-- get XCSoar 6.4_alpha1  
+- get XCSoar 6.4_alpha1
   (<https://play.google.com/store/apps/details?id=org.xcsoar.testing>)
 
 - enter this key in XCSoar's tracking settings (Setup System, Setup, Tracking)
 
 - fly!
 
-- your friends click on Live to see current live tracks  
+- your friends click on Live to see current live tracks
   (<https://skylines.aero/tracking/>)
 
 This feature is only available on Android. You need an internet connection

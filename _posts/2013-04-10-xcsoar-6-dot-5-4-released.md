@@ -14,6 +14,6 @@ Changelog:
 
 Download:
 
- [{{ site.absolute_server_url }}/download/](/download/)  
- <{{ site.download_server_url }}/6.5.4/>  
+ [{{ site.absolute_server_url }}/download/](/download/)
+ <{{ site.download_server_url }}/6.5.4/>
  <https://market.android.com/details?id=org.xcsoar>

@@ -4,7 +4,7 @@ created_at: 2022-02-11 13:13:03 +0200
 author: folken
 layout: post
 ---
-Version 7.23 is released today. 
+Version 7.23 is released today.
 
 If you need an android edition please download it from [ANDROID 7.23](https://download.xcsoar.org/releases/7.23/ANDROID)
 

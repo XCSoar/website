@@ -5,7 +5,7 @@ author: folken
 layout: post
 ---
 
-The sixteenth maintenance release of XCSoar 6.8. This version is a stability 
+The sixteenth maintenance release of XCSoar 6.8. This version is a stability
 release, that fixes numerous crashes.
 
 
@@ -15,6 +15,6 @@ Changelog:
 
 Download:
 
- [{{ site.absolute_server_url }}/download/](/download/)  
- <{{ site.download_server_url }}/6.8.16/>  
+ [{{ site.absolute_server_url }}/download/](/download/)
+ <{{ site.download_server_url }}/6.8.16/>
  <https://play.google.com/store/apps/details?id=org.xcsoar>

@@ -13,4 +13,3 @@ Note that Google Play counts only people using Android, without duplicates (if
 you have more than one Android phone/tablet), and of course excluding those who
 have a Windows CE/Mobile device. We have no idea how many users run XCSoar on
 Windows CE/Mobile.
-
