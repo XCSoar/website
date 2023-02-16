@@ -3,23 +3,23 @@
  ******************************************************************************/
 
 /* GLOBALS */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, ins, strike, strong, sub, sup, dt, dd, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {	margin: 0; padding: 0; border: 0; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, ins, strike, strong, sub, sup, dt, dd, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {  margin: 0; padding: 0; border: 0; }
 ul, ol, li, dl { border: 0; }
 
 a:active { outline: 0; }
 body { line-height: 1; font-size: small; }
-table {	border-collapse: collapse; border-spacing: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
 .hidden { display: none; }
 
-a.green { color: #359A41; }
-a.green:hover { color: #1B8D29; }
-a.green:active { color: #359A41; }
+a.green { color: #359a41; }
+a.green:hover { color: #1b8d29; }
+a.green:active { color: #359a41; }
 
 /* LINKS */
 a:link { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-hr { border-style: dotted; border-width: 1px 0px 0px 0px; margin: 10px 0; }
+hr { border-style: dotted; border-width: 1px 0 0 0; margin: 10px 0; }
 
 strong {
     font-weight: bold;
@@ -113,13 +113,13 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 #webchat { height: 500px; border: 1px dotted #9f9c99; }
 
 /* IFRAME */
-#iframe{ margin: 120px 0px 20px; }
+#iframe{ margin: 120px 0 20px; }
 
 /******************************************************************************
  SECONDARY SECTION
  ******************************************************************************/
 #secondary {
-  padding: 20px 0px;
+  padding: 20px 0;
   background: #f4f4ed;
   width: 98%;
   margin: auto;
@@ -188,9 +188,9 @@ footer h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-
   margin-top: 20px 0;
   max-width: fit-content;
 
-  -webkit-box-shadow:0px 0px 20px #000000;
-     -moz-box-shadow:0px 0px 20px #000000;
-          box-shadow:0px 0px 20px #000000;
+  -webkit-box-shadow:0px 0 20px #000000;
+     -moz-box-shadow:0px 0 20px #000000;
+          box-shadow:0px 0 20px #000000;
 } */
 .nowrap {
   white-space: nowrap;
@@ -202,7 +202,7 @@ footer h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-
 
 ul {
   list-style-position: inside;
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 /* BUTTONS */
@@ -275,7 +275,7 @@ li.list-item-xcsoar {
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 /* DOWNLOADS */
