@@ -60,7 +60,7 @@ menu: discover
 ## Supported platforms
 
 - Android Smartphones and Tablets
-  *(min. Android 1.6)*
+  *(min. Android 5.0)*
 - Computer
   *(Windows or Unix)*
 - Windows CE (obsolete, will be removed soon)
