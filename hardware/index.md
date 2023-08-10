@@ -23,6 +23,15 @@ device.
 XCSoar has been reported to work on many android products, whether they are
 smartphones, tablets or car GPS.  Note that XCSoar requires Android 5.0 or up.
 
+Android devices known to work well with XCSoar are:
+-   Google Pixel 6
+-   Google Pixel 2
+-   Cat S61
+
+Android devices known to have issues with XCSoar are:
+-   Xiaomi * , due to a [Bluetooth issue](https://github.com/XCSoar/XCSoar/issues/1279)
+
+
 ## Built-in GPS
 
 Most Android devices have built-in GPS. It is good enough for many pilots,
@@ -31,7 +40,7 @@ MacCready synchronization, task declaration, IGC file download...
 
 ## Bluetooth or IOIO
 
-Android devices don't have a serial port. There are two ways to
+Android devices do not have a serial port. There are two ways to
 connect peripherals:
 
 - *Bluetooth*: the wireless solution; you can connect up to 7
@@ -115,6 +124,13 @@ cheap way to connect a FLARM.
 The [IMI ERIXX](http://www.imi-gliding.com/products/erixx-flight-recorder.html)
 is fully supported by XCSoar.
 
+LX navigation
+-------------
+
+Era 80 is not working with XCSoar due to a [bug in the device](https://github.com/XCSoar/XCSoar/issues/415).
+
+Era 57 is not supported [at the moment](https://github.com/XCSoar/XCSoar/issues/389).
+
 ## LXNAV S7/S8/S100/Nano
 
 LXNAV [S7](https://gliding.lxnav.com/products/s7/), [S8](https://gliding.lxnav.com/products/s8/),
@@ -123,6 +139,9 @@ are fully supported by XCSoar, thanks to LXNAV's hardware donations.
 
 LXNAV S8, S100 and Nano have built-in Bluetooth.
 LXNAV sells [a Bluetooth adapter for the S7](https://gliding.lxnav.com/products/s7-s8-s80-bluetooth-module/).
+
+LXNAV Nano [does not support reception of external commands to trigger PEV](https://github.com/XCSoar/XCSoar/issues/1242)
+
 
 ## OpenVario
 
