@@ -129,7 +129,7 @@ is fully supported by XCSoar.
 Era 80 is not working with XCSoar due to a [bug in the device](https://github.com/XCSoar/XCSoar/issues/415).
 
 Era 57 is not supported [at the moment](https://github.com/XCSoar/XCSoar/issues/389).
-  
+
 ## LXNAV S7/S8/S100/Nano
 
 LXNAV [S7](https://gliding.lxnav.com/products/s7/), [S8](https://gliding.lxnav.com/products/s8/),
