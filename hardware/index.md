@@ -24,12 +24,12 @@ XCSoar has been reported to work on many android products, whether they are
 smartphones, tablets or car GPS.  Note that XCSoar requires Android 5.0 or up.
 
 Android devices known to work well with XCSoar are:
-- Google Pixel 6
-- Google Pixel 2
-- Cat S61
+-   Google Pixel 6
+-   Google Pixel 2
+-   Cat S61
 
 Android devices known to have issues with XCSoar are:
-- Xiaomi * , due to a [Bluetooth issue](https://github.com/XCSoar/XCSoar/issues/1279)
+-   Xiaomi * , due to a [Bluetooth issue](https://github.com/XCSoar/XCSoar/issues/1279)
 
 
 ## Built-in GPS
@@ -124,7 +124,8 @@ cheap way to connect a FLARM.
 The [IMI ERIXX](http://www.imi-gliding.com/products/erixx-flight-recorder.html)
 is fully supported by XCSoar.
 
-## LX navigation
+LX navigation
+-------------
 
 Era 80 is not working with XCSoar due to a [bug in the device](https://github.com/XCSoar/XCSoar/issues/415).
 
