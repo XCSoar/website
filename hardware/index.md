@@ -24,6 +24,9 @@ XCSoar has been reported to work on many android products, whether they are
 smartphones, tablets or car GPS.  Note that XCSoar requires Android 5.0 or up.
 
 Android devices known to work well with XCSoar are:
+-   Google Pixel 8
+-   Google Pixel 8 Pro
+-   Galaxy S22 Ultra
 -   Google Pixel 6
 -   Google Pixel 2
 -   Cat S61
