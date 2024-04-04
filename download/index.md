@@ -10,8 +10,8 @@ version: stable
 
 The Android version of XCSoar {{ site.xcsoar_stable_version }} runs on phones and tablets with Android 5 or newer.
 
-- {:.list-item-android}[XCSoar on F-Droid](https://f-droid.org/packages/org.xcsoar/)
-- {:.list-item-android}[XCSoar {{ site.xcsoar_stable_version }} on Android]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/ANDROID/)
+- {:.list-item-android}[XCSoar {{ site.xcsora_stable_version }} on F-Droid](https://f-droid.org/packages/org.xcsoar/)
+- {:.list-item-android}[XCSoar {{ site.xcsoar_stable_version }} for Android]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/ANDROID/)
 
 ## XCSoar {{ site.xcsoar_stable_version }} for Kobo
 
@@ -20,7 +20,7 @@ Kobo Aura Edition 2.  To install, copy *KoboRoot.tgz* to the data partition to a
 directory called ".kobo" (note the leading dot; the directory already exists,
 but is hidden).  Reboot the Kobo.
 
-- {:.list-item-kobo}[[XCSoar {{ site.xcsoar_stable_version }} Kobo installer]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/KOBO/KoboRoot.tgz)
+- {:.list-item-kobo}[XCSoar {{ site.xcsoar_stable_version }} Kobo installer]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/KOBO/KoboRoot.tgz)
 
 ## XCSoar {{ site.xcsoar_stable_version }} for desktop computers
 
