@@ -107,7 +107,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rbtree (0.4.6)
-    rexml (3.2.5)
+    rexml (3.3.3)
+      strscan
     rouge (3.30.0)
     safe_yaml (1.0.5)
     sassc (2.4.0)
@@ -119,6 +120,7 @@ GEM
       set (~> 1.0)
     stringex (2.8.6)
     stringio (3.0.9)
+    strscan (3.1.0)
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     tty-color (0.6.0)
