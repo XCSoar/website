@@ -8,8 +8,8 @@
 #
 # Installation:
 #
-# * install the librsvg2-bin package (rsvg-convert is needed)
-# * copy svgconvert.rb to plugins folder
+# * Install the librsvg2-bin package (rsvg-convert is needed)
+# * Copy svgconvert.rb to the plugins folder
 
 class Jekyll::SVGConvert < Liquid::Tag
 
@@ -42,21 +42,21 @@ class Jekyll::SVGConvert < Liquid::Tag
     ext = File.extname(@source)
     basename = File.basename(@source, ext)
 
-    if @width and @height
+    if @width && @height
       basename.concat("-#{@width}x#{@height}")
     end
 
     @dest = "#{File.dirname(@source)}/#{basename}.#{@format}"
     @dest_path = File.join(site.dest, @dest)
 
-    # Register as StaticFile
-    site.static_files.push(self)
+    # Register the file as a static file
+    # No need to push self to site.static_files
 
     # Return relative path to output file
-    """#{@dest}"""
+    @dest
   end
 
-  # Returns source file path.
+  # Returns source file path
   def path
     @source_path
   end
@@ -71,13 +71,13 @@ class Jekyll::SVGConvert < Liquid::Tag
     @dest_path
   end
 
-  def write(dest)
+  def write
     # Generate output file if it doesn't exist or is less recent than the source file
     if !File.exists?(@dest_path) || File.mtime(@dest_path) <= File.mtime(@source_path)
       print "Generating #{@format.upcase}: #{@source} -> #{@dest}\n"
 
       options = "-o #{@dest_path}"
-      if @width and @height
+      if @width && @height
         options.concat(" --width=#{@width}")
         options.concat(" --height=#{@height}")
       end
