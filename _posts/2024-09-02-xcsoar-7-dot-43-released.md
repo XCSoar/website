@@ -12,7 +12,6 @@ remove all data. Install either from F-Droid or via APK File download.
 Please also note that the Storage Directory has moved to /android/media/org.xcsoar. This directory
 is accessible with normal file manager tools on android.
 
-
 Version 7.43 - 2024-08-12
 * calculations
   - CRITICAL: reachable map labels show correct altitude with head wind #1424
