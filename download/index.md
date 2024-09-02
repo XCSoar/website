@@ -20,13 +20,13 @@ Kobo Aura Edition 2.  To install, copy *KoboRoot.tgz* to the data partition to a
 directory called ".kobo" (note the leading dot; the directory already exists,
 but is hidden).  Reboot the Kobo.
 
-- {:.list-item-kobo}[XCSoar {{ site.xcsoar_stable_version }} Kobo installer]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/KOBO/KoboRoot.tgz)
+- {:.list-item-kobo}[XCSoar {{ site.xcsoar_stable_version }} Kobo installer]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/KOBO/)
 
 ## XCSoar {{ site.xcsoar_stable_version }} for desktop computers
 
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_stable_version }} on Windows]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PC/)
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_stable_version }} on Windows (64 bit)]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN64/)
-- {:.list-item-linux}[XCSoar {{ site.xcsoar_stable_version }} on Linux]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/LINUX/)
+- {:.list-item-debian}[XCSoar {{ site.xcsoar_stable_version }} on Debian Linux]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/DEBIAN/)
 
 ## XCSoar {{ site.xcsoar_stable_version }} for single-board computers
 

@@ -251,8 +251,8 @@ li.list-item-android {
   list-style-image: url('/img/icon-android.png');
 }
 
-li.list-item-linux {
-  list-style-image: url('/img/icon-linux.png');
+li.list-item-debian {
+  list-style-image: url('/img/icon-debian.png');
 }
 
 li.list-item-cubie {

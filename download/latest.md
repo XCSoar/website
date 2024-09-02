@@ -26,7 +26,7 @@ but is hidden).  Reboot the Kobo.
 
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_testing_version }} for Windows]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/PC/)
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_testing_version }} for  Windows (64 bit)]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/WIN64/)
-- {:.list-item-linux}[XCSoar {{ site.xcsoar_testing_version }} for Linux]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/LINUX/)
+- {:.list-item-debian}[XCSoar {{ site.xcsoar_testing_version }} for Debian Linux]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/DEBIAN/)
 
 ## XCSoar {{ site.xcsoar_stable_version }} for single-board computers
 
