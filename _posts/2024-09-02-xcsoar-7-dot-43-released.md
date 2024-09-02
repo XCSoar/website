@@ -1,6 +1,6 @@
 ---
-title: "XCSoar 7.36 released"
-created_at: 2023-07-03 00:54:56 +0200
+title: "XCSoar 7.43 released"
+created_at: 2023-09-02 00:49:56 +0200
 author: folken
 layout: post
 ---
