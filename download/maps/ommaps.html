@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLayers Map</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol/ol.css" type="text/css">
+    <style>
+        .map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+    <script src="./ol.js"></script>
+</head>
+<body>
+
+<div id="map" class="map"></div>
+<div id="map_list"></div>
+
+<script>
+    // Initialize the map with a basic view
+    var map = new ol.Map({
+        target: 'map',
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()  // Using OpenStreetMap as the base layer
+            })
+        ],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([0, 25]),  // Center at (0, 25)
+            zoom: 2
+        })
+    });
+
+    var activeRect = null;
+    var infoElement = null;
+
+    map.on('click', function () {
+        // Close the info window and reset the active rectangle color
+        if (infoElement) {
+            infoElement.remove();
+            infoElement = null;
+        }
+
+        if (activeRect) {
+            activeRect.setStyle(createStyle('#FF8800'));
+            activeRect = null;
+        }
+    });
+
+    function createStyle(color) {
+        return new ol.style.Style({
+            stroke: new ol.style.Stroke({
+                color: color,
+                width: 2
+            }),
+            fill: new ol.style.Fill({
+                color: 'rgba(255, 136, 0, 0.2)'
+            })
+        });
+    }
+
+    function addRegionToMap(regionName, extents) {
+        var bounds = [
+            ol.proj.fromLonLat([extents[0], extents[1]]),  // SW corner (lon, lat)
+            ol.proj.fromLonLat([extents[2], extents[3]])   // NE corner (lon, lat)
+        ];
+
+        var rect = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [
+                    new ol.Feature(new ol.geom.Polygon([[
+                        bounds[0],
+                        [bounds[0][0], bounds[1][1]],
+                        bounds[1],
+                        [bounds[1][0], bounds[0][1]],
+                        bounds[0]
+                    ]]))
+                ]
+            }),
+            style: createStyle('#FF8800')
+        });
+
+        rect.region = regionName;
+        map.addLayer(rect);
+
+        rect.getSource().getFeatures()[0].on('click', function () {
+            if (activeRect) {
+                activeRect.setStyle(createStyle('#FF8800'));
+            }
+            activeRect = rect;
+            activeRect.setStyle(createStyle('#0000CC'));
+
+            var content = "<div style='margin: 0px; padding: 5px;'><span style='font-size: 1.7em;'>" +
+                regionName + "</span><br/><br/>" +
+                "<a href='https://download.xcsoar.org/source/map/region/" + regionName + ".xcm' type='application/octet-stream'>Standard map</a><br/>" +
+                "<a href='https://download.xcsoar.org/source/map/region/" + regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a><br/>" +
+                "<a href='https://download.xcsoar.org/source/map/region/" + regionName + "_Altair.xcm' type='application/octet-stream'>Altair map</a><br/></div>";
+
+            if (infoElement) infoElement.remove();
+            infoElement = document.createElement('div');
+            infoElement.innerHTML = content;
+            document.body.appendChild(infoElement);
+        });
+
+        // Add to the map list
+        var mapListInfo = "<hr/><h2>" + regionName + "</h2><br/><a href='https://download.xcsoar.org/maps/" +
+            regionName + ".xcm' type='application/octet-stream'>Standard map</a> | <a href='https://download.xcsoar.org/source/map/region/" +
+            regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a> | <a href='https://download.xcsoar.org/map/region/" +
+            regionName + "_Altair.xcm' type='application/octet-stream'>Altair map</a><br/><br/>";
+
+        document.getElementById('map_list').insertAdjacentHTML('beforeend', mapListInfo);
+    }
+
+    // Fetch the MAPS data dynamically
+    fetch('https://download.xcsoar.org/source/map/0_META/maps.config.js')
+        .then(response => response.text())
+        .then(data => {
+            // Evaluate the fetched script to get the MAPS object
+            eval(data);  // Use eval to execute the fetched JavaScript
+            // Now you have access to the MAPS variable
+            for (var region in MAPS) {
+                if (MAPS.hasOwnProperty(region)) {
+                    addRegionToMap(region, MAPS[region]);
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching MAPS data:', error);
+        });
+</script>
+
+</body>
+</html>
