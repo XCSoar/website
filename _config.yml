@@ -10,6 +10,7 @@ absolute_server_url: '//xcsoar.org'
 download_server_url: 'https://download.xcsoar.org/releases'
 trac_server_url: 'https://github.com/XCSoar/XCSoar/issues'
 mapgen_url: 'https://mapgen.xcsoar.org/'
+download_fdroid_url: 'https://f-droid.org/packages/org.xcsoar/'
 
 plugins:
   - jekyll/minibundle
