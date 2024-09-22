@@ -101,8 +101,7 @@ jquery: true
             var content = "<div style='margin: 0px; padding: 5px;'><span style='font-size: 1.7em;'>" +
                 regionName + "</span><br/><br/>" +
                 "<a href='https://download.xcsoar.org/source/map/region/" + regionName + ".xcm' type='application/octet-stream'>Standard map</a><br/>" +
-                "<a href='https://download.xcsoar.org/source/map/region/" + regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a><br/>" +
-                "<a href='https://download.xcsoar.org/source/map/region/" + regionName + "_Altair.xcm' type='application/octet-stream'>Altair map</a><br/></div>";
+                "<a href='https://download.xcsoar.org/source/map/region/" + regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a><br/>";
 
             if (infoElement) infoElement.remove();
             infoElement = document.createElement('div');
@@ -113,8 +112,7 @@ jquery: true
         // Add to the map list
         var mapListInfo = "<hr/><h2>" + regionName + "</h2><br/><a href='https://download.xcsoar.org/maps/" +
             regionName + ".xcm' type='application/octet-stream'>Standard map</a> | <a href='https://download.xcsoar.org/source/map/region/" +
-            regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a> | <a href='https://download.xcsoar.org/map/region/" +
-            regionName + "_Altair.xcm' type='application/octet-stream'>Altair map</a><br/><br/>";
+            regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a> | <a href='https://download.xcsoar.org/map/region/";
 
         document.getElementById('map_list').insertAdjacentHTML('beforeend', mapListInfo);
     }
