@@ -104,7 +104,7 @@ GEM
       nanoc-checking (~> 1.0)
       nanoc-cli (~> 4.11, >= 4.11.15)
       nanoc-core (~> 4.11, >= 4.11.15)
-    ostruct (0.6.0)
+    ostruct (0.6.1)
     parallel (1.26.3)
     pastel (0.8.0)
       tty-color (~> 0.5)
