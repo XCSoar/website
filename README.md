@@ -2,7 +2,7 @@
 
 1. Run Ruby Docker image
    ```
-   docker run -v ./:/data -it ruby:3.3.5  /bin/bash
+   docker run --network host -v ./:/data -it ruby:3.3.5  /bin/bash
    cd /data
    ```
 
@@ -15,6 +15,10 @@
    ```
    bundle exec jekyll build
    ```
+
+4. Start webserver
+   ```
+   jekyll serve
 
 ## How to generate a new post
 
