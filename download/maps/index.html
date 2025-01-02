@@ -5,7 +5,6 @@ title: Map Downloads
 menu: download
 jquery: true
 ---
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +14,16 @@ jquery: true
         .map {
             height: 500px;
             width: 100%;
+        }
+        .info-box {
+            position: fixed;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border: 1px solid #ccc;
+            top: 20px;
+            right: 20px;
+            width: 250px;
+            z-index: 10;
         }
     </style>
     <script src="./ol.js"></script>
@@ -42,19 +51,7 @@ jquery: true
     var activeRect = null;
     var infoElement = null;
 
-    map.on('click', function () {
-        // Close the info window and reset the active rectangle color
-        if (infoElement) {
-            infoElement.remove();
-            infoElement = null;
-        }
-
-        if (activeRect) {
-            activeRect.setStyle(createStyle('#FF8800'));
-            activeRect = null;
-        }
-    });
-
+    // Function to create a style for the rectangle
     function createStyle(color) {
         return new ol.style.Style({
             stroke: new ol.style.Stroke({
@@ -67,12 +64,14 @@ jquery: true
         });
     }
 
+    // Function to add a region's polygon to the map
     function addRegionToMap(regionName, extents) {
         var bounds = [
             ol.proj.fromLonLat([extents[0], extents[1]]),  // SW corner (lon, lat)
             ol.proj.fromLonLat([extents[2], extents[3]])   // NE corner (lon, lat)
         ];
 
+        // Create a polygon representing the region's bounding box
         var rect = new ol.layer.Vector({
             source: new ol.source.Vector({
                 features: [
@@ -91,13 +90,45 @@ jquery: true
         rect.region = regionName;
         map.addLayer(rect);
 
-        rect.getSource().getFeatures()[0].on('click', function () {
-            if (activeRect) {
-                activeRect.setStyle(createStyle('#FF8800'));
-            }
-            activeRect = rect;
+        // Add to the map list for download links
+        var mapListInfo = "<hr/><h2>" + regionName + "</h2><br/><a href='https://download.xcsoar.org/maps/" +
+            regionName + ".xcm' type='application/octet-stream'>Standard map</a> | <a href='https://download.xcsoar.org/source/map/region/" +
+            regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a>";
+
+        document.getElementById('map_list').insertAdjacentHTML('beforeend', mapListInfo);
+
+        // Add the region as a 'feature' of the layer (storing its region name)
+        rect.getSource().getFeatures().forEach(function(feature) {
+            feature.set('region', regionName);  // Store the region name on the feature
+            feature.set('layer', rect);  // Store the layer on the feature
+        });
+    }
+
+    // Function to handle click events on the map
+    function handleMapClick(event) {
+        if (infoElement) {
+            infoElement.remove();
+            infoElement = null;
+        }
+
+        if (activeRect) {
+            activeRect.setStyle(createStyle('#FF8800'));
+            activeRect = null;
+        }
+
+        var coordinate = event.coordinate;
+        var pixel = map.getPixelFromCoordinate(coordinate);
+        var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
+            return feature;
+        });
+
+        if (feature) {
+            var regionName = feature.get('region');
+            var layer = feature.get('layer');  // Retrieve the layer associated with the feature
+            activeRect = layer;
             activeRect.setStyle(createStyle('#0000CC'));
 
+            // Create the information box content
             var content = "<div style='margin: 0px; padding: 5px;'><span style='font-size: 1.7em;'>" +
                 regionName + "</span><br/><br/>" +
                 "<a href='https://download.xcsoar.org/source/map/region/" + regionName + ".xcm' type='application/octet-stream'>Standard map</a><br/>" +
@@ -105,19 +136,13 @@ jquery: true
 
             if (infoElement) infoElement.remove();
             infoElement = document.createElement('div');
+            infoElement.classList.add('info-box');
             infoElement.innerHTML = content;
             document.body.appendChild(infoElement);
-        });
-
-        // Add to the map list
-        var mapListInfo = "<hr/><h2>" + regionName + "</h2><br/><a href='https://download.xcsoar.org/maps/" +
-            regionName + ".xcm' type='application/octet-stream'>Standard map</a> | <a href='https://download.xcsoar.org/source/map/region/" +
-            regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a> | <a href='https://download.xcsoar.org/map/region/";
-
-        document.getElementById('map_list').insertAdjacentHTML('beforeend', mapListInfo);
+        }
     }
 
-    // Fetch the MAPS data dynamically
+    // Fetch the MAPS data dynamically from a URL
     fetch('https://download.xcsoar.org/source/map/0_META/maps.config.js')
         .then(response => response.text())
         .then(data => {
@@ -133,4 +158,9 @@ jquery: true
         .catch(error => {
             console.error('Error fetching MAPS data:', error);
         });
+
+    // Adding a listener for map clicks
+    map.on('singleclick', handleMapClick);
 </script>
+
+</body>
