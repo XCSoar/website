@@ -14,16 +14,16 @@ jquery: true
         .map {
             height: 500px;
             width: 100%;
+            position: relative;
         }
         .info-box {
-            position: fixed;
+            position: absolute;
             background: rgba(255, 255, 255, 0.8);
             padding: 10px;
             border: 1px solid #ccc;
-            top: 20px;
-            right: 20px;
-            width: 250px;
+            max-width: 250px;
             z-index: 10;
+            display: none; /* Hide initially */
         }
     </style>
     <script src="./ol.js"></script>
@@ -107,6 +107,7 @@ jquery: true
     // Function to handle click events on the map
     function handleMapClick(event) {
         if (infoElement) {
+            infoElement.style.display = 'none';  // Hide the info-box when clicking outside
             infoElement.remove();
             infoElement = null;
         }
@@ -134,11 +135,19 @@ jquery: true
                 "<a href='https://download.xcsoar.org/source/map/region/" + regionName + ".xcm' type='application/octet-stream'>Standard map</a><br/>" +
                 "<a href='https://download.xcsoar.org/source/map/region/" + regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a><br/>";
 
-            if (infoElement) infoElement.remove();
-            infoElement = document.createElement('div');
-            infoElement.classList.add('info-box');
+            if (!infoElement) {
+                infoElement = document.createElement('div');
+                infoElement.classList.add('info-box');
+                document.getElementById('map').appendChild(infoElement);
+            }
+
             infoElement.innerHTML = content;
-            document.body.appendChild(infoElement);
+            infoElement.style.display = 'block';  // Show the info box
+
+            // Position the info-box based on the clicked coordinates
+            var offset = 20;  // Offset from the click point to avoid overlap
+            infoElement.style.left = (pixel[0] + offset) + 'px';  // X position
+            infoElement.style.top = (pixel[1] + offset) + 'px';  // Y position
         }
     }
 
