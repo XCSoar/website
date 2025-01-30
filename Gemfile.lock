@@ -29,7 +29,7 @@ GEM
     immutable-ruby (0.2.0)
       concurrent-ruby (~> 1.1)
       sorted_set (~> 1.0)
-    jekyll (4.4.0)
+    jekyll (4.4.1)
       addressable (~> 2.4)
       base64 (~> 0.2)
       colorator (~> 1.0)
