@@ -117,7 +117,7 @@ GEM
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    pstore (0.1.4)
+    pstore (0.2.0)
     public_suffix (6.0.2)
     rake (13.2.1)
     rb-fsevent (0.11.2)
