@@ -1,28 +1,28 @@
-<div id="aside" class="col-md-4 float-end">
+<aside class="col-md-4 float-end">
   <h2>XCSoar Releases</h2>
   <ul>
     <li>
-      {% if page.version == 'stable' %}<b><a>XCSoar {{ site.xcsoar_stable_version }}</a></b>{% else %}<a href="/download/index.html">XCSoar {{ site.xcsoar_stable_version }}</a>{% endif %}<br/>
+      {% if page.version == 'stable' %}<strong><a>XCSoar {{ site.xcsoar_stable_version }}</a></strong>{% else %}<a href="/download/index.html">XCSoar {{ site.xcsoar_stable_version }}</a>{% endif %}<br>
       The current stable version.
     </li>
     {% if site.xcsoar_testing_version %}
     <li>
-      {% if page.version == 'latest' %}<b><a>XCSoar {{ site.xcsoar_testing_version }} (development)</a></b>{% else %}<a href="/download/latest.html">XCSoar {{ site.xcsoar_testing_version }} (development)</a>{% endif %}<br/>
-      The latest 'bleeding edge' developer version.<br/>(potentially unstable, recommended for testing only)
+      {% if page.version == 'latest' %}<strong><a>XCSoar {{ site.xcsoar_testing_version }} (development)</a></strong>{% else %}<a href="/download/latest.html">XCSoar {{ site.xcsoar_testing_version }} (development)</a>{% endif %}<br>
+      The latest 'bleeding edge' developer version.<br>(potentially unstable, recommended for testing only)
     </li>
     {% endif %}
     <li>
-      {% if page.version == 'old' %}<b><a>XCSoar {{ site.xcsoar_old_version }}</a></b>{% else %}<a href="/download/old.html">XCSoar {{ site.xcsoar_old_version }}</a>{% endif %}<br/>
+      {% if page.version == 'old' %}<strong><a>XCSoar {{ site.xcsoar_old_version }}</a></strong>{% else %}<a href="/download/old.html">XCSoar {{ site.xcsoar_old_version }}</a>{% endif %}<br>
       The previous stable version.
     </li>
   </ul>
 
-  <hr/>
+  <hr>
 
   <p><a href="/download/data.html" class="btn btn-success btn-lg w-100">Download Data Files</a></p>
-  <p>Download <a href="/download/data.html"><span class="highlight">Maps, Waypoints, Airspace</span></a>, or use our <a href="{{ site.mapgen_url }}"><span class="highlight">Map Generator</span></a> to create custom maps of your area.</p>
+  <p>Download <a href="/download/data.html">Maps, Waypoints, Airspace</a>, or use our <a href="{{ site.mapgen_url }}">Map Generator</a> to create custom maps of your area.</p>
 
-  <hr/>
+  <hr>
 
   <p><a href="/discover/manual.html" class="btn btn-lg w-100 btn-primary">Download Manual</a></p>
   <p>In  <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf">English</a>,
@@ -30,6 +30,6 @@
          <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-de.pdf">German</a>,
     and  <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-pt_BR.pdf">Portuguese</a>.
   </p>
-  <hr/>
+  <hr>
 
-</div>
+</aside>

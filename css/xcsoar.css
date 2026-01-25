@@ -120,8 +120,8 @@ ul#nav li.develop a:hover { border-bottom-color: #B55722; color: #B55722; }
   ul#nav li { float: none; }
 }
 
-#summary, #content { color: #453c37; }
-#aside { line-height: 1.6; }
+main, article { color: #453c37; }
+aside { line-height: 1.6; }
 
 #webchat { height: 31.25rem; border: 1px dotted #9f9c99; }
 
