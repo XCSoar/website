@@ -4,6 +4,7 @@ color: blue
 title: ... the open-source glide computer
 tagline: true
 lightbox: true
+carousel: true
 ---
 
 <section id="screenshots">
@@ -11,35 +12,44 @@ lightbox: true
     <div class="col-md-12">
       <h2>Screenshots</h2>
       <p>Highlights of XCSoar's interface</p>
-      <div class="screenshots-scroll">
-        <div class="screenshots-container">
-          <figure>
-            <a href="./discover/screenshots/map.png" title="Moving Map">
-              <img src="./discover/screenshots/map.png" alt="Moving Map" class="screenshot" loading="lazy">
-            </a>
-            <figcaption>
-              <strong>Moving Map</strong><br>
-              The primary display, easily configurable to provide the desired level of detail.
-            </figcaption>
-          </figure>
-          <figure>
-            <a href="./discover/screenshots/map_terrain1.png" title="Terrain Display">
-              <img src="./discover/screenshots/map_terrain1.png" alt="Terrain Display" class="screenshot" loading="lazy">
-            </a>
-            <figcaption>
-              <strong>Terrain Display</strong><br>
-              Terrain and Topology data from all over the world can be displayed on the moving map.
-            </figcaption>
-          </figure>
-          <figure>
-            <a href="./discover/screenshots/map_flarm_traffic.png" title="FLARM Integration">
-              <img src="./discover/screenshots/map_flarm_traffic.png" alt="FLARM Integration" class="screenshot" loading="lazy">
-            </a>
-            <figcaption>
-              <strong>FLARM Integration</strong><br>
-              All received FLARM traffic is displayed on the map and on the inset radar screen. (including climb speed)
-            </figcaption>
-          </figure>
+      <div class="screenshot-carousel">
+        <button class="carousel-btn carousel-prev" aria-label="Previous screenshot">‹</button>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <figure class="carousel-slide active">
+              <a href="./discover/screenshots/map.png" title="Moving Map">
+                <img src="./discover/screenshots/map.png" alt="Moving Map" class="screenshot" loading="lazy">
+              </a>
+              <figcaption>
+                <strong>Moving Map</strong><br>
+                The primary display, easily configurable to provide the desired level of detail.
+              </figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <a href="./discover/screenshots/map_terrain1.png" title="Terrain Display">
+                <img src="./discover/screenshots/map_terrain1.png" alt="Terrain Display" class="screenshot" loading="lazy">
+              </a>
+              <figcaption>
+                <strong>Terrain Display</strong><br>
+                Terrain and Topology data from all over the world can be displayed on the moving map.
+              </figcaption>
+            </figure>
+            <figure class="carousel-slide">
+              <a href="./discover/screenshots/map_flarm_traffic.png" title="FLARM Integration">
+                <img src="./discover/screenshots/map_flarm_traffic.png" alt="FLARM Integration" class="screenshot" loading="lazy">
+              </a>
+              <figcaption>
+                <strong>FLARM Integration</strong><br>
+                All received FLARM traffic is displayed on the map and on the inset radar screen. (including climb speed)
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-next" aria-label="Next screenshot">›</button>
+        <div class="carousel-indicators">
+          <button class="carousel-indicator active" aria-label="Go to screenshot 1" data-slide="0"></button>
+          <button class="carousel-indicator" aria-label="Go to screenshot 2" data-slide="1"></button>
+          <button class="carousel-indicator" aria-label="Go to screenshot 3" data-slide="2"></button>
         </div>
       </div>
       <p>

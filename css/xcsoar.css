@@ -162,44 +162,134 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   max-width: 400px;
 }
 
-.screenshots-scroll {
+.screenshot-carousel {
+  position: relative;
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+  max-width: 100%;
+  margin: 20px 0;
 }
 
-.screenshots-scroll::-webkit-scrollbar {
-  height: 8px;
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.screenshots-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.screenshots-scroll::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
-
-.screenshots-container {
+.carousel-track {
   display: flex;
-  gap: 20px;
-  padding-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.screenshots-container figure {
-  flex: 0 0 auto;
-  width: 300px;
-  max-width: 300px;
-  margin: 0;
-}
-
-.screenshots-container .screenshot {
+.carousel-slide {
+  flex: 0 0 100%;
   width: 100%;
+  margin: 0;
+  display: none;
+  text-align: center;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-slide img {
+  max-width: 100%;
   height: auto;
+  max-height: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+.carousel-slide figcaption {
+  margin-top: 15px;
+  padding: 0 20px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #878380;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+.carousel-indicator:hover {
+  background: rgba(135, 131, 128, 0.5);
+}
+
+.carousel-indicator.active {
+  background: #878380;
+  border-color: #878380;
+}
+
+.carousel-indicator:focus-visible {
+  outline: 2px solid #878380;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+  
+  .carousel-prev {
+    left: 5px;
+  }
+  
+  .carousel-next {
+    right: 5px;
+  }
 }
 
 .screenshot {
