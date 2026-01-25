@@ -1,0 +1,220 @@
+---
+description: Prefer HTML5 native features over JavaScript implementations
+alwaysApply: true
+---
+
+# Prefer HTML5 Over JavaScript
+
+## Principle
+
+**Use native HTML5 features and semantic elements instead of JavaScript implementations** whenever possible. This improves performance, accessibility, and maintainability.
+
+## Rationale
+
+- **Performance**: Native browser features are faster than JS implementations
+- **Accessibility**: HTML5 semantic elements have built-in ARIA support
+- **Progressive Enhancement**: Works without JavaScript enabled
+- **Maintainability**: Less code to maintain, fewer bugs
+- **SEO**: Search engines better understand semantic HTML
+- **Mobile**: Better touch support and native mobile features
+
+## Guidelines
+
+### Forms & Input
+
+#### ❌ BAD - JavaScript validation
+```html
+<input type="text" id="email">
+<script>
+  document.getElementById('email').addEventListener('blur', function() {
+    if (!this.value.includes('@')) {
+      alert('Invalid email');
+    }
+  });
+</script>
+```
+
+#### ✅ GOOD - HTML5 native validation
+```html
+<input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+```
+
+### Navigation & Links
+
+#### ❌ BAD - JavaScript navigation
+```html
+<div onclick="window.location='/page'">Go to page</div>
+```
+
+#### ✅ GOOD - Native anchor tag
+```html
+<a href="/page">Go to page</a>
+```
+
+### Modals & Dialogs
+
+#### ❌ BAD - Custom JavaScript modal
+```html
+<div class="modal" id="myModal">...</div>
+<script>
+  function openModal() {
+    document.getElementById('myModal').style.display = 'block';
+  }
+</script>
+```
+
+#### ✅ GOOD - HTML5 `<dialog>` element
+```html
+<dialog id="myModal">
+  <p>Modal content</p>
+  <form method="dialog">
+    <button>Close</button>
+  </form>
+</dialog>
+<script>
+  document.getElementById('myModal').showModal();
+</script>
+```
+
+### Details & Accordions
+
+#### ❌ BAD - JavaScript accordion
+```html
+<div class="accordion-header" onclick="toggleAccordion()">Header</div>
+<div class="accordion-content" id="content">Content</div>
+```
+
+#### ✅ GOOD - HTML5 `<details>` element
+```html
+<details>
+  <summary>Header</summary>
+  <p>Content</p>
+</details>
+```
+
+### Images & Media
+
+#### ❌ BAD - JavaScript lazy loading
+```html
+<img data-src="image.jpg" class="lazy">
+<script>
+  // Lazy loading implementation
+</script>
+```
+
+#### ✅ GOOD - Native lazy loading
+```html
+<img src="image.jpg" loading="lazy" alt="Description">
+```
+
+### Video & Audio
+
+#### ❌ BAD - Custom video controls
+```html
+<video id="video">
+<script>
+  // Custom play/pause controls
+</script>
+```
+
+#### ✅ GOOD - Native video controls
+```html
+<video controls>
+  <source src="video.mp4" type="video/mp4">
+</video>
+```
+
+### Form Elements
+
+#### Use native HTML5 input types:
+- `type="email"` - Email validation
+- `type="url"` - URL validation
+- `type="tel"` - Phone number
+- `type="date"` - Date picker
+- `type="time"` - Time picker
+- `type="number"` - Number input with spinner
+- `type="range"` - Slider
+- `type="color"` - Color picker
+- `type="search"` - Search input
+- `type="month"`, `type="week"` - Date ranges
+
+#### Form attributes:
+- `required` - Required field validation
+- `pattern` - Regex validation
+- `min`, `max` - Range validation
+- `step` - Increment values
+- `autocomplete` - Browser autocomplete
+- `placeholder` - Hint text
+
+### Semantic HTML5 Elements
+
+Use semantic elements instead of generic divs:
+
+```html
+<!-- ❌ BAD -->
+<div class="header">...</div>
+<div class="nav">...</div>
+<div class="main">...</div>
+<div class="footer">...</div>
+
+<!-- ✅ GOOD -->
+<header>...</header>
+<nav>...</nav>
+<main>...</main>
+<footer>...</footer>
+```
+
+Other semantic elements:
+- `<article>` - Independent content
+- `<section>` - Thematic grouping
+- `<aside>` - Sidebar content
+- `<figure>` + `<figcaption>` - Images with captions
+- `<time>` - Dates and times
+- `<mark>` - Highlighted text
+- `<progress>` - Progress bars
+- `<meter>` - Gauge/measurement
+
+### When JavaScript is Still Needed
+
+JavaScript is appropriate for:
+- Complex interactions (drag & drop, complex animations)
+- Dynamic content loading (AJAX)
+- Real-time updates
+- Client-side routing (SPAs)
+- Complex state management
+- Features not available in HTML5
+
+But always:
+1. **Start with HTML5** - Use native features first
+2. **Enhance with JS** - Add JavaScript only when needed
+3. **Progressive Enhancement** - Ensure core functionality works without JS
+
+## Examples for This Project
+
+### Lightbox
+- Current: Custom vanilla JS lightbox ✅ (Good - no native alternative)
+- Could use: `<dialog>` for simple modals
+
+### Forms
+- Use `type="email"`, `required`, `pattern` attributes
+- Native validation instead of JS validation
+
+### Navigation
+- Use `<nav>` semantic element
+- Native anchor tags, not `onclick` handlers
+
+### Images
+- Use `loading="lazy"` attribute
+- Use `<picture>` for responsive images
+- Use `<figure>` for images with captions
+
+## Checklist
+
+When implementing a feature:
+- [ ] Is there an HTML5 native alternative?
+- [ ] Can I use semantic HTML5 elements?
+- [ ] Can I use native form validation?
+- [ ] Can I use native lazy loading?
+- [ ] Can I use native media controls?
+- [ ] Does it work without JavaScript?
+- [ ] Is it accessible by default?
