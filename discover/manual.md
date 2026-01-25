@@ -4,11 +4,8 @@ color: blue
 title: Manual
 menu: discover
 ---
-Since the XCSoar developers are currently very active, there might be some topics missing in this manual.
-Others might be outdated or simply wrong. If you find anything that you feel is wrong, please send us an
-[email](/contact/), open a ticket on
-[GitHub Issues]({{site.github_issues_url}}) or try to fix the manual yourself.
-Since this is an open-source project everybody can [collaborate](/develop/)!
+Some manual topics may be missing or outdated. If you find errors, [contact us](/contact/),
+open a [GitHub issue]({{site.github_issues_url}}), or [contribute](/develop/) a fix.
 
 Manuals of the stable version {{ site.xcsoar_stable_version }}:
 
