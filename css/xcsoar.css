@@ -213,6 +213,7 @@ aside { line-height: 1.6; }
   position: relative;
   overflow: visible;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .carousel-container {
@@ -224,6 +225,7 @@ aside { line-height: 1.6; }
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .carousel-track {
