@@ -128,14 +128,45 @@ small { font-size: 0.875rem; }
   font-weight: 400;
 }
 
-ul#nav { float: right; margin-top: 1.25rem; list-style: none; }
-ul#nav li { float: left; padding-left: 1.875rem; font-size: 1rem; }
-ul#nav li a { text-decoration: none; text-transform: uppercase; color: #878380; }
-ul#nav li.home a:hover { border-bottom: 2px solid #1A4977; color: #1A4977; }
-ul#nav li.news a:hover { border-bottom: 2px solid #1A4977; color: #1A4977; }
-ul#nav li.docs a:hover { border-bottom: 2px solid #1A4977; color: #1A4977; }
-ul#nav li.download a:hover, ul#nav li.hardware a:hover { border-bottom: 2px solid #1B8D29; color: #1B8D29; }
-ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
+ul#nav {
+  float: right;
+  margin-top: 1.25rem;
+  list-style: none;
+}
+
+ul#nav li {
+  float: left;
+  padding-left: 1.875rem;
+  font-size: 1rem;
+}
+
+ul#nav li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #878380;
+}
+
+ul#nav li a:hover {
+  border-bottom: 2px solid;
+}
+
+ul#nav li.home a:hover,
+ul#nav li.news a:hover,
+ul#nav li.docs a:hover {
+  border-bottom-color: #1A4977;
+  color: #1A4977;
+}
+
+ul#nav li.download a:hover,
+ul#nav li.hardware a:hover {
+  border-bottom-color: #1B8D29;
+  color: #1B8D29;
+}
+
+ul#nav li.develop a:hover {
+  border-bottom-color: #B55722;
+  color: #B55722;
+}
 
 @media (max-width: 47.9375rem) {
   #logo { text-align: center; }
