@@ -351,6 +351,20 @@ footer h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-
 
 ul {
   list-style-position: inside;
+  list-style-type: disc;
+}
+
+#about ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 30px;
+  margin: 15px 0;
+}
+
+#about ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
   padding-left: 0;
 }
 
