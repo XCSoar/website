@@ -61,6 +61,9 @@ ul, ol { padding-left: 1.25rem; }
 #secondary #footer { line-height: 0.875rem; }
 
 #primary { padding: 0.625rem 0 0 0; }
+.navbar { padding: 0; }
+.navbar-brand { padding-left: 0; }
+.navbar-brand img { max-width: 100%; display: block; }
 #logo { padding-left: 0; }
 #logo img { max-width: 100%; display: block; }
 .shadowed main { padding: 0 0 0.625rem 0; }
@@ -82,14 +85,14 @@ ul, ol { padding-left: 1.25rem; }
   font-size: 1rem;
 }
 
-.nav-link {
+.navbar-nav .nav-link {
   text-decoration: none;
   text-transform: uppercase;
   color: #878380;
   padding-left: 1.875rem !important;
 }
 
-.nav-link:hover {
+.navbar-nav .nav-link:hover {
   border-bottom: 2px solid;
 }
 
@@ -102,14 +105,26 @@ ul, ol { padding-left: 1.25rem; }
 
 .nav-item.develop .nav-link:hover { border-bottom-color: #B55722; color: #B55722; }
 
-@media (max-width: 47.9375rem) {
-  #logo { text-align: center; }
-  .nav { flex-direction: column; }
-  .nav-item { padding: 0.625rem 0 0; width: 33%; text-align: center; }
+.navbar-toggler {
+  border: 0.125rem solid #878380;
+  padding: 0.25rem 0.5rem;
 }
 
-@media (max-width: 23.125rem) {
-  .nav-item { width: 100%; }
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.1875rem rgba(135, 131, 128, 0.25);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28135, 131, 128, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 47.9375rem) {
+  .navbar-brand { text-align: center; }
+  .navbar-nav .nav-link {
+    padding-left: 0 !important;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
 }
 
 main, article { color: #453c37; }

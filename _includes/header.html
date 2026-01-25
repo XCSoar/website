@@ -75,6 +75,9 @@
 <link rel="stylesheet" href="/css/xcsoar-not-trac.css">
 
 
+<!-- Bootstrap 5.3.8 JavaScript Bundle (for navbar collapse) -->
+<script src="/lib/bootstrap-5.3.8/bootstrap.bundle.min.js"></script>
+
 {% if page.lightbox %}
 <script src="/lib/lightbox.js" defer></script>
 {% endif %}
@@ -171,9 +174,9 @@
 <div class="shadowed">
   <header id="primary">
     <div class="container">
-      <div class="row">
-        <div id="logo" class="col-md-4">
-          <a href="/">
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand" href="/" id="logo">
             {% if color == 'green' %}
             <img src="/img/logo-green.svg" alt="xcsoar-logo-green">
             {% elsif color == 'red' %}
@@ -182,10 +185,11 @@
             <img src="/img/logo-blue.svg" alt="xcsoar-logo-blue">
             {% endif %}
           </a>
-        </div>
-        <div class="col-md-8">
-          <nav>
-            <ul class="nav justify-content-end">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
               <li class="nav-item home{% if page.menu == 'home' or page.url == '/' %} current{% endif %}">
                 <a class="nav-link{% if page.menu == 'home' or page.url == '/' %} active{% endif %}" href="/" title="XCSoar homepage"{% if page.menu == 'home' or page.url == '/' %} aria-current="page"{% endif %}>Home</a>
               </li>
@@ -202,9 +206,9 @@
                 <a class="nav-link{% if page.menu == 'develop' %} active{% endif %}" href="/develop/" title="Help us to develop XCSoar even further"{% if page.menu == 'develop' %} aria-current="page"{% endif %}>Contribute</a>
               </li>
             </ul>
-          </nav>
+          </div>
         </div>
-      </div>
+      </nav>
 
       <div class="row">
         <div id="title" class="col-12">
