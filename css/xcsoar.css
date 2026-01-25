@@ -39,6 +39,16 @@ h1, h2, h3, h4 { letter-spacing: 0; font-family: "Ubuntu", sans-serif; }
   padding: 20px 0 0 0;
 }
 
+#logo {
+  padding-left: 0;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .shadowed main {
   padding: 0 0 20px 0;
 }
@@ -187,7 +197,6 @@ footer h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-
   margin: 1% 1% 0 2%;
   width: 97%;
   max-width: 1230px;
-  padding: 0 20px;
 
   -webkit-box-shadow:0px 0 20px #000000;
      -moz-box-shadow:0px 0 20px #000000;
@@ -195,6 +204,10 @@ footer h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-
 }
 .nowrap {
   white-space: nowrap;
+}
+
+.shadowed .container {
+  padding: 0 20px;
 }
 
 .container {
