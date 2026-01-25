@@ -1,0 +1,28 @@
+# Security Headers for Apache
+# Note: This file is for reference. Headers should be configured at the server level.
+# If using Apache, uncomment and adjust these directives.
+
+# Content Security Policy (also set via meta tag in HTML)
+# Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://maps.google.com https://www.google.com https://download.xcsoar.org; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://download.xcsoar.org https://maps.google.com https://www.google.com https://skylines.aero; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+
+# Prevent MIME type sniffing
+# Header set X-Content-Type-Options "nosniff"
+
+# Prevent clickjacking
+# Header set X-Frame-Options "SAMEORIGIN"
+
+# Enable XSS protection
+# Header set X-XSS-Protection "1; mode=block"
+
+# Referrer Policy
+# Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Permissions Policy (formerly Feature-Policy)
+# Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+# Strict Transport Security (HSTS) - only if using HTTPS
+# Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# Remove server information
+# Header unset Server
+# Header unset X-Powered-By
