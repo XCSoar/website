@@ -371,7 +371,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 .carousel-slide figcaption {
   margin-top: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   padding: 0 20px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -424,7 +424,8 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .carousel-indicator {
