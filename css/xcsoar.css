@@ -409,31 +409,24 @@ ul#nav li.develop a:hover { border-bottom-color: #B55722; color: #B55722; }
 .screenshot:hover { border-color: #6a635f; }
 
 footer,
-footer a,
-.copyright,
-.copyright a,
-.copyright span {
+footer a {
   font-size: 0.875rem !important;
   font-weight: 300 !important;
   color: #fff !important;
+  line-height: 1.6 !important;
 }
 
-footer { line-height: 1.6 !important; }
+footer {
+  text-align: center;
+}
 
-footer a,
-.copyright a {
+footer a {
   text-decoration: none !important;
 }
 
-footer a:hover,
-.copyright a:hover {
+footer a:hover {
   border-bottom: 1px dotted !important;
   color: #d2e0ec !important;
-}
-
-.copyright {
-  text-align: center;
-  line-height: 1.6 !important;
 }
 
 .shadowed {
@@ -495,12 +488,6 @@ li.list-item-xcsoar { list-style-image: url('/img/icon-xcsoar.png'); }
 ul#downloads a { color: #359A41; }
 ul#downloads a:hover { color: #1B8D29; }
 ul#downloads a:active { color: #359A41; }
-
-#social-links div {
-  float: left;
-  width: 25%;
-  text-align: center;
-}
 
 h2 small {
   color: #999999;
