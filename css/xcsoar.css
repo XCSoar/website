@@ -56,7 +56,16 @@ p, ul, ol, ul li, ol li {
   line-height: 1.6;
 }
 
-ul, ol { padding-left: 1.25rem; }
+p {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+ul, ol {
+  padding-left: 1.25rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
 
 #secondary #footer { line-height: 0.875rem; }
 
@@ -302,13 +311,16 @@ aside { line-height: 1.6; }
 .carousel-slide.next2 img { box-shadow: 0 0.3125rem 1.125rem rgba(0, 0, 0, 0.25); }
 
 .carousel-slide figcaption {
-  padding: 0 1.25rem 3.125rem 1.25rem;
+  padding: 0 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   font-size: 0.875rem;
   line-height: 1.4;
   max-width: 100%;
   box-sizing: border-box;
+  margin-top: 0.625rem;
 }
 
 .carousel-slide.active figcaption { opacity: 1; }
@@ -350,6 +362,7 @@ aside { line-height: 1.6; }
   gap: 0.625rem;
   position: relative;
   z-index: 10;
+  margin-top: 1.25rem;
 }
 
 .carousel-indicator {
@@ -459,6 +472,16 @@ ul {
 }
 
 #about { padding-right: 1.875rem; }
+
+#about ul {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+#about ul li {
+  list-style-type: disc;
+  padding-left: 0.625rem;
+}
 
 @media (max-width: 61.9375rem) {
   #about {
