@@ -325,14 +325,20 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 }
 
 .carousel-slide.prev {
-  opacity: 0.4;
-  transform: scale(0.9) translateX(-30px);
+  opacity: 0.3;
+  transform: scale(0.85) translateX(-50px);
   z-index: 2;
 }
 
 .carousel-slide.next {
+  opacity: 0.5;
+  transform: scale(0.92) translateX(80px);
+  z-index: 3;
+}
+
+.carousel-slide.next2 {
   opacity: 0.4;
-  transform: scale(0.9) translateX(30px);
+  transform: scale(0.88) translateX(150px);
   z-index: 2;
 }
 
@@ -359,6 +365,12 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   margin-top: 15px;
   margin-bottom: 50px;
   padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-slide.active figcaption {
+  opacity: 1;
 }
 
 .carousel-btn {
@@ -442,11 +454,15 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   }
   
   .carousel-slide.prev {
-    transform: scale(0.85) translateX(-20px);
+    transform: scale(0.8) translateX(-30px);
   }
   
   .carousel-slide.next {
-    transform: scale(0.85) translateX(20px);
+    transform: scale(0.88) translateX(60px);
+  }
+  
+  .carousel-slide.next2 {
+    transform: scale(0.85) translateX(120px);
   }
   
   .carousel-btn {
