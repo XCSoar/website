@@ -34,3 +34,5 @@ Protocol documentation for various manufacturers' devices supported by XCSoar.
 - [Borgelt Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/Borgelt) - Borgelt device protocol implementation
 - [IMI ERIXX Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/IMI) - IMI ERIXX protocol implementation
 - [EW Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/EW) - EW device protocol implementation
+- [Loefgren Vario Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/Loeg) - Loefgren vario protocol implementation
+- [Vaulter Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/Vaulter) - Vaulter device protocol implementation
