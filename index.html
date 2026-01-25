@@ -19,10 +19,10 @@ lightbox: true
     <p>
       <a href="./discover/" title="Learn more about XCSoar">Learn more...</a>
     </p>
-    <hr/>
+    <hr>
   </div>
 
-  <div id="aside" class="col-md-4 float-end">
+  <aside id="aside" class="col-md-4 float-end">
       <a href="./download/" class="btn btn-success btn-lg w-100">
       Download XCSoar
     </a>
@@ -64,7 +64,7 @@ lightbox: true
       </li>
   </ul>
 
-    <hr/>
+    <hr>
 
     <a href="./discover/manual.html" class="btn btn-lg w-100 btn-primary">
       Download Manual
@@ -85,50 +85,50 @@ lightbox: true
       </li>
     </ul>
 
-    <hr/>
+    <hr>
 
     <div id="social-links" class="clearfix">
-      <div><a href="atom.xml" title="Follow us via RSS feed" target="_blank"><img src="{% svgconvert img/icon-rss.svg 48x48 %}" alt="rss"></a></div>
-      <div><a href="https://github.com/XCSoar/XCSoar.git" title="Follow our development via git" target="_blank"><img src="{% svgconvert img/icon-git.svg 48x48 %}" alt="git"></a></div>
-      <div><a href="https://twitter.com/XCSoar" title="Follow us on Twitter" target="_blank"><img src="{% svgconvert img/icon-twitter.svg 48x48 %}" alt="twitter"></a></div>
+      <div><a href="atom.xml" title="Follow us via RSS feed" target="_blank" rel="noopener noreferrer"><img src="{% svgconvert img/icon-rss.svg 48x48 %}" alt="rss"></a></div>
+      <div><a href="https://github.com/XCSoar/XCSoar.git" title="Follow our development via git" target="_blank" rel="noopener noreferrer"><img src="{% svgconvert img/icon-git.svg 48x48 %}" alt="git"></a></div>
+      <div><a href="https://twitter.com/XCSoar" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><img src="{% svgconvert img/icon-twitter.svg 48x48 %}" alt="twitter"></a></div>
     </div>
 
-    <hr/>
+    <hr>
   </div>
 
   <div class="col-md-8">
     <p>
       Try
-      <a href="https://skylines.aero/" style="text-decoration:none;font-weight:bold">
+      <a href="https://skylines.aero/" style="text-decoration:none;font-weight:bold" rel="noopener noreferrer">
         <img class="logo"
              src="https://www.skylines.aero/android-chrome-192x192.png" alt="skylines.aero"
-             width="24" height="24"/>
+             width="24" height="24">
         <span style="color:#008EDA">Sky</span><span style="color:black">Lines</span></a>, our live tracking and flight sharing platform!
     </p>
-    <hr/>
+    <hr>
   </div>
 
   {% for post in site.posts limit: 1 %}
-  <div class="span8 news-item">
+  <article class="col-md-8 news-item">
     <h2>
       <a href="{{ post.url }}">{{ post.title }}</a><br>
-      <small>({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</small>
+      <small>(<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:'%e. %b %Y' }}</time>{% if post.author %} by {{ post.author }}{% endif %})</small>
     </h2>
 
     <div class="news-content">
       {{ post.content }}
     </div>
-    <hr/>
-  </div>
+    <hr>
+  </article>
   {% endfor %}
 
   {% for post in site.posts limit: 5 offset: 1 %}
-  <div class="span8 news-item">
+  <article class="col-md-8 news-item">
     <h2>
-      <small>{{ post.date | date:'%e. %b %Y' }}:</small>
+      <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:'%e. %b %Y' }}</time>:</small>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </h2>
-  </div>
+  </article>
   {% endfor %}
 
   <div class="col-md-8">
@@ -145,10 +145,10 @@ lightbox: true
         <div class="col-md-4">
           <figure>
             <a href="./discover/screenshots/map.png" title="Moving Map">
-              <img src="./discover/screenshots/map.png" alt="Moving Map" class="screenshot" loading="lazy"/>
+              <img src="./discover/screenshots/map.png" alt="Moving Map" class="screenshot" loading="lazy">
             </a>
             <figcaption>
-              <strong>Moving Map</strong><br/>
+              <strong>Moving Map</strong><br>
               The primary display, easily configurable to provide the desired level of detail.
             </figcaption>
           </figure>
@@ -156,10 +156,10 @@ lightbox: true
         <div class="col-md-4">
           <figure>
             <a href="./discover/screenshots/map_terrain1.png" title="Terrain Display">
-              <img src="./discover/screenshots/map_terrain1.png" alt="Terrain Display" class="screenshot" loading="lazy"/>
+              <img src="./discover/screenshots/map_terrain1.png" alt="Terrain Display" class="screenshot" loading="lazy">
             </a>
             <figcaption>
-              <strong>Terrain Display</strong><br/>
+              <strong>Terrain Display</strong><br>
               Terrain and Topology data from all over the world can be displayed on the moving map.
             </figcaption>
           </figure>
@@ -167,10 +167,10 @@ lightbox: true
         <div class="col-md-4">
           <figure>
             <a href="./discover/screenshots/map_flarm_traffic.png" title="FLARM Integration">
-              <img src="./discover/screenshots/map_flarm_traffic.png" alt="FLARM Integration" class="screenshot" loading="lazy"/>
+              <img src="./discover/screenshots/map_flarm_traffic.png" alt="FLARM Integration" class="screenshot" loading="lazy">
             </a>
             <figcaption>
-              <strong>FLARM Integration</strong><br/>
+              <strong>FLARM Integration</strong><br>
               All received FLARM traffic is displayed on the map and on the inset radar screen. (including climb speed)
             </figcaption>
           </figure>

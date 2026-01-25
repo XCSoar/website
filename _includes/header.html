@@ -44,10 +44,10 @@
 {% else %}
 
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html lang="en">
 <head>
+  <meta charset="utf-8">
   <title>XCSoar - {{ page.title }}</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="keywords" content="XCSoar, gliding, soaring, paragliding, gps, navigation, moving map" />
   <meta name="description" content="open-source tactical glide computer for soaring and paragliding pilots" />
 
@@ -180,17 +180,17 @@
 {% endif %}
 
 <div class="shadowed">
-  <div id="primary">
+  <header id="primary">
     <div class="container">
       <div class="row">
         <div id="logo" class="col-md-4">
           <a href="/">
             {% if color == 'green' %}
-            <img src="/img/logo-green.svg" alt="xcsoar-logo-green" />
+            <img src="/img/logo-green.svg" alt="xcsoar-logo-green">
             {% elsif color == 'red' %}
-            <img src="/img/logo-red.svg" alt="xcsoar-logo-red" />
+            <img src="/img/logo-red.svg" alt="xcsoar-logo-red">
             {% else %}
-            <img src="/img/logo-blue.svg" alt="xcsoar-logo-blue" />
+            <img src="/img/logo-blue.svg" alt="xcsoar-logo-blue">
             {% endif %}
           </a>
         </div>
@@ -212,3 +212,7 @@
           <h1{% if page.tagline %} class="tagline"{% endif %}>{{ page.title }}</h1>
         </div>
       </div>
+    </div>
+  </header>
+
+<main>
