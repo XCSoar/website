@@ -4,8 +4,7 @@ color: blue
 title: Manual
 menu: discover
 ---
-Some manual topics may be missing or outdated. If you find errors, [contact us](/contact/),
-open a [GitHub issue]({{site.github_issues_url}}), or [contribute](/develop/) a fix.
+Some manual topics may be missing or outdated. If you find errors, open a [GitHub issue]({{site.github_issues_url}}) or [contribute on GitHub](https://github.com/XCSoar/XCSoar) a fix.
 
 Manuals of the stable version {{ site.xcsoar_stable_version }}:
 

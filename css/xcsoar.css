@@ -108,7 +108,8 @@ ul, ol {
 
 .nav-item.home .nav-link:hover,
 .nav-item.news .nav-link:hover,
-.nav-item.docs .nav-link:hover { border-bottom-color: #1A4977; color: #1A4977; }
+.nav-item.docs .nav-link:hover,
+.nav-item.discussion .nav-link:hover { border-bottom-color: #1A4977; color: #1A4977; }
 
 .nav-item.download .nav-link:hover,
 .nav-item.hardware .nav-link:hover { border-bottom-color: #1B8D29; color: #1B8D29; }

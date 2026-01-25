@@ -202,8 +202,13 @@
               <li class="nav-item download{% if page.menu == 'download' %} current{% endif %}">
                 <a class="nav-link{% if page.menu == 'download' %} active{% endif %}" href="/download/" title="Download XCSoar and the map files"{% if page.menu == 'download' %} aria-current="page"{% endif %}>Download</a>
               </li>
-              <li class="nav-item develop{% if page.menu == 'develop' %} current{% endif %}">
-                <a class="nav-link{% if page.menu == 'develop' %} active{% endif %}" href="/develop/" title="Help us to develop XCSoar even further"{% if page.menu == 'develop' %} aria-current="page"{% endif %}>Contribute</a>
+              <li class="nav-item discussion{% if page.menu == 'discussion' %} current{% endif %}">
+                <a class="nav-link{% if page.menu == 'discussion' %} active{% endif %}" href="https://github.com/XCSoar/XCSoar/discussions" title="XCSoar GitHub Discussions" target="_blank" rel="noopener noreferrer"{% if page.menu == 'discussion' %} aria-current="page"{% endif %}>Discussion</a>
+              </li>
+              <li class="nav-item develop">
+                <a class="nav-link" href="https://github.com/XCSoar/XCSoar" title="Contribute on GitHub" target="_blank" rel="noopener noreferrer">
+                  GitHub <img src="/img/icon-github.svg" alt="" style="width: 1.25rem; height: 1.25rem; vertical-align: middle;">
+                </a>
               </li>
             </ul>
           </div>
