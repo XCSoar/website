@@ -414,6 +414,7 @@ footer a:hover {
   background: #fff;
   width: 97%;
   max-width: 87.5rem;
+  margin: 0 auto;
   padding: 0 1.25rem;
   overflow-x: hidden;
   box-shadow: 0 0 1.25rem #000000;
