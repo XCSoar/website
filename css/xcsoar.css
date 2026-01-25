@@ -13,7 +13,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 ul, ol, li, dl { border: 0; }
 a:active { outline: 0; }
 table { border-collapse: collapse; border-spacing: 0; }
-.hidden { display: none; }
 
 a.green { color: #359a41; }
 a.green:hover { color: #1b8d29; }
@@ -75,49 +74,42 @@ ul, ol { padding-left: 1.25rem; }
 }
 
 #title h1.tagline {
-  text-align: center;
   font-size: 1.75rem;
   font-weight: 400;
 }
 
-ul#nav {
-  float: right;
-  list-style: none;
-}
-
-ul#nav li {
-  float: left;
-  padding-left: 1.875rem;
+.nav {
   font-size: 1rem;
 }
 
-ul#nav li a {
+.nav-link {
   text-decoration: none;
   text-transform: uppercase;
   color: #878380;
+  padding-left: 1.875rem !important;
 }
 
-ul#nav li a:hover {
+.nav-link:hover {
   border-bottom: 2px solid;
 }
 
-ul#nav li.home a:hover,
-ul#nav li.news a:hover,
-ul#nav li.docs a:hover { border-bottom-color: #1A4977; color: #1A4977; }
+.nav-item.home .nav-link:hover,
+.nav-item.news .nav-link:hover,
+.nav-item.docs .nav-link:hover { border-bottom-color: #1A4977; color: #1A4977; }
 
-ul#nav li.download a:hover,
-ul#nav li.hardware a:hover { border-bottom-color: #1B8D29; color: #1B8D29; }
+.nav-item.download .nav-link:hover,
+.nav-item.hardware .nav-link:hover { border-bottom-color: #1B8D29; color: #1B8D29; }
 
-ul#nav li.develop a:hover { border-bottom-color: #B55722; color: #B55722; }
+.nav-item.develop .nav-link:hover { border-bottom-color: #B55722; color: #B55722; }
 
 @media (max-width: 47.9375rem) {
   #logo { text-align: center; }
-  ul#nav { float: none; clear: both; }
-  ul#nav li { padding: 0.625rem 0 0; width: 33%; text-align: center; }
+  .nav { flex-direction: column; }
+  .nav-item { padding: 0.625rem 0 0; width: 33%; text-align: center; }
 }
 
 @media (max-width: 23.125rem) {
-  ul#nav li { float: none; }
+  .nav-item { width: 100%; }
 }
 
 main, article { color: #453c37; }
@@ -169,7 +161,6 @@ aside { line-height: 1.6; }
   display: block;
 }
 
-#screenshots ul { list-style: none; }
 #screenshots ul li {
   float: left;
   width: 18.5rem;
@@ -394,9 +385,6 @@ footer a {
   line-height: 1.6 !important;
 }
 
-footer {
-  text-align: center;
-}
 
 footer a {
   text-decoration: none !important;
@@ -416,9 +404,6 @@ footer a:hover {
   box-shadow: 0 0 1.25rem #000000;
 }
 
-.nowrap { white-space: nowrap; }
-.shadowed .container,
-.container { padding: 0 1.25rem; }
 .shadowed .container { padding: 0; }
 
 ul {
@@ -435,11 +420,9 @@ ul {
   }
 }
 
-.btn,
 ul.quicklinks li a { text-decoration: none; }
 
 ul.quicklinks {
-  list-style: none;
   line-height: 1.5625rem;
 }
 
