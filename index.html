@@ -57,7 +57,7 @@ lightbox: true
 
 <section id="about">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
       <h2>About XCSoar</h2>
       <p>
         XCSoar is a tactical glide computer originally developed for the Pocket PC
@@ -77,80 +77,6 @@ lightbox: true
         <a href="./discover/" title="Learn more about XCSoar">Learn more...</a>
       </p>
     </div>
-
-    <aside id="aside" class="col-md-4">
-      <a href="./download/" class="btn btn-success btn-lg w-100">
-      Download XCSoar
-    </a>
-
-    <ul id="downloads" class="quicklinks">
-      <li class="list-item-data">
-        <a href="./download/data.html">Maps, Waypoints, ...</a>
-      </li>
-
-      <li class="divider"></li>
-
-      <li class="list-item-android">
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/ANDROID/">Android</a>
-        <small class="nowrap">(<a href="{{ site.download_fdroid_url }}">F-Droid</a>,
-        <a href="{{ site.download_play_store_url }}">Play</a>)</small>
-      </li>
-      <li class="list-item-mac">
-        <a href="{{ site.download_app_store_url }}">iOS (App Store)</a>
-      </li>
-      <li class="list-item-cubie">
-        <a href="https://openvario.org/doku.php?id=downloads">CUBIE/OpenVario</a>
-      </li>
-      <li class="list-item-kobo">
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/KOBO/">KOBO E-reader</a>
-      </li>
-      <li class="list-item-linux">
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/{{ site.xcsoar_linux_download_subdir }}/">Unix / Linux</a>
-      </li>
-      <li class="list-item-pi">
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PI/">Raspberry PI 1-3</a>
-      </li>
-      <li class="list-item-pi">
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PI4/">Raspberry PI 4</a>
-      </li>
-      <li class="list-item-windows">
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN64/">Windows</a>
-        <small class="nowrap">(<a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PC/">32 bit</a> /
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN64/">64 bit</a>)</small>
-      </li>
-  </ul>
-
-    <hr>
-
-    <a href="./discover/manual.html" class="btn btn-lg w-100 btn-primary">
-      Download Manual
-    </a>
-
-    <ul id="manuals" class="quicklinks">
-      <li class="list-item-xcsoar">
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual.pdf">Manual for XCSoar {{ site.xcsoar_stable_version }}</a>
-      </li>
-      <li class="list-item-xcsoar">
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-de.pdf">German translation {{ site.xcsoar_stable_version }}</a>
-      </li>
-      <li class="list-item-xcsoar">
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-fr.pdf">French translation {{ site.xcsoar_stable_version }}</a>
-      </li>
-      <li class="list-item-xcsoar">
-        <a href="{{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-pt_BR.pdf">Portuguese translation {{ site.xcsoar_stable_version }}</a>
-      </li>
-    </ul>
-
-    <hr>
-
-    <div id="social-links" class="clearfix">
-      <div><a href="atom.xml" title="Follow us via RSS feed" target="_blank" rel="noopener noreferrer"><img src="{% svgconvert img/icon-rss.svg 48x48 %}" alt="rss"></a></div>
-      <div><a href="https://github.com/XCSoar/XCSoar.git" title="Follow our development via git" target="_blank" rel="noopener noreferrer"><img src="{% svgconvert img/icon-git.svg 48x48 %}" alt="git"></a></div>
-      <div><a href="https://twitter.com/XCSoar" title="Follow us on Twitter" target="_blank" rel="noopener noreferrer"><img src="{% svgconvert img/icon-twitter.svg 48x48 %}" alt="twitter"></a></div>
-    </div>
-
-    <hr>
-    </aside>
   </div>
 </section>
 
