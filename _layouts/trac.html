@@ -3,7 +3,7 @@
 {% include header.html %}
 
 <div class="row" id="content">
-  <div class="span12">
+  <div class="col-12">
     {{ content }}
 
 {% include section_change.html %}
@@ -13,7 +13,7 @@
 
 <script>
   $(document).ready(function() {
-    $('#secondary .row .span12').append($('#primary #footer').detach());
+    $('#secondary .row .col-12').append($('#primary #footer').detach());
     $('#primary #content #banner #header').hide();
   });
 </script>

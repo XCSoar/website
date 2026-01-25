@@ -6,7 +6,7 @@ menu: discover
 ---
 <div class="row">
   {% for post in site.posts %}
-  <div class="span8 news-item">
+  <div class="col-md-8 news-item">
     <h2>
       {{ post.title }}<br>
       <small>({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</small>

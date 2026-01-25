@@ -146,7 +146,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   color: #6a635f;
 }
 
-#screenshots .span4 {
+#screenshots .col-md-4 {
   max-width: 400px;
 }
 
