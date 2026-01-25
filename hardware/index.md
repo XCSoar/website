@@ -10,7 +10,7 @@ XCSoar runs on a wide variety of hardware: desktop computers
 E-ink readers such as the Kobo are very good platforms aswell.
 
 XCSoar is compatible with many peripheral hardware such as varios and
-loggers. Consult [the manual](/docs/manual.html) for an extensive
+loggers. Consult [the manual](/docs/) for an extensive
 list.
 
 Many users ask us what hardware they shall buy for running XCSoar.  This
