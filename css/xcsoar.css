@@ -205,23 +205,24 @@ aside { line-height: 1.6; }
   }
 }
 
-.screenshot-carousel,
-.carousel-container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
 .screenshot-carousel {
+  width: 100%;
   max-width: 100%;
   min-height: 21.875rem;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .carousel-container {
+  width: 100%;
   height: 21.875rem;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .carousel-track {
@@ -233,6 +234,7 @@ aside { line-height: 1.6; }
 .carousel-slide {
   position: absolute;
   width: 100%;
+  max-width: 100%;
   left: 50%;
   top: 50%;
   text-align: center;
@@ -241,6 +243,7 @@ aside { line-height: 1.6; }
   z-index: 1;
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0.85);
+  box-sizing: border-box;
 }
 
 .carousel-slide.active {
@@ -298,6 +301,8 @@ aside { line-height: 1.6; }
   transition: opacity 0.3s ease-in-out;
   font-size: 0.875rem;
   line-height: 1.4;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-slide.active figcaption { opacity: 1; }
@@ -361,9 +366,17 @@ aside { line-height: 1.6; }
 }
 
 @media (max-width: 48rem) {
-  .screenshot-carousel,
-  .carousel-container { min-height: 21.875rem; }
-  .carousel-container { height: 21.875rem; }
+  .screenshot-carousel {
+    min-height: 21.875rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  .carousel-container {
+    min-height: 21.875rem;
+    height: 21.875rem;
+    width: 100%;
+    max-width: 100%;
+  }
   .carousel-slide img { max-width: 85%; max-height: 17.5rem; }
   .carousel-slide.prev { transform: translate(calc(-50% - 1.875rem), -50%) scale(0.8); }
   .carousel-slide.next { transform: translate(calc(-50% + 3.75rem), -50%) scale(0.88); }
