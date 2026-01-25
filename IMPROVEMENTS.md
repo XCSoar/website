@@ -194,7 +194,7 @@
 
 ### Replace jQuery Lightbox
 **Issue**: Issue #42 already tracks this
-**Solution**: 
+**Solution**:
 ```html
 <!-- Replace with modern solution -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
