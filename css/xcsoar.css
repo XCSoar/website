@@ -325,6 +325,13 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   aspect-ratio: auto;
 }
 
+/* Ensure gallery screenshots maintain aspect ratio */
+#screenshots figure img.screenshot {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 #screenshots figure figcaption {
   margin-top: 10px;
   font-size: 0.875rem; /* 14px */
@@ -440,13 +447,15 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 }
 
 .carousel-slide img {
-  max-width: 70%;
-  height: auto;
+  max-width: 70% !important;
+  width: auto !important;
+  height: auto !important;
   max-height: 280px;
   margin: 0 auto;
   display: block;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
+  object-fit: contain;
 }
 
 .carousel-slide.active img {
@@ -604,10 +613,22 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
   border: 1px solid lightgrey;
   background: white;
+  display: block;
+}
+
+/* Gallery screenshots - maintain aspect ratio */
+#screenshots .screenshot {
   width: 100%;
   height: auto;
   object-fit: contain;
-  display: block;
+}
+
+/* Carousel screenshots - use carousel-specific sizing */
+.carousel-slide .screenshot {
+  width: auto;
+  height: auto;
+  max-width: 70%;
+  max-height: 280px;
 }
 
 .screenshot:hover {
