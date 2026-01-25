@@ -392,6 +392,10 @@ aside { line-height: 1.6; }
 
 .screenshot:hover { border-color: #6a635f; }
 
+footer {
+  margin-top: 1rem;
+}
+
 footer,
 footer a {
   font-size: 0.875rem !important;
