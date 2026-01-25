@@ -411,9 +411,9 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 .carousel-slide {
   position: absolute;
   width: 100%;
-  left: 0;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%) scale(0.85) translateX(0);
+  transform: translate(-50%, -50%) scale(0.85);
   margin: 0;
   text-align: center;
   opacity: 0;
@@ -424,27 +424,27 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 .carousel-slide.active {
   opacity: 1;
-  transform: translateY(-50%) scale(1) translateX(0);
+  transform: translate(-50%, -50%) scale(1);
   z-index: 5;
   pointer-events: auto;
 }
 
 .carousel-slide.prev {
   opacity: 0.2;
-  transform: translateY(-50%) scale(0.85) translateX(-50px);
+  transform: translate(calc(-50% - 50px), -50%) scale(0.85);
   z-index: 2;
   filter: blur(2px);
 }
 
 .carousel-slide.next {
   opacity: 0.7;
-  transform: translateY(-50%) scale(0.95) translateX(60px);
+  transform: translate(calc(-50% + 60px), -50%) scale(0.95);
   z-index: 3;
 }
 
 .carousel-slide.next2 {
   opacity: 0.6;
-  transform: translateY(-50%) scale(0.9) translateX(100px);
+  transform: translate(calc(-50% + 100px), -50%) scale(0.9);
   z-index: 2;
 }
 
