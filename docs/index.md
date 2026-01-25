@@ -23,3 +23,14 @@ Manuals of the stable version {{ site.xcsoar_stable_version }}:
 Documentation for developers contributing to XCSoar.
 
 - [Developer Manual](https://xcsoar.readthedocs.io/en/latest/) - Complete developer documentation
+
+### Manufacturer Protocols
+
+Protocol documentation for various manufacturers' devices supported by XCSoar.
+
+- [Cambridge CAI302 Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/CAI302) - Protocol implementation and documentation
+- [FLARM Protocol](https://flarm.com/support/downloads/) - FLARM device protocol documentation
+- [LXNAV Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/LX) - LXNAV device protocol implementation
+- [Borgelt Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/Borgelt) - Borgelt device protocol implementation
+- [IMI ERIXX Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/IMI) - IMI ERIXX protocol implementation
+- [EW Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/EW) - EW device protocol implementation
