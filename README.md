@@ -2,7 +2,7 @@
 
 1. Run Ruby Docker image
    ```
-   docker run --network host -v ./:/data -it ruby:3.3.5  /bin/bash
+   docker run --network host -v ./:/data -it ruby:4.0.1  /bin/bash
    cd /data
    ```
 

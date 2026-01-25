@@ -73,7 +73,7 @@ class Jekyll::SVGConvert < Liquid::Tag
 
   def write
     # Generate output file if it doesn't exist or is less recent than the source file
-    if !File.exists?(@dest_path) || File.mtime(@dest_path) <= File.mtime(@source_path)
+    if !File.exist?(@dest_path) || File.mtime(@dest_path) <= File.mtime(@source_path)
       print "Generating #{@format.upcase}: #{@source} -> #{@dest}\n"
 
       options = "-o #{@dest_path}"
