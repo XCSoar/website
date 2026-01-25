@@ -70,7 +70,9 @@
 <link rel="stylesheet" href="/lib/bootstrap/bootstrap-grid.css" >
 <link rel="stylesheet" href="/css/xcsoar.css" >
 <link rel="stylesheet" href="/css/xcsoar-{{ color }}.css">
-<link rel="stylesheet" href="/lib/jquery-lightbox/jquery.lightbox-0.5.css" >
+{% if page.jquery %}
+<link rel="stylesheet" href="/css/lightbox.css" >
+{% endif %}
   {% if page.trac %}
 <link rel="stylesheet" href="/css/xcsoar-trac.css">
 {% else %}
@@ -79,8 +81,7 @@
 
 
 {% if page.jquery %}
-<script src="/lib/jquery-1.8.2.min.js"></script>
-<script src="/lib/jquery-lightbox/jquery.lightbox-0.5.min.js"></script>
+<script src="/lib/lightbox.js" defer></script>
 {% endif %}
 
 {% if page.forum %}
