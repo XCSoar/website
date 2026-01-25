@@ -557,18 +557,21 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
  TERTIARY SECTION
  ******************************************************************************/
 
-/* FOOTER */
+/* FOOTER - Standardized across all pages and layouts */
 
 footer {
   margin-top: 20px;
   color: #fff;
   font-size: 0.875rem; /* 14px - consistent across all pages */
   line-height: 1.6;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
 }
 
 footer a {
   text-decoration: none;
   color: #fff;
+  font-size: 0.875rem; /* 14px - explicit size */
 }
 
 footer a:hover {
@@ -582,21 +585,43 @@ footer h2 {
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
 }
 
-/* COPYRIGHT */
+/* COPYRIGHT - Standardized across all pages */
 
 .copyright {
   font-size: 0.875rem; /* 14px - consistent with footer */
   text-align: center;
   margin: 20px 0;
   line-height: 1.6;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  color: #fff;
 }
 
 .copyright p {
-  font-size: 0.875rem; /* 14px - ensure paragraph inherits */
+  font-size: 0.875rem; /* 14px - explicit, prevents inheritance */
   margin: 0;
   line-height: 1.6;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+.copyright strong {
+  font-weight: 400;
+}
+
+.copyright a {
+  font-size: 0.875rem; /* 14px - explicit */
+  color: #fff;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  border-bottom: 1px dotted;
+  color: #d2e0ec;
 }
 
 /* GLOBAL */
