@@ -1,0 +1,267 @@
+---
+description: Responsive design - layouts must work on desktop and mobile
+alwaysApply: true
+---
+
+# Responsive Design Requirements
+
+## Principle
+
+**All layouts must work on both desktop and mobile devices.** Use responsive design patterns, flexible layouts, and mobile-first approaches. Implement responsive dropdown menus and adaptive layouts.
+
+## Rationale
+
+- **Accessibility**: Users access the site from various devices
+- **User Experience**: Mobile-friendly sites provide better UX
+- **Modern Web Standards**: Responsive design is expected
+- **SEO**: Mobile-friendly sites rank better
+- **Future-Proof**: Adapts to new device sizes automatically
+
+## Implementation Guidelines
+
+### Layout Responsiveness
+
+1. **Use Flexible Units**: Prefer relative units (rem, em, %, vw, vh) over fixed pixels
+   ```css
+   /* ❌ BAD - Fixed width */
+   .container { width: 1200px; }
+   
+   /* ✅ GOOD - Flexible width */
+   .container { max-width: 87.5rem; width: 97%; }
+   ```
+
+2. **Flexbox/Grid for Layouts**: Use flexbox or CSS Grid for responsive layouts
+   ```css
+   /* ✅ GOOD - Responsive flexbox */
+   .row {
+     display: flex;
+     flex-wrap: wrap;
+   }
+   
+   .col-md-4 {
+     flex: 0 0 33.333333%;
+     max-width: 33.333333%;
+   }
+   ```
+
+3. **Media Queries**: Use breakpoints for different screen sizes
+   ```css
+   /* ✅ GOOD - Responsive breakpoints */
+   @media (max-width: 61.9375rem) {
+     .col-md-4 {
+       flex: 0 0 50%;
+       max-width: 50%;
+     }
+   }
+   
+   @media (max-width: 47.9375rem) {
+     .col-md-4 {
+       flex: 0 0 100%;
+       max-width: 100%;
+     }
+   }
+   ```
+
+### Navigation Responsiveness
+
+1. **Mobile Menu**: Convert horizontal nav to dropdown/hamburger menu on mobile
+   ```css
+   /* ✅ GOOD - Responsive navigation */
+   @media (max-width: 47.9375rem) {
+     ul#nav {
+       float: none;
+       clear: both;
+     }
+     
+     ul#nav li {
+       width: 33%;
+       text-align: center;
+     }
+   }
+   ```
+
+2. **Touch-Friendly Targets**: Ensure interactive elements are large enough for touch
+   ```css
+   /* ✅ GOOD - Touch-friendly button */
+   .carousel-btn {
+     width: 3.125rem;
+     height: 3.125rem;
+   }
+   
+   @media (max-width: 48rem) {
+     .carousel-btn {
+       width: 2.5rem;
+       height: 2.5rem;
+     }
+   }
+   ```
+
+3. **Dropdown Menus**: Implement responsive dropdown behavior
+   - Desktop: Hover to show dropdown
+   - Mobile: Click/tap to toggle dropdown
+   - Use JavaScript for mobile interactions if needed
+
+### Image Responsiveness
+
+1. **Flexible Images**: Images should scale with container
+   ```css
+   /* ✅ GOOD - Responsive images */
+   img {
+     max-width: 100%;
+     height: auto;
+   }
+   ```
+
+2. **Responsive Sizing**: Adjust image sizes for different screens
+   ```css
+   .carousel-slide img {
+     max-width: 70%;
+   }
+   
+   @media (max-width: 48rem) {
+     .carousel-slide img {
+       max-width: 85%;
+     }
+   }
+   ```
+
+### Typography Responsiveness
+
+1. **Relative Font Sizes**: Use rem/em units that scale with base font size
+   ```css
+   /* ✅ GOOD - Relative sizing */
+   html { font-size: 16px; }
+   h1 { font-size: 2rem; }
+   p { font-size: 1rem; }
+   ```
+
+2. **Readable on Mobile**: Ensure text is readable without zooming
+   - Minimum font size: 0.875rem (14px) for body text
+   - Adequate line-height for readability
+
+### Breakpoint Strategy
+
+Use consistent breakpoints:
+- **Mobile**: max-width: 47.9375rem (767px)
+- **Tablet**: max-width: 61.9375rem (991px)
+- **Desktop**: Above 991px
+
+### Testing Requirements
+
+1. **Test on Multiple Devices**: Verify layout works on:
+   - Desktop (1920px, 1366px)
+   - Tablet (768px, 1024px)
+   - Mobile (375px, 414px, 320px)
+
+2. **Test Interactions**: Ensure:
+   - Navigation works on touch devices
+   - Buttons are tappable
+   - Forms are usable
+   - Content is readable
+
+### Common Patterns
+
+1. **Mobile-First Approach**: Start with mobile styles, enhance for desktop
+   ```css
+   /* Base styles for mobile */
+   .container { padding: 0.625rem; }
+   
+   /* Enhance for desktop */
+   @media (min-width: 48rem) {
+     .container { padding: 1.25rem; }
+   }
+   ```
+
+2. **Hide/Show Elements**: Show/hide content based on screen size
+   ```css
+   .desktop-only { display: block; }
+   .mobile-only { display: none; }
+   
+   @media (max-width: 47.9375rem) {
+     .desktop-only { display: none; }
+     .mobile-only { display: block; }
+   }
+   ```
+
+3. **Stack on Mobile**: Stack columns vertically on mobile
+   ```css
+   .row {
+     display: flex;
+     flex-direction: row;
+   }
+   
+   @media (max-width: 47.9375rem) {
+     .row {
+       flex-direction: column;
+     }
+   }
+   ```
+
+## Examples
+
+### ✅ GOOD - Responsive Navigation
+```css
+ul#nav {
+  float: right;
+  list-style: none;
+}
+
+@media (max-width: 47.9375rem) {
+  ul#nav {
+    float: none;
+    clear: both;
+  }
+  
+  ul#nav li {
+    width: 33%;
+    text-align: center;
+  }
+}
+```
+
+### ✅ GOOD - Responsive Grid
+```css
+.col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+@media (max-width: 61.9375rem) {
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+```
+
+### ❌ BAD - Fixed Width Layout
+```css
+.container { width: 1200px; }
+.nav { width: 800px; }
+/* No media queries - breaks on mobile */
+```
+
+## Checklist
+
+When implementing layouts:
+- [ ] Does it work on mobile (375px width)?
+- [ ] Does it work on tablet (768px width)?
+- [ ] Does it work on desktop (1920px width)?
+- [ ] Are navigation elements touch-friendly?
+- [ ] Are images responsive?
+- [ ] Is text readable without zooming?
+- [ ] Are breakpoints consistent?
+- [ ] Are dropdown menus responsive?
+- [ ] Is layout flexible (uses flexbox/grid)?
+- [ ] Are units relative (rem/em/%) not fixed (px)?
+
+## Goal
+
+**Every layout must be fully functional and visually appropriate on all device sizes from 320px to 2560px+.** No horizontal scrolling, no broken layouts, no unreadable text.
