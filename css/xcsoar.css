@@ -284,8 +284,10 @@ aside { line-height: 1.6; }
 .carousel-slide figure a { display: block; text-align: center; }
 
 .carousel-slide img {
-  max-width: 90% !important;
+  width: auto;
+  max-width: 85%;
   max-height: 20rem;
+  height: auto;
   display: block;
   margin: 0 auto;
   box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.3);
