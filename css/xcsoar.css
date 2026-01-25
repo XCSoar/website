@@ -152,21 +152,12 @@ ul#nav li a:hover {
 
 ul#nav li.home a:hover,
 ul#nav li.news a:hover,
-ul#nav li.docs a:hover {
-  border-bottom-color: #1A4977;
-  color: #1A4977;
-}
+ul#nav li.docs a:hover { border-bottom-color: #1A4977; color: #1A4977; }
 
 ul#nav li.download a:hover,
-ul#nav li.hardware a:hover {
-  border-bottom-color: #1B8D29;
-  color: #1B8D29;
-}
+ul#nav li.hardware a:hover { border-bottom-color: #1B8D29; color: #1B8D29; }
 
-ul#nav li.develop a:hover {
-  border-bottom-color: #B55722;
-  color: #B55722;
-}
+ul#nav li.develop a:hover { border-bottom-color: #B55722; color: #B55722; }
 
 @media (max-width: 47.9375rem) {
   #logo { text-align: center; }
