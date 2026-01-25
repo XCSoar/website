@@ -79,6 +79,14 @@
   background: rgba(0, 0, 0, 0.8);
 }
 
+.lightbox-close:focus-visible,
+.lightbox-prev:focus-visible,
+.lightbox-next:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
 .lightbox-close {
   top: 10px;
   right: 10px;

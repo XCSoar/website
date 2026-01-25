@@ -194,12 +194,7 @@
 
 ### Replace jQuery Lightbox
 **Issue**: Issue #42 already tracks this
-**Solution**:
-```html
-<!-- Replace with modern solution -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-```
+**Solution**: Implemented with custom vanilla JS lightbox (`/lib/lightbox.js` and `/css/lightbox.css`) - no external dependencies, ~6KB total. Features include keyboard navigation, error handling, and accessibility improvements.
 
 ### Upgrade Bootstrap
 **Current**: Bootstrap 2.x (custom)

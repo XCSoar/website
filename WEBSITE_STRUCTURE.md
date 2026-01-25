@@ -12,7 +12,7 @@ This is a Jekyll-based static website for XCSoar, an open-source glide computer.
 
 ## Directory Structure
 
-```
+```text
 website/
 ├── _config.yml              # Jekyll configuration
 ├── _layouts/                # Page layouts (7 layouts)
@@ -245,7 +245,7 @@ Key settings:
 
 ## Navigation Structure
 
-```
+```text
 Home
 ├── Discover
 │   ├── Features
