@@ -325,20 +325,21 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 }
 
 .carousel-slide.prev {
-  opacity: 0.3;
+  opacity: 0.2;
   transform: scale(0.85) translateX(-50px);
   z-index: 2;
+  filter: blur(2px);
 }
 
 .carousel-slide.next {
-  opacity: 0.5;
-  transform: scale(0.92) translateX(80px);
+  opacity: 0.7;
+  transform: scale(0.95) translateX(80px);
   z-index: 3;
 }
 
 .carousel-slide.next2 {
-  opacity: 0.4;
-  transform: scale(0.88) translateX(150px);
+  opacity: 0.6;
+  transform: scale(0.9) translateX(150px);
   z-index: 2;
 }
 
@@ -356,9 +357,16 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
-.carousel-slide.prev img,
+.carousel-slide.prev img {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
 .carousel-slide.next img {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-slide.next2 img {
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
 }
 
 .carousel-slide figcaption {
