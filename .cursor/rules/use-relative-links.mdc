@@ -1,0 +1,60 @@
+# Use Relative Links for Internal Navigation
+
+## Rule
+Always use root-relative paths (starting with `/`) for all internal links within the website. Never use absolute URLs (http://, https://, or protocol-relative //) for internal navigation.
+
+## Rationale
+- **Consistency**: All internal links work the same way regardless of page depth
+- **Portability**: Site works on any domain or subdomain without changes
+- **Maintainability**: Easier to update and test locally
+- **Performance**: Slightly faster (no DNS lookup needed)
+- **Security**: Avoids mixed content issues
+
+## Examples
+
+### ✅ Correct (Root-Relative)
+```html
+<a href="/discover/screenshots/">Screenshots</a>
+<a href="/imprint.html">Imprint</a>
+<a href="/download/">Download</a>
+<img src="/img/logo-blue.svg" alt="Logo">
+<link rel="stylesheet" href="/css/xcsoar.css">
+```
+
+### ❌ Incorrect (Absolute URLs)
+```html
+<a href="//xcsoar.org/imprint.html">Imprint</a>
+<a href="https://xcsoar.org/download/">Download</a>
+<a href="http://xcsoar.org/discover/">Discover</a>
+```
+
+### ❌ Incorrect (Relative Paths)
+```html
+<a href="./discover/screenshots/">Screenshots</a>
+<a href="../download/">Download</a>
+```
+
+## Exceptions
+- **External links** (to other domains) should use absolute URLs:
+  ```html
+  <a href="https://github.com/XCSoar/XCSoar/blob/master/COPYING">License</a>
+  ```
+- **CDN resources** that must be external (e.g., OpenLayers for maps):
+  ```html
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol/ol.css">
+  ```
+
+## Implementation
+- All navigation links in `_includes/header.html` use root-relative paths
+- All internal links in content pages use root-relative paths
+- All image sources use root-relative paths
+- All CSS/JS includes use root-relative paths
+- Footer links use root-relative paths
+
+## When Editing
+When adding or modifying links:
+1. Check if the link is internal (same domain) or external
+2. If internal, use root-relative path starting with `/`
+3. If external, use full `https://` URL
+4. Never use protocol-relative URLs (`//`) for internal links
+5. Never use relative paths (`./` or `../`) - use root-relative instead

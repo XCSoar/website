@@ -1,13 +1,10 @@
-{% if page.trac or page.forum %}
+{% if page.forum %}
 {% assign server_url = site.absolute_server_url %}
 {% else  %}
 {% assign server_url = site.server_url %}
 {% endif %}
 
-{% if page.trac %}
-
-<html xmlns="https://www.w3.org/1999/xhtml"
-      xmlns:py="https://genshi.edgewall.org/"
+<html
       py:strip="">
 <head py:match="head" py:attrs="select('@*')">
   ${select('*|comment()|text()')}
@@ -80,11 +77,7 @@
 {% if page.lightbox %}
 <link rel="stylesheet" href="/css/lightbox.css" >
 {% endif %}
-  {% if page.trac %}
-<link rel="stylesheet" href="/css/xcsoar-trac.css">
-{% else %}
 <link rel="stylesheet" href="/css/xcsoar-not-trac.css">
-{% endif %}
 
 
 {% if page.lightbox %}
@@ -174,9 +167,7 @@
 
 </head>
 
-{% if page.trac %}
-<body py:match="body" py:attrs="select('@*')">
-{% elsif page.forum %}
+{% if page.forum %}
 <body id="phpbb" class="section-{SCRIPT_NAME} {S_CONTENT_DIRECTION}">
 {% else %}
 <body>

@@ -79,7 +79,7 @@ website/
 │   ├── xcsoar-blue.css     # Blue theme
 │   ├── xcsoar-green.css    # Green theme
 │   ├── xcsoar-red.css      # Red theme
-│   ├── xcsoar-trac.css     # Trac theme
+│   ├── xcsoar-trac.css     # Legacy Trac theme (deprecated)
 │   └── xcsoar-forum.css    # Forum theme
 ├── img/                    # Images (21 files)
 │   ├── *.svg               # SVG icons/logos
@@ -90,7 +90,7 @@ website/
 │   ├── jquery-1.8.2.min.js # jQuery
 │   └── jquery-lightbox/    # Lightbox plugin
 ├── templates/              # Template files (3 files)
-│   └── trac.html           # Trac templates
+│   └── trac.html           # Legacy Trac templates (deprecated)
 ├── index.html              # Homepage
 ├── imprint.md              # Legal/imprint
 └── atom.xml                # RSS feed
@@ -179,8 +179,8 @@ website/
    - Minimal layout
    - Used for hardware page
 
-7. **trac.html** - Trac/issue tracker layout
-   - Special layout for issue pages
+7. **trac.html** - Legacy layout (deprecated, not used)
+   - Previously used for Trac issue tracker pages
 
 ## Color Themes
 

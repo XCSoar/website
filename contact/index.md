@@ -15,7 +15,7 @@ other XCSoar users:
 - [Forum](https://forum.xcsoar.org/)
 - [User mailing list](https://lists.sourceforge.net/lists/listinfo/xcsoar-user)
 - [Chat](irc.html) (irc.libera.chat #xcsoar)
-- [Bug tracker]({{site.trac_server_url}}) - report bugs or
+- [GitHub Issues]({{site.github_issues_url}}) - report bugs or
   request features
 
 ## Developers
