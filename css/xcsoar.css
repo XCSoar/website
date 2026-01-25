@@ -528,9 +528,23 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 /* FOOTER */
 
-footer { margin-top: 20px; color: #fff; }
-footer a { text-decoration: none; color: #fff; }
-footer a:hover { border-bottom: 1px dotted; color: #d2e0ec; }
+footer {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 0.875rem; /* 14px - consistent across all pages */
+  line-height: 1.6;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  border-bottom: 1px dotted;
+  color: #d2e0ec;
+}
+
 footer h2 {
   margin: 13px 0 16px 0;
   font-size: 0.875rem; /* 14px */
@@ -542,9 +556,16 @@ footer h2 {
 /* COPYRIGHT */
 
 .copyright {
-  font-size: 0.6875rem; /* 11px */
+  font-size: 0.875rem; /* 14px - consistent with footer */
   text-align: center;
   margin: 20px 0;
+  line-height: 1.6;
+}
+
+.copyright p {
+  font-size: 0.875rem; /* 14px - ensure paragraph inherits */
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* GLOBAL */
