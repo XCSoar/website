@@ -278,14 +278,14 @@ aside { line-height: 1.6; }
   align-items: center;
   justify-content: center;
   width: auto;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .carousel-slide figure a { display: block; text-align: center; }
 
 .carousel-slide img {
   width: auto;
-  max-width: 85%;
+  max-width: 95%;
   max-height: 20rem;
   height: auto;
   display: block;
@@ -381,7 +381,12 @@ aside { line-height: 1.6; }
     width: 100%;
     max-width: 100%;
   }
-  .carousel-slide img { max-width: 85%; max-height: 20rem; }
+  .carousel-slide img {
+    width: auto;
+    max-width: 95%;
+    max-height: 20rem;
+    height: auto;
+  }
   .carousel-slide.prev { transform: translate(calc(-50% - 1.875rem), -50%) scale(0.8); }
   .carousel-slide.next { transform: translate(calc(-50% + 3.75rem), -50%) scale(0.88); }
   .carousel-slide.next2 { transform: translate(calc(-50% + 7.5rem), -50%) scale(0.85); }
