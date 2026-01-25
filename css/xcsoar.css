@@ -162,6 +162,46 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   max-width: 400px;
 }
 
+.screenshots-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.screenshots-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.screenshots-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.screenshots-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.screenshots-container {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.screenshots-container figure {
+  flex: 0 0 auto;
+  width: 300px;
+  max-width: 300px;
+  margin: 0;
+}
+
+.screenshots-container .screenshot {
+  width: 100%;
+  height: auto;
+}
+
 .screenshot {
   padding: 6px;
 
