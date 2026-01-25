@@ -561,22 +561,24 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 footer {
   margin-top: 20px;
-  color: #fff;
-  font-size: 0.875rem; /* 14px - consistent across all pages */
-  line-height: 1.6;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
+  color: #fff !important;
+  font-size: 0.875rem !important; /* 14px - consistent across all pages, !important to override inheritance */
+  line-height: 1.6 !important;
+  font-family: "Ubuntu", sans-serif !important;
+  font-weight: 300 !important;
 }
 
 footer a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 0.875rem; /* 14px - explicit size */
+  text-decoration: none !important;
+  color: #fff !important;
+  font-size: 0.875rem !important; /* 14px - explicit size */
+  font-family: "Ubuntu", sans-serif !important;
+  font-weight: 300 !important;
 }
 
 footer a:hover {
-  border-bottom: 1px dotted;
-  color: #d2e0ec;
+  border-bottom: 1px dotted !important;
+  color: #d2e0ec !important;
 }
 
 footer h2 {
@@ -591,37 +593,48 @@ footer h2 {
 /* COPYRIGHT - Standardized across all pages */
 
 .copyright {
-  font-size: 0.875rem; /* 14px - consistent with footer */
+  font-size: 0.875rem !important; /* 14px - consistent with footer, !important to override any inheritance */
   text-align: center;
   margin: 20px 0;
-  line-height: 1.6;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  color: #fff;
+  line-height: 1.6 !important;
+  font-family: "Ubuntu", sans-serif !important;
+  font-weight: 300 !important;
+  color: #fff !important;
 }
 
 .copyright p {
-  font-size: 0.875rem; /* 14px - explicit, prevents inheritance */
-  margin: 0;
-  line-height: 1.6;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  color: #fff;
+  font-size: 0.875rem !important; /* 14px - explicit, prevents inheritance */
+  margin: 0 !important;
+  line-height: 1.6 !important;
+  font-family: "Ubuntu", sans-serif !important;
+  font-weight: 300 !important;
+  color: #fff !important;
 }
 
 .copyright strong {
-  font-weight: 400;
+  font-weight: 400 !important;
+  font-size: 0.875rem !important;
+  font-family: "Ubuntu", sans-serif !important;
 }
 
 .copyright a {
-  font-size: 0.875rem; /* 14px - explicit */
-  color: #fff;
-  text-decoration: none;
+  font-size: 0.875rem !important; /* 14px - explicit */
+  color: #fff !important;
+  text-decoration: none !important;
+  font-family: "Ubuntu", sans-serif !important;
+  font-weight: 300 !important;
 }
 
 .copyright a:hover {
-  border-bottom: 1px dotted;
-  color: #d2e0ec;
+  border-bottom: 1px dotted !important;
+  color: #d2e0ec !important;
+}
+
+.copyright span {
+  font-size: 0.875rem !important;
+  font-family: "Ubuntu", sans-serif !important;
+  font-weight: 300 !important;
+  color: #fff !important;
 }
 
 /* GLOBAL */
