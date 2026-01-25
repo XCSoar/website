@@ -287,13 +287,13 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   width: 100%;
   max-width: 100%;
   margin: 20px 0;
-  min-height: 600px; /* Ensure space for stacked images */
+  min-height: 450px; /* Ensure space for stacked images */
 }
 
 .carousel-container {
   width: 100%;
   position: relative;
-  height: 600px; /* Fixed height for stacking */
+  height: 450px; /* Fixed height for stacking */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,9 +344,9 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 }
 
 .carousel-slide img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
-  max-height: 500px;
+  max-height: 350px;
   margin: 0 auto;
   display: block;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -454,11 +454,16 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 @media (max-width: 768px) {
   .screenshot-carousel {
-    min-height: 500px;
+    min-height: 350px;
   }
   
   .carousel-container {
-    height: 500px;
+    height: 350px;
+  }
+  
+  .carousel-slide img {
+    max-width: 85%;
+    max-height: 280px;
   }
   
   .carousel-slide.prev {
