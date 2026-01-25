@@ -475,7 +475,8 @@ footer {
   line-height: 1.6 !important;
 }
 
-footer a {
+footer a,
+.copyright a {
   text-decoration: none !important;
 }
 
@@ -489,10 +490,6 @@ footer a:hover,
   text-align: center;
   margin: 1.25rem 0;
   line-height: 1.6 !important;
-}
-
-.copyright a {
-  text-decoration: none !important;
 }
 
 .shadowed {
@@ -526,8 +523,7 @@ ul {
 }
 
 .btn,
-ul.quicklinks li a,
-.copyright a { text-decoration: none; }
+ul.quicklinks li a { text-decoration: none; }
 
 ul.quicklinks {
   list-style: none;
