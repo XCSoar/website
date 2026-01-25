@@ -3,6 +3,12 @@
  ******************************************************************************/
 
 /* GLOBALS */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, ins, strike, strong, sub, sup, dt, dd, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {  margin: 0; padding: 0; border: 0; }
 ul, ol, li, dl { border: 0; }
 
@@ -289,6 +295,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   max-width: 100%;
   margin: 10px 0;
   min-height: 350px; /* Ensure space for stacked images */
+  overflow: hidden;
 }
 
 .carousel-container {
@@ -298,6 +305,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .carousel-track {
@@ -334,13 +342,13 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 .carousel-slide.next {
   opacity: 0.7;
-  transform: scale(0.95) translateX(80px);
+  transform: scale(0.95) translateX(60px);
   z-index: 3;
 }
 
 .carousel-slide.next2 {
   opacity: 0.6;
-  transform: scale(0.9) translateX(150px);
+  transform: scale(0.9) translateX(100px);
   z-index: 2;
 }
 
@@ -545,6 +553,7 @@ footer h2 {
   width: 97%;
   max-width: 1400px;
   padding: 0 20px;
+  overflow-x: hidden;
 
   -webkit-box-shadow:0px 0 20px #000000;
      -moz-box-shadow:0px 0 20px #000000;
