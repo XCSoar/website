@@ -1,0 +1,209 @@
+---
+description: Minimal code philosophy - less is more, maximize reuse
+alwaysApply: true
+---
+
+# Minimal Code, Maximum Reuse
+
+## Principle
+
+**Less code is more.** Write minimal, reusable CSS with maximum definition reuse. Consolidate duplicate properties, group selectors, and eliminate redundancy.
+
+## Rationale
+
+- **Maintainability**: Less code means fewer places to update
+- **Performance**: Smaller CSS files load faster
+- **Consistency**: Shared definitions ensure uniform styling
+- **Readability**: Consolidated code is easier to understand
+- **DRY Principle**: Don't Repeat Yourself
+
+## Implementation Guidelines
+
+### CSS Consolidation
+
+1. **Group Selectors**: Combine selectors that share properties
+   ```css
+   /* ❌ BAD - Duplicate properties */
+   h1 { font-size: 2rem; font-weight: 400; }
+   h2 { font-size: 1.75rem; font-weight: 400; }
+   
+   /* ✅ GOOD - Shared properties grouped */
+   h1, h2 { font-weight: 400; }
+   h1 { font-size: 2rem; }
+   h2 { font-size: 1.75rem; }
+   ```
+
+2. **Reuse Base Definitions**: Use base element styles, avoid subpage-specific overrides
+   ```css
+   /* ❌ BAD - Redundant subpage definitions */
+   #summary h1 { font-size: 2rem; }
+   #content h1 { font-size: 2rem; }
+   
+   /* ✅ GOOD - Single base definition */
+   h1 { font-size: 2rem; }
+   ```
+
+3. **Consolidate Repeated Values**: Group selectors with identical properties
+   ```css
+   /* ❌ BAD - Repeated properties */
+   footer { font-size: 0.875rem !important; color: #fff !important; }
+   .copyright { font-size: 0.875rem !important; color: #fff !important; }
+   
+   /* ✅ GOOD - Consolidated */
+   footer, .copyright { font-size: 0.875rem !important; color: #fff !important; }
+   ```
+
+4. **Remove Unnecessary Specificity**: Don't create separate definitions for minor differences
+   ```css
+   /* ❌ BAD - Unnecessary specificity */
+   ul.contact { list-style: none; margin: 0.625rem; }
+   ul.quicklinks { list-style: none; margin: 0.625rem; }
+   
+   /* ✅ GOOD - Use base ul styles or group if truly needed */
+   ul.quicklinks { list-style: none; margin: 0.625rem; }
+   /* ul.contact uses base ul styles */
+   ```
+
+5. **Single Font Family Definition**: Define font-family once, inherit everywhere
+   ```css
+   /* ❌ BAD - Repeated font-family */
+   html { font-family: "Ubuntu", sans-serif; }
+   h1 { font-family: "Ubuntu", sans-serif; }
+   footer { font-family: "Ubuntu", sans-serif !important; }
+   
+   /* ✅ GOOD - Define once */
+   html { font-family: "Ubuntu", sans-serif; }
+   /* All elements inherit */
+   ```
+
+### Code Minimization
+
+1. **Remove Redundant Comments**: Don't comment obvious things
+   ```css
+   /* ❌ BAD - Obvious comment */
+   h1 { font-size: 2rem; /* 32px */ }
+   
+   /* ✅ GOOD - No redundant comment */
+   h1 { font-size: 2rem; }
+   ```
+
+2. **Eliminate Duplicate Rules**: Consolidate identical definitions
+   ```css
+   /* ❌ BAD - Duplicate rules */
+   .copyright a { text-decoration: none !important; }
+   /* ... later in file ... */
+   .copyright a { text-decoration: none !important; }
+   
+   /* ✅ GOOD - Single definition */
+   .copyright a { text-decoration: none !important; }
+   ```
+
+3. **Use Shorthand Properties**: Combine related properties
+   ```css
+   /* ❌ BAD - Verbose */
+   margin-top: 1.25rem;
+   margin-bottom: 1.25rem;
+   
+   /* ✅ GOOD - Shorthand */
+   margin: 1.25rem 0;
+   ```
+
+4. **Remove Unused Styles**: Delete CSS that isn't used
+   ```css
+   /* ❌ BAD - Unused style */
+   .old-class { /* not used anywhere */ }
+   
+   /* ✅ GOOD - Removed */
+   ```
+
+### Formatting Reuse
+
+1. **Consolidate Similar Components**: Group related styles
+   ```css
+   /* ❌ BAD - Separate definitions */
+   .carousel-container { width: 100%; position: relative; }
+   .screenshot-carousel { width: 100%; position: relative; }
+   
+   /* ✅ GOOD - Shared properties */
+   .carousel-container,
+   .screenshot-carousel { width: 100%; position: relative; }
+   ```
+
+2. **Reuse Common Patterns**: Extract repeated patterns
+   ```css
+   /* ❌ BAD - Repeated pattern */
+   .btn { text-decoration: none; }
+   ul.quicklinks li a { text-decoration: none; }
+   .copyright a { text-decoration: none; }
+   
+   /* ✅ GOOD - Grouped */
+   .btn,
+   ul.quicklinks li a,
+   .copyright a { text-decoration: none; }
+   ```
+
+## When to Create Separate Definitions
+
+Only create separate definitions when:
+- **Significant visual difference** that can't be achieved with base styles
+- **Layout-specific needs** (e.g., carousel positioning)
+- **Component-specific behavior** (e.g., hover states for navigation)
+
+## Examples
+
+### ✅ GOOD - Maximum Reuse
+```css
+h1, h2 {
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 1.25rem 0 0.9375rem 0;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+
+footer,
+footer a,
+.copyright,
+.copyright a {
+  font-size: 0.875rem !important;
+  font-weight: 300 !important;
+  color: #fff !important;
+}
+```
+
+### ❌ BAD - Excessive Duplication
+```css
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 1.25rem 0 0.9375rem 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 1.25rem 0 0.9375rem 0;
+}
+
+footer { font-size: 0.875rem !important; color: #fff !important; }
+.copyright { font-size: 0.875rem !important; color: #fff !important; }
+```
+
+## Checklist
+
+When writing or modifying CSS:
+- [ ] Are there duplicate properties that can be grouped?
+- [ ] Can subpage-specific definitions be removed in favor of base styles?
+- [ ] Are there repeated values that can be consolidated?
+- [ ] Can similar components share common properties?
+- [ ] Is the font-family defined only once?
+- [ ] Are there redundant comments that can be removed?
+- [ ] Can shorthand properties be used?
+- [ ] Are there unused styles that can be deleted?
+
+## Goal
+
+**Aim for the smallest possible CSS file that maintains all functionality.** Every line should serve a purpose, and every property should be reused wherever possible.
