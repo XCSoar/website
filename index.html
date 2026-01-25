@@ -28,12 +28,8 @@ lightbox: true
         <a href="./discover/" title="Learn more about XCSoar">Learn more...</a>
       </p>
     </div>
-  </div>
-</section>
 
-<hr>
-
-  <aside id="aside" class="col-md-4 float-end">
+    <aside id="aside" class="col-md-4">
       <a href="./download/" class="btn btn-success btn-lg w-100">
       Download XCSoar
     </a>
@@ -105,40 +101,11 @@ lightbox: true
     </div>
 
     <hr>
-  </div>
-
-
-      {% for post in site.posts limit: 1 %}
-      <article class="news-item">
-        <h3>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3>
-        <p>
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:'%e. %b %Y' }}</time>{% if post.author %} by {{ post.author }}{% endif %}</small>
-        </p>
-        <div class="news-content">
-          {{ post.content }}
-        </div>
-      </article>
-      {% endfor %}
-
-      {% for post in site.posts limit: 5 offset: 1 %}
-      <article class="news-item">
-        <h3>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3>
-        <p>
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:'%e. %b %Y' }}</time></small>
-        </p>
-      </article>
-      {% endfor %}
-
-      <p>
-        <a href="./discover/news.html" title="See previous news posts">Previous news...</a>
-      </p>
-    </div>
+    </aside>
   </div>
 </section>
+
+<hr>
 
 <section id="screenshots">
   <div class="row">
@@ -193,3 +160,34 @@ lightbox: true
   <div class="row">
     <div class="col-md-12">
       <h2>News</h2>
+      {% for post in site.posts limit: 1 %}
+      <article class="news-item">
+        <h3>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        <p>
+          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:'%e. %b %Y' }}</time>{% if post.author %} by {{ post.author }}{% endif %}</small>
+        </p>
+        <div class="news-content">
+          {{ post.content }}
+        </div>
+      </article>
+      {% endfor %}
+
+      {% for post in site.posts limit: 5 offset: 1 %}
+      <article class="news-item">
+        <h3>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        <p>
+          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:'%e. %b %Y' }}</time></small>
+        </p>
+      </article>
+      {% endfor %}
+
+      <p>
+        <a href="./discover/news.html" title="See previous news posts">Previous news...</a>
+      </p>
+    </div>
+  </div>
+</section>
