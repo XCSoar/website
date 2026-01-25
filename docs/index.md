@@ -30,7 +30,7 @@ Protocol documentation for various manufacturers' devices supported by XCSoar.
 
 - [Cambridge CAI302 Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/CAI302) - Protocol implementation and documentation
 - [FLARM Protocol](https://flarm.com/support/downloads/) - FLARM device protocol documentation
-- [LXNAV Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/LX) - LXNAV device protocol implementation
+- [LXNAV Protocol](https://downloads.lxnavigation.com/details.php?id=17) - LX navigation communication protocols
 - [Borgelt Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/Borgelt) - Borgelt device protocol implementation
 - [IMI ERIXX Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/IMI) - IMI ERIXX protocol implementation
 - [EW Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/EW) - EW device protocol implementation
