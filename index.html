@@ -6,21 +6,32 @@ tagline: true
 lightbox: true
 ---
 
-<div class="row" id="summary">
-  <div class="col-md-8">
-    <p>
-      XCSoar is an open-source flight navigation software designed for gliders and
-      other sailplanes. It provides features like a moving map, task planning,
-      airspace information, and thermal detection. The software helps pilots with
-      route optimization and offers real-time data on altitude, speed, and location.
-      It can be used on various devices, including tablets and smartphones, making it
-      versatile for both recreational and competitive flying.
-    </p>
-    <p>
-      <a href="./discover/" title="Learn more about XCSoar">Learn more...</a>
-    </p>
-    <hr>
+<section id="about">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>About XCSoar</h2>
+      <p>
+        XCSoar is a tactical glide computer originally developed for the Pocket PC
+        platform. In 2005, the originally commercial software was given to the
+        open-source community for further development and has constantly been
+        improved since. It is now a multi-platform application that currently
+        runs on Windows, Windows Mobile, Unix and even Android devices.
+      </p>
+      <p>
+        Today XCSoar has almost everything you would need as a glider pilot... and more!
+        Due to our many active users, we are always getting new ideas of features, that
+        one might want to have. If you feel that something is missing or you think you
+        have found a bug, please do not hesitate and follow the guide
+        <a href="/develop/new_ticket.html">here</a> to write a feature request or bug report.
+      </p>
+      <p>
+        <a href="./discover/" title="Learn more about XCSoar">Learn more...</a>
+      </p>
+    </div>
   </div>
+</section>
+
+<hr>
 
   <aside id="aside" class="col-md-4 float-end">
       <a href="./download/" class="btn btn-success btn-lg w-100">
@@ -96,51 +107,44 @@ lightbox: true
     <hr>
   </div>
 
-  <div class="col-md-8">
-    <p>
-      Try
-      <a href="https://skylines.aero/" style="text-decoration:none;font-weight:bold" rel="noopener noreferrer">
-        <img class="logo"
-             src="https://www.skylines.aero/android-chrome-192x192.png" alt="skylines.aero"
-             width="24" height="24">
-        <span style="color:#008EDA">Sky</span><span style="color:black">Lines</span></a>, our live tracking and flight sharing platform!
-    </p>
-    <hr>
-  </div>
 
-  {% for post in site.posts limit: 1 %}
-  <article class="col-md-8 news-item">
-    <h2>
-      <a href="{{ post.url }}">{{ post.title }}</a><br>
-      <small>(<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:'%e. %b %Y' }}</time>{% if post.author %} by {{ post.author }}{% endif %})</small>
-    </h2>
+      {% for post in site.posts limit: 1 %}
+      <article class="news-item">
+        <h3>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        <p>
+          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:'%e. %b %Y' }}</time>{% if post.author %} by {{ post.author }}{% endif %}</small>
+        </p>
+        <div class="news-content">
+          {{ post.content }}
+        </div>
+      </article>
+      {% endfor %}
 
-    <div class="news-content">
-      {{ post.content }}
+      {% for post in site.posts limit: 5 offset: 1 %}
+      <article class="news-item">
+        <h3>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        <p>
+          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:'%e. %b %Y' }}</time></small>
+        </p>
+      </article>
+      {% endfor %}
+
+      <p>
+        <a href="./discover/news.html" title="See previous news posts">Previous news...</a>
+      </p>
     </div>
-    <hr>
-  </article>
-  {% endfor %}
+  </div>
+</section>
 
-  {% for post in site.posts limit: 5 offset: 1 %}
-  <article class="col-md-8 news-item">
-    <h2>
-      <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:'%e. %b %Y' }}</time>:</small>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h2>
-  </article>
-  {% endfor %}
-
-  <div class="col-md-8">
-    <h3>
-      <a href="./discover/news.html" title="See previous news posts">Previous news...</a>
-    </h3>
-
-{% include section_change.html %}
-
-    <div id="screenshots">
+<section id="screenshots">
+  <div class="row">
+    <div class="col-md-12">
       <h2>Screenshots</h2>
-      <h3>Highlights of XCSoar's interface</h3>
+      <p>Highlights of XCSoar's interface</p>
       <div class="row">
         <div class="col-md-4">
           <figure>
@@ -177,8 +181,15 @@ lightbox: true
         </div>
       </div>
       <p>
-        <a href="./discover/screenshots/">More...</a>
+        <a href="./discover/screenshots/">More screenshots...</a>
       </p>
     </div>
   </div>
-</div>
+</section>
+
+<hr>
+
+<section id="news">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>News</h2>
