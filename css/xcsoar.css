@@ -184,8 +184,8 @@ footer h2 { margin: 13px 0 16px 0; font-size: 14px; font-weight: normal; letter-
 
 .shadowed {
   background: #fff;
-  margin: 1% auto 0 auto;
-  width: 98%;
+  margin: 1% 1% 0 2%;
+  width: 97%;
   max-width: 1230px;
 
   -webkit-box-shadow:0px 0 20px #000000;
