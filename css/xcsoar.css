@@ -72,6 +72,7 @@ ul, ol { padding-left: 1.25rem; }
   border-top: 1px dotted #9f9c99;
   border-bottom: 1px dotted #9f9c99;
   padding: 0.9375rem 0;
+  margin-bottom: 0;
   font-size: 2rem;
   font-weight: 400;
 }
