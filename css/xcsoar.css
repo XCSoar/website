@@ -81,7 +81,7 @@ small {
  PRIMARY SECTION
  ******************************************************************************/
 #primary {
-  padding: 20px 0 0 0;
+  padding: 10px 0 0 0;
 }
 
 #logo {
@@ -97,16 +97,16 @@ small {
 }
 
 .shadowed main {
-  padding: 0 0 20px 0;
+  padding: 0 0 10px 0;
 }
 
 /* HEADER */
 #title h1 {
   border-top: 1px dotted #9f9c99;
   border-bottom: 1px dotted #9f9c99;
-  padding: 20px 0;
-  margin: 20px 0 10px;
-  font-size: 2.375rem; /* 38px */
+  padding: 15px 0;
+  margin: 10px 0 5px;
+  font-size: 2rem; /* 32px - reduced from 38px */
   font-weight: 400;
 }
 
@@ -287,14 +287,14 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   position: relative;
   width: 100%;
   max-width: 100%;
-  margin: 20px 0;
-  min-height: 450px; /* Ensure space for stacked images */
+  margin: 10px 0;
+  min-height: 350px; /* Ensure space for stacked images */
 }
 
 .carousel-container {
   width: 100%;
   position: relative;
-  height: 450px; /* Fixed height for stacking */
+  height: 350px; /* Fixed height for stacking */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -347,7 +347,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 .carousel-slide img {
   max-width: 70%;
   height: auto;
-  max-height: 350px;
+  max-height: 280px;
   margin: 0 auto;
   display: block;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -371,11 +371,13 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 }
 
 .carousel-slide figcaption {
-  margin-top: 15px;
-  margin-bottom: 70px;
+  margin-top: 10px;
+  margin-bottom: 50px;
   padding: 0 20px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.4;
 }
 
 .carousel-slide.active figcaption {
@@ -568,6 +570,21 @@ ul {
 
 #about {
   padding-right: 30px;
+}
+
+#about p {
+  margin-bottom: 0.75rem;
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.5;
+}
+
+#about ul {
+  margin: 10px 0;
+}
+
+#about ul li {
+  margin-bottom: 5px;
+  font-size: 0.9375rem; /* 15px */
 }
 
 #about ul {
