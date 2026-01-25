@@ -5,7 +5,7 @@ author: folken
 layout: post
 ---
 
-Please note that there are several CRICITAL issues addressed in this release. Please up-/sidegrade.
+Please note that there are several CRITICAL issues addressed in this release. Please up-/sidegrade.
 
 Android users: Due to new cryptographic signatures, you will need to uninstall and
 remove all data. Install either from F-Droid or via APK File download.
