@@ -4,12 +4,7 @@
 {% assign server_url = site.server_url %}
 {% endif %}
 
-<html
-      py:strip="">
-<head py:match="head" py:attrs="select('@*')">
-  ${select('*|comment()|text()')}
-
-{% elsif page.forum %}
+{% if page.forum %}
 
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}" xml:lang="{S_USER_LANG}">

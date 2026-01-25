@@ -291,6 +291,51 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
   text-transform: uppercase;
   color: #878380;
 }
+/* Screenshot gallery - using Bootstrap grid */
+#screenshots .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+#screenshots .col-md-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+#screenshots figure {
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+#screenshots figure a {
+  display: block;
+  width: 100%;
+}
+
+#screenshots figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+#screenshots figure figcaption {
+  margin-top: 10px;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+}
+
+#screenshots figure figcaption strong {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Legacy list-based styles (for old pages, if any) */
 #screenshots ul { list-style: none; }
 #screenshots ul li { float: left; width: 296px; padding: 5px 10px; margin: 0 5px 20px 0; background: url(../img/thumbnail-backdrop.png) 0 0 no-repeat; }
 #screenshots ul li.last-child { margin-right: 0; }
@@ -310,14 +355,23 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 }
 
 #screenshots p {
-  padding: 10px;
-  font-size: 0.6875rem; /* 11px */
-  line-height: 13px;
-  color: #6a635f;
+  margin-top: 20px;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.6;
 }
 
-#screenshots .col-md-4 {
-  max-width: 400px;
+@media (max-width: 991px) {
+  #screenshots .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  #screenshots .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .screenshot-carousel {
