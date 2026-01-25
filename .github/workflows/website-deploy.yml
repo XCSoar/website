@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 4.0.1
+          ruby-version: 3.4.8
           bundler-cache: true
       - name: install dependencies
         run: |
