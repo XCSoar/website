@@ -202,6 +202,7 @@ ul#nav li.develop a:hover { border-bottom: 2px solid #B55722; color: #B55722; }
 
 .carousel-slide figcaption {
   margin-top: 15px;
+  margin-bottom: 50px;
   padding: 0 20px;
 }
 
