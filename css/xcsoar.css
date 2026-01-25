@@ -287,7 +287,6 @@ aside { line-height: 1.6; }
 
 .carousel-slide img {
   width: auto;
-  max-width: 100%;
   max-height: 20rem;
   height: auto;
   display: block;
@@ -385,7 +384,6 @@ aside { line-height: 1.6; }
   }
   .carousel-slide img {
     width: auto;
-    max-width: 95%;
     max-height: 20rem;
     height: auto;
   }
