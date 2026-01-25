@@ -2,7 +2,7 @@
 layout: discover
 color: blue
 title: Manual
-menu: discover
+menu: docs
 ---
 Some manual topics may be missing or outdated. If you find errors, open a [GitHub issue]({{site.github_issues_url}}) or [contribute on GitHub](https://github.com/XCSoar/XCSoar) a fix.
 
