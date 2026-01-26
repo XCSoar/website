@@ -28,9 +28,10 @@ Documentation for developers contributing to XCSoar.
 
 Protocol documentation for various manufacturers' devices supported by XCSoar.
 
-- [Cambridge CAI302 Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/CAI302) - Protocol implementation and documentation
-- [FLARM Protocol](https://flarm.com/support/downloads/) - FLARM device protocol documentation
-- [LX navigation Protocol](https://downloads.lxnavigation.com/details.php?id=17) - LX navigation communication protocols
+- [Cambridge CAI302 Protocol](https://cambridge-aero.com/300series.htm) - 302 Dataport User's Guide (PDF available from Cambridge Aero)
+- [FLARM Data Port Interface ICD (FTD-012)](https://flarm.com/wp-content/uploads/2025/09/FTD-012-Data-Port-Interface-Control-Document-ICD-7.22.pdf) - FLARM protocol specification (PDF)
+- [FLARM Downloads](https://flarm.com/support/downloads/) - Additional FLARM documentation
+- [LX navigation Protocol](https://downloads.lxnavigation.com/details.php?id=17) - LX navigation communication protocols (PDF)
 - [LXNAV Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/LXNAV) - LXNAV device protocol implementation
 - [Borgelt Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/Borgelt) - Borgelt device protocol implementation
 - [IMI ERIXX Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/IMI) - IMI ERIXX protocol implementation
