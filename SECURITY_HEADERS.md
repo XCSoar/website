@@ -22,7 +22,7 @@ Add to `.htaccess` or Apache config:
 
 ```apache
 # Content Security Policy
-Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://maps.google.com https://www.google.com https://download.xcsoar.org; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://download.xcsoar.org https://maps.google.com https://www.google.com https://skylines.aero; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://maps.google.com https://www.google.com https://download.xcsoar.org; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://download.xcsoar.org https://maps.google.com https://www.google.com https://skylines.aero; frame-src https://maps.google.com https://www.google.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';"
 
 # Prevent MIME type sniffing
 Header set X-Content-Type-Options "nosniff"
@@ -48,7 +48,7 @@ Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 Add to nginx config:
 
 ```nginx
-add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://maps.google.com https://www.google.com https://download.xcsoar.org; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://download.xcsoar.org https://maps.google.com https://www.google.com https://skylines.aero; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self';" always;
+add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://maps.google.com https://www.google.com https://download.xcsoar.org; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://download.xcsoar.org https://maps.google.com https://www.google.com https://skylines.aero; frame-src https://maps.google.com https://www.google.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';" always;
 add_header X-Content-Type-Options "nosniff" always;
 add_header X-Frame-Options "SAMEORIGIN" always;
 add_header X-XSS-Protection "1; mode=block" always;
@@ -62,7 +62,8 @@ add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; prelo
 The CSP allows:
 
 - **default-src 'self'**: Only load resources from same origin by default
-- **script-src**: Allows scripts from self, inline (for lightbox), and trusted CDNs
+- **script-src**: Allows scripts from self, inline (for lightbox), eval (for maps config), and trusted CDNs
+- **worker-src**: Allows web workers from self and blob URLs (for OpenLayers)
 - **style-src**: Allows styles from self, inline, and CDNs
 - **img-src**: Allows images from self, data URIs, and any HTTPS source
 - **font-src**: Allows fonts from self and data URIs
