@@ -24,11 +24,12 @@ but is hidden).  Reboot the Kobo.
 
 ## XCSoar {{ site.xcsoar_testing_version }} for desktop computers
 
-- {:.list-item-windows}[XCSoar {{ site.xcsoar_testing_version }} for Windows]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/PC/)
-- {:.list-item-windows}[XCSoar {{ site.xcsoar_testing_version }} for  Windows (64 bit)]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/WIN64/)
+- {:.list-item-windows}[XCSoar {{ site.xcsoar_testing_version }} on Windows]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/PC/)
+- {:.list-item-windows}[XCSoar {{ site.xcsoar_testing_version }} on Windows (64 bit)]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/WIN64/)
 - {:.list-item-debian}[XCSoar {{ site.xcsoar_testing_version }} for Debian Linux]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/DEBIAN/)
 
-## XCSoar {{ site.xcsoar_stable_version }} for single-board computers
+## XCSoar {{ site.xcsoar_testing_version }} for single-board computers
 
-- {:.list-item-linux}[XCSoar {{ site.xcsoar_testing_version }} for Raspberry Pi]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/PI/)
-- {:.list-item-linux}[XCSoar {{ site.xcsoar_testing_version }} for Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/CUBIE/)
+- {:.list-item-linux}[XCSoar {{ site.xcsoar_testing_version }} on Raspberry Pi]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/PI/)
+- {:.list-item-linux}[XCSoar {{ site.xcsoar_testing_version }} on Raspberry Pi 4]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/PI4/)
+- {:.list-item-linux}[XCSoar {{ site.xcsoar_testing_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_testing_version }}/CUBIE/)
