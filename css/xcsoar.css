@@ -251,7 +251,8 @@ li.list-item-android {
   list-style-image: url('/img/icon-android.png');
 }
 
-li.list-item-debian {
+li.list-item-debian,
+li.list-item-unix {
   list-style-image: url('/img/icon-debian.png');
 }
 

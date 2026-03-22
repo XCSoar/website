@@ -8,9 +8,14 @@ xcsoar_old_version: 7.43
 server_url: ''
 absolute_server_url: '//xcsoar.org'
 download_server_url: 'https://download.xcsoar.org/releases'
+# Release tree folder for desktop Linux/Unix packages (7.44+ uses UNIX/; older stables used DEBIAN/)
+xcsoar_linux_download_subdir: UNIX
+xcsoar_old_linux_download_subdir: DEBIAN
 trac_server_url: 'https://github.com/XCSoar/XCSoar/issues'
 mapgen_url: 'https://mapgen.xcsoar.org/'
 download_fdroid_url: 'https://f-droid.org/packages/org.xcsoar/'
+download_play_store_url: 'https://play.google.com/store/apps/details?id=org.xcsoar.play'
+download_app_store_url: 'https://apps.apple.com/app/xcsoar/id6741046464'
 
 plugins:
   - jekyll/minibundle

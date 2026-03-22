@@ -15,11 +15,11 @@ upgrades, broad modernization, and a long list of bug fixes across platforms.
 - [Release directory (7.44)]({{ site.download_server_url }}/7.44/)
 - [GitHub release v7.44](https://github.com/XCSoar/XCSoar/releases/tag/v7.44)
 - [Full changelog (NEWS.txt on GitHub, v7.44)](https://github.com/XCSoar/XCSoar/blob/v7.44/NEWS.txt)
-- Android (Google Play): [org.xcsoar.play](https://play.google.com/store/apps/details?id=org.xcsoar.play)
-- Android (F-Droid): [org.xcsoar](https://f-droid.org/packages/org.xcsoar/)
-- iOS (App Store): [XCSoar](https://apps.apple.com/app/xcsoar/id6741046464)
+- Android (Google Play): [org.xcsoar.play]({{ site.download_play_store_url }})
+- Android (F-Droid): [org.xcsoar]({{ site.download_fdroid_url }})
+- iOS (App Store): [XCSoar]({{ site.download_app_store_url }})
 - Windows (WIN64): [XCSoar 7.44 for Windows (64 bit)]({{ site.download_server_url }}/7.44/WIN64/)
-- Linux (Debian): [XCSoar 7.44 on Debian]({{ site.download_server_url }}/7.44/DEBIAN/)
+- Unix / Linux: [XCSoar 7.44 on Unix / Linux]({{ site.download_server_url }}/7.44/UNIX/)
 
 ## Major contributors
 

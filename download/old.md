@@ -10,7 +10,13 @@ version: old
 
 The Android version of XCSoar {{ site.xcsoar_old_version }} runs on all phones and tablets with Android 1.6 or newer.
 
-- {:.list-item-android}[XCSoar {{ site.xcsoar_old_version }} on Android]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/ANDROID/)
+- {:.list-item-android}[XCSoar {{ site.xcsoar_old_version }} on Android (APK)]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/ANDROID/)
+- {:.list-item-android}[XCSoar on F-Droid]({{ site.download_fdroid_url }})
+- {:.list-item-android}[XCSoar on Google Play]({{ site.download_play_store_url }})
+
+## XCSoar on iOS
+
+- {:.list-item-mac}[XCSoar on the App Store]({{ site.download_app_store_url }})
 
 ## XCSoar {{ site.xcsoar_old_version }} on Kobo Mini/Touch/Glo
 
@@ -25,7 +31,7 @@ hidden).  Reboot the Kobo.
 
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_old_version }} on Windows]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/PC/)
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_old_version }} on Windows (64 bit)]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/WIN64/)
-- {:.list-item-debian}[XCSoar {{ site.xcsoar_old_version }} on Debian Linux]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/DEBIAN/)
+- {:.list-item-debian}[XCSoar {{ site.xcsoar_old_version }} on Debian Linux]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/{{ site.xcsoar_old_linux_download_subdir }}/)
 
 ## XCSoar {{ site.xcsoar_old_version }} on single-board computers
 

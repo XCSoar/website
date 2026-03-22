@@ -11,7 +11,14 @@ version: stable
 The Android version of XCSoar {{ site.xcsoar_stable_version }} runs on phones and tablets with Android 6 or newer.
 
 - {:.list-item-android}[XCSoar {{ site.xcsoar_stable_version }} on F-Droid]({{ site.download_fdroid_url }})
-- {:.list-item-android}[XCSoar {{ site.xcsoar_stable_version }} for Android]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/ANDROID/)
+- {:.list-item-android}[XCSoar {{ site.xcsoar_stable_version }} on Google Play]({{ site.download_play_store_url }})
+- {:.list-item-android}[XCSoar {{ site.xcsoar_stable_version }} for Android (APK)]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/ANDROID/)
+
+## XCSoar {{ site.xcsoar_stable_version }} for iOS
+
+XCSoar {{ site.xcsoar_stable_version }} for iPhone and iPad is available on the App Store.
+
+- {:.list-item-mac}[XCSoar on the App Store]({{ site.download_app_store_url }})
 
 ## XCSoar {{ site.xcsoar_stable_version }} for Kobo
 
@@ -27,9 +34,9 @@ but is hidden).  Reboot the Kobo.
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_stable_version }} on Windows]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PC/)
 - {:.list-item-windows}[XCSoar {{ site.xcsoar_stable_version }} on Windows (64 bit)]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN64/)
 
-## XCSoar {{ site.xcsoar_stable_version }} for Linux Desktop computers
+## XCSoar {{ site.xcsoar_stable_version }} for Unix / Linux desktop
 
-- {:.list-item-debian}[XCSoar {{ site.xcsoar_stable_version }} on Debian Linux]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/DEBIAN/)
+- {:.list-item-unix}[XCSoar {{ site.xcsoar_stable_version }} on Unix / Linux]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/{{ site.xcsoar_linux_download_subdir }}/)
 
 ## XCSoar {{ site.xcsoar_stable_version }} for single-board computers
 
