@@ -1,0 +1,12 @@
+{
+  "ignoreFiles": ["lib/**/*"],
+  "rules": {
+    "color-no-invalid-hex": true,
+    "declaration-block-no-duplicate-properties": true,
+    "function-calc-no-unspaced-operator": true,
+    "keyframe-declaration-no-important": true,
+    "property-no-unknown": true,
+    "string-no-newline": true,
+    "unit-no-unknown": true
+  }
+}

@@ -26,7 +26,7 @@ alwaysApply: true
    /* ❌ BAD - Duplicate properties */
    h1 { font-size: 2rem; font-weight: 400; }
    h2 { font-size: 1.75rem; font-weight: 400; }
-   
+
    /* ✅ GOOD - Shared properties grouped */
    h1, h2 { font-weight: 400; }
    h1 { font-size: 2rem; }
@@ -38,7 +38,7 @@ alwaysApply: true
    /* ❌ BAD - Redundant subpage definitions */
    #summary h1 { font-size: 2rem; }
    #content h1 { font-size: 2rem; }
-   
+
    /* ✅ GOOD - Single base definition */
    h1 { font-size: 2rem; }
    ```
@@ -48,7 +48,7 @@ alwaysApply: true
    /* ❌ BAD - Repeated properties */
    footer { font-size: 0.875rem !important; color: #fff !important; }
    .copyright { font-size: 0.875rem !important; color: #fff !important; }
-   
+
    /* ✅ GOOD - Consolidated */
    footer, .copyright { font-size: 0.875rem !important; color: #fff !important; }
    ```
@@ -58,7 +58,7 @@ alwaysApply: true
    /* ❌ BAD - Unnecessary specificity */
    ul.contact { list-style: none; margin: 0.625rem; }
    ul.quicklinks { list-style: none; margin: 0.625rem; }
-   
+
    /* ✅ GOOD - Use base ul styles or group if truly needed */
    ul.quicklinks { list-style: none; margin: 0.625rem; }
    /* ul.contact uses base ul styles */
@@ -70,7 +70,7 @@ alwaysApply: true
    html { font-family: "Ubuntu", sans-serif; }
    h1 { font-family: "Ubuntu", sans-serif; }
    footer { font-family: "Ubuntu", sans-serif !important; }
-   
+
    /* ✅ GOOD - Define once */
    html { font-family: "Ubuntu", sans-serif; }
    /* All elements inherit */
@@ -82,7 +82,7 @@ alwaysApply: true
    ```css
    /* ❌ BAD - Obvious comment */
    h1 { font-size: 2rem; /* 32px */ }
-   
+
    /* ✅ GOOD - No redundant comment */
    h1 { font-size: 2rem; }
    ```
@@ -93,7 +93,7 @@ alwaysApply: true
    .copyright a { text-decoration: none !important; }
    /* ... later in file ... */
    .copyright a { text-decoration: none !important; }
-   
+
    /* ✅ GOOD - Single definition */
    .copyright a { text-decoration: none !important; }
    ```
@@ -103,7 +103,7 @@ alwaysApply: true
    /* ❌ BAD - Verbose */
    margin-top: 1.25rem;
    margin-bottom: 1.25rem;
-   
+
    /* ✅ GOOD - Shorthand */
    margin: 1.25rem 0;
    ```
@@ -112,7 +112,7 @@ alwaysApply: true
    ```css
    /* ❌ BAD - Unused style */
    .old-class { /* not used anywhere */ }
-   
+
    /* ✅ GOOD - Removed */
    ```
 
@@ -123,7 +123,7 @@ alwaysApply: true
    /* ❌ BAD - Separate definitions */
    .carousel-container { width: 100%; position: relative; }
    .screenshot-carousel { width: 100%; position: relative; }
-   
+
    /* ✅ GOOD - Shared properties */
    .carousel-container,
    .screenshot-carousel { width: 100%; position: relative; }
@@ -135,7 +135,7 @@ alwaysApply: true
    .btn { text-decoration: none; }
    ul.quicklinks li a { text-decoration: none; }
    .copyright a { text-decoration: none; }
-   
+
    /* ✅ GOOD - Grouped */
    .btn,
    ul.quicklinks li a,

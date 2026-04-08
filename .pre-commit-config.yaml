@@ -1,20 +1,57 @@
 ---
+# https://pre-commit.com — run: pre-commit install
+default_install_hook_types: [pre-commit]
+exclude: ^(_site/|\.jekyll-cache/)
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
-      - id: check-yaml
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-      - id: mixed-line-ending
+      - id: check-added-large-files
+        args: [--maxkb=1024]
       - id: check-case-conflict
       - id: check-executables-have-shebangs
       - id: check-json
-      - id: check-xml
-      - id: pretty-format-json
-        args:
-          - --autofix
+      - id: check-merge-conflict
       - id: check-symlinks
+      - id: check-xml
+      - id: check-yaml
+        args: [--unsafe]
+      - id: detect-private-key
+      - id: end-of-file-fixer
+        exclude: ^lib/
       - id: fix-byte-order-marker
-      - id: requirements-txt-fixer
-      - id: sort-simple-yaml
+      - id: mixed-line-ending
+        exclude: ^lib/
+      - id: trailing-whitespace
+        exclude: ^lib/
+      - id: pretty-format-json
+        args: [--autofix]
+        exclude: ^\.vscode/
+
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.37.1
+    hooks:
+      - id: yamllint
+        args:
+          - -d
+          - "{extends: relaxed, rules: {line-length: {max: 200}, document-start: disable}}"
+
+  - repo: https://github.com/djlint/djLint
+    rev: v1.36.4
+    hooks:
+      - id: djlint
+        args: [--lint]
+        files: \.html$
+        exclude: ^(lib/|_site/|\.jekyll-cache/)
+
+  - repo: local
+    hooks:
+      - id: stylelint
+        name: stylelint (site CSS)
+        entry: stylelint
+        language: node
+        additional_dependencies:
+          - stylelint@16.11.0
+        files: ^css/.*\.css$
+        args: [--config, .stylelintrc.json, --allow-empty-input]

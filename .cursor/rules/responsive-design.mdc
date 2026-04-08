@@ -25,7 +25,7 @@ alwaysApply: true
    ```css
    /* ❌ BAD - Fixed width */
    .container { width: 1200px; }
-   
+
    /* ✅ GOOD - Flexible width */
    .container { max-width: 87.5rem; width: 97%; }
    ```
@@ -37,7 +37,7 @@ alwaysApply: true
      display: flex;
      flex-wrap: wrap;
    }
-   
+
    .col-md-4 {
      flex: 0 0 33.333333%;
      max-width: 33.333333%;
@@ -53,7 +53,7 @@ alwaysApply: true
        max-width: 50%;
      }
    }
-   
+
    @media (max-width: 47.9375rem) {
      .col-md-4 {
        flex: 0 0 100%;
@@ -72,7 +72,7 @@ alwaysApply: true
        float: none;
        clear: both;
      }
-     
+
      ul#nav li {
        width: 33%;
        text-align: center;
@@ -87,7 +87,7 @@ alwaysApply: true
      width: 3.125rem;
      height: 3.125rem;
    }
-   
+
    @media (max-width: 48rem) {
      .carousel-btn {
        width: 2.5rem;
@@ -117,7 +117,7 @@ alwaysApply: true
    .carousel-slide img {
      max-width: 70%;
    }
-   
+
    @media (max-width: 48rem) {
      .carousel-slide img {
        max-width: 85%;
@@ -165,7 +165,7 @@ Use consistent breakpoints:
    ```css
    /* Base styles for mobile */
    .container { padding: 0.625rem; }
-   
+
    /* Enhance for desktop */
    @media (min-width: 48rem) {
      .container { padding: 1.25rem; }
@@ -176,7 +176,7 @@ Use consistent breakpoints:
    ```css
    .desktop-only { display: block; }
    .mobile-only { display: none; }
-   
+
    @media (max-width: 47.9375rem) {
      .desktop-only { display: none; }
      .mobile-only { display: block; }
@@ -189,7 +189,7 @@ Use consistent breakpoints:
      display: flex;
      flex-direction: row;
    }
-   
+
    @media (max-width: 47.9375rem) {
      .row {
        flex-direction: column;
@@ -211,7 +211,7 @@ ul#nav {
     float: none;
     clear: both;
   }
-  
+
   ul#nav li {
     width: 33%;
     text-align: center;
