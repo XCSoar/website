@@ -1,0 +1,18 @@
+---
+layout: discover
+color: blue
+title: News archive
+menu: news
+---
+<p class="news-archive__back"><a href="/discover/news.html">← Latest news</a></p>
+
+<p class="news-archive__intro">Newest first.</p>
+
+<ul class="news-archive-list">
+  {% for post in site.posts %}
+  <li class="news-archive-list__item">
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <span class="news-archive-list__meta"> — {{ post.date | date: '%e %b %Y' }}{% if post.author %}, {{ post.author }}{% endif %}</span>
+  </li>
+  {% endfor %}
+</ul>

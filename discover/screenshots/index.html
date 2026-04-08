@@ -6,6 +6,31 @@ menu: discover
 lightbox: true
 ---
 
+{% assign phone_meta = site.data.google_play_phone_screenshots %}
+{% assign play_shots = phone_meta.screenshots %}
+{% if phone_meta and play_shots and play_shots.size > 0 %}
+  <h2 class="h4">Google Play (phone)</h2>
+  <p class="text-muted small mb-3">
+    Same screenshots as in the
+    <a href="{{ phone_meta.source }}">XCSoar Fastlane Play Store metadata</a>.
+  </p>
+  <div class="row mb-5" id="screenshots-play-store">
+    {% for shot in play_shots %}
+    <div class="col-md-4">
+      <figure>
+        <a href="play-store/{{ shot.filename }}" title="{{ shot.title }}">
+          <img src="play-store/{{ shot.filename }}" alt="{{ shot.alt }}" class="screenshot" loading="lazy">
+        </a>
+        <figcaption>
+          <strong>{{ shot.title }}</strong>
+        </figcaption>
+      </figure>
+    </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+  <h2 class="h4">Gallery</h2>
   <div class="row" id="screenshots">
     <div class="col-md-4">
       <figure>
@@ -96,4 +121,3 @@ lightbox: true
       </figure>
     </div>
   </div>
-</div>

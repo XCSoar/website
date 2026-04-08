@@ -1,0 +1,30 @@
+{% assign phone = site.data.google_play_phone_screenshots %}
+{% assign shots = phone.screenshots %}
+{% if phone and shots and shots.size > 0 %}
+    <div class="screenshot-carousel">
+        <button class="carousel-btn carousel-prev" aria-label="Previous screenshot">‹</button>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            {% for shot in shots %}
+            <figure class="carousel-slide{% if forloop.first %} active{% endif %}">
+              <a href="{{ shot.path }}" title="{{ shot.title }}">
+                <img src="{{ shot.path }}" alt="{{ shot.alt }}" class="screenshot" loading="lazy">
+              </a>
+              <figcaption>
+                <strong>{{ shot.title }}</strong><br>
+                <span class="small text-muted">Google Play phone screenshots</span>
+              </figcaption>
+            </figure>
+            {% endfor %}
+          </div>
+        </div>
+        <button class="carousel-btn carousel-next" aria-label="Next screenshot">›</button>
+        <div class="carousel-indicators">
+          {% for shot in shots %}
+          <button type="button" class="carousel-indicator{% if forloop.first %} active{% endif %}" aria-label="Go to screenshot {{ forloop.index }}" data-slide="{{ forloop.index0 }}"></button>
+          {% endfor %}
+        </div>
+      </div>
+{% else %}
+    <p class="mb-0"><a href="/discover/screenshots/">Screenshots</a></p>
+{% endif %}

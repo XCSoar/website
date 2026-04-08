@@ -14,7 +14,10 @@ xcsoar_old_linux_download_subdir: DEBIAN
 github_issues_url: 'https://github.com/XCSoar/XCSoar/issues'
 mapgen_url: 'https://mapgen.xcsoar.org/'
 download_fdroid_url: 'https://f-droid.org/packages/org.xcsoar/'
-download_play_store_url: 'https://play.google.com/store/apps/details?id=org.xcsoar.play'
+# Google Play package id; phone screenshots for /discover/screenshots/ sync from XCSoar/XCSoar Fastlane:
+# https://github.com/XCSoar/XCSoar/tree/master/fastlane/metadata/android
+# https://github.com/XCSoar/XCSoar/blob/master/fastlane/README.md
+download_android_google_play_package_id: org.xcsoar.play
 download_app_store_url: 'https://apps.apple.com/app/xcsoar/id6741046464'
 
 plugins:
@@ -23,3 +26,4 @@ plugins:
 # Maintainer notes under docs/internal/ are not part of the public site.
 exclude:
   - docs/internal
+  - scripts

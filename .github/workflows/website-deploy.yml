@@ -17,6 +17,8 @@ jobs:
             yui-compressor \
             librsvg2-bin \
             rsync
+      - name: sync Fastlane Play Store text and phone screenshots from XCSoar/XCSoar
+        run: ruby scripts/sync_google_play_metadata.rb
       - name: build website
         run: bundle exec jekyll build --future
       - name: rsync deployments
