@@ -194,7 +194,7 @@
 
 ### Replace jQuery Lightbox
 **Issue**: Issue #42 already tracks this
-**Solution**: Implemented with custom vanilla JS lightbox (`/lib/lightbox.js` and `/css/lightbox.css`) - no external dependencies, ~6KB total. Features include keyboard navigation, error handling, and accessibility improvements.
+**Solution**: Implemented with custom vanilla JS lightbox under `/lib/lightbox/` (`lightbox.js` + `lightbox.css`) - no external dependencies, ~6KB total. Features include keyboard navigation, error handling, and accessibility improvements.
 
 ### Upgrade Bootstrap
 **Current**: Bootstrap 2.x (custom)
@@ -227,7 +227,7 @@
 ```html
 <meta property="og:title" content="XCSoar - Open-source glide computer">
 <meta property="og:description" content="Tactical glide computer for soaring and paragliding pilots">
-<meta property="og:image" content="https://xcsoar.org/img/logo-blue.svg">
+<meta property="og:image" content="https://xcsoar.org/img/xcsoar.svg">
 <meta property="og:url" content="https://xcsoar.org">
 <meta property="og:type" content="website">
 ```

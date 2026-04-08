@@ -66,20 +66,17 @@ website/
 │   ├── index.md            # Main download page
 │   ├── latest.md           # Latest version
 │   ├── old.md              # Old versions
-│   ├── data.md             # Data files download
 │   ├── maps/               # Map downloads
 │   │   ├── index.html      # Maps page
 │   │   ├── ol.js           # OpenLayers script
 │   │   └── ommaps.html     # Maps interface
-│   ├── waypoints/          # Waypoint downloads
-│   │   ├── index.html      # Waypoints page
-│   │   └── waypoints.js    # Waypoints script
-│   └── data/               # Data files
+│   └── data/               # Static assets (e.g. sample checklist)
 │       └── xcsoar-checklist.txt
 ├── hardware/               # Hardware compatibility
 │   └── index.md            # Hardware info
 ├── css/                    # Stylesheets (7 CSS files)
-│   ├── xcsoar.css          # Main stylesheet
+│   ├── xcsoar.css          # Global layout / nav / lists
+│   ├── screenshots.css     # #screenshots grid + homepage carousel (conditional)
 │   ├── xcsoar-blue.css     # Blue theme
 │   ├── xcsoar-green.css    # Green theme
 │   ├── xcsoar-red.css      # Red theme
@@ -89,7 +86,7 @@ website/
 │   ├── *.svg               # SVG icons/logos
 │   └── *.png               # PNG images
 ├── lib/                    # Third-party libraries
-│   ├── bootstrap/          # Bootstrap CSS
+│   ├── bootstrap-5.3.8/    # Official Bootstrap 5.3.8 dist (CSS + JS bundle)
 │   ├── flags/              # Country flags
 │   ├── jquery-1.8.2.min.js # jQuery
 │   └── jquery-lightbox/    # Lightbox plugin
@@ -129,9 +126,8 @@ website/
   - Main download (stable version)
   - Latest version
   - Old versions
-  - Data files (maps, waypoints)
   - Interactive maps (OpenLayers)
-  - Waypoints browser
+  - Static files under `download/data/` (e.g. sample checklist)
 
 ### 4. Develop (`/develop/`)
 - **Layout**: `develop.html`

@@ -18,11 +18,20 @@ Manuals of the stable version {{ site.xcsoar_stable_version }}:
 - {% country_flag br %} [XCSoar XCSoar em um flash]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-in-a-flash-pt_BR.pdf) Quick guide in Portuguese
 - {% country_flag br %} [XCSoar Manual do Usuário]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/XCSoar-manual-pt_BR.pdf) Complete Portuguese manual
 
+## File formats & configuration reference
+
+These **[Read the Docs](https://xcsoar.readthedocs.io/en/latest/)** chapters are **reference** material—file layouts, syntax, and hooks.
+
+- [Map data file formats](https://xcsoar.readthedocs.io/en/latest/mapfile.html) — terrain, topography, airspace, and waypoint files XCSoar loads
+- [Checklists](https://xcsoar.readthedocs.io/en/latest/checklist.html) — checklist file format: paths, Markdown, checkboxes, and links (`https:`, `tel:`, `sms:`, `geo:`, `xcsoar://` dialogs, …)
+- [Input events](https://xcsoar.readthedocs.io/en/latest/input_events.html) — `.xci` mapping of keys, hardware buttons, and touch labels to actions; default F-key groups and glide-computer events
+- [Lua scripting](https://xcsoar.readthedocs.io/en/latest/lua.html) — Lua API inside XCSoar for automation (often used with input events)
+
 ## Developer Docs
 
-Documentation for developers contributing to XCSoar.
+Documentation for people **building or hacking on** XCSoar:
 
-- [Developer Manual](https://xcsoar.readthedocs.io/en/latest/) - Complete developer documentation
+- [Developer manual — full index](https://xcsoar.readthedocs.io/en/latest/) — compiling, dev environment, architecture, policy, debugging utilities, Git tips, and more
 
 ### Manufacturer Protocols
 
