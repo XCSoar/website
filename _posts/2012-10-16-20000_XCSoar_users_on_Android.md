@@ -11,7 +11,7 @@ in June that number was already up to over 15.000 pilots. We are now proud to
 announce that we just hit the mark of 20.000 pilots using XCSoar on their
 Android devices.
 
-![Market Downloads](/discover/attachments/2012-10-16_market.png)
+![Market Downloads](/img/attachments/2012-10-16_market.png)
 
 These are only the pilots using the Android version though. There is also still
 a significant number of pilots using XCSoar on other platforms like the Triadis

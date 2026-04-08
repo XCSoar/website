@@ -8,27 +8,24 @@ This is a Jekyll-based static website for XCSoar, an open-source glide computer.
 - **Ruby Version**: 3.4.8
 - **Theme**: Custom (not using a standard Jekyll theme)
 - **CSS Framework**: Bootstrap (customized)
-- **JavaScript**: jQuery 1.8.2, custom scripts
+- **JavaScript**: Bootstrap 5 bundle, vanilla lightbox (conditional), screenshot carousel (conditional), OpenLayers on the maps page
 
 ## Directory Structure
 
 ```text
 website/
 ├── _config.yml              # Jekyll configuration
-├── _layouts/                # Page layouts (7 layouts)
+├── _layouts/                # Page layouts (4 layouts)
 │   ├── default.html        # Default layout (blue theme)
-│   ├── develop.html        # Development/contribution pages (red theme)
-│   ├── discover.html       # Discovery/info pages (blue theme)
 │   ├── download.html       # Download pages (green theme)
 │   ├── post.html           # Blog post layout
-│   ├── simple.html         # Simple page layout
-│   └── trac.html           # Trac/issue tracker layout
-├── _includes/              # Reusable components (5 includes)
+│   └── simple.html         # Simple page layout
+├── _includes/              # Reusable components
 │   ├── header.html         # Site header/navigation
 │   ├── footer.html         # Site footer
-│   ├── discover_menu.html  # Discover section menu
-│   ├── download_sidebar.html  # Download sidebar
-│   └── section_change.html # Section navigation
+│   ├── seo-structured-data.html
+│   ├── home-fastlane-carousel.html
+│   └── download_sidebar.html  # Download sidebar
 ├── _plugins/               # Custom Jekyll plugins (2 plugins)
 │   ├── country_flag.rb     # Country flag tag
 │   └── svgconvert.rb       # SVG to PNG converter
@@ -44,24 +41,6 @@ website/
 │       ├── IMPROVEMENTS.md
 │       ├── SECURITY_HEADERS.md
 │       └── WEBSITE_STRUCTURE.md  # This file
-├── develop/                # Development/Contribution section
-│   ├── index.md            # Main contribute page
-│   ├── donations.md        # Donations
-│   ├── infrastructure.md   # Infrastructure info
-│   └── new_ticket.md       # How to create tickets
-├── discover/               # Discovery/Information section
-│   ├── index.md            # Main discover page
-│   ├── features.md         # Feature list
-│   ├── history.md          # Project history
-│   ├── manual.md           # Manual links
-│   ├── logos.md            # Logo information
-│   ├── news.html           # News page
-│   ├── screenshots/        # Screenshot gallery
-│   │   ├── index.html      # Screenshot index
-│   │   └── *.png           # Screenshot images
-│   ├── simulators/         # Simulator info
-│   │   └── condor.md       # Condor simulator
-│   └── attachments/        # Media attachments
 ├── download/               # Download section
 │   ├── index.md            # Main download page
 │   ├── latest.md           # Latest version
@@ -73,24 +52,26 @@ website/
 │       └── xcsoar-checklist.txt
 ├── hardware/               # Hardware compatibility
 │   └── index.md            # Hardware info
-├── css/                    # Stylesheets (6 CSS files)
+├── css/                    # Stylesheets (5 CSS files)
 │   ├── xcsoar.css          # Global layout / nav / lists
 │   ├── screenshots.css     # #screenshots grid + homepage carousel (conditional)
+│   ├── maps-page.css       # OpenLayers map download UI
 │   ├── xcsoar-blue.css     # Blue theme
 │   ├── xcsoar-green.css    # Green theme
-│   ├── xcsoar-red.css      # Red theme
-│   └── xcsoar-trac.css     # Legacy Trac theme (deprecated)
-├── img/                    # Images (21 files)
+│   └── xcsoar-red.css      # Red theme
+├── img/                    # Images (icons, themes, Play Store phone shots, post attachments)
+│   ├── play-store/         # Google Play screenshots (sync script → _data + files)
+│   ├── attachments/        # Legacy images linked from old news posts
 │   ├── *.svg               # SVG icons/logos
 │   └── *.png               # PNG images
-├── lib/                    # Third-party libraries
+├── lib/                    # Third-party and site JS/CSS helpers
 │   ├── bootstrap-5.3.8/    # Official Bootstrap 5.3.8 dist (CSS + JS bundle)
-│   ├── flags/              # Country flags
-│   ├── jquery-1.8.2.min.js # jQuery
-│   └── jquery-lightbox/    # Lightbox plugin
-├── templates/              # Template files (1 file)
-│   └── trac.html           # Legacy Trac templates (deprecated)
+│   ├── flags/              # Country flags sprite + CSS (`{% country_flag %}`; CSS linked on /docs/)
+│   ├── lightbox/           # Vanilla lightbox (screenshots / homepage when enabled)
+│   └── screenshot-carousel.js
 ├── index.html              # Homepage
+├── news.html               # Recent posts (summary)
+├── news-archive.html       # Full post index
 ├── imprint.md              # Legal/imprint
 └── atom.xml                # RSS feed
 
@@ -101,20 +82,14 @@ website/
 ### 1. Homepage (`/`)
 - **Layout**: `default.html`
 - **Color Theme**: Blue
-- **Content**: Introduction, download CTA, latest news, social links
-- **Features**: Screenshot gallery with jQuery lightbox
+- **Content**: Introduction, feature list, homepage screenshot carousel (Google Play shots)
+- **Features**: Screenshot gallery with vanilla lightbox
 
-### 2. Discover (`/discover/`)
-- **Layout**: `discover.html`
-- **Color Theme**: Blue
-- **Purpose**: Information about XCSoar
-- **Pages**:
-  - Features
-  - History
-  - Manual (links to PDFs)
-  - Screenshots gallery
-  - Simulators (Condor)
-  - Logos
+### 2. News (`/news.html`, `/news-archive.html`, `/news/…`)
+- **Layout**: `default.html` for indexes; `post.html` for `_posts/`
+- **Color Theme**: Blue (index pages)
+- **Permalink**: `/news/:year/:month/:day/:title.html`
+- **Purpose**: Release posts and announcements; Atom feed in `atom.xml`
 
 ### 3. Download (`/download/`)
 - **Layout**: `download.html`
@@ -127,25 +102,14 @@ website/
   - Interactive maps (OpenLayers)
   - Static files under `download/data/` (e.g. sample checklist)
 
-### 4. Develop (`/develop/`)
-- **Layout**: `develop.html`
-- **Color Theme**: Red
-- **Purpose**: Contribution and development info
-- **Pages**:
-  - How to contribute
-  - Donations
-  - Infrastructure
-  - How to create tickets
+### 4. Docs (`/docs/`)
+- **Layout**: `default.html`
+- **Purpose**: Manual PDF links, Read the Docs references, hardware link
 
 ### 5. Hardware (`/hardware/`)
 - **Layout**: `simple.html`
 - **Purpose**: Hardware compatibility information
 - **Content**: Supported devices, peripherals, Android devices
-
-### 6. Contact (`/contact/`)
-- **Layout**: `default.html`
-- **Purpose**: Contact information
-- **Pages**: Contact form, IRC info
 
 ## Layout System
 
@@ -157,36 +121,24 @@ website/
    - Footer
    - Color theme support (blue/green/red)
 
-2. **discover.html** - Discovery section layout
-   - Includes discover menu sidebar
-   - Blue theme
-
-3. **download.html** - Download section layout
+2. **download.html** - Download section layout
    - Includes download sidebar
    - Green theme
 
-4. **develop.html** - Development section layout
-   - Red theme
-   - Development-focused navigation
-
-5. **post.html** - Blog post layout
+3. **post.html** - Blog post layout
    - For `_posts/` entries
    - Post metadata display
 
-6. **simple.html** - Simple page layout
+4. **simple.html** - Simple page layout
    - Minimal layout
    - Used for hardware page
-
-7. **trac.html** - Legacy layout (deprecated, not used)
-   - Previously used for Trac issue tracker pages
 
 ## Color Themes
 
 The site uses color-coded sections:
-- **Blue**: Default, Discover section
+- **Blue**: Default, news index pages, Docs
 - **Green**: Download section
-- **Red**: Develop/Contribution section
-
+- **Red**: Optional (e.g. some posts via `color: red` in front matter)
 CSS files:
 - `xcsoar-blue.css`
 - `xcsoar-green.css`
@@ -195,7 +147,7 @@ CSS files:
 ## Configuration (`_config.yml`)
 
 Key settings:
-- **Permalink**: `/discover/:year/:month/:day/:title.html`
+- **Permalink**: `/news/:year/:month/:day/:title.html`
 - **XCSoar Versions**:
   - Stable: 7.43
   - Old: 7.42
@@ -245,31 +197,21 @@ Key settings:
 
 ```text
 Home
-├── Discover
-│   ├── Features
-│   ├── History
-│   ├── Manual
-│   ├── Screenshots
-│   └── Simulators
+├── News → /news.html, /news-archive.html, individual posts under /news/…
 ├── Download
-│   ├── Latest
-│   ├── Old Versions
-│   ├── Maps
-│   └── Waypoints
-├── Develop
-│   ├── Contribute
-│   ├── Donations
-│   └── Infrastructure
-├── Hardware
-└── Contact
+│   ├── Releases
+│   └── Maps
+├── Docs (/docs/)
+│   └── Hardware compatibility (→ /hardware/)
+└── Imprint (footer)
 ```
 
 ## Static Assets
 
 - **CSS**: Custom Bootstrap-based stylesheets
-- **JavaScript**: jQuery 1.8.2, custom scripts
+- **JavaScript**: Bootstrap bundle, conditional lightbox and carousel, OpenLayers on maps
 - **Images**: SVG icons, PNG screenshots
-- **Libraries**: Bootstrap, jQuery Lightbox, country flags
+- **Libraries**: Bootstrap, vanilla lightbox, country flags (CSS loaded on `/docs/` pages)
 
 ## Deployment
 

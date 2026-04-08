@@ -12,7 +12,7 @@ on Android.  (We do not know how many people downloaded XCSoar
 anonymously from this website.)
 
 When I announced the
-[50,000 pilots mark two years ago](/discover/2014/06/04/50000-pilots-using-xcsoar.html),
+[50,000 pilots mark two years ago](/news/2014/06/04/50000-pilots-using-xcsoar.html),
 I thought our growth would be over eventually, and I could not imagine
 we would ever reach 100,000 pilots.  Here we are, even more proud of
 our success!

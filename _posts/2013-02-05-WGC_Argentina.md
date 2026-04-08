@@ -5,7 +5,7 @@ title: XCSoar is world champion!
 author: Helmut
 ---
 
-![Club class winners, WGC Argentina 2012](/discover/attachments/2013-01_podios_club.jpg "Club class winners")
+![Club class winners, WGC Argentina 2012](/img/attachments/2013-01_podios_club.jpg "Club class winners")
 
 Congratulations to XCSoar user and contributor Santiago Berca for winning
 the 32nd FAI World Gliding Championship in the club class!!

@@ -2,26 +2,26 @@
 source: https://github.com/XCSoar/XCSoar/tree/master/fastlane/metadata/android/en-US/images/phoneScreenshots
 screenshots:
 - filename: 01-traffic-map.png
-  path: "/discover/screenshots/play-store/01-traffic-map.png"
+  path: "/img/play-store/01-traffic-map.png"
   title: Traffic Map
   alt: 'XCSoar: Traffic Map'
 - filename: 02-circling-mode.jpg
-  path: "/discover/screenshots/play-store/02-circling-mode.jpg"
+  path: "/img/play-store/02-circling-mode.jpg"
   title: Circling Mode
   alt: 'XCSoar: Circling Mode'
 - filename: 03-cruise-mode.jpg
-  path: "/discover/screenshots/play-store/03-cruise-mode.jpg"
+  path: "/img/play-store/03-cruise-mode.jpg"
   title: Cruise Mode
   alt: 'XCSoar: Cruise Mode'
 - filename: 06-map-elements.jpg
-  path: "/discover/screenshots/play-store/06-map-elements.jpg"
+  path: "/img/play-store/06-map-elements.jpg"
   title: Map Elements
   alt: 'XCSoar: Map Elements'
 - filename: 07-airspace-warning.jpg
-  path: "/discover/screenshots/play-store/07-airspace-warning.jpg"
+  path: "/img/play-store/07-airspace-warning.jpg"
   title: Airspace Warning
   alt: 'XCSoar: Airspace Warning'
 - filename: '08-airspace-details.jpg'
-  path: "/discover/screenshots/play-store/08-airspace-details.jpg"
+  path: "/img/play-store/08-airspace-details.jpg"
   title: Airspace Details
   alt: 'XCSoar: Airspace Details'

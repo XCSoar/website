@@ -1,5 +1,5 @@
 ---
-layout: discover
+layout: default
 color: blue
 title: Docs
 description: "XCSoar documentation — manuals, quick guides, hardware compatibility, and developer links."
@@ -48,3 +48,7 @@ Protocol documentation for various manufacturers' devices supported by XCSoar.
 - [EW Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/EW) - EW device protocol implementation
 - [Loefgren Vario Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/Loeg) - Loefgren vario protocol implementation
 - [Vaulter Protocol](https://github.com/XCSoar/XCSoar/tree/master/src/Device/Driver/Vaulter) - Vaulter device protocol implementation
+
+## Hardware compatibility
+
+- [Supported devices and platforms](/hardware/) — phones, tablets, embedded boards, and desktop systems that run XCSoar

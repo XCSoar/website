@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 # Fetches Google Play phone screenshots from XCSoar/XCSoar Fastlane (single source of truth):
-#   images/phoneScreenshots/* → discover/screenshots/play-store/ + _data/google_play_phone_screenshots.yml
+#   images/phoneScreenshots/* → img/play-store/ + _data/google_play_phone_screenshots.yml
 # https://github.com/XCSoar/XCSoar/tree/master/fastlane/metadata/android/en-US/images/phoneScreenshots
 #
 # Run before local Jekyll build if you want the latest assets; CI runs this automatically.
@@ -20,7 +20,7 @@ RAW_SCREENSHOT_BASE =
 
 root = File.expand_path("..", __dir__)
 data_dir = File.join(root, "_data")
-play_store_img_dir = File.join(root, "discover", "screenshots", "play-store")
+play_store_img_dir = File.join(root, "img", "play-store")
 
 def github_open_options(extra = {})
   {
@@ -65,7 +65,7 @@ image_items.each do |item|
   title = title_from_filename(name)
   screenshots_yaml << {
     "filename" => name,
-    "path" => "/discover/screenshots/play-store/#{name}",
+    "path" => "/img/play-store/#{name}",
     "title" => title,
     "alt" => "XCSoar: #{title}"
   }

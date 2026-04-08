@@ -62,6 +62,10 @@
 <link href="/lib/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/xcsoar.css" >
 <link rel="stylesheet" href="/css/xcsoar-{{ color }}.css">
+{% assign _p = page.url | default: '' %}
+{% if _p contains '/docs' %}
+<link rel="stylesheet" href="/lib/flags/flags.css">
+{% endif %}
 {% if page.lightbox or page.carousel %}
 <link rel="stylesheet" href="/css/screenshots.css">
 {% endif %}
@@ -117,10 +121,10 @@
                 <a class="nav-link{% if page.menu == 'home' or page.url == '/' %} active{% endif %}" href="/" title="XCSoar homepage"{% if page.menu == 'home' or page.url == '/' %} aria-current="page"{% endif %}>Home</a>
               </li>
               <li class="nav-item news{% if page.menu == 'news' %} current{% endif %}">
-                <a class="nav-link{% if page.menu == 'news' %} active{% endif %}" href="/discover/news.html" title="XCSoar news and updates"{% if page.menu == 'news' %} aria-current="page"{% endif %}>News</a>
+                <a class="nav-link{% if page.menu == 'news' %} active{% endif %}" href="/news.html" title="XCSoar news and updates"{% if page.menu == 'news' %} aria-current="page"{% endif %}>News</a>
               </li>
-              <li class="nav-item docs{% if page.menu == 'docs' or page.menu == 'discover' %} current{% endif %}">
-                <a class="nav-link{% if page.menu == 'docs' or page.menu == 'discover' %} active{% endif %}" href="/docs/" title="XCSoar documentation"{% if page.menu == 'docs' or page.menu == 'discover' %} aria-current="page"{% endif %}>Docs</a>
+              <li class="nav-item docs{% if page.menu == 'docs' %} current{% endif %}">
+                <a class="nav-link{% if page.menu == 'docs' %} active{% endif %}" href="/docs/" title="XCSoar documentation"{% if page.menu == 'docs' %} aria-current="page"{% endif %}>Docs</a>
               </li>
               <li class="nav-item dropdown download{% if page.menu == 'download' %} current{% endif %}">
                 <a class="nav-link dropdown-toggle{% if page.menu == 'download' %} active{% endif %}" href="/download/" id="navbarDownload" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Download XCSoar and maps">Download</a>

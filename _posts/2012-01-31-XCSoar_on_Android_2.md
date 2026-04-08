@@ -4,7 +4,7 @@ color: blue
 title: XCSoar on Android &#35;2
 author: Turbo
 ---
-![Market Downloads](/discover/attachments/2012-01-31_market.png)
+![Market Downloads](/img/attachments/2012-01-31_market.png)
 We're proud to announce that by now over 9.400 people have downloaded and
 installed XCSoar on their Android devices!
 

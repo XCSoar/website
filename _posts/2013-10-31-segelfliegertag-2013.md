@@ -11,4 +11,4 @@ XCSoar und [SkyLines](https://skylines.aero/) werden auf Stand 7
 mit drei Entwicklern vertreten sein.  Die Firma
 [8F Computer (StrePla)](http://www.strepla.de/) hat uns
 freundlicherweise eingeladen, wie schon
-[im April auf der AERO](/discover/2013/04/15/xcsoar-on-the-aero-expo-2013.html).
+[im April auf der AERO](/news/2013/04/15/xcsoar-on-the-aero-expo-2013.html).

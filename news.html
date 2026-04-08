@@ -1,5 +1,5 @@
 ---
-layout: discover
+layout: default
 color: blue
 title: News
 description: "XCSoar release announcements, updates, and project news."
@@ -7,7 +7,7 @@ menu: news
 ---
 <div class="row">
   {% for post in site.posts limit:4 %}
-  <div class="col-md-8 news-item">
+  <div class="col-12 news-item">
     <h2>
       {{ post.title }}<br>
       <small>({{ post.date | date:'%e. %b %Y' }}{% if post.author %} by {{ post.author }}{% endif %})</small>
@@ -26,7 +26,7 @@ menu: news
 
 {% if site.posts.size > 4 %}
 <p class="mt-3 mb-0">
-  <a href="/discover/news-archive.html">All news and releases</a>
+  <a href="/news-archive.html">All news and releases</a>
   <span class="text-muted">({{ site.posts.size }} posts)</span>
 </p>
 {% endif %}

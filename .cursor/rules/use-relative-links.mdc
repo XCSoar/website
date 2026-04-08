@@ -14,7 +14,7 @@ Always use root-relative paths (starting with `/`) for all internal links within
 
 ### ✅ Correct (Root-Relative)
 ```html
-<a href="/discover/screenshots/">Screenshots</a>
+<a href="/#screenshots">Screenshots</a>
 <a href="/imprint.html">Imprint</a>
 <a href="/download/">Download</a>
 <img src="/img/xcsoar.svg" alt="Logo">
@@ -25,13 +25,13 @@ Always use root-relative paths (starting with `/`) for all internal links within
 ```html
 <a href="//xcsoar.org/imprint.html">Imprint</a>
 <a href="https://xcsoar.org/download/">Download</a>
-<a href="http://xcsoar.org/discover/">Discover</a>
+<a href="http://xcsoar.org/news.html">News</a>
 ```
 
 ### ❌ Incorrect (Relative Paths)
 ```html
-<a href="./discover/screenshots/">Screenshots</a>
-<a href="../download/">Download</a>
+<a href="./news.html">News</a>
+<a href="../download/index.html">Download</a>
 ```
 
 ## Exceptions
