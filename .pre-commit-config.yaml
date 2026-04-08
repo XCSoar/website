@@ -16,6 +16,5 @@ repos:
           - --autofix
       - id: check-symlinks
       - id: fix-byte-order-marker
-      - id: fix-encoding-pragma
       - id: requirements-txt-fixer
       - id: sort-simple-yaml
