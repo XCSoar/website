@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Derived from XCSoar Data/graphics/title.svg; version digit removed; coords normalized for use as img -->
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="15" viewBox="0 0 90 15">
+  <text
+     x="0.16"
+     y="13.83"
+     font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif"
+     font-size="17.93"
+     font-weight="bold"
+     fill="#000000">XCSoar</text>
+</svg>

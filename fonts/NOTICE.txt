@@ -1,0 +1,7 @@
+DejaVu Sans (woff2 files in this directory)
+
+Copyright (c) Bitstream, Inc. and DejaVu contributors. See the full
+Bitstream Vera / DejaVu license in the upstream font package:
+https://dejavu-fonts.github.io/License.html
+
+Files were obtained from the @fontsource/dejavu-sans npm package (same terms).

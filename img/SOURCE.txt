@@ -1,0 +1,12 @@
+Vector sources (sync from XCSoar when the app artwork changes):
+
+  xcsoar.svg          ← ../XCSoar/Data/graphics/logo.svg     (square / app icon, blue)
+  xcsoar-red.svg      ← ../XCSoar/Data/graphics/logo_red.svg (square mark, red theme)
+
+  title-navbar.svg    ← derived from ../XCSoar/Data/graphics/title.svg (version layer removed)
+  title-red-navbar.svg ← derived from title_red.svg (version removed; wordmark tinted for navbar)
+
+logo-green.svg        — website / download theme only (horizontal composite; no XCSoar Data/graphics match)
+logo-icon-green.svg   — bird mark only: derived from logo-green.svg (wordmark removed); navbar “XCSoar” is CSS text
+
+Navbar wordmark: live text in header (DejaVu Sans bold); title-navbar.svg / title-red-navbar.svg remain for reference or other uses
