@@ -7,6 +7,10 @@ url: "https://xcsoar.org"
 # Default meta description when a page has no `description` front matter.
 description: "Open-source tactical glide computer for soaring and paragliding pilots — maps, tasks, METAR, and more."
 
+title: XCSoar
+# Default Open Graph / Twitter image (absolute URL built with absolute_url filter).
+og_image: /android-chrome-512x512.png
+
 xcsoar_stable_version: 7.44
 xcsoar_testing_version: null
 xcsoar_old_version: 7.43
