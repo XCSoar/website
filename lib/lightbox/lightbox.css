@@ -10,10 +10,18 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 10000;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.lightbox-overlay.is-open {
+  display: flex;
+}
+
+body.lightbox-open {
+  overflow: hidden;
 }
 
 .lightbox-container {
@@ -105,9 +113,8 @@
   transform: translateY(-50%);
 }
 
-/* Hide navigation buttons when not needed */
-.lightbox-prev[style*="display: none"],
-.lightbox-next[style*="display: none"] {
+.lightbox-prev.lightbox-nav-hidden,
+.lightbox-next.lightbox-nav-hidden {
   display: none !important;
 }
 
