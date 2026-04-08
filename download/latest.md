@@ -2,6 +2,7 @@
 layout: download
 color: green
 title: Download
+description: "Download the latest XCSoar development (testing) builds for Android, iOS, Windows, Linux, and embedded platforms."
 menu: download
 version: latest
 ---

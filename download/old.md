@@ -2,6 +2,7 @@
 layout: download
 color: green
 title: Download
+description: "Download the previous stable XCSoar release for pilots who need an older version."
 menu: download
 version: old
 ---

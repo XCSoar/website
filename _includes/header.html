@@ -41,7 +41,9 @@
   <meta charset="utf-8">
   <title>XCSoar {{ page.title }}</title>
   <meta name="keywords" content="XCSoar, gliding, soaring, paragliding, gps, navigation, moving map" />
-  <meta name="description" content="open-source tactical glide computer for soaring and paragliding pilots" />
+  {% capture seo_desc %}{{ page.description | default: page.excerpt | default: site.description }}{% endcapture %}
+  <meta name="description" content="{{ seo_desc | strip_html | strip | truncate: 160 | xml_escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
 
 {% endif %}
 

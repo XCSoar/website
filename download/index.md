@@ -2,6 +2,7 @@
 layout: download
 color: green
 title: Releases
+description: "Download XCSoar stable releases for Android, iOS, Windows, Linux, Kobo e-readers, and Raspberry Pi."
 menu: download
 version: stable
 ---

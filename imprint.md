@@ -2,6 +2,7 @@
 layout: simple
 color: blue
 title: Imprint
+description: "Legal imprint and contact for the XCSoar open-source glide computer project."
 ---
 
 The *XCSoar* project is managed by:

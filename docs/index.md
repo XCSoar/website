@@ -2,6 +2,7 @@
 layout: discover
 color: blue
 title: Docs
+description: "XCSoar documentation — manuals, quick guides, hardware compatibility, and developer links."
 menu: docs
 ---
 
