@@ -42,4 +42,4 @@ but is hidden).  Reboot the Kobo.
 
 - {:.list-item-linux}[XCSoar {{ site.xcsoar_stable_version }} on Raspberry Pi]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PI/)
 - {:.list-item-linux}[XCSoar {{ site.xcsoar_stable_version }} on Raspberry Pi 4]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PI4/)
-- {:.list-item-linux}[XCSoar {{ site.xcsoar_stable_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/CUBIE/)
+- {:.list-item-cubie}[XCSoar {{ site.xcsoar_stable_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/CUBIE/)

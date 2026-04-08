@@ -36,4 +36,4 @@ hidden).  Reboot the Kobo.
 ## XCSoar {{ site.xcsoar_old_version }} on single-board computers
 
 - {:.list-item-linux}[XCSoar {{ site.xcsoar_old_version }} on Raspberry Pi]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/PI/)
-- {:.list-item-linux}[XCSoar {{ site.xcsoar_old_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/CUBIE/)
+- {:.list-item-cubie}[XCSoar {{ site.xcsoar_old_version }} on Cubieboard]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/CUBIE/)

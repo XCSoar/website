@@ -292,13 +292,13 @@ li.list-item-windows { background-image: url("/img/icon-windows.png"); }
 li.list-item-wince { background-image: url("/img/icon-windows-mobile.png"); }
 li.list-item-android { background-image: url("/img/icon-android.png"); }
 li.list-item-debian,
-li.list-item-unix { background-image: url("/img/icon-debian.png"); }
-li.list-item-cubie { background-image: url("/img/icon-cubie-20x20.png"); }
-li.list-item-pi { background-image: url("/img/icon-pi-20x20.png"); }
+li.list-item-unix { background-image: url("/img/icon-debian.svg"); }
+li.list-item-cubie { background-image: url("/img/icon-cubie.svg"); }
+li.list-item-pi { background-image: url("/img/icon-pi.svg"); }
 li.list-item-mac { background-image: url("/img/icon-apple.png"); }
-li.list-item-kobo { background-image: url("/img/icon-kobo-20x20.png"); }
+li.list-item-kobo { background-image: url("/img/icon-kobo.svg"); }
 li.list-item-xcsoar { background-image: url("/img/icon-xcsoar.png"); }
-li.list-item-linux { background-image: url("/img/icon-pi-20x20.png"); }
+li.list-item-linux { background-image: url("/img/icon-pi.svg"); }
 
 /* News / posts: normal nested lists (avoid stealing download rules) */
 article ul:not(:has(> li[class*="list-item-"])),
