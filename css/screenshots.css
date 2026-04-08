@@ -3,7 +3,7 @@
  * Loaded only when page.lightbox or page.carousel (see _includes/header.html).
  */
 
-/* Discover / screenshots gallery grid */
+/* Homepage / gallery screenshot grid */
 #screenshots .row {
   display: flex;
   flex-wrap: wrap;

@@ -1,0 +1,49 @@
+/**
+ * Accent colors and body background per site theme.
+ * Applied via `html.site-theme--{blue|green|red}` from the shared header.
+ */
+
+html.site-theme--blue {
+  --site-a: #3e73a7;
+  --site-a-hover: #1a4977;
+  --site-a-active: #3e73a7;
+  --site-highlight: #3e73a7;
+  --site-body-bg: url("../img/bg-blue.png") 50% 0 repeat;
+}
+
+html.site-theme--green {
+  --site-a: #359a41;
+  --site-a-hover: #1b8d29;
+  --site-a-active: #359a41;
+  --site-highlight: #359a41;
+  --site-body-bg: url("../img/bg-green.png") 50% 0 repeat;
+}
+
+html.site-theme--red {
+  --site-a: #ff9052;
+  --site-a-hover: #b55722;
+  --site-a-active: #ff9052;
+  --site-highlight: #ff9052;
+  --site-body-bg: url("../img/bg-red.png") 50% 0 repeat;
+}
+
+html[class*="site-theme--"] a {
+  color: var(--site-a);
+}
+
+html[class*="site-theme--"] a:hover {
+  color: var(--site-a-hover);
+}
+
+html[class*="site-theme--"] a:active {
+  color: var(--site-a-active);
+}
+
+html[class*="site-theme--"] body {
+  background: var(--site-body-bg);
+}
+
+html[class*="site-theme--"] .highlight {
+  color: var(--site-highlight);
+  font-weight: bold;
+}

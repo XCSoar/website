@@ -1,17 +1,7 @@
-{% if page.color %}
-{% assign color = page.color %}
-{% else %}
-{% assign color = 'blue' %}
-{% endif %}
-
 {% include header.html %}
-
 <div class="container">
-  <div class="row">
-    <article class="col-md-12">
-      {{ content }}
-    </article>
-  </div>
+  <article>
+    {{ content }}
+  </article>
 </div>
-
 {% include footer.html %}

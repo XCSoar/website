@@ -1,0 +1,37 @@
+# Main navbar: order preserved. `type: download_dropdown` renders _includes/nav-download-dropdown.html.
+main:
+  - id: home
+    home: true
+    label: Home
+    href: /
+    title: XCSoar homepage
+    menu: home
+  - id: news
+    label: News
+    href: /news.html
+    title: XCSoar news and updates
+    menu: news
+  - id: docs
+    label: Docs
+    href: /docs/
+    title: XCSoar documentation
+    menu: docs
+  - type: download_dropdown
+    id: download
+    label: Download
+    href: /download/
+    title: Download XCSoar and maps
+    menu: download
+  - id: discussion
+    label: Discussion
+    href: https://github.com/XCSoar/XCSoar/discussions
+    title: XCSoar GitHub Discussions
+    menu: discussion
+    external: true
+  - id: github
+    li_class: develop
+    label: GitHub
+    href: https://github.com/XCSoar/XCSoar
+    title: Contribute on GitHub
+    external: true
+    icon: /img/icon-github.svg

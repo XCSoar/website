@@ -1,0 +1,30 @@
+{% assign nav_url = page.url | default: '' %}
+{% for item in site.data.nav.main %}
+  {% if item.type == 'download_dropdown' %}
+              <li class="nav-item dropdown {{ item.id }}{% if page.menu == item.menu %} current{% endif %}">
+                <a class="nav-link dropdown-toggle{% if page.menu == item.menu %} active{% endif %}" href="{{ item.href }}" id="navbarDownload" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="{{ item.title }}">{{ item.label }}</a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDownload">
+                  <li><a class="dropdown-item{% if nav_url == '/download/' or nav_url == '/download/index.html' %} active{% endif %}" href="/download/"{% if nav_url == '/download/' or nav_url == '/download/index.html' %} aria-current="page"{% endif %}>Releases</a></li>
+                  <li><a class="dropdown-item{% if nav_url contains '/download/maps/' %} active{% endif %}" href="/download/maps/"{% if nav_url contains '/download/maps/' %} aria-current="page"{% endif %}>Maps</a></li>
+                </ul>
+              </li>
+  {% elsif item.icon %}
+              <li class="nav-item {{ item.li_class }}">
+                <a class="nav-link" href="{{ item.href }}" title="{{ item.title }}" target="_blank" rel="noopener noreferrer">
+                  {{ item.label }} <img src="{{ item.icon }}" alt="" class="nav-link-icon">
+                </a>
+              </li>
+  {% elsif item.external %}
+              <li class="nav-item {{ item.id }}{% if page.menu == item.menu %} current{% endif %}">
+                <a class="nav-link{% if page.menu == item.menu %} active{% endif %}" href="{{ item.href }}" title="{{ item.title }}" target="_blank" rel="noopener noreferrer"{% if page.menu == item.menu %} aria-current="page"{% endif %}>{{ item.label }}</a>
+              </li>
+  {% elsif item.home %}
+              <li class="nav-item {{ item.id }}{% if page.menu == item.menu or page.url == '/' or page.url == '/index.html' %} current{% endif %}">
+                <a class="nav-link{% if page.menu == item.menu or page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ item.href }}" title="{{ item.title }}"{% if page.menu == item.menu or page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>{{ item.label }}</a>
+              </li>
+  {% else %}
+              <li class="nav-item {{ item.id }}{% if page.menu == item.menu %} current{% endif %}">
+                <a class="nav-link{% if page.menu == item.menu %} active{% endif %}" href="{{ item.href }}" title="{{ item.title }}"{% if page.menu == item.menu %} aria-current="page"{% endif %}>{{ item.label }}</a>
+              </li>
+  {% endif %}
+{% endfor %}

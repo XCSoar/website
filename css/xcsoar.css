@@ -107,23 +107,8 @@ blockquote {
   flex-shrink: 0;
 }
 
-/* Page title after brand: same face/size as wordmark; gray (Bootstrap h1 color overridden) */
-#primary h1.navbar-page-title {
-  font-family: inherit;
-  font-size: var(--navbar-brand-line-font-size);
-  font-weight: 400;
-  line-height: var(--navbar-brand-line-line-height);
-  letter-spacing: var(--navbar-brand-line-letter-spacing);
-  color: #6c757d;
-  flex: 1 1 5rem;
-  min-width: 0;
-}
-
-/* Home: title below navbar; same rhythm as in-bar page title */
-.home-page-title-row {
-  padding: 0.35rem 0 0.85rem;
-  margin-bottom: 0.15rem;
-}
+/* Page title (navbar) and home hero title share the same type rhythm */
+#primary h1.navbar-page-title,
 .home-page-title {
   font-family: inherit;
   font-size: var(--navbar-brand-line-font-size);
@@ -131,6 +116,19 @@ blockquote {
   line-height: var(--navbar-brand-line-line-height);
   letter-spacing: var(--navbar-brand-line-letter-spacing);
   color: #6c757d;
+}
+
+#primary h1.navbar-page-title {
+  flex: 1 1 5rem;
+  min-width: 0;
+}
+
+.home-page-title-row {
+  padding: 0.35rem 0 0.85rem;
+  margin-bottom: 0.15rem;
+}
+
+.home-page-title {
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
@@ -301,17 +299,13 @@ li.list-item-xcsoar { background-image: url("/img/icon-xcsoar.png"); }
 li.list-item-linux { background-image: url("/img/icon-pi.svg"); }
 
 /* News / posts: normal nested lists (avoid stealing download rules) */
-article ul:not(:has(> li[class*="list-item-"])),
-article ol:not(:has(> li[class*="list-item-"])),
-main ul:not(:has(> li[class*="list-item-"])),
-main ol:not(:has(> li[class*="list-item-"])) {
+:is(article, main) ul:not(:has(> li[class*="list-item-"])),
+:is(article, main) ol:not(:has(> li[class*="list-item-"])) {
   padding-left: 1.25rem;
 }
 
-article ul ul,
-article ol ol,
-main ul ul,
-main ol ol {
+:is(article, main) ul ul,
+:is(article, main) ol ol {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }

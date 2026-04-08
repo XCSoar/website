@@ -20,8 +20,11 @@ website/
 │   ├── download.html       # Download pages (green theme)
 │   ├── post.html           # Blog post layout
 │   └── simple.html         # Simple page layout
+├── _data/
+│   └── nav.yml             # Main navbar (rendered by nav-main-items.html)
 ├── _includes/              # Reusable components
-│   ├── header.html         # Site header/navigation
+│   ├── header.html         # Site header, theme, assets
+│   ├── nav-main-items.html # Navbar list from _data/nav.yml
 │   ├── footer.html         # Site footer
 │   ├── seo-structured-data.html
 │   ├── home-fastlane-carousel.html
@@ -52,13 +55,11 @@ website/
 │       └── xcsoar-checklist.txt
 ├── hardware/               # Hardware compatibility
 │   └── index.md            # Hardware info
-├── css/                    # Stylesheets (5 CSS files)
+├── css/                    # Stylesheets (core + conditional)
 │   ├── xcsoar.css          # Global layout / nav / lists
+│   ├── xcsoar-theme.css    # Link colors + body background per `html.site-theme--*`
 │   ├── screenshots.css     # #screenshots grid + homepage carousel (conditional)
-│   ├── maps-page.css       # OpenLayers map download UI
-│   ├── xcsoar-blue.css     # Blue theme
-│   ├── xcsoar-green.css    # Green theme
-│   └── xcsoar-red.css      # Red theme
+│   └── maps-page.css       # OpenLayers map download UI
 ├── img/                    # Images (icons, themes, Play Store phone shots, post attachments)
 │   ├── play-store/         # Google Play screenshots (sync script → _data + files)
 │   ├── attachments/        # Legacy images linked from old news posts
@@ -139,10 +140,7 @@ The site uses color-coded sections:
 - **Blue**: Default, news index pages, Docs
 - **Green**: Download section
 - **Red**: Optional (e.g. some posts via `color: red` in front matter)
-CSS files:
-- `xcsoar-blue.css`
-- `xcsoar-green.css`
-- `xcsoar-red.css`
+CSS: `xcsoar.css` (base) + `xcsoar-theme.css` (accent + background via `html.site-theme--{blue|green|red}`).
 
 ## Configuration (`_config.yml`)
 
