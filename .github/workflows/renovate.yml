@@ -1,0 +1,38 @@
+---
+# Runs Renovate on a schedule (self-hosted). If you also use the Mend Renovate GitHub App,
+# disable one to avoid duplicate PRs.
+# Optional: add repo secret RENOVATE_TOKEN (fine-grained PAT: contents, issues, pull-requests,
+# workflows) so normal CI runs on Renovate PRs; otherwise github.token is used.
+name: Renovate
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  statuses: write
+  workflows: write
+
+concurrency:
+  group: renovate
+  cancel-in-progress: false
+
+jobs:
+  renovate:
+    name: Run Renovate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Renovate
+        uses: renovatebot/github-action@b67590ea780158ccd13192c22a3655a5231f869d # v46.1.8
+        with:
+          configurationFile: renovate.json
+          token: ${{ secrets.RENOVATE_TOKEN != '' && secrets.RENOVATE_TOKEN || github.token }}

@@ -1,15 +1,47 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabled": true,
   "extends": [
-    "config:base"
+    "config:recommended",
+    ":dependencyDashboard",
+    "schedule:weekly",
+    "helpers:pinGitHubActionDigests"
   ],
+  "timezone": "UTC",
+  "labels": ["dependencies"],
+  "platformAutomerge": true,
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
   "packageRules": [
     {
-      "automerge": true,
-      "matchUpdateTypes": [
-        "patch",
-        "minor"
-      ]
+      "description": "Single PR for all GitHub Actions (pin digest + minor/patch)",
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions",
+      "matchUpdateTypes": ["digest", "patch", "minor"],
+      "automerge": true
+    },
+    {
+      "description": "Single PR for pre-commit hook revisions",
+      "matchManagers": ["pre-commit"],
+      "groupName": "pre-commit hooks",
+      "automerge": true
+    },
+    {
+      "description": "Automerge Ruby patch and minor (not major)",
+      "matchManagers": ["bundler"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "automerge": true
+    },
+    {
+      "description": "Require review for major Ruby upgrades",
+      "matchManagers": ["bundler"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
     }
-  ]
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": ["before 4am on monday"]
+  }
 }
