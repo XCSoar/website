@@ -12,7 +12,7 @@ The Android version of XCSoar {{ site.xcsoar_old_version }} runs on all phones a
 
 - {:.list-item-android}[XCSoar {{ site.xcsoar_old_version }} on Android (APK)]({{ site.download_server_url }}/{{ site.xcsoar_old_version }}/ANDROID/)
 - {:.list-item-android}[XCSoar on F-Droid]({{ site.download_fdroid_url }})
-- {:.list-item-android}[XCSoar on Google Play]({{ site.download_play_store_url }})
+- {:.list-item-android}[XCSoar on Google Play](https://play.google.com/store/apps/details?id={{ site.download_android_google_play_package_id }})
 
 ## XCSoar on iOS
 

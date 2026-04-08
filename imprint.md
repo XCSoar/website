@@ -2,15 +2,16 @@
 layout: simple
 color: blue
 title: Imprint
-menu: contact
 ---
 
 The *XCSoar* project is managed by:
 
-Philipp Wollschlegel
-Paracelsusstrasse 59c
-4058 Basel
-Switzerland
+<address class="imprint-address">
+  Philipp Wollschlegel<br>
+  Paracelsusstrasse 59c<br>
+  4058 Basel<br>
+  Switzerland
+</address>
 
-Source code of this web site can be found in the
+Source code of this website can be found in the
 [git repository](https://github.com/XCSoar/website).

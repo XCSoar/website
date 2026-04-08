@@ -1,0 +1,51 @@
+---
+description: Separate structure (HTML) from presentation (CSS); no inline styles in site markup
+globs: "**/*.{html,md,css,js}"
+alwaysApply: false
+---
+
+# HTML and CSS separation (XCSoar website)
+
+## Principle
+
+Keep **structure and content** in HTML / Liquid / Markdown. Keep **visual layout, typography, and colors** in stylesheets. Avoid presentational attributes and inline `style` on site-owned pages and includes.
+
+## HTML / Liquid / Markdown
+
+- Do **not** use `style="..."` on elements. Use a **class** and define rules in `css/xcsoar.css`, `css/screenshots.css`, `css/maps-page.css`, or another linked sheet.
+- Do **not** embed `<style>...</style>` in Jekyll pages or `_includes/`. Link `/css/...` from the page or extend the shared header pattern if a new global sheet is needed.
+- Prefer **semantic class names** (e.g. `news-archive-list__item`, `map-popup__title`, `map-ol`) over long chains of Bootstrap utilities for **project-specific** blocks. Bootstrap remains fine for grid (`row`, `col-*`) and one-off spacing where it stays readable.
+- Decorative images in the nav or chrome: size and align with a **CSS class** (e.g. `.nav-link-icon`), not `width`/`height`+inline styles unless you need explicit intrinsic size for LCP (then document why).
+
+## JavaScript that injects HTML
+
+- Build markup with **classes** that are styled in CSS (e.g. `.map-popup`, `.map-popup__title`). Do **not** concatenate `style='margin:0;padding:5px'` (or similar) into template strings.
+- **Exception**: values that **depend on runtime data** (e.g. popup `left`/`top` from a map click) may stay as `element.style.left = ...`. Static look-and-feel still belongs in CSS.
+
+## Where to put CSS
+
+- **Site-wide** components: `css/xcsoar.css`.
+- **Feature-specific** pages (e.g. OpenLayers map downloads): dedicated file such as `css/maps-page.css`, linked only from those pages.
+- **Screenshots / lightbox / carousel**: existing `css/screenshots.css` and `lib/lightbox/lightbox.css`; prefer **classes + toggles** (e.g. `.is-open`, `.lightbox-nav-hidden`) over `element.style.display` for show/hide when practical.
+
+## Quick check
+
+```html
+<!-- ❌ BAD -->
+<img src="icon.svg" alt="" style="width:1.25rem;height:1.25rem;vertical-align:middle">
+<div style="padding:20px 0;width:100%">
+
+<!-- ✅ GOOD -->
+<img src="icon.svg" alt="" class="nav-link-icon">
+<div class="map-ol">
+```
+
+```javascript
+// ❌ BAD
+var html = "<div style='padding:5px'><span style='font-size:1.7em'>" + title + "</span></div>";
+
+// ✅ GOOD
+var html = "<div class='map-popup'><span class='map-popup__title'>" + title + "</span></div>";
+```
+
+Do **not** change vendored files under `lib/bootstrap-*`, `lib/jquery-*`, or minified `download/maps/ol.js` for style separation—treat them as third-party.

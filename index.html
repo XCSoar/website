@@ -14,13 +14,13 @@ carousel: true
       XCSoar is a tactical glide computer for glider pilots.
     </p>
     <ul>
-      <li><strong>Moving map</strong> with terrain, topography, and airspace from worldwide databases</li>
+      <li><strong>Moving map</strong> with terrain, topography, and airspace from worldwide databases, including <a href="https://openaip.net/" target="_blank" rel="noopener noreferrer">OpenAIP</a></li>
       <li><strong>Real-time calculations</strong> and navigation</li>
       <li><strong>Thermal assistance</strong> for finding and centering thermals</li>
-      <li><strong>FLARM integration</strong> for collision avoidance and traffic information</li>
+      <li><strong><a href="https://flarm.com/" target="_blank" rel="noopener noreferrer">FLARM</a> integration</strong> for collision avoidance and traffic information</li>
       <li><strong>Task planning</strong> for AAT, racing, and cross-country</li>
       <li><strong>Contest scoring</strong> with automatic <a href="https://weglide.org" target="_blank" rel="noopener noreferrer">WeGlide</a> integration and <a href="https://skylines.aero" target="_blank" rel="noopener noreferrer">SkyLines</a> tracking</li>
-      <li><strong>Weather integration</strong> with RASP forecasts, satellite imagery, and automatic thermals from <a href="https://thermalmap.info" target="_blank" rel="noopener noreferrer">TIM</a></li>
+      <li><strong>Weather integration</strong> with <a href="https://www.aviationweather.gov/metar" target="_blank" rel="noopener noreferrer">METAR</a>, <a href="https://www.drjack.info/RASP/" target="_blank" rel="noopener noreferrer">RASP</a> forecasts, satellite imagery, and automatic thermals from <a href="https://thermalmap.info" target="_blank" rel="noopener noreferrer">TIM</a></li>
       <li><strong>Airspace warnings</strong> with real-time alerts and filtering</li>
       <li><strong>Device integration</strong> supporting many manufacturers</li>
       <li><strong>Flight analysis</strong> with barograms and performance metrics</li>
@@ -32,94 +32,6 @@ carousel: true
   </section>
 
   <section id="screenshots" class="col-md-7 order-1 order-md-2">
-    <div class="screenshot-carousel">
-        <button class="carousel-btn carousel-prev" aria-label="Previous screenshot">‹</button>
-        <div class="carousel-container">
-          <div class="carousel-track">
-            <figure class="carousel-slide active">
-              <a href="/discover/screenshots/" title="Moving Map">
-                <img src="/discover/screenshots/map.png" alt="Moving Map" class="screenshot" loading="lazy">
-              </a>
-              <figcaption>
-                <strong>Moving Map</strong><br>
-                Configurable primary display.
-              </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <a href="/discover/screenshots/" title="Terrain Display">
-                <img src="/discover/screenshots/map_terrain1.png" alt="Terrain Display" class="screenshot" loading="lazy">
-              </a>
-              <figcaption>
-                <strong>Terrain Display</strong><br>
-                Global terrain and topography data.
-              </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <a href="/discover/screenshots/" title="FLARM Integration">
-                <img src="/discover/screenshots/map_flarm_traffic.png" alt="FLARM Integration" class="screenshot" loading="lazy">
-              </a>
-              <figcaption>
-                <strong>FLARM Integration</strong><br>
-                FLARM traffic displayed on map and radar with climb rates.
-              </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <a href="/discover/screenshots/" title="FLARM Radar">
-                <img src="/discover/screenshots/flarm_radar1.png" alt="FLARM Radar" class="screenshot" loading="lazy">
-              </a>
-              <figcaption>
-                <strong>FLARM Radar</strong><br>
-                Butterfly radar with climb values and touch selection.
-              </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <a href="/discover/screenshots/" title="Task Navigation">
-                <img src="/discover/screenshots/map_task.png" alt="Task Navigation" class="screenshot" loading="lazy">
-              </a>
-              <figcaption>
-                <strong>Task Navigation</strong><br>
-                Path to next waypoint with required altitude calculation.
-              </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <a href="/discover/screenshots/" title="Waypoint Information">
-                <img src="/discover/screenshots/waypoint_info.png" alt="Waypoint Information" class="screenshot" loading="lazy">
-              </a>
-              <figcaption>
-                <strong>Waypoint Information</strong><br>
-                Waypoint data with real-time calculations.
-              </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <a href="/discover/screenshots/" title="Analysis: Task">
-                <img src="/discover/screenshots/analysis_task.png" alt="Analysis: Task" class="screenshot" loading="lazy">
-              </a>
-              <figcaption>
-                <strong>Analysis: Task</strong><br>
-                In-flight tactical analysis and planning.
-              </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-              <a href="/discover/screenshots/" title="Analysis: OLC">
-                <img src="/discover/screenshots/analysis_olc.png" alt="Analysis: OLC" class="screenshot" loading="lazy">
-              </a>
-              <figcaption>
-                <strong>Analysis: OLC</strong><br>
-                Post-flight analysis with automatic scoring.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <button class="carousel-btn carousel-next" aria-label="Next screenshot">›</button>
-        <div class="carousel-indicators">
-          <button class="carousel-indicator active" aria-label="Go to screenshot 1" data-slide="0"></button>
-          <button class="carousel-indicator" aria-label="Go to screenshot 2" data-slide="1"></button>
-          <button class="carousel-indicator" aria-label="Go to screenshot 3" data-slide="2"></button>
-          <button class="carousel-indicator" aria-label="Go to screenshot 4" data-slide="3"></button>
-          <button class="carousel-indicator" aria-label="Go to screenshot 5" data-slide="4"></button>
-          <button class="carousel-indicator" aria-label="Go to screenshot 6" data-slide="5"></button>
-          <button class="carousel-indicator" aria-label="Go to screenshot 7" data-slide="6"></button>
-        </div>
-      </div>
+{% include home-fastlane-carousel.html %}
   </section>
 </div>

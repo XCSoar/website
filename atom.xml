@@ -8,7 +8,7 @@
   <id>{{ site.server_url }}</id>
 
   <icon>{{ site.server_url }}/xcsoar-logo.png</icon>
-  <logo>{{ site.server_url }}/logo-blue.jpg</logo>
+  <logo>{{ site.server_url }}/img/xcsoar.svg</logo>
 
   <author>
     <name>XCSoar Team</name>

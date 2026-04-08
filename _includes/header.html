@@ -39,7 +39,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>XCSoar - {{ page.title }}</title>
+  <title>XCSoar {{ page.title }}</title>
   <meta name="keywords" content="XCSoar, gliding, soaring, paragliding, gps, navigation, moving map" />
   <meta name="description" content="open-source tactical glide computer for soaring and paragliding pilots" />
 
@@ -65,21 +65,23 @@
 
   <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="XCSoar.org ATOM feed" />
 
-<!-- Bootstrap 5.3.8 (hosted locally) -->
+<!-- Bootstrap 5.3.8: official dist (same as npm bootstrap@5.3.8 dist/css/bootstrap.min.css), loaded first -->
 <link href="/lib/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/xcsoar.css" >
 <link rel="stylesheet" href="/css/xcsoar-{{ color }}.css">
-{% if page.lightbox %}
-<link rel="stylesheet" href="/css/lightbox.css" >
+{% if page.lightbox or page.carousel %}
+<link rel="stylesheet" href="/css/screenshots.css">
 {% endif %}
-<link rel="stylesheet" href="/css/xcsoar-not-trac.css">
+{% if page.lightbox %}
+<link rel="stylesheet" href="/lib/lightbox/lightbox.css">
+{% endif %}
 
 
 <!-- Bootstrap 5.3.8 JavaScript Bundle (for navbar collapse) -->
 <script src="/lib/bootstrap-5.3.8/bootstrap.bundle.min.js"></script>
 
 {% if page.lightbox %}
-<script src="/lib/lightbox.js" defer></script>
+<script src="/lib/lightbox/lightbox.js" defer></script>
 {% endif %}
 {% if page.carousel %}
 <script src="/lib/screenshot-carousel.js" defer></script>
@@ -175,20 +177,31 @@
   <header id="primary">
     <div class="container">
       <nav class="navbar navbar-expand-md">
-        <div class="container-fluid px-0">
-          <a class="navbar-brand" href="/" id="logo">
-            {% if color == 'green' %}
-            <img src="/img/logo-green.svg" alt="xcsoar-logo-green">
-            {% elsif color == 'red' %}
-            <img src="/img/logo-red.svg" alt="xcsoar-logo-red">
-            {% else %}
-            <img src="/img/logo-blue.svg" alt="xcsoar-logo-blue">
-            {% endif %}
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid px-0 navbar-top-line">
+          <div class="navbar-top-line__brand d-flex align-items-center flex-grow-1 min-w-0">
+            <div class="navbar-brand navbar-brand--split mb-0">
+              <a class="navbar-brand__mark-link" href="/" id="logo" aria-label="XCSoar home">
+                {% if color == 'green' %}
+                <img class="navbar-brand__mark" src="/img/logo-icon-green.svg" alt="">
+                {% elsif color == 'red' %}
+                <img class="navbar-brand__mark" src="/img/xcsoar-red.svg" alt="">
+                {% else %}
+                <img class="navbar-brand__mark" src="/img/xcsoar.svg" alt="">
+                {% endif %}
+              </a>
+              <span class="navbar-brand__wordmark{% if color == 'red' %} navbar-brand__wordmark--red{% elsif color == 'green' %} navbar-brand__wordmark--green{% endif %}" aria-hidden="true">XCSoar</span>
+            </div>
+            {% unless page.forum %}
+            {% unless page.tagline %}
+            <h1 class="navbar-page-title text-truncate mb-0 min-w-0">{{ page.title }}</h1>
+            {% endunless %}
+            {% endunless %}
+          </div>
+          <button class="navbar-toggler flex-shrink-0 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <div class="collapse navbar-collapse flex-grow-1 justify-content-md-end" id="navbarNav">
+            {% assign nav_url = page.url | default: '' %}
             <ul class="navbar-nav">
               <li class="nav-item home{% if page.menu == 'home' or page.url == '/' %} current{% endif %}">
                 <a class="nav-link{% if page.menu == 'home' or page.url == '/' %} active{% endif %}" href="/" title="XCSoar homepage"{% if page.menu == 'home' or page.url == '/' %} aria-current="page"{% endif %}>Home</a>
@@ -199,27 +212,30 @@
               <li class="nav-item docs{% if page.menu == 'docs' or page.menu == 'discover' %} current{% endif %}">
                 <a class="nav-link{% if page.menu == 'docs' or page.menu == 'discover' %} active{% endif %}" href="/docs/" title="XCSoar documentation"{% if page.menu == 'docs' or page.menu == 'discover' %} aria-current="page"{% endif %}>Docs</a>
               </li>
-              <li class="nav-item download{% if page.menu == 'download' %} current{% endif %}">
-                <a class="nav-link{% if page.menu == 'download' %} active{% endif %}" href="/download/" title="Download XCSoar and the map files"{% if page.menu == 'download' %} aria-current="page"{% endif %}>Download</a>
+              <li class="nav-item dropdown download{% if page.menu == 'download' %} current{% endif %}">
+                <a class="nav-link dropdown-toggle{% if page.menu == 'download' %} active{% endif %}" href="/download/" id="navbarDownload" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Download XCSoar and maps">Download</a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDownload">
+                  <li><a class="dropdown-item{% if nav_url == '/download/' or nav_url == '/download/index.html' %} active{% endif %}" href="/download/"{% if nav_url == '/download/' or nav_url == '/download/index.html' %} aria-current="page"{% endif %}>Releases</a></li>
+                  <li><a class="dropdown-item{% if nav_url contains '/download/maps/' %} active{% endif %}" href="/download/maps/"{% if nav_url contains '/download/maps/' %} aria-current="page"{% endif %}>Maps</a></li>
+                </ul>
               </li>
               <li class="nav-item discussion{% if page.menu == 'discussion' %} current{% endif %}">
                 <a class="nav-link{% if page.menu == 'discussion' %} active{% endif %}" href="https://github.com/XCSoar/XCSoar/discussions" title="XCSoar GitHub Discussions" target="_blank" rel="noopener noreferrer"{% if page.menu == 'discussion' %} aria-current="page"{% endif %}>Discussion</a>
               </li>
               <li class="nav-item develop">
                 <a class="nav-link" href="https://github.com/XCSoar/XCSoar" title="Contribute on GitHub" target="_blank" rel="noopener noreferrer">
-                  GitHub <img src="/img/icon-github.svg" alt="" style="width: 1.25rem; height: 1.25rem; vertical-align: middle;">
+                  GitHub <img src="/img/icon-github.svg" alt="" class="nav-link-icon">
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-
-      <div class="row">
-        <div id="title" class="col-12">
-          <h1{% if page.tagline %} class="tagline text-center"{% endif %}>{{ page.title }}</h1>
-        </div>
+      {% if page.tagline %}
+      <div id="title" class="home-page-title-row text-center">
+        <h1 class="home-page-title mb-0">{{ page.title }}</h1>
       </div>
+      {% endif %}
     </div>
   </header>
 

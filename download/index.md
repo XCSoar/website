@@ -1,7 +1,7 @@
 ---
 layout: download
 color: green
-title: Download
+title: Releases
 menu: download
 version: stable
 ---
@@ -11,7 +11,7 @@ version: stable
 The Android version of XCSoar {{ site.xcsoar_stable_version }} runs on phones and tablets with Android 6 or newer.
 
 - {:.list-item-android}[XCSoar {{ site.xcsoar_stable_version }} on F-Droid]({{ site.download_fdroid_url }})
-- {:.list-item-android}[XCSoar {{ site.xcsoar_stable_version }} on Google Play]({{ site.download_play_store_url }})
+- {:.list-item-android}[XCSoar {{ site.xcsoar_stable_version }} on Google Play](https://play.google.com/store/apps/details?id={{ site.download_android_google_play_package_id }})
 - {:.list-item-android}[XCSoar {{ site.xcsoar_stable_version }} for Android (APK)]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/ANDROID/)
 
 ## XCSoar {{ site.xcsoar_stable_version }} for iOS

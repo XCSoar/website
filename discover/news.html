@@ -5,7 +5,7 @@ title: News
 menu: news
 ---
 <div class="row">
-  {% for post in site.posts %}
+  {% for post in site.posts limit:4 %}
   <div class="col-md-8 news-item">
     <h2>
       {{ post.title }}<br>
@@ -16,9 +16,16 @@ menu: news
       {{ post.content | truncatewords_html: 50 }}
     </div>
     <p>
-      <a href="{{ post.url }}">more...</a>
+      <a href="{{ post.url }}">more…</a>
     </p>
     <hr/>
   </div>
   {% endfor %}
 </div>
+
+{% if site.posts.size > 4 %}
+<p class="mt-3 mb-0">
+  <a href="/discover/news-archive.html">All news and releases</a>
+  <span class="text-muted">({{ site.posts.size }} posts)</span>
+</p>
+{% endif %}
