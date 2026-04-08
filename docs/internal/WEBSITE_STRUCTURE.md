@@ -68,20 +68,18 @@ website/
 │   ├── old.md              # Old versions
 │   ├── maps/               # Map downloads
 │   │   ├── index.html      # Maps page
-│   │   ├── ol.js           # OpenLayers script
-│   │   └── ommaps.html     # Maps interface
+│   │   └── ol.js           # OpenLayers script
 │   └── data/               # Static assets (e.g. sample checklist)
 │       └── xcsoar-checklist.txt
 ├── hardware/               # Hardware compatibility
 │   └── index.md            # Hardware info
-├── css/                    # Stylesheets (7 CSS files)
+├── css/                    # Stylesheets (6 CSS files)
 │   ├── xcsoar.css          # Global layout / nav / lists
 │   ├── screenshots.css     # #screenshots grid + homepage carousel (conditional)
 │   ├── xcsoar-blue.css     # Blue theme
 │   ├── xcsoar-green.css    # Green theme
 │   ├── xcsoar-red.css      # Red theme
-│   ├── xcsoar-trac.css     # Legacy Trac theme (deprecated)
-│   └── xcsoar-forum.css    # Forum theme
+│   └── xcsoar-trac.css     # Legacy Trac theme (deprecated)
 ├── img/                    # Images (21 files)
 │   ├── *.svg               # SVG icons/logos
 │   └── *.png               # PNG images
@@ -90,7 +88,7 @@ website/
 │   ├── flags/              # Country flags
 │   ├── jquery-1.8.2.min.js # jQuery
 │   └── jquery-lightbox/    # Lightbox plugin
-├── templates/              # Template files (3 files)
+├── templates/              # Template files (1 file)
 │   └── trac.html           # Legacy Trac templates (deprecated)
 ├── index.html              # Homepage
 ├── imprint.md              # Legal/imprint
