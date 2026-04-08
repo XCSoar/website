@@ -165,7 +165,7 @@ DEPENDENCIES
   stringex
   tzinfo (>= 1, < 3)
   tzinfo-data
-  wdm (~> 0.1.1)
+  wdm (~> 0.2.0)
 
 BUNDLED WITH
   4.0.6
