@@ -17,7 +17,7 @@ Always use root-relative paths (starting with `/`) for all internal links within
 <a href="/discover/screenshots/">Screenshots</a>
 <a href="/imprint.html">Imprint</a>
 <a href="/download/">Download</a>
-<img src="/img/logo-blue.svg" alt="Logo">
+<img src="/img/xcsoar.svg" alt="Logo">
 <link rel="stylesheet" href="/css/xcsoar.css">
 ```
 

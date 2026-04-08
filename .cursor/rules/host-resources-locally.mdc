@@ -22,12 +22,12 @@ alwaysApply: true
 
 ### CSS Frameworks
 - Download and commit CSS files to `/lib/` directory
-- Example: Bootstrap should be in `/lib/bootstrap/` not from CDN
-- Use versioned directories if needed: `/lib/bootstrap-5.3.8/`
+- Example: official Bootstrap dist in `/lib/bootstrap-5.3.8/` (not CDN)
+- Prefer versioned directories: `/lib/bootstrap-5.3.8/bootstrap.min.css`
 
 ### JavaScript Libraries
 - Download and commit JS files to `/lib/` directory
-- Example: `/lib/lightbox.js` (already implemented)
+- Example: `/lib/lightbox/lightbox.js` + `lightbox.css` (self-contained folder)
 - No external script tags from CDN
 
 ### Fonts
@@ -41,9 +41,7 @@ alwaysApply: true
 
 ## Current Status
 
-⚠️ **Bootstrap is currently loaded from CDN** (`cdn.jsdelivr.net`)
-- Should be downloaded and hosted in `/lib/bootstrap/`
-- Update `_includes/header.html` to use local path
+Bootstrap **5.3.8** is hosted locally under `/lib/bootstrap-5.3.8/` (see `_includes/header.html`).
 
 ## Examples
 
@@ -55,7 +53,7 @@ alwaysApply: true
 
 ### ✅ GOOD - Hosting Locally
 ```html
-<link href="/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="/lib/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
 <script src="/lib/some-library/library.min.js"></script>
 ```
 
