@@ -34,12 +34,16 @@ website/
 │   └── svgconvert.rb       # SVG to PNG converter
 ├── _posts/                 # Blog posts (95+ posts)
 │   └── YYYY-MM-DD-title.md # Post format
-├── _tools/                 # Build tools (6 files)
-│   ├── *.tpl               # Template files
-│   └── *.py                # Python scripts
-├── contact/                # Contact section
-│   ├── index.md            # Contact page
-│   └── irc.html            # IRC information
+├── _tools/                 # Build helpers and scripts
+│   ├── fabfile.py          # Legacy Fabric wrapper around Jekyll
+│   └── ftp_index/          # FTP index templates and Python scripts
+├── docs/                   # Documentation (/docs/) and internal notes
+│   ├── index.md            # Public docs index (published)
+│   └── internal/           # Excluded in _config.yml; not built by Jekyll
+│       ├── HTML5_ANALYSIS.md
+│       ├── IMPROVEMENTS.md
+│       ├── SECURITY_HEADERS.md
+│       └── WEBSITE_STRUCTURE.md  # This file
 ├── develop/                # Development/Contribution section
 │   ├── index.md            # Main contribute page
 │   ├── donations.md        # Donations
