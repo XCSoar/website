@@ -1,0 +1,112 @@
+{% comment %}
+  JSON-LD for Google rich results: home = Organization + WebSite + SoftwareApplication;
+  posts = BlogPosting; other pages = WebPage. Requires seo_desc and og_image from header.
+{% endcomment %}
+{% assign schema_desc = seo_desc | strip_html | strip | truncate: 500 %}
+{% assign page_url = page.url | absolute_url %}
+{% assign root_url = '/' | absolute_url %}
+{% assign logo_url = site.og_image | absolute_url %}
+{% assign org_id = site.url | append: '/#organization' %}
+{% assign website_id = site.url | append: '/#website' %}
+{% assign is_home = false %}
+{% if page.path == 'index.html' or page.url == '/' %}
+  {% assign is_home = true %}
+{% endif %}
+{% if is_home %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": {{ org_id | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "url": {{ root_url | jsonify }},
+      "logo": {{ logo_url | jsonify }},
+      "sameAs": [
+        "https://github.com/XCSoar/XCSoar"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ website_id | jsonify }},
+      "url": {{ root_url | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "publisher": { "@id": {{ org_id | jsonify }} }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": {{ site.url | append: '/#softwareapplication' | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ schema_desc | jsonify }},
+      "url": {{ root_url | jsonify }},
+      "image": {{ logo_url | jsonify }},
+      "applicationCategory": "NavigationApplication",
+      "operatingSystem": "Android, iOS, Windows, Linux, Kobo, Raspberry Pi",
+      "softwareVersion": {{ site.xcsoar_stable_version | jsonify }},
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "isPartOf": { "@id": {{ website_id | jsonify }} },
+      "author": { "@id": {{ org_id | jsonify }} },
+      "publisher": { "@id": {{ org_id | jsonify }} }
+    }
+  ]
+}
+</script>
+{% elsif page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ schema_desc | jsonify }},
+  "url": {{ page_url | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
+  "image": [{{ og_image | jsonify }}],
+  {% if page.author %}
+  "author": {
+    "@type": "Person",
+    "name": {{ page.author | jsonify }}
+  },
+  {% else %}
+  "author": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "url": {{ root_url | jsonify }}
+  },
+  {% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ logo_url | jsonify }}
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ page_url | jsonify }}
+  }
+}
+</script>
+{% else %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ page.title | jsonify }},
+  "description": {{ schema_desc | jsonify }},
+  "url": {{ page_url | jsonify }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "url": {{ root_url | jsonify }}
+  }
+}
+</script>
+{% endif %}
