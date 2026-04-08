@@ -4,45 +4,25 @@ color: green
 title: Map Downloads
 menu: download
 ---
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenLayers Map</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol/ol.css" type="text/css">
-    <style>
-        .map {
-            height: 500px;
-            width: 100%;
-            position: relative;
-        }
-        .info-box {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            border: 1px solid #ccc;
-            max-width: 250px;
-            z-index: 10;
-            display: none; /* Hide initially */
-        }
-    </style>
-    <script src="/download/maps/ol.js"></script>
-</head>
-<body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol/ol.css" type="text/css">
+<link rel="stylesheet" href="/css/maps-page.css">
 
-<div id="map" class="map"></div>
+<p class="maps-page-intro">These are pre-built regional maps. To build a map for your own area, use the <a href="{{ site.mapgen_url }}">XCSoar map generator</a>.</p>
+
+<div id="map" class="map-ol"></div>
 <div id="map_list"></div>
 
+<script src="/download/maps/ol.js"></script>
 <script>
-    // Initialize the map with a basic view
     var map = new ol.Map({
         target: 'map',
         layers: [
             new ol.layer.Tile({
-                source: new ol.source.OSM()  // Using OpenStreetMap as the base layer
+                source: new ol.source.OSM()
             })
         ],
         view: new ol.View({
-            center: ol.proj.fromLonLat([0, 25]),  // Center at (0, 25)
+            center: ol.proj.fromLonLat([0, 25]),
             zoom: 2
         })
     });
@@ -50,7 +30,6 @@ menu: download
     var activeRect = null;
     var infoElement = null;
 
-    // Function to create a style for the rectangle
     function createStyle(color) {
         return new ol.style.Style({
             stroke: new ol.style.Stroke({
@@ -63,14 +42,12 @@ menu: download
         });
     }
 
-    // Function to add a region's polygon to the map
     function addRegionToMap(regionName, extents) {
         var bounds = [
-            ol.proj.fromLonLat([extents[0], extents[1]]),  // SW corner (lon, lat)
-            ol.proj.fromLonLat([extents[2], extents[3]])   // NE corner (lon, lat)
+            ol.proj.fromLonLat([extents[0], extents[1]]),
+            ol.proj.fromLonLat([extents[2], extents[3]])
         ];
 
-        // Create a polygon representing the region's bounding box
         var rect = new ol.layer.Vector({
             source: new ol.source.Vector({
                 features: [
@@ -89,24 +66,21 @@ menu: download
         rect.region = regionName;
         map.addLayer(rect);
 
-        // Add to the map list for download links
         var mapListInfo = "<hr/><h2>" + regionName + "</h2><br/><a href='https://download.xcsoar.org/maps/" +
             regionName + ".xcm' type='application/octet-stream'>Standard map</a> | <a href='https://download.xcsoar.org/source/map/region/" +
             regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a>";
 
         document.getElementById('map_list').insertAdjacentHTML('beforeend', mapListInfo);
 
-        // Add the region as a 'feature' of the layer (storing its region name)
         rect.getSource().getFeatures().forEach(function(feature) {
-            feature.set('region', regionName);  // Store the region name on the feature
-            feature.set('layer', rect);  // Store the layer on the feature
+            feature.set('region', regionName);
+            feature.set('layer', rect);
         });
     }
 
-    // Function to handle click events on the map
     function handleMapClick(event) {
         if (infoElement) {
-            infoElement.style.display = 'none';  // Hide the info-box when clicking outside
+            infoElement.style.display = 'none';
             infoElement.remove();
             infoElement = null;
         }
@@ -124,39 +98,34 @@ menu: download
 
         if (feature) {
             var regionName = feature.get('region');
-            var layer = feature.get('layer');  // Retrieve the layer associated with the feature
+            var layer = feature.get('layer');
             activeRect = layer;
             activeRect.setStyle(createStyle('#0000CC'));
 
-            // Create the information box content
-            var content = "<div style='margin: 0px; padding: 5px;'><span style='font-size: 1.7em;'>" +
+            var content = "<div class='map-popup'><span class='map-popup__title'>" +
                 regionName + "</span><br/><br/>" +
                 "<a href='https://download.xcsoar.org/source/map/region/" + regionName + ".xcm' type='application/octet-stream'>Standard map</a><br/>" +
                 "<a href='https://download.xcsoar.org/source/map/region/" + regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a><br/>";
 
             if (!infoElement) {
                 infoElement = document.createElement('div');
-                infoElement.classList.add('info-box');
+                infoElement.classList.add('map-info-box');
                 document.getElementById('map').appendChild(infoElement);
             }
 
             infoElement.innerHTML = content;
-            infoElement.style.display = 'block';  // Show the info box
+            infoElement.style.display = 'block';
 
-            // Position the info-box based on the clicked coordinates
-            var offset = 20;  // Offset from the click point to avoid overlap
-            infoElement.style.left = (pixel[0] + offset) + 'px';  // X position
-            infoElement.style.top = (pixel[1] + offset) + 'px';  // Y position
+            var offset = 20;
+            infoElement.style.left = (pixel[0] + offset) + 'px';
+            infoElement.style.top = (pixel[1] + offset) + 'px';
         }
     }
 
-    // Fetch the MAPS data dynamically from a URL
     fetch('https://download.xcsoar.org/source/map/0_META/maps.config.js')
         .then(response => response.text())
         .then(data => {
-            // Evaluate the fetched script to get the MAPS object
-            eval(data);  // Use eval to execute the fetched JavaScript
-            // Now you have access to the MAPS variable
+            eval(data);
             for (var region in MAPS) {
                 if (MAPS.hasOwnProperty(region)) {
                     addRegionToMap(region, MAPS[region]);
@@ -167,8 +136,5 @@ menu: download
             console.error('Error fetching MAPS data:', error);
         });
 
-    // Adding a listener for map clicks
     map.on('singleclick', handleMapClick);
 </script>
-
-</body>

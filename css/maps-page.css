@@ -1,0 +1,24 @@
+/**
+ * OpenLayers map download pages (download/maps/).
+ * Loaded only by those pages; pairs with CDN ol.css.
+ */
+
+.maps-page-intro {
+  margin-bottom: 1rem;
+}
+
+.map-ol {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.map-info-box {
+  position: absolute;
+  z-index: 10;
+  max-width: 250px;
+  padding: 10px;
+  display: none;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+}
