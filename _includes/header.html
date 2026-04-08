@@ -83,12 +83,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Security Headers -->
-  <!-- CSP: cdn.jsdelivr.net only for OpenLayers maps (download/maps pages) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://maps.google.com https://www.google.com https://download.xcsoar.org; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cdn.jsdelivr.net https://download.xcsoar.org https://maps.google.com https://www.google.com https://skylines.aero; frame-src https://maps.google.com https://www.google.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self';">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <!-- No meta CSP or legacy X-* security headers: maximize compatibility (maps, CDNs, inline scripts).
+       HSTS, CSP, Permissions-Policy, etc. belong on the origin server if you want them later. -->
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
