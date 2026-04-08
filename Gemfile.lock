@@ -116,9 +116,6 @@ GEM
       tty-color (~> 0.5)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    pstore (0.2.1)
-    public_suffix (7.0.5)
-    rake (13.2.1)
     pry (0.16.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -130,8 +127,6 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     rbtree (0.4.6)
-    rexml (3.4.2)
-    rouge (4.5.1)
     reline (0.6.3)
       io-console (~> 0.5)
     rexml (3.4.4)
@@ -173,4 +168,4 @@ DEPENDENCIES
   wdm (~> 0.1.1)
 
 BUNDLED WITH
-   2.5.16
+  4.0.6
