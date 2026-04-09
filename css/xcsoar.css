@@ -125,7 +125,8 @@ blockquote {
 
 .home-page-title-row {
   padding: 0.35rem 0 0.85rem;
-  margin-bottom: 0.15rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px dotted #9f9c99;
 }
 
 .home-page-title {
@@ -160,7 +161,7 @@ a#logo.navbar-brand__mark-link {
   flex-shrink: 0;
 }
 .navbar-brand--split .navbar-brand__mark {
-  height: 1.2em;
+  height: 2.4em;
   width: auto;
   flex-shrink: 0;
   vertical-align: middle;
