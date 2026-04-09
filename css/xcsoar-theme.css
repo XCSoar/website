@@ -39,6 +39,24 @@ html[class*="site-theme--"] a:active {
   color: var(--site-a-active);
 }
 
+/*
+ * Global theme link colour (`html … a`) beats Bootstrap’s `.btn-*` (higher specificity),
+ * so solid buttons (e.g. .btn-success) get theme green text on a green background.
+ * Restore Bootstrap’s per-button foreground colours.
+ */
+html[class*="site-theme--"] a.btn:not(.btn-link) {
+  color: var(--bs-btn-color);
+}
+
+html[class*="site-theme--"] a.btn:not(.btn-link):hover,
+html[class*="site-theme--"] a.btn:not(.btn-link):focus-visible {
+  color: var(--bs-btn-hover-color);
+}
+
+html[class*="site-theme--"] a.btn:not(.btn-link):active {
+  color: var(--bs-btn-active-color);
+}
+
 html[class*="site-theme--"] body {
   background: var(--site-body-bg);
 }
