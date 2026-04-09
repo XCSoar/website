@@ -7,41 +7,62 @@
     "schedule:weekly",
     "helpers:pinGitHubActionDigests"
   ],
-  "timezone": "UTC",
-  "labels": ["dependencies"],
+  "labels": [
+    "dependencies"
+  ],
+  "lockFileMaintenance": {
+    "automerge": true,
+    "enabled": true,
+    "schedule": [
+      "before 4am on monday"
+    ]
+  },
+  "packageRules": [
+    {
+      "automerge": true,
+      "description": "Single PR for all GitHub Actions (pin digest + minor/patch)",
+      "groupName": "GitHub Actions",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor"
+      ]
+    },
+    {
+      "automerge": true,
+      "description": "Single PR for pre-commit hook revisions",
+      "groupName": "pre-commit hooks",
+      "matchManagers": [
+        "pre-commit"
+      ]
+    },
+    {
+      "automerge": true,
+      "description": "Automerge Ruby patch and minor (not major)",
+      "matchManagers": [
+        "bundler"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ]
+    },
+    {
+      "automerge": false,
+      "description": "Require review for major Ruby upgrades",
+      "matchManagers": [
+        "bundler"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ]
+    }
+  ],
   "platformAutomerge": true,
   "prConcurrentLimit": 5,
   "prHourlyLimit": 2,
-  "packageRules": [
-    {
-      "description": "Single PR for all GitHub Actions (pin digest + minor/patch)",
-      "matchManagers": ["github-actions"],
-      "groupName": "GitHub Actions",
-      "matchUpdateTypes": ["digest", "patch", "minor"],
-      "automerge": true
-    },
-    {
-      "description": "Single PR for pre-commit hook revisions",
-      "matchManagers": ["pre-commit"],
-      "groupName": "pre-commit hooks",
-      "automerge": true
-    },
-    {
-      "description": "Automerge Ruby patch and minor (not major)",
-      "matchManagers": ["bundler"],
-      "matchUpdateTypes": ["patch", "minor"],
-      "automerge": true
-    },
-    {
-      "description": "Require review for major Ruby upgrades",
-      "matchManagers": ["bundler"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false
-    }
-  ],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "automerge": true,
-    "schedule": ["before 4am on monday"]
-  }
+  "timezone": "UTC"
 }
