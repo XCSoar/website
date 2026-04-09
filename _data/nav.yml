@@ -1,4 +1,4 @@
-# Main navbar: order preserved. `type: download_dropdown` renders _includes/nav-download-dropdown.html.
+# Main navbar: order preserved. `type: download_dropdown` / `docs_dropdown` are rendered in nav-main-items.html.
 main:
   - id: home
     home: true
@@ -11,7 +11,8 @@ main:
     href: /news.html
     title: XCSoar news and updates
     menu: news
-  - id: docs
+  - type: docs_dropdown
+    id: docs
     label: Docs
     href: /docs/
     title: XCSoar documentation

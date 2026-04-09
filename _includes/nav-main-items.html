@@ -8,6 +8,14 @@
                   <li><a class="dropdown-item{% if nav_url contains '/download/maps/' %} active{% endif %}" href="/download/maps/"{% if nav_url contains '/download/maps/' %} aria-current="page"{% endif %}>Maps</a></li>
                 </ul>
               </li>
+  {% elsif item.type == 'docs_dropdown' %}
+              <li class="nav-item dropdown {{ item.id }}{% if page.menu == item.menu or page.menu == 'hardware' %} current{% endif %}">
+                <a class="nav-link dropdown-toggle{% if page.menu == item.menu or page.menu == 'hardware' %} active{% endif %}" href="{{ item.href }}" id="navbarDocs" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="{{ item.title }}">{{ item.label }}</a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDocs">
+                  <li><a class="dropdown-item" href="/docs/#manual">Manual</a></li>
+                  <li><a class="dropdown-item{% if nav_url contains '/hardware/' %} active{% endif %}" href="/hardware/"{% if nav_url contains '/hardware/' %} aria-current="page"{% endif %}>Hardware</a></li>
+                </ul>
+              </li>
   {% elsif item.icon %}
               <li class="nav-item {{ item.li_class }}">
                 <a class="nav-link" href="{{ item.href }}" title="{{ item.title }}" target="_blank" rel="noopener noreferrer">
