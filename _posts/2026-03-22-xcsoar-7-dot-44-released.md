@@ -107,7 +107,7 @@ Tobias Bieniek, Tobias Schulte, and Vesko.
 - [LX Navigation](https://www.lxnavigation.com/) Eos/Era variometers
 - [Stratux](https://github.com/stratux/stratux)
 - [Larus](https://www.larus.com/) protocol update to version 0.1.4
-- [OpenVario](https://www.openvario.org/) protocol extended for onboard IMU
+- [OpenVario](https://www.openvario.de/) protocol extended for onboard IMU
   gyroscope/acceleration data
 - [AIR Control Display](https://www.air-avionics.com/comm-and-transponders/)
   driver upgrades, including radio frequency exchange and transponder mode
