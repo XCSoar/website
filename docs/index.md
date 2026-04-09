@@ -6,7 +6,7 @@ description: "XCSoar documentation — manuals, quick guides, hardware compatibi
 menu: docs
 ---
 
-## Manual
+## Manual {#manual}
 
 Manuals of the stable version {{ site.xcsoar_stable_version }}:
 
