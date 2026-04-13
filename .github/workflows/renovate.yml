@@ -27,12 +27,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           fetch-depth: 0
 
       - name: Renovate
-        uses: renovatebot/github-action@b67590ea780158ccd13192c22a3655a5231f869d # v46.1.8
+        uses: renovatebot/github-action@eb932558ad942cccfd8211cf535f17ff183a9f74 # v46.1.9
         with:
           configurationFile: renovate.json
           token: ${{ secrets.RENOVATE_TOKEN != '' && secrets.RENOVATE_TOKEN || github.token }}
