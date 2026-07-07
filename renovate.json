@@ -3,7 +3,8 @@
   "enabled": true,
   "enabledManagers": [
     "github-actions",
-    "pre-commit"
+    "pre-commit",
+    "bundler"
   ],
   "extends": [
     "config:recommended",
@@ -14,6 +15,13 @@
   "labels": [
     "dependencies"
   ],
+  "lockFileMaintenance": {
+    "automerge": true,
+    "enabled": true,
+    "schedule": [
+      "before 4am on monday"
+    ]
+  },
   "packageRules": [
     {
       "automerge": true,
@@ -34,6 +42,27 @@
       "groupName": "pre-commit hooks",
       "matchManagers": [
         "pre-commit"
+      ]
+    },
+    {
+      "automerge": true,
+      "description": "Automerge Ruby patch and minor (not major)",
+      "matchManagers": [
+        "bundler"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ]
+    },
+    {
+      "automerge": false,
+      "description": "Require review for major Ruby upgrades",
+      "matchManagers": [
+        "bundler"
+      ],
+      "matchUpdateTypes": [
+        "major"
       ]
     }
   ],
