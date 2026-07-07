@@ -33,9 +33,6 @@ website/
 │   └── country_flag.rb     # Country flag tag
 ├── _posts/                 # Blog posts (95+ posts)
 │   └── YYYY-MM-DD-title.md # Post format
-├── _tools/                 # Build helpers and scripts
-│   ├── fabfile.py          # Legacy Fabric wrapper around Jekyll
-│   └── ftp_index/          # FTP index templates and Python scripts
 ├── docs/                   # Documentation (/docs/) and internal notes
 │   ├── index.md            # Public docs index (published)
 │   └── internal/           # Excluded in _config.yml; not built by Jekyll
@@ -180,7 +177,6 @@ Key settings:
 - **Jekyll Plugins**:
   - jekyll-feed: 0.17.0
 - **Other**:
-  - minima: 2.5.2 (theme, but customized)
   - stringex: 2.8.6 (URL-friendly strings)
 
 ## Navigation Structure
