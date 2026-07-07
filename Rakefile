@@ -1,10 +1,3 @@
-begin
-  require 'nanoc'
-rescue LoadError
-  require 'rubygems'
-  require 'nanoc'
-end
-
 require 'yaml'
 require 'stringex'
 

@@ -33,8 +33,6 @@ gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.8.0", :platforms => [:jruby]
 
-gem 'jekyll-minibundle'
-gem 'nanoc'
 gem 'stringex'
 gem 'ostruct'
 gem 'logger'

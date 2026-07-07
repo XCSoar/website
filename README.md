@@ -9,7 +9,7 @@ Source for [xcsoar.org](https://xcsoar.org/): a static site built with [Jekyll](
 On Debian/Ubuntu, install optional packages so local builds match production asset steps:
 
 ```bash
-sudo apt-get install -y yui-compressor librsvg2-bin
+sudo apt-get install -y yui-compressor
 ```
 
 ## Build and preview

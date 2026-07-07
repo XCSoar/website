@@ -31,7 +31,6 @@ download_android_google_play_package_id: org.xcsoar.play
 download_app_store_url: 'https://apps.apple.com/app/xcsoar/id6741046464'
 
 plugins:
-  - jekyll/minibundle
   - jekyll-sitemap
 
 # Maintainer notes under docs/internal/ are not part of the public site.

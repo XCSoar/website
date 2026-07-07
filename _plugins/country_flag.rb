@@ -1,15 +1,6 @@
-# Generates a PNG image or PDF from an SVG file
-#
+# Renders a country flag span (sprite-based CSS in /lib/flags/flags.css).
 # Usage:
-#
-# {% svgconvert /path/to/local/image.svg %}
-# {% svgconvert /path/to/local/image.svg 50x50 %}
-# {% svgconvert /path/to/local/image.svg --format=pdf %}
-#
-# Installation:
-#
-# * install the librsvg2-bin package (rsvg-convert is needed)
-# * copy svgconvert.rb to plugins folder
+# {% country_flag gb %}
 
 class Jekyll::CountryFlag < Liquid::Tag
   def initialize(tag_name, text, tokens)

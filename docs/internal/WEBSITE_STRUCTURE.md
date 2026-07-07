@@ -29,9 +29,8 @@ website/
 │   ├── seo-structured-data.html
 │   ├── home-fastlane-carousel.html
 │   └── download_sidebar.html  # Download sidebar
-├── _plugins/               # Custom Jekyll plugins (2 plugins)
-│   ├── country_flag.rb     # Country flag tag
-│   └── svgconvert.rb       # SVG to PNG converter
+├── _plugins/               # Custom Jekyll plugins (1 plugin)
+│   └── country_flag.rb     # Country flag tag
 ├── _posts/                 # Blog posts (95+ posts)
 │   └── YYYY-MM-DD-title.md # Post format
 ├── _tools/                 # Build helpers and scripts
@@ -161,10 +160,6 @@ Key settings:
 1. **country_flag.rb** - Liquid tag for country flags
    - Usage: `{% country_flag gb %}`
 
-2. **svgconvert.rb** - SVG to PNG converter
-   - Usage: `{% svgconvert /path/to/image.svg 48x48 %}`
-   - Requires: `librsvg2-bin` (rsvg-convert)
-
 ## Blog Posts (`_posts/`)
 
 - Format: `YYYY-MM-DD-title.md`
@@ -175,19 +170,16 @@ Key settings:
 ## Build Process
 
 1. Jekyll processes Markdown and Liquid templates
-2. SVG files converted to PNG (via plugin)
-3. CSS minification (yui-compressor)
-4. Output to `_site/` directory
-5. Deployed via rsync to production server
+2. CSS minification (yui-compressor)
+3. Output to `_site/` directory
+4. Deployed via rsync to production server
 
 ## Dependencies
 
 - **Jekyll**: 4.4.1
 - **Jekyll Plugins**:
   - jekyll-feed: 0.17.0
-  - jekyll-minibundle: 3.0.0
 - **Other**:
-  - nanoc: 4.14.6 (build tool)
   - minima: 2.5.2 (theme, but customized)
   - stringex: 2.8.6 (URL-friendly strings)
 

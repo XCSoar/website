@@ -15,7 +15,6 @@ jobs:
         run: |
           sudo apt-get install \
             yui-compressor \
-            librsvg2-bin \
             rsync
       - name: sync Fastlane Play Store text and phone screenshots from XCSoar/XCSoar
         run: ruby scripts/sync_google_play_metadata.rb
