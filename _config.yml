@@ -10,6 +10,10 @@ description: "Open-source tactical glide computer for soaring and paragliding pi
 title: XCSoar
 # Default Open Graph / Twitter image (absolute URL built with absolute_url filter).
 og_image: /android-chrome-512x512.png
+og_image_width: 512
+og_image_height: 512
+og_image_type: image/png
+og_image_alt: "XCSoar logo"
 
 xcsoar_stable_version: 7.45
 xcsoar_testing_version: null
