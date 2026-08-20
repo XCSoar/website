@@ -30,7 +30,7 @@ Updates in the app stores may take a little longer to appear.
 ## Weather
 
 [SkySight](https://skysight.io), [EDL](https://www.edl-soaring.com/), and
-[XCTherm](https://xctherm.com) can now be shown directly on map pages.
+[XC Therm](https://xctherm.com) can now be shown directly on map pages.
 
 They use the same basic controls as RASP: choose a layer and forecast time for
 each page, then adjust them from the cursor bar at the bottom of the map.
@@ -148,7 +148,7 @@ much of its map and forecast integration.
 caching.
 
 [Benjamin Girard](https://github.com/Eldalie) added EDL.
-[Philip Heinrich](https://github.com/cumulophib) developed the XCTherm
+[Philip Heinrich](https://github.com/cumulophib) developed the XC Therm
 integration, including its in-flight cursor controls.
 
 [Simon GH](https://github.com/groundhogxc) worked on RASP rendering and brought
