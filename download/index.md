@@ -32,8 +32,12 @@ but is hidden).  Reboot the Kobo.
 
 ## XCSoar {{ site.xcsoar_stable_version }} for Windows desktop computers
 
-- {:.list-item-windows}[XCSoar {{ site.xcsoar_stable_version }} on Windows]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PC/)
-- {:.list-item-windows}[XCSoar {{ site.xcsoar_stable_version }} on Windows (64 bit)]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN64/)
+Windows OpenGL builds replace the deprecated GDI PC and WIN64 binaries.
+
+- {:.list-item-windows}Windows 64-bit OpenGL: [installer]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN64OPENGL/XCSoar-{{ site.xcsoar_stable_version }}-WIN64OPENGL-Installer.exe) or [portable zip]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN64OPENGL/XCSoar.zip)
+- {:.list-item-windows}Windows 32-bit OpenGL: [installer]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN32OPENGL/XCSoar-{{ site.xcsoar_stable_version }}-WIN32OPENGL-Installer.exe) or [portable zip]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN32OPENGL/XCSoar.zip)
+- {:.list-item-windows}Windows 64-bit standalone (deprecated GDI): [XCSoar.exe]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/WIN64/XCSoar.exe)
+- {:.list-item-windows}Windows 32-bit standalone (deprecated GDI): [XCSoar.exe]({{ site.download_server_url }}/{{ site.xcsoar_stable_version }}/PC/XCSoar.exe)
 
 ## XCSoar {{ site.xcsoar_stable_version }} for Unix / Linux desktop
 
