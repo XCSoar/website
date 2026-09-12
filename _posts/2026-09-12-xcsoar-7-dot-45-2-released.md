@@ -17,14 +17,18 @@ reported after 7.45.1.
 - [XCSoar 7.45.2 downloads]({{ site.download_server_url }}/7.45.2/)
 - [GitHub release](https://github.com/XCSoar/XCSoar/releases/tag/v7.45.2)
 - [Full changelog](https://github.com/XCSoar/XCSoar/blob/v7.45.2/NEWS.txt)
+- Android: [Google Play](https://play.google.com/store/apps/details?id={{ site.download_android_google_play_package_id }}),
+  [F-Droid]({{ site.download_fdroid_url }}),
+  or [APK]({{ site.download_server_url }}/7.45.2/ANDROID/XCSoar.apk)
+- iOS: [App Store]({{ site.download_app_store_url }})
+  or [IPA]({{ site.download_server_url }}/7.45.2/IOS64/xcsoar-signed.ipa)
 - Windows 64-bit OpenGL: [installer](https://github.com/XCSoar/XCSoar/releases/download/v7.45.2/XCSoar-WIN64OPENGL-Installer.exe)
   or [portable zip](https://github.com/XCSoar/XCSoar/releases/download/v7.45.2/XCSoar-WIN64OPENGL.zip)
 - Windows 32-bit OpenGL: [installer](https://github.com/XCSoar/XCSoar/releases/download/v7.45.2/XCSoar-WIN32OPENGL-Installer.exe)
   or [portable zip](https://github.com/XCSoar/XCSoar/releases/download/v7.45.2/XCSoar-WIN32OPENGL.zip)
-- Android: [Google Play](https://play.google.com/store/apps/details?id={{ site.download_android_google_play_package_id }})
-  or [F-Droid]({{ site.download_fdroid_url }})
-- iOS: [App Store]({{ site.download_app_store_url }})
-- Linux: [Unix builds]({{ site.download_server_url }}/7.45.2/UNIX/)
+- Linux: [amd64 .deb]({{ site.download_server_url }}/7.45.2/UNIX/xcsoar_7.45.2_amd64.deb)
+- macOS: [disk image]({{ site.download_server_url }}/7.45.2/MACOS/XCSoar.dmg)
+- Kobo: [KoboRoot.tgz]({{ site.download_server_url }}/7.45.2/KOBO/KoboRoot.tgz)
 
 Updates in the app stores may take a little longer to appear.
 
