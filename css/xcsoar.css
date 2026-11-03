@@ -210,7 +210,12 @@ a#logo.navbar-brand__mark-link {
   padding: 5px;
 }
 
-.map-popup__title {
+.map-popup p {
+  margin: 0.35rem 0 0;
+}
+
+p.map-popup__title {
+  margin-top: 0;
   font-size: 1.7em;
 }
 

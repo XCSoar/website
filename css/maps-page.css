@@ -13,6 +13,21 @@
   position: relative;
 }
 
+.map-region {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.map-region h2,
+.map-region p {
+  margin: 0;
+}
+
+.map-region p {
+  margin-top: 0.5rem;
+}
+
 .map-info-box {
   position: absolute;
   z-index: 10;

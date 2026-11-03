@@ -50,9 +50,9 @@ function addRegionToMap(regionName, extents) {
     rect.region = regionName;
     map.addLayer(rect);
 
-    var mapListInfo = "<hr/><h2>" + regionName + "</h2><br/><a href='https://download.xcsoar.org/maps/" +
-        regionName + ".xcm' type='application/octet-stream'>Standard map</a> | <a href='https://download.xcsoar.org/source/map/region/" +
-        regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a>";
+    var mapListInfo = '<section class="map-region">\n<h2>' + regionName + '</h2>\n<p><a href="https://download.xcsoar.org/maps/' +
+        regionName + '.xcm">Standard map</a> | <a href="https://download.xcsoar.org/source/map/region/' +
+        regionName + '_HighRes.xcm">High resolution map</a></p></section>';
 
     document.getElementById('map_list').insertAdjacentHTML('beforeend', mapListInfo);
 
@@ -86,10 +86,9 @@ function handleMapClick(event) {
         activeRect = layer;
         activeRect.setStyle(createStyle('#0000CC'));
 
-        var content = "<div class='map-popup'><span class='map-popup__title'>" +
-            regionName + "</span><br/><br/>" +
-            "<a href='https://download.xcsoar.org/source/map/region/" + regionName + ".xcm' type='application/octet-stream'>Standard map</a><br/>" +
-            "<a href='https://download.xcsoar.org/source/map/region/" + regionName + "_HighRes.xcm' type='application/octet-stream'>High resolution map</a><br/>";
+        var content = '<div class="map-popup">\n<p class="map-popup__title">' + regionName + '</p>\n' +
+            '<p><a href="https://download.xcsoar.org/source/map/region/' + regionName + '.xcm">Standard map</a></p>\n' +
+            '<p><a href="https://download.xcsoar.org/source/map/region/' + regionName + '_HighRes.xcm">High resolution map</a></p></div>';
 
         if (!infoElement) {
             infoElement = document.createElement('div');
