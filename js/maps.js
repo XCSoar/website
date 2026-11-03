@@ -1,8 +1,15 @@
 var map = new ol.Map({
     target: 'map',
+    controls: ol.control.defaults.defaults({
+        attributionOptions: { collapsible: false }
+    }),
     layers: [
         new ol.layer.Tile({
-            source: new ol.source.OSM()
+            source: new ol.source.XYZ({
+                url: 'https://{a-c}.tile.opentopomap.org/{z}/{x}/{y}.png',
+                maxZoom: 17,
+                attributions: 'Map data: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, SRTM | Map style: © <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+            })
         })
     ],
     view: new ol.View({
@@ -14,14 +21,14 @@ var map = new ol.Map({
 var activeRect = null;
 var infoElement = null;
 
-function createStyle(color) {
+function createStyle(color, fill) {
     return new ol.style.Style({
         stroke: new ol.style.Stroke({
             color: color,
             width: 2
         }),
         fill: new ol.style.Fill({
-            color: 'rgba(255, 136, 0, 0.2)'
+            color: fill
         })
     });
 }
@@ -44,7 +51,7 @@ function addRegionToMap(regionName, extents) {
                 ]]))
             ]
         }),
-        style: createStyle('#FF8800')
+        style: createStyle('#3e73a7', 'rgba(62, 115, 167, 0.2)')
     });
 
     rect.region = regionName;
@@ -70,7 +77,7 @@ function handleMapClick(event) {
     }
 
     if (activeRect) {
-        activeRect.setStyle(createStyle('#FF8800'));
+        activeRect.setStyle(createStyle('#3e73a7', 'rgba(62, 115, 167, 0.2)'));
         activeRect = null;
     }
 
@@ -84,7 +91,7 @@ function handleMapClick(event) {
         var regionName = feature.get('region');
         var layer = feature.get('layer');
         activeRect = layer;
-        activeRect.setStyle(createStyle('#0000CC'));
+        activeRect.setStyle(createStyle('#1a4977', 'rgba(26, 73, 119, 0.35)'));
 
         var content = '<div class="map-popup">\n<p class="map-popup__title">' + regionName + '</p>\n' +
             '<p><a href="https://download.xcsoar.org/source/map/region/' + regionName + '.xcm">Standard map</a></p>\n' +
