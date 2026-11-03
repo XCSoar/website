@@ -5,7 +5,7 @@ title: Map Downloads
 description: "Pre-built XCSoar map regions and interactive browser to choose map files for download."
 menu: download
 ---
-<link rel="stylesheet" href="/download/maps/ol.css">
+<link rel="stylesheet" href="/lib/openlayers-10.1.0/ol.css">
 <link rel="stylesheet" href="/css/maps-page.css">
 
 <p class="maps-page-intro">These are pre-built regional maps. To build a map for your own area, use the <a href="{{ site.mapgen_url }}">XCSoar map generator</a>.</p>
@@ -13,7 +13,7 @@ menu: download
 <div id="map" class="map-ol"></div>
 <div id="map_list"></div>
 
-<script src="/download/maps/ol.js"></script>
+<script src="/lib/openlayers-10.1.0/ol.js"></script>
 <script>
     var map = new ol.Map({
         target: 'map',
