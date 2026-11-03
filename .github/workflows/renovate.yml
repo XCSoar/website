@@ -15,7 +15,6 @@ permissions:
   issues: write
   pull-requests: write
   statuses: write
-  workflows: write
 
 concurrency:
   group: renovate

@@ -1,6 +1,6 @@
 /**
  * OpenLayers map download pages (download/maps/).
- * Loaded only by those pages; pairs with CDN ol.css.
+ * Loaded only by those pages; pairs with /download/maps/ol.css (OpenLayers 10.1.0).
  */
 
 .maps-page-intro {
