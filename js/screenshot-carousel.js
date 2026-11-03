@@ -21,10 +21,10 @@
     function updateCarouselWidth() {
       const activeSlide = slides[currentSlide];
       if (!activeSlide) return;
-      
+
       const activeImage = activeSlide.querySelector('img');
       if (!activeImage) return;
-      
+
       // Wait for image to load if not already loaded
       if (activeImage.complete) {
         setCarouselWidth(activeImage);
@@ -37,13 +37,13 @@
       const carousel = document.querySelector('.screenshot-carousel');
       const container = document.querySelector('.carousel-container');
       if (!carousel || !container) return;
-      
+
       // Calculate image width based on natural dimensions and max-height constraint
       const maxHeight = 320; // 20rem = 320px
       const naturalWidth = image.naturalWidth;
       const naturalHeight = image.naturalHeight;
       const maxWidth = carousel.parentElement.offsetWidth;
-      
+
       // Calculate width if image is constrained by max-height
       let imageWidth;
       if (naturalHeight > maxHeight) {
@@ -54,7 +54,7 @@
         // Image uses natural width
         imageWidth = naturalWidth;
       }
-      
+
       // Set container width to exact image width, but don't exceed parent width
       const targetWidth = Math.min(imageWidth, maxWidth);
       container.style.width = targetWidth + 'px';
@@ -75,7 +75,7 @@
       slides.forEach((slide, i) => {
         // Remove all state classes
         slide.classList.remove('active', 'prev', 'next', 'next2');
-        
+
         if (i === currentSlide) {
           slide.classList.add('active');
         } else if (i === currentSlide - 1 || (currentSlide === 0 && i === totalSlides - 1)) {
@@ -84,7 +84,7 @@
           // Calculate next and next+1 positions
           const nextIndex = (currentSlide + 1) % totalSlides;
           const next2Index = (currentSlide + 2) % totalSlides;
-          
+
           if (i === nextIndex) {
             slide.classList.add('next');
           } else if (i === next2Index) {
@@ -97,7 +97,7 @@
       indicators.forEach((indicator, i) => {
         indicator.classList.toggle('active', i === currentSlide);
       });
-      
+
       // Update carousel width to match image
       setTimeout(updateCarouselWidth, 100);
     }
@@ -134,17 +134,17 @@
     });
 
     // Make carousel focusable for keyboard navigation
-    
+
     // Initialize the first slide state on load
     showSlide(0);
-    
+
     // Update width on window resize
     let resizeTimeout;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(updateCarouselWidth, 250);
     });
-    
+
     // Update width when all images are loaded
     const allImages = track.querySelectorAll('img');
     let loadedCount = 0;
