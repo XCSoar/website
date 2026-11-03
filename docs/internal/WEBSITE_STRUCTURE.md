@@ -5,7 +5,7 @@ This is a Jekyll-based static website for XCSoar, an open-source glide computer.
 
 ## Technology Stack
 - **Static Site Generator**: Jekyll 4.4.1
-- **Ruby Version**: 3.4.8
+- **Ruby Version**: 4.0.x (CI; see `.github/workflows/website-deploy.yml`)
 - **Theme**: Custom (not using a standard Jekyll theme)
 - **CSS Framework**: Bootstrap (customized)
 - **JavaScript**: Bootstrap 5 bundle, vanilla lightbox (conditional), screenshot carousel (conditional), OpenLayers on the maps page
@@ -45,27 +45,31 @@ website/
 │   ├── latest.md           # Latest version
 │   ├── old.md              # Old versions
 │   ├── maps/               # Map downloads
-│   │   ├── index.html      # Maps page
-│   │   └── ol.js           # OpenLayers script
+│   │   └── index.html      # Maps page (OpenLayers from lib/)
 │   └── data/               # Static assets (e.g. sample checklist)
 │       └── xcsoar-checklist.txt
 ├── hardware/               # Hardware compatibility
 │   └── index.md            # Hardware info
-├── css/                    # Stylesheets (core + conditional)
+├── css/                    # Layout
 │   ├── xcsoar.css          # Global layout / nav / lists
 │   ├── xcsoar-theme.css    # Link colors + body background per `html.site-theme--*`
 │   ├── screenshots.css     # #screenshots grid + homepage carousel (conditional)
+│   ├── lightbox.css
 │   └── maps-page.css       # OpenLayers map download UI
+├── js/                     # Site behavior
+│   ├── lightbox.js
+│   ├── screenshot-carousel.js
+│   └── maps.js
 ├── img/                    # Images (icons, themes, Play Store phone shots, post attachments)
 │   ├── play-store/         # Google Play screenshots (sync script → _data + files)
 │   ├── attachments/        # Legacy images linked from old news posts
 │   ├── *.svg               # SVG icons/logos
 │   └── *.png               # PNG images
-├── lib/                    # Third-party and site JS/CSS helpers
-│   ├── bootstrap-5.3.8/    # Official Bootstrap 5.3.8 dist (CSS + JS bundle)
-│   ├── flags/              # Country flags sprite + CSS (`{% country_flag %}`; CSS linked on /docs/)
-│   ├── lightbox/           # Vanilla lightbox (screenshots / homepage when enabled)
-│   └── screenshot-carousel.js
+├── lib/                    # Third-party files only
+│   ├── bootstrap-5.3.8/
+│   ├── flags/              # Country-flag sprite (`{% country_flag %}`)
+│   ├── fonts/
+│   └── openlayers-10.1.0/
 ├── index.html              # Homepage
 ├── news.html               # Recent posts (summary)
 ├── news-archive.html       # Full post index

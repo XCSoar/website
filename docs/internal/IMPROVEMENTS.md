@@ -194,7 +194,7 @@
 
 ### Replace jQuery Lightbox
 **Issue**: Issue #42 already tracks this
-**Solution**: Implemented with custom vanilla JS lightbox under `/lib/lightbox/` (`lightbox.js` + `lightbox.css`) - no external dependencies, ~6KB total. Features include keyboard navigation, error handling, and accessibility improvements.
+**Solution**: Implemented with custom vanilla JS lightbox (`js/lightbox.js` + `css/lightbox.css`) - no external dependencies, ~6KB total. Features include keyboard navigation, error handling, and accessibility improvements.
 
 ### Upgrade Bootstrap
 **Current**: Bootstrap 2.x (custom)
