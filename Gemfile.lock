@@ -62,7 +62,7 @@ GEM
     ostruct (0.6.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    pstore (0.2.1)
+    pstore (0.3.0)
     public_suffix (7.0.5)
     rake (13.4.2)
     rb-fsevent (0.11.2)
